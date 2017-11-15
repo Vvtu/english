@@ -63,12 +63,6 @@ class App extends PureComponent {
             <div className="app__button2">
               <div className="app__center">b2</div>
             </div>
-            <div className="app__button3">
-              <div className="app__center">b3</div>
-            </div>
-            <div className="app__button4">
-              <div className="app__center">b4</div>
-            </div>
           </div>
         </ThemeProvider>
       </div>

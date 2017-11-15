@@ -13,11 +13,13 @@
 
 @media (orientation: portrait) {
   .app__grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: var(--button_height) 1fr
-      var(--button_height) 1fr;
-    grid-template-areas: 'info info info info' 'russian russian russian russian'
-      'button1 button2 button4 button3' 'english english english english';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: var(--button_height) 1fr var(--button_height) 1fr;
+    grid-template-areas: 'info info' 'russian russian' 'button1 button2' 'english english';
+  }
+  .overflow_y_scroll {
+    height: calc(42vh - var(--button_height));
+    overflow-y: scroll;
   }
 }
 @media (orientation: landscape) {
@@ -25,9 +27,12 @@
     height: 100vh;
     /* margin-top: calc(var(--button_height) + var(--main_gap)) ; */
     grid-template-columns: var(--button_height) 1fr 1fr var(--button_height);
-    grid-template-rows: var(--button_height) 1fr 1fr;
-    grid-template-areas: 'info info info info' 'button1 russian english button3'
-      'button2 russian english button4';
+    grid-template-rows: var(--button_height) 1fr;
+    grid-template-areas: 'info info info info' 'button1 russian english button2';
+  }
+  .overflow_y_scroll {
+    height: calc(90vh - var(--button_height));
+    overflow-y: scroll;
   }
 }
 
@@ -60,11 +65,6 @@
   }
 } */
 
-.overflow_y_scroll {
-  height: calc(42vh - var(--button_height));
-  overflow-x: hidden;
-}
-
 .app__info {
   grid-area: info;
   background-color: lightgrey;
@@ -73,12 +73,10 @@
 .app__russian {
   grid-area: russian;
   /* background-color: grey; */
-
 }
 .app__english {
   grid-area: english;
   /* background-color: grey; */
-
 }
 .app__button1 {
   grid-area: button1;
