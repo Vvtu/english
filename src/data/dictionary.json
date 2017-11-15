@@ -1,0 +1,21 @@
+{
+  "activeIndex": 2,
+  "showEnglish": true,
+  "settings": {
+    "size": "xl"
+  },
+  "dictionary": [
+    {
+      "Прошло много времени с тех пор как джаваскрипт стал мейнстримом": "Long time passed since JavaScript become mainstream."
+    },
+    {
+      "Не смотря на многочисленные ошибки, до сих пор нет единственного правильного пути написания кода в этом языке.": "Despite multiple attempts, there is still no right single way to write code in this language."
+    },
+    {
+      "Каждый использует его в своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык. Каждый использует его в своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык. Каждый использует его в своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык": "Everybody is using it in their own special way and most people still fill that they are failing to tame the language. Everybody is using it in their own special way and most people still fill that they are failing to tame the language. Everybody is using it in their own special way and most people still fill that they are failing to tame the language."
+    },
+    {
+      "1": "2"
+    }
+  ]
+}
