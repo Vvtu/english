@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import ThemeProvider from 'arui-feather/theme-provider';
 import Label from 'arui-feather/label';
 
-import {dictionary, settings} from './data/dictionary.json'
+import { dictionary, settings } from './data/dictionary.json';
 
 // import Header from './containers/Header/Header';
 // import Sidebar from './containers/Sidebar/Sidebar';
@@ -13,6 +13,10 @@ import {dictionary, settings} from './data/dictionary.json'
 import './App.css';
 
 class App extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { activeIndex: 2, showEnglish: true };
+  }
   componentDidCatch(error, info) {
     // Display fallback UI
     // this.setState({ hasError: true });
@@ -23,13 +27,10 @@ class App extends PureComponent {
 
   render() {
     const { activeIndex, showEnglish } = this.state;
-    const { theme } = settings || {};
-    console.log('App render this.props =  ', this.props);
-
+    const { theme, size } = settings || {};
     const activeObj = dictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     const english = showEnglish && Object.values(activeObj || {})[0];
-    const { size } = settings || {};
 
     return (
       <div className={'theme__backgroundcolor_' + theme}>
@@ -44,12 +45,16 @@ class App extends PureComponent {
             </div>
             <div className="app__russian">
               <div className="app__center">
-                <Label size={size}>{russian}</Label>
+                <div className="overflow_y_scroll">
+                  <Label size={size}>{russian}</Label>
+                </div>
               </div>
             </div>
             <div className="app__english">
               <div className="app__center">
-                <Label size={size}>{english}</Label>
+                <div className="overflow_y_scroll">
+                  <Label size={size}>{english}</Label>
+                </div>
               </div>
             </div>
             <div className="app__button1">
@@ -71,4 +76,4 @@ class App extends PureComponent {
   }
 }
 
-export default  App;
+export default App;

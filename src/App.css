@@ -13,17 +13,16 @@
 
 @media (orientation: portrait) {
   .app__grid {
-    height: 86vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: var(--button_height) calc(42vh - var(--button_height))
-      var(--button_height) calc(42vh - var(--button_height));
+    grid-template-rows: var(--button_height) 1fr
+      var(--button_height) 1fr;
     grid-template-areas: 'info info info info' 'russian russian russian russian'
       'button1 button2 button4 button3' 'english english english english';
   }
 }
 @media (orientation: landscape) {
   .app__grid {
-    height: 86vh;
+    height: 100vh;
     /* margin-top: calc(var(--button_height) + var(--main_gap)) ; */
     grid-template-columns: var(--button_height) 1fr 1fr var(--button_height);
     grid-template-rows: var(--button_height) 1fr 1fr;
@@ -61,24 +60,25 @@
   }
 } */
 
+.overflow_y_scroll {
+  height: calc(42vh - var(--button_height));
+  overflow-x: hidden;
+}
+
 .app__info {
   grid-area: info;
   background-color: lightgrey;
 }
 
 .app__russian {
-  height: 100%;
   grid-area: russian;
   /* background-color: grey; */
-  overflow-x: hidden;
-  overflow-y: scroll;
+
 }
 .app__english {
-  height: 100%;
   grid-area: english;
   /* background-color: grey; */
-  overflow-x: hidden;
-  overflow-y: scroll;
+
 }
 .app__button1 {
   grid-area: button1;
