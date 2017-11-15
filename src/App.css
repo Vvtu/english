@@ -1,8 +1,6 @@
 :root {
   --button_height: 2rem;
-  --row_margin_left: 10px;
-  --main_gap: 0.8rem;
-  --row_gap: 0.8rem;
+  --main_gap: 1rem;
 }
 
 .app__grid {
@@ -13,27 +11,31 @@
 
 @media (orientation: portrait) {
   .app__grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: var(--button_height) 1fr var(--button_height) 1fr;
-    grid-template-areas: 'info info' 'russian russian' 'button1 button2' 'english english';
+    height: 86vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr var(--button_height) 1fr;
+    grid-template-areas: 'russian' 'info' 'english';
   }
   .overflow_y_scroll {
-    height: calc(42vh - var(--button_height));
+    height: calc(43vh - var(--button_height));
     overflow-y: scroll;
   }
 }
 @media (orientation: landscape) {
   .app__grid {
-    height: 100vh;
-    /* margin-top: calc(var(--button_height) + var(--main_gap)) ; */
-    grid-template-columns: var(--button_height) 1fr 1fr var(--button_height);
-    grid-template-rows: var(--button_height) 1fr;
-    grid-template-areas: 'info info info info' 'button1 russian english button2';
+    height: 65vh;
+    grid-template-columns:   1fr 1fr  ;
+    grid-template-rows:  1fr var(--button_height);
+    grid-template-areas: 'russian english' 'info info';
   }
   .overflow_y_scroll {
-    height: calc(90vh - var(--button_height));
+    height: calc(65vh - var(--button_height));
     overflow-y: scroll;
   }
+}
+
+.color_green {
+  color: #6b5ee0;
 }
 
 /* .row {
@@ -78,25 +80,6 @@
   grid-area: english;
   /* background-color: grey; */
 }
-.app__button1 {
-  grid-area: button1;
-  background-color: lightgray;
-}
-
-.app__button2 {
-  grid-area: button2;
-  background-color: yellow;
-}
-
-.app__button3 {
-  grid-area: button3;
-  background-color: lightgray;
-}
-
-.app__button4 {
-  grid-area: button4;
-  background-color: yellow;
-}
 
 .app__center {
   height: 100%;
@@ -106,18 +89,17 @@
   align-items: center;
 }
 
-.app__row_gap {
-  padding-left: var(--row_gap);
-}
 
 /* Flexboxes
 ======================================================= */
-.app {
+.app__info2 {
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
+
 .app__verticalflex {
   display: flex;
   flex-direction: column;

@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 
 import ThemeProvider from 'arui-feather/theme-provider';
 import Label from 'arui-feather/label';
+import Button from 'arui-feather/button';
+import CheckBox from 'arui-feather/checkbox';
 
 import { dictionary, settings } from './data/dictionary.json';
 
@@ -15,7 +17,7 @@ import './App.css';
 class App extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 2, showEnglish: true };
+    this.state = { activeIndex: 1, showEnglish: true };
   }
   componentDidCatch(error, info) {
     // Display fallback UI
@@ -33,14 +35,15 @@ class App extends PureComponent {
     const english = showEnglish && Object.values(activeObj || {})[0];
 
     return (
-      <div className={'theme__backgroundcolor_' + theme}>
+      <div className={'theme__backgroundcolor_' + theme }>
         <ThemeProvider theme={theme}>
           <div className="app__grid">
             <div className="app__info">
-              <div className="app__center">
-                app__info
-                <div className="app__row_gap" />
-                adsfadsf
+              <div className="app__info2">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
               </div>
             </div>
             <div className="app__russian">
@@ -53,16 +56,23 @@ class App extends PureComponent {
             <div className="app__english">
               <div className="app__center">
                 <div className="overflow_y_scroll">
-                  <Label size={size}>{english}</Label>
+                  <Label className="color_green" size={size}>
+                    {english}
+                  </Label>
                 </div>
               </div>
             </div>
-            <div className="app__button1">
-              <div className="app__center">b1</div>
+            {/* <div className="app__left_button">
+              <div className="app__center">L</div>
             </div>
-            <div className="app__button2">
-              <div className="app__center">b2</div>
-            </div>
+            <div className="app__right_button">
+              <div className="app__center">
+
+              <Button
+                size={'s'}
+              />
+              </div>
+            </div> */}
           </div>
         </ThemeProvider>
       </div>
