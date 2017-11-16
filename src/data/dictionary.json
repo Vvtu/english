@@ -7,7 +7,7 @@
       "Прошло много времени с тех пор как джаваскрипт стал мейнстримом": "Long time passed since JavaScript become mainstream."
     },
     {
-      "Не смотря на многочисленные ошибки, до сих пор нет единственного правильного пути написания кода в этом языке.": "Despite multiple attempts, there is still no right single way to write code in this language."
+      "Не смотря на многочисленные попытки, до сих пор нет единственного правильного пути написания кода в этом языке.": "Despite multiple attempts, there is still no right single way to write code in this language."
     },
     {
       "Каждый использует его своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык.": "Everybody is using it in their own special way and most people still fill that they are failing to tame the language."
@@ -25,7 +25,7 @@
       "Я расскажу вам, как я придумал идею говорить о языке Javascript.": "I'll tell you how I came up with idea to talk about javascript language."
     },
     {
-      "Я знаю много языков. Паскаль, С++ и наконец перешел к джфваскрипт.": "I know many languages. Pascal, C++ and finally jump to javascript."
+      "Я знаю много языков. Паскаль, С++ и наконец перешел к джфваскрипт.": "I know many languages. Pascal, C++ and finally jumped to javascript."
     },
     {
       "У меня было очень хорошее понимание того, как JavaScript-код должен быть написан. И я был совершенно неправ.": "I had very good understanding of how the javascript code should be written. And I was completely wrong."
