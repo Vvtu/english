@@ -30,7 +30,7 @@ class App extends PureComponent {
       activeIndex: undefined,
       forwardHistory: [],
       history: [],
-      showEnglish: true,
+      showEnglish: false,
     };
   }
   componentDidCatch(error, info) {
@@ -81,6 +81,14 @@ class App extends PureComponent {
     });
   };
 
+  handleShowEnglishClicked = () => {
+    if (this.state.activeIndex !== undefined) {
+      this.setState({
+        showEnglish: true,
+      });
+    }
+  };
+
   render() {
     const { activeIndex, showEnglish } = this.state;
     const { theme, size } = settings || {};
@@ -101,13 +109,20 @@ class App extends PureComponent {
                   width={32}
                   onClick={this.handleBackClicked}
                 />
-
-                <div>
-                  <Icon name="action-fail" colored={true} size={size} />
-                </div>
-                <div>
-                  <Icon name="action-ok" colored={true} size={size} />
-                </div>
+                {showEnglish ? (
+                  <div>
+                    <div>
+                      <Icon name="action-fail" colored={true} size={size} />
+                    </div>
+                    <div>
+                      <Icon name="action-ok" colored={true} size={size} />
+                    </div>
+                  </div>
+                ) : (
+                  <div onClick={this.handleShowEnglishClicked}>
+                    <Icon name="tool-calendar" colored={true} size={size} />
+                  </div>
+                )}
                 <img
                   alt={'back'}
                   height={32}
@@ -134,17 +149,6 @@ class App extends PureComponent {
                 </div>
               </div>
             </div>
-            {/* <div className="app__left_button">
-              <div className="app__center">L</div>
-            </div>
-            <div className="app__right_button">
-              <div className="app__center">
-
-              <Button
-                size={'s'}
-              />
-              </div>
-            </div> */}
           </div>
         </ThemeProvider>
       </div>
