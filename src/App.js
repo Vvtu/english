@@ -7,12 +7,7 @@ import Icon from 'arui-feather/icon';
 import IconBack from './iconback.svg';
 
 import { dictionary, settings } from './data/dictionary.json';
-
-// import Header from './containers/Header/Header';
-// import Sidebar from './containers/Sidebar/Sidebar';
-// import EditArea from './containers/EditArea/EditArea';
-// import Footer from './containers/Footer/Footer';
-
+import { loadItem, saveItem } from './localStorage';
 import './App.css';
 
 function getRandomInt(min, max) {
@@ -90,13 +85,21 @@ class App extends PureComponent {
     }
   };
 
-  handleFailClicked = () => {
-    this.handleForwardClicked();
-  };
+  handleFailClicked = () => this.handleUserAnswerClicked(0);
+  handleOkClicked = () => this.handleUserAnswerClicked(1);
 
-  handleOkClicked = () => {
+  handleUserAnswerClicked(int) {
+    const { activeIndex } = this.state;
+    const activeObj = activeIndex !== undefined && dictionary[activeIndex];
+    const russian = Object.keys(activeObj || {})[0];
+    if (russian) {
+      const item = loadItem(russian);
+      const { shown, hit } = item || {};
+      const newItem = { shown: (shown || 0) + 1, hit: (hit || 0) + int };
+      saveItem(russian, newItem);
+    }
     this.handleForwardClicked();
-  };
+  }
 
   render() {
     const { activeIndex, showEnglish } = this.state;

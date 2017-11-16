@@ -1,16 +1,17 @@
-export const loadState = () => {
+export const loadItem = (key) => {
   try {
-    return JSON.parse(localStorage.getItem('state'));
+    const value =  localStorage.getItem(key);
+    return JSON.parse(value);
   } catch (err) {
-    console.log('Failed to load state from localStorage. err = ', err);
+    console.log('Failed to load item from localStorage. err = ', err);
     return undefined;
   }
 };
 
-export const saveState = (state) => {
+export const saveItem = (key, value) => {
   try {
-    const serializedState = JSON.stringify(state);
-    localStorage.setItem('state', serializedState);
+    const serializedValue = JSON.stringify(value);
+    localStorage.setItem(key, serializedValue);
   } catch (err) {
     console.error(err);
   }
