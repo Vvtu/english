@@ -11,30 +11,32 @@
 
 @media (orientation: portrait) {
   .app__grid {
-    height: 86vh;
+    height: 100vh;
+    max-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr var(--button_height) 1fr;
     grid-template-areas: 'russian' 'info' 'english';
   }
   .overflow_y_scroll {
-    height: calc(43vh - var(--button_height));
+    max-height: calc(50vh - var(--button_height));
     overflow-y: scroll;
   }
 }
 @media (orientation: landscape) {
   .app__grid {
-    height: 65vh;
-    grid-template-columns:   1fr 1fr  ;
-    grid-template-rows:  1fr var(--button_height);
+    max-height: 92vh;
+    height: 92vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr var(--button_height);
     grid-template-areas: 'russian english' 'info info';
   }
   .overflow_y_scroll {
-    height: calc(65vh - var(--button_height));
+    max-height: calc(90vh - var(--button_height));
     overflow-y: scroll;
   }
 }
 
-.color_green {
+.eng_text_color {
   color: #6b5ee0;
 }
 
@@ -91,8 +93,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
 
 .app__info2 {
   height: 100%;

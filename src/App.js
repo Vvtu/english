@@ -57,7 +57,7 @@ class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: undefined,
+      activeIndex: 0,
       forwardHistory: [],
       history: [],
       showEnglish: false,
@@ -154,9 +154,9 @@ class App extends PureComponent {
                 <img
                   alt={'back'}
                   height={32}
+                  onClick={this.handleBackClicked}
                   src={IconBack}
                   width={32}
-                  onClick={this.handleBackClicked}
                 />
                 {!showEnglish && (
                   <div onClick={this.handleShowEnglishClicked}>
@@ -181,11 +181,11 @@ class App extends PureComponent {
 
                 <img
                   alt={'back'}
-                  height={32}
-                  src={IconBack}
                   className="invert__horizontal"
-                  width={32}
+                  height={32}
                   onClick={this.handleForwardClicked}
+                  src={IconBack}
+                  width={32}
                 />
               </div>
             </div>
@@ -199,7 +199,7 @@ class App extends PureComponent {
             <div className="app__english">
               <div className="app__center">
                 <div className="overflow_y_scroll">
-                  <Label className="color_green" size={size}>
+                  <Label className="eng_text_color" size={size}>
                     {english}
                   </Label>
                 </div>
