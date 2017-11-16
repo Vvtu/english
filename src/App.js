@@ -26,7 +26,12 @@ function getRandomInt(min, max) {
 class App extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 1, showEnglish: true, history: [], forwardHistory: [] };
+    this.state = {
+      activeIndex: undefined,
+      forwardHistory: [],
+      history: [],
+      showEnglish: true,
+    };
   }
   componentDidCatch(error, info) {
     // Display fallback UI
@@ -40,7 +45,7 @@ class App extends PureComponent {
     const { activeIndex, forwardHistory, history } = this.state;
     const len = history.length;
     if (len === 0) {
-      console.log('handleForwardClicked newActiveIndex = NO ')
+      console.log('handleForwardClicked newActiveIndex = NO ');
       return;
     }
     const newActiveIndex = history[len - 1];
@@ -51,7 +56,7 @@ class App extends PureComponent {
       forwardHistory: newForwardHistory,
       history: newHistory,
     });
-    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex)
+    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
   };
 
   handleForwardClicked = () => {
@@ -66,7 +71,7 @@ class App extends PureComponent {
       newForwardHistory = [];
       newActiveIndex = getRandomInt(0, 4);
     }
-    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex)
+    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
 
     const newHistory = history.concat(activeIndex);
     this.setState({
@@ -79,7 +84,7 @@ class App extends PureComponent {
   render() {
     const { activeIndex, showEnglish } = this.state;
     const { theme, size } = settings || {};
-    const activeObj = dictionary[activeIndex];
+    const activeObj = activeIndex !== undefined && dictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     const english = showEnglish && Object.values(activeObj || {})[0];
 
