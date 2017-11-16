@@ -37,13 +37,6 @@ class App extends PureComponent {
       showEnglish: false,
     };
   }
-  componentDidCatch(error, info) {
-    // Display fallback UI
-    // this.setState({ hasError: true });
-    // You can also log the error to an error reporting service
-    console.error('ErrorBoundary');
-    console.error(error, info);
-  }
 
   handleBackClicked = () => {
     const { activeIndex, forwardHistory, history } = this.state;
@@ -111,6 +104,14 @@ class App extends PureComponent {
     this.handleForwardClicked();
   }
 
+  handleRemoveItemClicked = () => {
+    const { activeIndex } = this.state;
+    if (activeIndex !== undefined) {
+      dictionary.splice(activeIndex, 1);
+    }
+    this.handleForwardClicked();
+  };
+
   render() {
     const { activeIndex, showEnglish } = this.state;
     const { theme, size } = settings || {};
@@ -131,6 +132,16 @@ class App extends PureComponent {
                   width={32}
                   onClick={this.handleBackClicked}
                 />
+                {!showEnglish && (
+                  <div onClick={this.handleShowEnglishClicked}>
+                    <Icon name="tool-calendar" colored={true} size={size} />
+                  </div>
+                )}
+                {showEnglish && (
+                  <div onClick={this.handleRemoveItemClicked}>
+                    <Icon name="action-error" colored={true} size={size} />
+                  </div>
+                )}
                 {showEnglish && (
                   <div onClick={this.handleFailClicked}>
                     <Icon name="action-fail" colored={true} size={size} />
@@ -141,11 +152,7 @@ class App extends PureComponent {
                     <Icon name="action-ok" colored={true} size={size} />
                   </div>
                 )}
-                {!showEnglish && (
-                  <div onClick={this.handleShowEnglishClicked}>
-                    <Icon name="tool-calendar" colored={true} size={size} />
-                  </div>
-                )}
+
                 <img
                   alt={'back'}
                   height={32}
