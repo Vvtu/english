@@ -7,15 +7,25 @@ import Icon from 'arui-feather/icon';
 import IconBack from './iconback.svg';
 
 import { dictionary, settings } from './data/dictionary.json';
-import { loadItem, saveItem } from './localStorage';
 import './App.css';
 
-function getRandomInt(min, max) {
+const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   //The maximum is exclusive and the minimum is inclusive
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
+
+const getItemFormLocalStorage = (key) => {
+  const item = localStorage.getItem(key);
+  const arr = (item || '').split('=');
+  const shown = parseInt(arr[0], 10) || 0;
+  let hit = 0;
+  if (arr.length > 1) {
+    hit = parseInt(arr[1], 10) || 0;
+  }
+  return { shown, hit };
+};
 
 class App extends PureComponent {
   constructor(props) {
@@ -93,10 +103,10 @@ class App extends PureComponent {
     const activeObj = activeIndex !== undefined && dictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     if (russian) {
-      const item = loadItem(russian);
-      const { shown, hit } = item || {};
-      const newItem = { shown: (shown || 0) + 1, hit: (hit || 0) + int };
-      saveItem(russian, newItem);
+      const item = getItemFormLocalStorage(russian);
+      const { shown, hit } = item;
+      const newItem = shown + 1 + '=' + (hit + int);
+      localStorage.setItem(russian, newItem);
     }
     this.handleForwardClicked();
   }
