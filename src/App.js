@@ -2,8 +2,6 @@ import React, { PureComponent } from 'react';
 
 import ThemeProvider from 'arui-feather/theme-provider';
 import Label from 'arui-feather/label';
-import Button from 'arui-feather/button';
-import CheckBox from 'arui-feather/checkbox';
 import Icon from 'arui-feather/icon';
 
 import IconBack from './iconback.svg';
@@ -20,7 +18,8 @@ import './App.css';
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 class App extends PureComponent {
@@ -55,6 +54,7 @@ class App extends PureComponent {
       activeIndex: newActiveIndex,
       forwardHistory: newForwardHistory,
       history: newHistory,
+      showEnglish: false,
     });
     console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
   };
@@ -78,6 +78,7 @@ class App extends PureComponent {
       activeIndex: newActiveIndex,
       forwardHistory: newForwardHistory,
       history: newHistory,
+      showEnglish: false,
     });
   };
 
@@ -87,6 +88,14 @@ class App extends PureComponent {
         showEnglish: true,
       });
     }
+  };
+
+  handleFailClicked = () => {
+    this.handleForwardClicked();
+  };
+
+  handleOkClicked = () => {
+    this.handleForwardClicked();
   };
 
   render() {
@@ -109,16 +118,17 @@ class App extends PureComponent {
                   width={32}
                   onClick={this.handleBackClicked}
                 />
-                {showEnglish ? (
-                  <div>
-                    <div>
-                      <Icon name="action-fail" colored={true} size={size} />
-                    </div>
-                    <div>
-                      <Icon name="action-ok" colored={true} size={size} />
-                    </div>
+                {showEnglish && (
+                  <div onClick={this.handleFailClicked}>
+                    <Icon name="action-fail" colored={true} size={size} />
                   </div>
-                ) : (
+                )}
+                {showEnglish && (
+                  <div onClick={this.handleOkClicked}>
+                    <Icon name="action-ok" colored={true} size={size} />
+                  </div>
+                )}
+                {!showEnglish && (
                   <div onClick={this.handleShowEnglishClicked}>
                     <Icon name="tool-calendar" colored={true} size={size} />
                   </div>
