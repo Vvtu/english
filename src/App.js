@@ -17,10 +17,16 @@ import { dictionary, settings } from './data/dictionary.json';
 
 import './App.css';
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
 class App extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 1, showEnglish: true };
+    this.state = { activeIndex: 1, showEnglish: true, history: [], forwardHistory: [] };
   }
   componentDidCatch(error, info) {
     // Display fallback UI
@@ -31,25 +37,43 @@ class App extends PureComponent {
   }
 
   handleBackClicked = () => {
-    console.log('handleBackClicked')
-    let newActiveIndex = this.state.activeIndex - 1;
-    if (newActiveIndex < 0) {
-      newActiveIndex = dictionary.length - 1;
+    const { activeIndex, forwardHistory, history } = this.state;
+    const len = history.length;
+    if (len === 0) {
+      console.log('handleForwardClicked newActiveIndex = NO ')
+      return;
     }
-    this.setState(
-      {activeIndex: newActiveIndex}
-    );
+    const newActiveIndex = history[len - 1];
+    const newForwardHistory = forwardHistory.concat(activeIndex);
+    const newHistory = history.slice(0, len - 1);
+    this.setState({
+      activeIndex: newActiveIndex,
+      forwardHistory: newForwardHistory,
+      history: newHistory,
+    });
+    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex)
   };
-  handleForwardClicked = () => {
-    console.log('handleForwardClicked')
 
-    let newActiveIndex = this.state.activeIndex + 1;
-    if (newActiveIndex >= dictionary.length) {
-      newActiveIndex = 0;
+  handleForwardClicked = () => {
+    const { activeIndex, forwardHistory, history } = this.state;
+    let newActiveIndex;
+    let newForwardHistory;
+    let forwardLen = forwardHistory.length;
+    if (forwardLen > 0) {
+      newActiveIndex = forwardHistory[forwardLen - 1];
+      newForwardHistory = forwardHistory.slice(0, forwardLen - 1);
+    } else {
+      newForwardHistory = [];
+      newActiveIndex = getRandomInt(0, 4);
     }
-    this.setState(
-      {activeIndex: newActiveIndex}
-    );
+    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex)
+
+    const newHistory = history.concat(activeIndex);
+    this.setState({
+      activeIndex: newActiveIndex,
+      forwardHistory: newForwardHistory,
+      history: newHistory,
+    });
   };
 
   render() {
