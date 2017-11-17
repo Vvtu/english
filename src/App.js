@@ -19,7 +19,7 @@ class App extends PureComponent {
       forwardHistory: [],
       history: [],
       showEnglish: false,
-      randomDictionary: dictionary, // arrayRandomOrder(dictionary),
+      randomDictionary: arrayRandomOrder(dictionary),
     };
   }
 
@@ -81,7 +81,7 @@ class App extends PureComponent {
     if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
       const newRandomDictionary = randomDictionary
         .slice(0, activeIndex)
-        .concat(randomDictionary.slice(activeIndex+1));
+        .concat(randomDictionary.slice(activeIndex + 1));
       const newActiveIndex = activeIndex >= newRandomDictionary.length ? 0 : activeIndex;
       this.setState({
         activeIndex: newActiveIndex,
