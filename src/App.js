@@ -19,12 +19,45 @@ class App extends PureComponent {
       forwardHistory: [],
       history: [],
       showEnglish: false,
-      randomDictionary: arrayRandomOrder(dictionary),
+      randomDictionary: dictionary, // arrayRandomOrder(dictionary),
     };
   }
 
+  ifShownThanIncrementFailed = (int) => {
+    const { activeIndex, randomDictionary, showEnglish } = this.state;
+    if (showEnglish) {
+      const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
+      const russian = Object.keys(activeObj || {})[0];
+      if (russian) {
+        const item = getItemFormLocalStorage(russian);
+        const { shown, failed } = item;
+        const newItem = shown + 1 + '=' + (failed + (int || 0));
+        localStorage.setItem(russian, newItem);
+      }
+    }
+  };
+
+  handleFailClicked = (e) => this.handleForwardClicked(e, 1);
+
+  handleForwardClicked = (e, int) => {
+    e.preventDefault();
+    this.ifShownThanIncrementFailed(int);
+
+    const { activeIndex, randomDictionary } = this.state;
+
+    const len = randomDictionary.length;
+    const newActiveIndex = activeIndex === len - 1 ? 0 : activeIndex + 1;
+    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
+    this.setState({
+      activeIndex: newActiveIndex,
+      showEnglish: false,
+    });
+  };
+
   handleBackClicked = (e) => {
     e.preventDefault();
+    this.ifShownThanIncrementFailed(1);
+
     const { activeIndex, randomDictionary } = this.state;
     const len = randomDictionary.length;
     const newActiveIndex = activeIndex === 0 ? len - 1 : activeIndex - 1;
@@ -35,42 +68,12 @@ class App extends PureComponent {
     });
   };
 
-  handleForwardClicked = (e) => {
-    e.preventDefault();
-    const { activeIndex, randomDictionary } = this.state;
-    const len = randomDictionary.length;
-    const newActiveIndex = activeIndex === len - 1 ? 0 : activeIndex + 1;
-    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
-    this.setState({
-      activeIndex: newActiveIndex,
-      showEnglish: false,
-    });
-  };
-
   handleShowEnglishClicked = (e) => {
     e.preventDefault();
-    if (this.state.activeIndex !== undefined) {
-      this.setState({
-        showEnglish: true,
-      });
-    }
+    this.setState({
+      showEnglish: true,
+    });
   };
-
-  handleFailClicked = (e) => this.handleUserAnswerClicked(e, 1);
-  handleOkClicked = (e) => this.handleUserAnswerClicked(e, 0);
-
-  handleUserAnswerClicked(e, int) {
-    const { activeIndex, randomDictionary } = this.state;
-    const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
-    const russian = Object.keys(activeObj || {})[0];
-    if (russian) {
-      const item = getItemFormLocalStorage(russian);
-      const { shown, failed } = item;
-      const newItem = shown + 1 + '=' + (failed + int);
-      localStorage.setItem(russian, newItem);
-    }
-    this.handleForwardClicked(e);
-  }
 
   handleRemoveItemClicked = (e) => {
     e.preventDefault();
@@ -78,7 +81,7 @@ class App extends PureComponent {
     if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
       const newRandomDictionary = randomDictionary
         .slice(0, activeIndex)
-        .concat(randomDictionary.slice(activeIndex));
+        .concat(randomDictionary.slice(activeIndex+1));
       const newActiveIndex = activeIndex >= newRandomDictionary.length ? 0 : activeIndex;
       this.setState({
         activeIndex: newActiveIndex,
@@ -145,11 +148,6 @@ class App extends PureComponent {
                     onDoubleClick={this.handleFailClicked}
                   >
                     <Icon name="action-fail" colored={true} size={size} />
-                  </div>
-                )}
-                {showEnglish && (
-                  <div onClick={this.handleOkClicked} onDoubleClick={this.handleOkClicked}>
-                    <Icon name="action-ok" colored={true} size={size} />
                   </div>
                 )}
                 <img
