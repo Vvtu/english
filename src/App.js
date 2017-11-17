@@ -75,7 +75,7 @@ class App extends PureComponent {
       const newRandomDictionary = randomDictionary
         .slice(0, activeIndex)
         .concat(randomDictionary.slice(activeIndex));
-      const newActiveIndex = Math.min(activeIndex, newRandomDictionary.length);
+      const newActiveIndex = activeIndex >= newRandomDictionary.length ? 0 : activeIndex;
       this.setState({
         activeIndex: newActiveIndex,
         randomDictionary: newRandomDictionary,
@@ -91,6 +91,8 @@ class App extends PureComponent {
     const russian = Object.keys(activeObj || {})[0];
     const english = showEnglish && Object.values(activeObj || {})[0];
 
+    const { shown, failed } = getItemFormLocalStorage(russian);
+
     return (
       <div className={'theme__backgroundcolor_' + theme}>
         <ThemeProvider theme={theme}>
@@ -104,6 +106,18 @@ class App extends PureComponent {
                   src={IconBack}
                   width={32}
                 />
+
+                {!showEnglish && (
+                  <div>
+                    <Label size={size}>{shown}</Label>
+                    {failed > 0 && (
+                      <Label size={size} className="red-color">
+                        {'\u00A0/ ' + failed}
+                      </Label>
+                    )}
+                  </div>
+                )}
+
                 {!showEnglish && (
                   <div onClick={this.handleShowEnglishClicked}>
                     <Icon name="tool-calendar" colored={true} size={size} />
@@ -124,7 +138,6 @@ class App extends PureComponent {
                     <Icon name="action-ok" colored={true} size={size} />
                   </div>
                 )}
-
                 <img
                   alt={'back'}
                   className="invert__horizontal"

@@ -101,3 +101,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.red-color {
+  color : #00ffff;
+}
