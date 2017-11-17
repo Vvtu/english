@@ -9,49 +9,7 @@ import IconBack from './iconback.svg';
 import { dictionary, settings } from './data/dictionary.json';
 import './App.css';
 
-const getItemFormLocalStorage = (key) => {
-  const item = localStorage.getItem(key);
-  const arr = (item || '').split('=');
-  const shown = parseInt(arr[0], 10) || 0;
-  let failed = 0;
-  if (arr.length > 1) {
-    failed = parseInt(arr[1], 10) || 0;
-  }
-  return { shown, failed };
-};
-
-// const getRandomInt = (min, max) => {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   //The maximum is exclusive and the minimum is inclusive
-//   return Math.floor(Math.random() * (max - min)) + min;
-// };
-
-const getNewActiveIndex = () => {
-  let i = 0;
-  let index = -1;
-  while (i < 10 && index === -1) {
-    i += 1;
-    index = dictionary.findIndex((elem) => {
-      const russian = Object.keys(elem || {})[0];
-      if (!russian) {
-        return false;
-      }
-      const stat = getItemFormLocalStorage(russian);
-      const { shown, failed } = stat;
-      let velocityToShow = (failed * 1.3 + 1) / (shown + 1);
-      if (velocityToShow > 1) {
-        velocityToShow = 1;
-      }
-      const rnd = Math.random();
-      if (rnd < velocityToShow * 0.1) {
-        return true;
-      }
-      return false;
-    });
-  }
-  return index !== -1 ? index : undefined;
-};
+import { getItemFormLocalStorage, arrayRandomOrder } from './lib/lib';
 
 class App extends PureComponent {
   constructor(props) {
@@ -61,47 +19,28 @@ class App extends PureComponent {
       forwardHistory: [],
       history: [],
       showEnglish: false,
+      randomDictionary: arrayRandomOrder(dictionary),
     };
   }
 
   handleBackClicked = () => {
-    const { activeIndex, forwardHistory, history } = this.state;
-    const len = history.length;
-    if (len === 0) {
-      console.log('handleForwardClicked newActiveIndex = NO ');
-      return;
-    }
-    const newActiveIndex = history[len - 1];
-    const newForwardHistory = forwardHistory.concat(activeIndex);
-    const newHistory = history.slice(0, len - 1);
+    const { activeIndex, randomDictionary } = this.state;
+    const len = randomDictionary.length;
+    const newActiveIndex = activeIndex === 0 ? len - 1 : activeIndex - 1;
+    console.log('handleBackClicked newActiveIndex = ', newActiveIndex);
     this.setState({
       activeIndex: newActiveIndex,
-      forwardHistory: newForwardHistory,
-      history: newHistory,
       showEnglish: false,
     });
-    console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
   };
 
   handleForwardClicked = () => {
-    const { activeIndex, forwardHistory, history } = this.state;
-    let newActiveIndex;
-    let newForwardHistory;
-    let forwardLen = forwardHistory.length;
-    if (forwardLen > 0) {
-      newActiveIndex = forwardHistory[forwardLen - 1];
-      newForwardHistory = forwardHistory.slice(0, forwardLen - 1);
-    } else {
-      newForwardHistory = [];
-      newActiveIndex = getNewActiveIndex();
-    }
+    const { activeIndex, randomDictionary } = this.state;
+    const len = randomDictionary.length;
+    const newActiveIndex = activeIndex === len - 1 ? 0 : activeIndex + 1;
     console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
-
-    const newHistory = history.concat(activeIndex);
     this.setState({
       activeIndex: newActiveIndex,
-      forwardHistory: newForwardHistory,
-      history: newHistory,
       showEnglish: false,
     });
   };
@@ -118,8 +57,8 @@ class App extends PureComponent {
   handleOkClicked = () => this.handleUserAnswerClicked(0);
 
   handleUserAnswerClicked(int) {
-    const { activeIndex } = this.state;
-    const activeObj = activeIndex !== undefined && dictionary[activeIndex];
+    const { activeIndex, randomDictionary } = this.state;
+    const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     if (russian) {
       const item = getItemFormLocalStorage(russian);
@@ -131,17 +70,24 @@ class App extends PureComponent {
   }
 
   handleRemoveItemClicked = () => {
-    const { activeIndex } = this.state;
-    if (activeIndex !== undefined && activeIndex < dictionary.length) {
-      dictionary.splice(activeIndex, 1);
+    const { activeIndex, randomDictionary } = this.state;
+    if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
+      const newRandomDictionary = randomDictionary
+        .slice(0, activeIndex)
+        .concat(randomDictionary.slice(activeIndex));
+      const newActiveIndex = Math.min(activeIndex, newRandomDictionary.length);
+      this.setState({
+        activeIndex: newActiveIndex,
+        randomDictionary: newRandomDictionary,
+        showEnglish: true,
+      });
     }
-    this.handleForwardClicked();
   };
 
   render() {
-    const { activeIndex, showEnglish } = this.state;
+    const { activeIndex, showEnglish, randomDictionary } = this.state;
     const { theme, size } = settings || {};
-    const activeObj = activeIndex !== undefined && dictionary[activeIndex];
+    const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     const english = showEnglish && Object.values(activeObj || {})[0];
 
