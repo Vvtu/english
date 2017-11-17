@@ -23,7 +23,8 @@ class App extends PureComponent {
     };
   }
 
-  handleBackClicked = () => {
+  handleBackClicked = (e) => {
+    e.preventDefault();
     const { activeIndex, randomDictionary } = this.state;
     const len = randomDictionary.length;
     const newActiveIndex = activeIndex === 0 ? len - 1 : activeIndex - 1;
@@ -34,7 +35,8 @@ class App extends PureComponent {
     });
   };
 
-  handleForwardClicked = () => {
+  handleForwardClicked = (e) => {
+    e.preventDefault();
     const { activeIndex, randomDictionary } = this.state;
     const len = randomDictionary.length;
     const newActiveIndex = activeIndex === len - 1 ? 0 : activeIndex + 1;
@@ -45,7 +47,8 @@ class App extends PureComponent {
     });
   };
 
-  handleShowEnglishClicked = () => {
+  handleShowEnglishClicked = (e) => {
+    e.preventDefault();
     if (this.state.activeIndex !== undefined) {
       this.setState({
         showEnglish: true,
@@ -53,10 +56,10 @@ class App extends PureComponent {
     }
   };
 
-  handleFailClicked = () => this.handleUserAnswerClicked(1);
-  handleOkClicked = () => this.handleUserAnswerClicked(0);
+  handleFailClicked = (e) => this.handleUserAnswerClicked(e, 1);
+  handleOkClicked = (e) => this.handleUserAnswerClicked(e, 0);
 
-  handleUserAnswerClicked(int) {
+  handleUserAnswerClicked(e, int) {
     const { activeIndex, randomDictionary } = this.state;
     const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
@@ -66,10 +69,11 @@ class App extends PureComponent {
       const newItem = shown + 1 + '=' + (failed + int);
       localStorage.setItem(russian, newItem);
     }
-    this.handleForwardClicked();
+    this.handleForwardClicked(e);
   }
 
-  handleRemoveItemClicked = () => {
+  handleRemoveItemClicked = (e) => {
+    e.preventDefault();
     const { activeIndex, randomDictionary } = this.state;
     if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
       const newRandomDictionary = randomDictionary
@@ -103,6 +107,7 @@ class App extends PureComponent {
                   alt={'back'}
                   height={32}
                   onClick={this.handleBackClicked}
+                  onDoubleClick={this.handleBackClicked}
                   src={IconBack}
                   width={32}
                 />
@@ -119,22 +124,31 @@ class App extends PureComponent {
                 )}
 
                 {!showEnglish && (
-                  <div onClick={this.handleShowEnglishClicked}>
+                  <div
+                    onClick={this.handleShowEnglishClicked}
+                    onDoubleClick={this.handleShowEnglishClicked}
+                  >
                     <Icon name="tool-calendar" colored={true} size={size} />
                   </div>
                 )}
                 {showEnglish && (
-                  <div onClick={this.handleRemoveItemClicked}>
+                  <div
+                    onClick={this.handleRemoveItemClicked}
+                    onDoubleClick={this.handleRemoveItemClicked}
+                  >
                     <Icon name="action-error" colored={true} size={size} />
                   </div>
                 )}
                 {showEnglish && (
-                  <div onClick={this.handleFailClicked}>
+                  <div
+                    onClick={this.handleFailClicked}
+                    onDoubleClick={this.handleFailClicked}
+                  >
                     <Icon name="action-fail" colored={true} size={size} />
                   </div>
                 )}
                 {showEnglish && (
-                  <div onClick={this.handleOkClicked}>
+                  <div onClick={this.handleOkClicked} onDoubleClick={this.handleOkClicked}>
                     <Icon name="action-ok" colored={true} size={size} />
                   </div>
                 )}
@@ -143,6 +157,7 @@ class App extends PureComponent {
                   className="invert__horizontal"
                   height={32}
                   onClick={this.handleForwardClicked}
+                  onDoubleClick={this.handleForwardClicked}
                   src={IconBack}
                   width={32}
                 />
