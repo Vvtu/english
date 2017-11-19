@@ -141,13 +141,13 @@ class App extends PureComponent {
               />
             )}
             {showEnglish && (
-              <button
+              <div
                 onClick={this.handleFailClicked}
                 onDoubleClick={this.handleFailClicked}
                 className="eng_text_color font_size_32"
               >
                 NO
-              </button>
+              </div>
             )}
             <img
               alt={'back'}
