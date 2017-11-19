@@ -23,7 +23,7 @@ class App extends PureComponent {
     };
   }
 
-  ifShownThanIncrementFailed = (int) => {
+  incrementLocalStorage = (int) => {
     const { activeIndex, randomDictionary, showEnglish } = this.state;
     if (showEnglish) {
       const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
@@ -41,7 +41,7 @@ class App extends PureComponent {
 
   handleForwardClicked = (e, int) => {
     e.preventDefault();
-    this.ifShownThanIncrementFailed(int);
+    this.incrementLocalStorage(int);
 
     const { activeIndex, randomDictionary } = this.state;
 
@@ -56,7 +56,7 @@ class App extends PureComponent {
 
   handleBackClicked = (e) => {
     e.preventDefault();
-    this.ifShownThanIncrementFailed(1);
+    this.incrementLocalStorage(1);
 
     const { activeIndex, randomDictionary } = this.state;
     const len = randomDictionary.length;
@@ -86,7 +86,7 @@ class App extends PureComponent {
       this.setState({
         activeIndex: newActiveIndex,
         randomDictionary: newRandomDictionary,
-        showEnglish: true,
+        showEnglish: false,
       });
     }
   };
