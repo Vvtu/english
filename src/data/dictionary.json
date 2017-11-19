@@ -1,10 +1,7 @@
 {
-  "settings": {
-    "size": "xl"
-  },
   "dictionary": [
     {
-      "Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом.": "Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream. Long time passed since JavaScript become mainstream."
+      "Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом.": "Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream."
     },
     {
       "Не смотря на многочисленные попытки, до сих пор нет единственного правильного пути написания кода в этом языке.": "Despite multiple attempts, there is still no right single way to write code in this language."
@@ -25,7 +22,7 @@
       "Я расскажу вам, как я придумал идею говорить о языке Javascript.": "I'll tell you how I came up with idea to talk about javascript language."
     },
     {
-      "Я знаю много языков. Паскаль, С++ и наконец перешел к джфваскрипт.": "I know many languages. Pascal, C++ and finally jumped to javascript."
+      "Я знаю много языков. Паскаль, С++ и наконец перешел к javascript.": "I know many languages. Pascal, C++ and finally jumped to javascript."
     },
     {
       "У меня было очень хорошее понимание того, как JavaScript-код должен быть написан. И я был совершенно неправ.": "I had very good understanding of how the javascript code should be written. And I was completely wrong."
@@ -35,7 +32,7 @@
     },
 
     {
-      "Но даже теперь я не уверен, что понимаю даваскипт полностью.": "But even now I am not sure that I understood javascript completely."
+      "Но даже теперь я не уверен, что понял даваскипт полностью.": "But even now I am not sure that I understood javascript completely."
     },
     {
       "Кто здесь думает, что знает Javascript очень хорошо?": "Who is there thinking know javascript very well?"
@@ -59,7 +56,7 @@
       "Те, кто не знает, что они ходят во тьме, никогда не будут искать света.": "Those who are unaware they are walking in darkness will never seek the light."
     },
     {
-      "Я хочу сказать, что JavaScript-это Брюс Ли из языков программирования. Потому что он гибкий, он мощный и он изменил всю картину.": "I'd like to say that javascript is Bruce Lee of programming languages. Because it's flexible, it's powerful and it changed the hole picture."
+      "Я бы хотел сказать, что JavaScript-это Брюс Ли из языков программирования. Потому что он гибкий, он мощный и он изменил всю картину.": "I'd like to say that javascript is Bruce Lee of programming languages. Because it's flexible, it's powerful and it changed the hole picture."
     },
     {
       "Я хочу (своего рода) указать вам на некоторые вещи, которые вы, возможно, не видели раньше или, может быть, не думали о них.": "I want to (sort of) point you to some of the things that you may be haven't seen before or maybe didn't think about them"

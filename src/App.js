@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react';
 
-import ThemeProvider from 'arui-feather/theme-provider';
-import Label from 'arui-feather/label';
-import Icon from 'arui-feather/icon';
+import IconBack from './svg/iconback.svg';
+import IconBackGreen from './svg/iconback_green.svg';
+import IconCancel from './svg/iconcancel.svg';
 
-import IconBack from './iconback.svg';
-
-import { dictionary, settings } from './data/dictionary.json';
+import { dictionary } from './data/dictionary.json';
 import './App.css';
 
 import { getItemFormLocalStorage, arrayRandomOrder } from './lib/lib';
@@ -93,7 +91,6 @@ class App extends PureComponent {
 
   render() {
     const { activeIndex, showEnglish, randomDictionary } = this.state;
-    const { theme, size } = settings || {};
     const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     const english = showEnglish && Object.values(activeObj || {})[0];
@@ -101,84 +98,82 @@ class App extends PureComponent {
     const { shown, failed } = getItemFormLocalStorage(russian);
 
     return (
-      <div className={'theme__backgroundcolor_' + theme}>
-        <ThemeProvider theme={theme}>
-          <div className="app__grid">
-            <div className="app__info">
-              <div className="app__info2">
-                <img
-                  alt={'back'}
-                  height={32}
-                  onClick={this.handleBackClicked}
-                  onDoubleClick={this.handleBackClicked}
-                  src={IconBack}
-                  width={32}
-                />
+      <div className="app__grid">
+        <div className="app__info">
+          <div className="app__info2">
+            <img
+              alt={'back'}
+              height={32}
+              onClick={this.handleBackClicked}
+              onDoubleClick={this.handleBackClicked}
+              src={IconBack}
+              width={32}
+            />
 
-                {!showEnglish && (
-                  <div>
-                    <Label size={size}>{shown}</Label>
-                    {failed > 0 && (
-                      <Label size={size} className="red-color">
-                        {'\u00A0/ ' + failed}
-                      </Label>
-                    )}
-                  </div>
+            {!showEnglish && (
+              <div>
+                <span className="font_size_24">{shown}</span>
+                {failed > 0 && (
+                  <span className="font_size_24 red-color">{'\u00A0/ ' + failed}</span>
                 )}
+              </div>
+            )}
 
-                {!showEnglish && (
-                  <div
-                    onClick={this.handleShowEnglishClicked}
-                    onDoubleClick={this.handleShowEnglishClicked}
-                  >
-                    <Icon name="tool-calendar" colored={true} size={size} />
-                  </div>
-                )}
-                {showEnglish && (
-                  <div
-                    onClick={this.handleRemoveItemClicked}
-                    onDoubleClick={this.handleRemoveItemClicked}
-                  >
-                    <Icon name="action-error" colored={true} size={size} />
-                  </div>
-                )}
-                {showEnglish && (
-                  <div
-                    onClick={this.handleFailClicked}
-                    onDoubleClick={this.handleFailClicked}
-                  >
-                    <Icon name="action-fail" colored={true} size={size} />
-                  </div>
-                )}
-                <img
-                  alt={'back'}
-                  className="invert__horizontal"
-                  height={32}
-                  onClick={this.handleForwardClicked}
-                  onDoubleClick={this.handleForwardClicked}
-                  src={IconBack}
-                  width={32}
-                />
-              </div>
-            </div>
-            <div className="app__russian">
-              <div className="app__center">
-                <div className="overflow_y_scroll">
-                  <Label size={size}>{russian}</Label>
-                </div>
-              </div>
-            </div>
-            <div className="app__english">
-              <div className="app__center">
-                <div className="overflow_y_scroll">
-                  <Label className="eng_text_color" size={size}>
-                    {english}
-                  </Label>
-                </div>
-              </div>
+            {!showEnglish && (
+              <img
+                alt="down"
+                className="icon_rotate_down"
+                height={32}
+                onClick={this.handleShowEnglishClicked}
+                onDoubleClick={this.handleShowEnglishClicked}
+                src={IconBackGreen}
+                width={32}
+              />
+            )}
+            {showEnglish && (
+              <img
+                alt="down"
+                height={32}
+                onClick={this.handleRemoveItemClicked}
+                onDoubleClick={this.handleRemoveItemClicked}
+                src={IconCancel}
+                width={32}
+              />
+            )}
+            {showEnglish && (
+              <button
+                onClick={this.handleFailClicked}
+                onDoubleClick={this.handleFailClicked}
+                className="eng_text_color font_size_32"
+              >
+                NO
+              </button>
+            )}
+            <img
+              alt={'back'}
+              className="icon_invert__horizontal"
+              height={32}
+              onClick={this.handleForwardClicked}
+              onDoubleClick={this.handleForwardClicked}
+              src={IconBack}
+              width={32}
+            />
+          </div>
+        </div>
+        <div className="app__russian">
+          <div className="app__center">
+            <div className="overflow_y_scroll">
+              <div className="font_size_24">{russian}</div>
             </div>
           </div>
-        </ThemeProvider>
+        </div>
+        <div className="app__english">
+          <div className="app__center">
+            <div className="overflow_y_scroll">
+              <div className="font_size_24 eng_text_color">{english}</div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

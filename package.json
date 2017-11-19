@@ -4,11 +4,10 @@
   "private": true,
   "homepage": "http://vvtu.github.io/english",
   "dependencies": {
-    "arui-feather": "^10.5.0",
+    "gh-pages": "^1.0.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "1.0.17",
-    "gh-pages": "^1.0.0"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
