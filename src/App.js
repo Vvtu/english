@@ -114,7 +114,7 @@ class App extends PureComponent {
               <div>
                 <span className="font_size_24">{shown}</span>
                 {failed > 0 && (
-                  <span className="font_size_24 red-color">{'\u00A0/ ' + failed}</span>
+                  <span className="font_size_24 red_text_color">{'\u00A0/ ' + failed}</span>
                 )}
               </div>
             )}
