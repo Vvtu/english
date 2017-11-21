@@ -28,9 +28,8 @@
       "У меня было очень хорошее понимание того, как JavaScript-код должен быть написан. И я был совершенно неправ.": "I had very good understanding of how the javascript code should be written. And I was completely wrong."
     },
     {
-      "Javascript ударил меня в спину много много раз, прежде чем я наконец понял": "Javascript hit me in back many many time before I finally understood."
+      "Javascript ударил меня в спину много много раз, прежде чем я наконец понял": "Javascript hit me in back many many times before I finally understood."
     },
-
     {
       "Но даже теперь я не уверен, что понял даваскипт полностью.": "But even now I am not sure that I understood javascript completely."
     },
@@ -62,8 +61,34 @@
       "Я хочу (своего рода) указать вам на некоторые вещи, которые вы, возможно, не видели раньше или, может быть, не думали о них.": "I want to (sort of) point you to some of the things that you may be haven't seen before or maybe didn't think about them"
     },
     {
+      "Пожалуйста упомяните вещи, которые идут хорошо и вещи, которые нужно исправить.": "Please mention things that went well and things to improve."
+    },
+    {
+      "Дайте примеры, по возможности": "Give examples if possible."
+    },
+    {
+      "Обоснуйте свои выборы метрик (даже если вы выбрали 'Соответсвует ожиданиям', что указывает на хорошую производительность.": "Justify your choiches for metrics (even if you selected 'Meets expectations' which denotes a good performance)."
+    },
+    {
+      "Также отметьте топики в дополнении к метрикам.": "Also mention topics in addition to the metrics. Add personal thoughts and feelings."
+    },
+    {
+      "Предложите топики для ежеквартального обсуждения, и позитивные и требующие улучшения.": "Suggest topics for the quarterly meeting to discuss: both positive feedback and opportunities for improvements"
+    },
+    {
+      "Используйте английский язык или родной язык.": "Use English or native language. Your feedback sill be handled confidentially."
+    },
+    {
+      "1": "2"
+    },
+    {
+      "1": "2"
+    },
+    {
+      "1": "2"
+    },
+    {
       "1": "2"
     }
   ]
 }
-
