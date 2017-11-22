@@ -7,7 +7,7 @@ import IconCancel from './svg/iconcancel.svg';
 import { dictionary } from './data/dictionary.json';
 import './App.css';
 
-import { getItemFormLocalStorage, arrayRandomOrder } from './lib/lib';
+import { getItemFormLocalStorage, arrayRandomOrder, filterDeletedOff } from './lib/lib';
 
 class App extends PureComponent {
   constructor(props) {
@@ -17,7 +17,7 @@ class App extends PureComponent {
       forwardHistory: [],
       history: [],
       showEnglish: false,
-      randomDictionary: arrayRandomOrder(dictionary),
+      randomDictionary: arrayRandomOrder(filterDeletedOff(dictionary)),
     };
   }
 
@@ -28,8 +28,9 @@ class App extends PureComponent {
       const russian = Object.keys(activeObj || {})[0];
       if (russian) {
         const item = getItemFormLocalStorage(russian);
-        const { shown, failed } = item;
-        const newItem = shown + 1 + '=' + (failed + (int || 0));
+        const { shown, failed, isDeleted } = item;
+        const newItem =
+          shown + 1 + '=' + (failed + (int || 0)) + isDeleted ? '=' + isDeleted : '';
         localStorage.setItem(russian, newItem);
       }
     }
@@ -77,6 +78,13 @@ class App extends PureComponent {
     e.preventDefault();
     const { activeIndex, randomDictionary } = this.state;
     if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
+      const activeObj = randomDictionary[activeIndex];
+      const russian = Object.keys(activeObj || {})[0];
+      if (russian) {
+        const { shown, failed } = getItemFormLocalStorage(russian);
+        const newItem = shown + '=' + failed + '=d';
+        localStorage.setItem(russian, newItem);
+      }
       const newRandomDictionary = randomDictionary
         .slice(0, activeIndex)
         .concat(randomDictionary.slice(activeIndex + 1));
@@ -114,7 +122,9 @@ class App extends PureComponent {
               <div>
                 <span className="font_size_24">{shown}</span>
                 {failed > 0 && (
-                  <span className="font_size_24 red_text_color">{'\u00A0/ ' + failed}</span>
+                  <span className="font_size_24 red_text_color">
+                    {'\u00A0/ ' + failed}
+                  </span>
                 )}
               </div>
             )}

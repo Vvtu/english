@@ -79,13 +79,25 @@
       "Используйте английский язык или родной язык.": "Use English or native language. Your feedback sill be handled confidentially."
     },
     {
-      "1": "2"
+      "Реакт делает безболезненным создание интерактивных интерфейсов": "React makes it painless to create interactive UIs."
     },
     {
-      "1": "2"
+      "Конструируйте простые вью для каждого состояния в вашем приложении и Реакт эффективно обновит и отрендерит именно тот компонент, где состояние изменилось.": "Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes."
     },
     {
-      "1": "2"
+      "Декларативные вьюшки делают ваш код более предсказуемым и удобным для дебагирования.": "Declarative views make your code more predictable and easier to debug."
+    },
+    {
+      "Создавайте встроенные компоненты, которые управляеют своим собственным состоянием. Затем компонуйте их для делания сложного UI.": "Build encapsulated components that manage their own state, then compose them to make complex UIs."
+    },
+    {
+      "Когда логика компонента написана на Javascript вместо шаблонов, вы легко можете прогнать много данных через ваше приложении и держать состояние вне DOM.": "Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM."
+    },
+    {
+      "Мы не делаем предположений о других выших технологиях, поэтому вы можете разрабатывать новые фичи в Реакт не переписывая ваш старый код.": "We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code."
+    },
+    {
+      "Реакт так же может сервеный рендеринг и мобильный с использованием Реакт нейтив.": "React can also render on the server using Node and power mobile apps using React Native."
     },
     {
       "1": "2"
