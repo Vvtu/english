@@ -37,7 +37,7 @@ export const filterDeletedOff = (arr) => {
     const russian = Object.keys(elem || {})[0];
     if (russian) {
       const {isDeleted} = getItemFormLocalStorage(russian);
-      return !!isDeleted;
+      return isDeleted === undefined;
     } else {
       return false;
     }

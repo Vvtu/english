@@ -102,6 +102,7 @@ class App extends PureComponent {
     const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
     const russian = Object.keys(activeObj || {})[0];
     const english = showEnglish && Object.values(activeObj || {})[0];
+    const count = randomDictionary.length;
 
     const { shown, failed } = getItemFormLocalStorage(russian);
 
@@ -126,6 +127,9 @@ class App extends PureComponent {
                     {'\u00A0/ ' + failed}
                   </span>
                 )}
+                  <span className="font_size_24">
+                    {'\u00A0(' + count+ ')'}
+                  </span>
               </div>
             )}
 
