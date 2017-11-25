@@ -1,26 +1,29 @@
 const dictionary = [
     {
-        'Ivan and I didn’t work  together in the same project, but we often discussed professional matters.':
-            'Иван и я не работали вместе в одном проекте, но мы часто обсуждали профессиональные темы.'
+        'Иван и я не работали вместе в одном проекте, но мы часто обсуждали профессиональные темы.':
+            'Ivan and I didn’t work  together in the same project, but we often discussed professional matters.'
     },
     {
-        'In my opinion, Ivan is a highly qualified frontend developer with considerable experience.':
-            'По моему мнению, Иван является высоко квалифицированным фронтенд разработчиком со значительным опытом.'
+        'По моему мнению, Иван является высоко квалифицированным фронтенд разработчиком со значительным опытом.':
+            'In my opinion, Ivan is a highly qualified frontend developer with considerable experience.'
     },
     {
-        'Two or three times I asked him for a help on using some technologies and libraries and he gave qualified answers to me. This advices were of great help  to solve the problems.':
-            'Два или три раза я спрашивал его о помощи по использованию некоторых технологий и библиотек и он дал мне квалифицированные ответы. Эти ответы очень помогли в решении проблем.'
+        'Два или три раза я спрашивал его о помощи по использованию некоторых технологий и библиотек и он дал мне квалифицированные ответы. Эти ответы очень помогли в решении проблем.':
+            'Two or three times I asked him for a help on using some technologies and libraries and he gave qualified answers to me. This advices were of great help  to solve the problems.'
     },
     {
-        'As a man, Ivan is sociable and interesting person to discuss any of the things with. He is an active and dedicated colleague.':
-            'Как человек Иван очень общительный и интересный человек для обсуждения любых вещей. Он активный и увлечённый колега'
+        'Как человек Иван очень общительный и интересный человек для обсуждения любых вещей. Он активный и увлечённый колега':
+            'As a man, Ivan is sociable and interesting person to discuss any of the things with. He is an active and dedicated colleague.'
     },
 
     {
-        'Feedback on your colleagues is important input for their managers in evaluating their recent performance, as well as providing them with meaningful sum-up on their outstanding and to-be-improved areas.':
-            'Обратная связь с коллегами является важным вкладом для их руководителей в оценке их недавней деятельности, а также предоставление им значимой информациии об выдающихся и требующих улучшения областях.'
+        'Обратная связь с коллегами является важным вкладом для их руководителей в оценке их недавней деятельности, а также предоставление им значимой информациии об выдающихся и требующих улучшения областях.':
+            'Feedback on your colleagues is important input for their managers in evaluating their recent performance, as well as providing them with meaningful sum-up on their outstanding and to-be-improved areas.'
     },
-    { 'Click here if you need some tips how to write meaningful feedback!': 'Нажмите сюда, если вам нужны некоторые советы о том, как писать осмысленный фидбек.' },
+    {
+        'Нажмите сюда, если вам нужны некоторые советы о том, как писать осмысленный фидбек.':
+            'Click here if you need some tips how to write meaningful feedback!'
+    },
     { '1': '2' }
 ];
 export default dictionary;
