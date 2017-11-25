@@ -1,0 +1,165 @@
+const dictionary = [
+    {
+        'Ivan and I didn’t work  together in the same project, but we often discussed professional matters.':
+            'Иван и я не работали вместе в одном проекте, но мы часто обсуждали профессиональные темы.'
+    },
+    {
+        'In my opinion, Ivan is a highly qualified frontend developer with considerable experience.':
+            'По моему мнению, Иван является высоко квалифицированным фронтенд разработчиком со значительным опытом.'
+    },
+    {
+        'Two or three times I asked him for a help on using some technologies and libraries and he gave qualified answers to me. This advices were of great help  to solve the problems.':
+            'Два или три раза я спрашивал его о помощи по использованию некоторых технологий и библиотек и он дал мне квалифицированные ответы. Эти ответы очень помогли в решении проблем.'
+    },
+    {
+        'As a man, Ivan is sociable and interesting person to discuss any of the things with. He is an active and dedicated colleague.':
+            'Как человек Иван очень общительный и интересный человек для обсуждения любых вещей. Он активный и увлечённый колега'
+    },
+    { '1': '2' }
+];
+export default dictionary;
+
+// ****************************************************************************************
+// Dmitry Baranovskiy: Zen of JavaScript | JSConf EU 2015 - YouTube
+// Видео по запросу javascript zen▶ 26:22
+// https://www.youtube.com/watch?v=QHs55-5FzgA
+// 10 нояб. 2015 г. - Добавлено пользователем JSConf
+// {
+//   'Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом.':
+//       'Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream.'
+// },
+// {
+//   'Не смотря на многочисленные попытки, до сих пор нет единственного правильного пути написания кода в этом языке.':
+//       'Despite multiple attempts, there is still no right single way to write code in this language.'
+// },
+// {
+//   'Каждый использует его своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык.':
+//       'Everybody is using it in their own special way and most people still fill that they are failing to tame the language.'
+// },
+// {
+//   'Посмотри на этот код. Ты не знал этого. Я знаю, поэтому я умнее тебя.':
+//       "Look at that code. You didn't know that. I know so I am smarter then you."
+// },
+// {
+//   'Все эти разговоры немного скучные потому, что бесполезные.':
+//       'All this talks are kinda boring, because they are not very useful.'
+// },
+// {
+//   'Моя речь будет такой же но я хочу принести вам весть.':
+//       'My talk will be sort of similar but I want to bring a message to you.'
+// },
+// {
+//   'Я расскажу вам, как я придумал идею говорить о языке Javascript.':
+//       "I'll tell you how I came up with idea to talk about javascript language."
+// },
+// {
+//   'Я знаю много языков. Паскаль, С++ и наконец перешел к javascript.':
+//       'I know many languages. Pascal, C++ and finally jumped to javascript.'
+// },
+// {
+//   'У меня было очень хорошее понимание того, как JavaScript-код должен быть написан. И я был совершенно неправ.':
+//       'I had very good understanding of how the javascript code should be written. And I was completely wrong.'
+// },
+// {
+//   'Javascript ударил меня в спину много много раз, прежде чем я наконец понял':
+//       'Javascript hit me in back many many times before I finally understood.'
+// },
+// {
+//   'Но даже теперь я не уверен, что понял даваскипт полностью.':
+//       'But even now I am not sure that I understood javascript completely.'
+// },
+// {
+//   'Кто здесь думает, что знает Javascript очень хорошо?':
+//       'Who is there thinking know javascript very well?'
+// },
+// {
+//   'OK. Пара заблуждающихся человек. Но большинство людей не так уверенно.':
+//       'Ok. The couple misguided people. But most people are not so confident.'
+// },
+// {
+//   'Я хочу, чтобы вы подумали... Остановитесь на минутку. Забудьте о react и angular. Подумайте о чистом JavaScript.':
+//       'What I want you to think... Stop for a moment. Forget about react and angular. Think about pure javascript.'
+// },
+// {
+//   'Каким он должен быть? Что такое правильный способ написания JavaScript.':
+//       'What it should be like? What is the proper way of javascript.'
+// },
+// {
+//   'Javascript очень гибкий, как вы знаете. Мы могли бы написать код многими способами.':
+//       'Javascript is very flexible as you all know. We could write code in many different ways.'
+// },
+// {
+//   'И я здесь не для того, чтобы научить вас правильно писать Javascript. Нет правильного пути.':
+//       'And I am not here to teach you how to write javascript the right way. There is no right way. '
+// },
+// {
+//   'Те, кто не знает, что они ходят во тьме, никогда не будут искать света.':
+//       'Those who are unaware they are walking in darkness will never seek the light.'
+// },
+// {
+//   'Я бы хотел сказать, что JavaScript-это Брюс Ли из языков программирования. Потому что он гибкий, он мощный и он изменил всю картину.':
+//       "I'd like to say that javascript is Bruce Lee of programming languages. Because it's flexible, it's powerful and it changed the hole picture."
+// },
+// {
+//   'Я хочу (своего рода) указать вам на некоторые вещи, которые вы, возможно, не видели раньше или, может быть, не думали о них.':
+//       "I want to (sort of) point you to some of the things that you may be haven't seen before or maybe didn't think about them"
+// },
+
+// ****************************************************************************************
+// https://reactjs.org
+//
+// {
+//   'Реакт делает безболезненным создание интерактивных интерфейсов':
+//       'React makes it painless to create interactive UIs.'
+// },
+// {
+//   'Конструируйте простые вью для каждого состояния в вашем приложении и Реакт эффективно обновит и отрендерит именно те компоненты, где состояние изменилось.':
+//       'Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.'
+// },
+// {
+//   'Декларативные вьюшки делают ваш код более предсказуемым и удобным для дебагирования.':
+//       'Declarative views make your code more predictable and easier to debug.'
+// },
+// {
+//   'Создавайте встроенные компоненты, которые управляеют своим собственным состоянием. Затем компонуйте их для делания сложного UI.':
+//       'Build encapsulated components that manage their own state, then compose them to make complex UIs.'
+// },
+// {
+//   'Когда логика компонента написана на Javascript вместо шаблонов, вы легко можете прогнать много данных через ваше приложении и держать состояние вне DOM.':
+//       'Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.'
+// },
+// {
+//   'Мы не делаем предположений о других выших технологиях, поэтому вы можете разрабатывать новые фичи в Реакт не переписывая ваш старый код.':
+//       'We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.'
+// },
+// {
+//   'Реакт так же может сервеный рендеринг с использованием Node и мобильный с использованием Реакт нейтив.':
+//       'React can also render on the server using Node and power mobile apps using React Native.'
+// },
+
+// ****************************************************************************************
+// Feedback
+//
+// {
+//   'Пожалуйста упомяните вещи, которые идут хорошо и вещи, которые нужно исправить.':
+//       'Please mention things that went well and things to improve.'
+// },
+// {
+//   'Дайте примеры, по возможности': 'Give examples if possible.'
+// },
+// {
+//   "Обоснуйте свои выборы метрик (даже если вы выбрали 'Соответсвует ожиданиям', что указывает на хорошую производительность.":
+//       "Justify your choiches for metrics (even if you selected 'Meets expectations' which denotes a good performance)."
+// },
+// {
+//   'Также отметьте топики в дополнении к метрикам. Добавьте личные мысли и чувства.':
+//       'Also mention topics in addition to the metrics. Add personal thoughts and feelings.'
+// },
+// {
+//   'Предложите топики для ежеквартального обсуждения, и позитивные и требующие улучшения.':
+//       'Suggest topics for the quarterly meeting to discuss: both positive feedback and opportunities for improvements'
+// },
+// {
+//   'Используйте английский язык или родной язык. Ваш феедбек все равно будут обработан конфиденциально.':
+//       'Use English or native language. Your feedback sill be handled confidentially.'
+// },
