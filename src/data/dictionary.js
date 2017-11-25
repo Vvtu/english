@@ -15,6 +15,12 @@ const dictionary = [
         'As a man, Ivan is sociable and interesting person to discuss any of the things with. He is an active and dedicated colleague.':
             'Как человек Иван очень общительный и интересный человек для обсуждения любых вещей. Он активный и увлечённый колега'
     },
+
+    {
+        'Feedback on your colleagues is important input for their managers in evaluating their recent performance, as well as providing them with meaningful sum-up on their outstanding and to-be-improved areas.':
+            'Обратная связь с коллегами является важным вкладом для их руководителей в оценке их недавней деятельности, а также предоставление им значимой информациии об выдающихся и требующих улучшения областях.'
+    },
+    { 'Click here if you need some tips how to write meaningful feedback!': '2' },
     { '1': '2' }
 ];
 export default dictionary;
