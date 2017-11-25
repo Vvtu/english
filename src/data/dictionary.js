@@ -20,7 +20,7 @@ const dictionary = [
         'Feedback on your colleagues is important input for their managers in evaluating their recent performance, as well as providing them with meaningful sum-up on their outstanding and to-be-improved areas.':
             'Обратная связь с коллегами является важным вкладом для их руководителей в оценке их недавней деятельности, а также предоставление им значимой информациии об выдающихся и требующих улучшения областях.'
     },
-    { 'Click here if you need some tips how to write meaningful feedback!': '2' },
+    { 'Click here if you need some tips how to write meaningful feedback!': 'Нажмите сюда, если вам нужны некоторые советы о том, как писать осмысленный фидбек.' },
     { '1': '2' }
 ];
 export default dictionary;
