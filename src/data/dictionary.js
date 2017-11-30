@@ -1,28 +1,43 @@
 const dictionary = [
     {
-        'Иван и я не работали вместе в одном проекте, но мы часто обсуждали профессиональные темы.':
-            'Ivan and I didn’t work  together in the same project, but we often discussed professional matters.'
+        'Реакт это JavaScript библиотека, и поэтому подразумевается, что у вас есть базовое понимание JavaScript.':
+            'React is a JavaScript library, and so it assumes you have a basic understanding of the JavaScript language.'
     },
     {
-        'По моему мнению, Иван является высоко квалифицированным фронтенд разработчиком со значительным опытом.':
-            'In my opinion, Ivan is a highly qualified frontend developer with considerable experience.'
+        'Если вы не чувствуете себя очень уверенно, мы рекомендуем освежить ваши знания JavaScript, чтобы вы могли следовать дальше более легко.':
+            'If you don’t feel very confident, we recommend refreshing your JavaScript knowledge so you can follow along more easily.'
     },
     {
-        'Два или три раза я спрашивал его о помощи по использованию некоторых технологий и библиотек и он дал мне квалифицированные ответы. Эти ответы очень помогли в решении проблем.':
-            'Two or three times I asked him for a help on using some technologies and libraries and he gave qualified answers to me. This advices were of great help  to solve the problems.'
+        'Мы также используем некоторый  синтаксис из ES6 в наших примерах':
+            'We also use some of the ES6 syntax in the examples. '
     },
     {
-        'Как человек Иван очень общительный и интересный человек для обсуждения любых вещей. Он активный и увлечённый колега':
-            'As a man, Ivan is sociable and interesting person to discuss any of the things with. He is an active and dedicated colleague.'
-    },
-
-    {
-        'Обратная связь с коллегами является важным вкладом для их руководителей в оценке их недавней деятельности, а также предоставление им значимой информациии об выдающихся и требующих улучшения областях.':
-            'Feedback on your colleagues is important input for their managers in evaluating their recent performance, as well as providing them with meaningful sum-up on their outstanding and to-be-improved areas.'
+        'Мы пытаемся использовать его умеренно, потому что от относительно новый  ':
+            'We try to use it sparingly because it’s still relatively new'
     },
     {
-        'Нажмите сюда, если вам нужны некоторые советы о том, как писать осмысленный фидбек.':
-            'Click here if you need some tips how to write meaningful feedback!'
+        'Но мы поддерживаем вас познакомиться с новыми стрелочными функциями, классами, шаблонами, литералами, let  и const утверждениями.':
+            'But we encourage you to get familiar with arrow functions, classes, template literals, let, and const statements'
+    },
+    {
+        'Вы можете использовать Babel REPL для проверки во что ES6 код компилируется.':
+            'You can use the Babel REPL to check what ES6 code compiles to.'
+    },
+    {
+        'В отличии от браузерных DOM элементов, реакт элементы являются простыми объектами, которые легко создавать.':
+            'Unlike browser DOM elements, React elements are plain objects, and are cheap to create.'
+    },
+    {
+        'React DOM заботиться об обновлении DOM, чтобы он соответствовал React элементам.':
+            'React DOM takes care of updating the DOM to match the React elements.'
+    },
+    {
+        'Можно перепутать элементы с более широко известной концепцией "компонентов".':
+            'One might confuse elements with a more widely known concept of “components”.'
+    },
+    {
+        'Элементы это то из чего сделаны компоненты, и мы поощряем прочтение этой секции перед тем как идти вперед.':
+            'Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.'
     },
     { '1': '2' }
 ];
@@ -171,4 +186,62 @@ export default dictionary;
 // {
 //   'Используйте английский язык или родной язык. Ваш феедбек все равно будут обработан конфиденциально.':
 //       'Use English or native language. Your feedback sill be handled confidentially.'
+// },
+
+// {
+//     'Иван и я не работали вместе в одном проекте, но мы часто обсуждали профессиональные темы.':
+//         'Ivan and I didn’t work  together in the same project, but we often discussed professional matters.'
+// },
+// {
+//     'По моему мнению, Иван является высоко квалифицированным фронтенд разработчиком со значительным опытом.':
+//         'In my opinion, Ivan is a highly qualified frontend developer with considerable experience.'
+// },
+// {
+//     'Два или три раза я спрашивал его о помощи по использованию некоторых технологий и библиотек и он дал мне квалифицированные ответы. Эти ответы очень помогли в решении проблем.':
+//         'Two or three times I asked him for a help on using some technologies and libraries and he gave qualified answers to me. This advices were of great help  to solve the problems.'
+// },
+// {
+//     'Как человек Иван очень общительный и интересный человек для обсуждения любых вещей. Он активный и увлечённый колега':
+//         'As a man, Ivan is sociable and interesting person to discuss any of the things with. He is an active and dedicated colleague.'
+// },
+
+// {
+//     'Обратная связь с коллегами является важным вкладом для их руководителей в оценке их недавней деятельности, а также предоставление им значимой информациии об выдающихся и требующих улучшения областях.':
+//         'Feedback on your colleagues is important input for their managers in evaluating their recent performance, as well as providing them with meaningful sum-up on their outstanding and to-be-improved areas.'
+// },
+// {
+//     'Нажмите сюда, если вам нужны некоторые советы о том, как писать осмысленный фидбек.':
+//         'Click here if you need some tips how to write meaningful feedback!'
+// },
+
+// ****************************************************************************************
+// Reactjs.org
+//
+// {
+//     'У компонентов Реакта имплементирован render() метод, который получает входные данные и возвращает то, что нужно отобразить.':
+//         'React components implement a render() method that takes input data and returns what to display.'
+// },
+// {
+//     'Этот пример использует XML подобный синтаксис, называемый JSX.':
+//         'This example uses an XML-like syntax called JSX.'
+// },
+// {
+//     'Входные данные, попавшие в компонент, могут быть доступные функции рендер через пропсы.':
+//         'Input data that is passed into the component can be accessed by render() via this.props.'
+// },
+// {
+//     'JSX является необязательным и не требуется для использования в Реакте.':
+//         'JSX is optional and not required to use React.'
+// },
+// {
+//     'Попробуйте Babel REPL, чтобы посмотреть чистый JavaScript код, произведенный после шага компиляции  JSX.':
+//         'Try the Babel REPL to see the raw JavaScript code produced by the JSX compilation step.'
+// },
+// {
+//     'В дополнении к получению входных данных (через пропсы), компонент может поддерживать внутреннее состояние (доступное через this.state).':
+//         'In addition to taking input data (accessed via this.props), a component can maintain internal state data (accessed via this.state).'
+// },
+// {
+//     'Когда состояние компонента изменится, рендерированная разметка будет обновлена через вызов render().':
+//         'When a component’s state data changes, the rendered markup will be updated by re-invoking render().'
 // },
