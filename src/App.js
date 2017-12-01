@@ -19,26 +19,23 @@ class App extends PureComponent {
         };
     }
 
-    incrementLocalStorage = (int) => {
+    incrementLocalStorage = () => {
         const { activeIndex, randomDictionary, showEnglish } = this.state;
         if (showEnglish) {
             const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
             const russian = Object.keys(activeObj || {})[0];
             if (russian) {
                 const item = getItemFormLocalStorage(russian);
-                const { shown, failed, isDeleted } = item;
-                const newItem =
-                    shown + 1 + '=' + (failed + (int || 0)) + isDeleted ? '=' + isDeleted : '';
+                const shown = parseInt(item, 10) || 0;
+                const newItem = String(shown + 1);
                 localStorage.setItem(russian, newItem);
             }
         }
     };
 
-    handleFailClicked = (e) => this.handleForwardClicked(e, 1);
-
-    handleForwardClicked = (e, int) => {
+    handleForwardClicked = (e) => {
         e.preventDefault();
-        this.incrementLocalStorage(int);
+        this.incrementLocalStorage();
 
         const { activeIndex, randomDictionary } = this.state;
 
@@ -53,7 +50,7 @@ class App extends PureComponent {
 
     handleBackClicked = (e) => {
         e.preventDefault();
-        this.incrementLocalStorage(1);
+        this.incrementLocalStorage();
 
         const { activeIndex, randomDictionary } = this.state;
         const len = randomDictionary.length;
@@ -79,9 +76,7 @@ class App extends PureComponent {
             const activeObj = randomDictionary[activeIndex];
             const russian = Object.keys(activeObj || {})[0];
             if (russian) {
-                const { shown, failed } = getItemFormLocalStorage(russian);
-                const newItem = shown + '=' + failed + '=d';
-                localStorage.setItem(russian, newItem);
+                localStorage.setItem(russian, 'd');
             }
             const newRandomDictionary = randomDictionary
                 .slice(0, activeIndex)
@@ -102,7 +97,8 @@ class App extends PureComponent {
         const english = showEnglish && Object.values(activeObj || {})[0];
         const count = randomDictionary.length;
 
-        const { shown, failed } = getItemFormLocalStorage(russian);
+        const item = getItemFormLocalStorage(russian);
+        const shown = parseInt(item, 10) || 0;
 
         return (
             <div className="app__grid">
@@ -117,21 +113,16 @@ class App extends PureComponent {
                             width={32}
                         />
 
-                        {!showEnglish && (
-                            <div>
-                                <span className="font_size_24">{shown}</span>
-                                {failed > 0 && (
-                                    <span className="font_size_24 red_text_color">
-                                        {'\u00A0/ ' + failed}
-                                    </span>
-                                )}
-                                <span className="font_size_24">{'\u00A0(' + count + ')'}</span>
-                            </div>
-                        )}
+                        <div>
+                            <span className="font_size_24">{activeIndex + 1 + ' / ' + count}</span>
+                            <span className="font_size_24 red_text_color">
+                                {'\u00A0(' + shown + ')'}
+                            </span>
+                        </div>
 
                         {!showEnglish && (
                             <img
-                                alt="down"
+                                alt="show english"
                                 className="icon_rotate_down"
                                 height={32}
                                 onClick={this.handleShowEnglishClicked}
@@ -142,7 +133,7 @@ class App extends PureComponent {
                         )}
                         {showEnglish && (
                             <img
-                                alt="down"
+                                alt="remove item"
                                 height={32}
                                 onClick={this.handleRemoveItemClicked}
                                 onDoubleClick={this.handleRemoveItemClicked}
@@ -150,17 +141,9 @@ class App extends PureComponent {
                                 width={32}
                             />
                         )}
-                        {showEnglish && (
-                            <div
-                                onClick={this.handleFailClicked}
-                                onDoubleClick={this.handleFailClicked}
-                                className="eng_text_color font_size_32"
-                            >
-                                NO
-                            </div>
-                        )}
+
                         <img
-                            alt={'back'}
+                            alt={'forward'}
                             className="icon_invert__horizontal"
                             height={32}
                             onClick={this.handleForwardClicked}

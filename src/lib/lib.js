@@ -1,16 +1,6 @@
 export const getItemFormLocalStorage = (key) => {
   const item = localStorage.getItem(key);
-  const arr = (item || '').split('=');
-  const shown = parseInt(arr[0], 10) || 0;
-  let failed = 0;
-  let isDeleted = undefined;
-  if (arr.length > 1) {
-    failed = parseInt(arr[1], 10) || 0;
-  }
-  if (arr.length > 2) {
-    isDeleted = arr[2];
-  }
-  return { shown, failed, isDeleted };
+  return item;
 };
 
 export const getRandomInt = (min, max) => {
@@ -36,8 +26,8 @@ export const filterDeletedOff = (arr) => {
   const result = (arr || []).filter((elem) => {
     const russian = Object.keys(elem || {})[0];
     if (russian) {
-      const {isDeleted} = getItemFormLocalStorage(russian);
-      return isDeleted === undefined;
+      const item = getItemFormLocalStorage(russian);
+      return item !== 'd';
     } else {
       return false;
     }
