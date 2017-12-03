@@ -123,7 +123,7 @@ class App extends PureComponent {
                         {!showEnglish && (
                             <img
                                 alt="show english"
-                                className="icon_rotate_down"
+                                className="icon_rotate"
                                 height={32}
                                 onClick={this.handleShowEnglishClicked}
                                 onDoubleClick={this.handleShowEnglishClicked}

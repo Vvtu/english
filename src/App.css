@@ -24,6 +24,9 @@
     max-height: calc(50vh - var(--button_height));
     overflow-y: scroll;
   }
+  .icon_rotate {
+    transform: rotate(270deg);
+  }
 }
 @media (orientation: landscape) {
   .app__grid {
@@ -34,6 +37,9 @@
   .overflow_y_scroll {
     max-height: calc(var(--trueHeight) - var(--button_height));
     overflow-y: scroll;
+  }
+  .icon_rotate {
+    transform: rotate(90deg);
   }
 }
 
@@ -72,9 +78,7 @@
 .icon_invert__horizontal {
   transform: scaleX(-1);
 }
-.icon_rotate_down {
-  transform: rotate(270deg);
-}
+
 
 /* .row {
   display: flex;
