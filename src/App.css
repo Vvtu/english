@@ -2,11 +2,16 @@
   --button_height: 2rem;
   --main_gap: 1rem;
   --trueHeight: calc(100vh - 1rem);
+  /* --red-color: #add8e6; */
+  --green-color: #6b5ee0;
+  --font-size: 24px;
+
 }
 /* grid
 ============================================================= */
 .app__grid {
   display: grid;
+  font-size: var(--font-size);
   grid-column-gap: var(--main_gap);
   grid-row-gap: calc(var(--main_gap)/1);
 
@@ -63,14 +68,11 @@
 ============================================================= */
 
 .eng_text_color {
-  color: #6b5ee0;
+  color: var(--green-color);
 }
-.red_text_color {
-  color: lightblue;
-}
-.font_size_24 {
-  font-size: 24px;
-}
+/* .red_text_color {
+  color: var(--red-color);
+} */
 
 /* icons
 ============================================================= */

@@ -114,10 +114,8 @@ class App extends PureComponent {
                         />
 
                         <div>
-                            <span className="font_size_24">{activeIndex + 1 + ' / ' + count}</span>
-                            <span className="font_size_24 red_text_color">
-                                {'\u00A0(' + shown + ')'}
-                            </span>
+                            <span>{activeIndex + 1 + ' / ' + count}</span>
+                            <span className="eng_text_color">{'\u00A0(' + shown + ')'}</span>
                         </div>
 
                         {!showEnglish && (
@@ -156,14 +154,14 @@ class App extends PureComponent {
                 <div className="app__russian">
                     <div className="app__center">
                         <div className="overflow_y_scroll">
-                            <div className="font_size_24">{russian}</div>
+                            <div>{russian}</div>
                         </div>
                     </div>
                 </div>
                 <div className="app__english">
                     <div className="app__center">
                         <div className="overflow_y_scroll">
-                            <div className="font_size_24 eng_text_color">{english}</div>
+                            <div className="eng_text_color">{english}</div>
                         </div>
                     </div>
                 </div>
