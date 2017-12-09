@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppCode test    test 1 1`] = `
+<div
+  className="app__grid"
+>
+  <div
+    className="app__info"
+  >
+    <div
+      className="app__info2"
+    >
+      <img
+        alt="back"
+        height={32}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        src="iconback.svg"
+        width={32}
+      />
+      <div>
+        <span>
+          1 / 1
+        </span>
+        <span
+          className="eng_text_color"
+        >
+           (0)
+        </span>
+      </div>
+      <img
+        alt="show english"
+        className="icon_rotate"
+        height={32}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        src="iconback_green.svg"
+        width={32}
+      />
+      <img
+        alt="forward"
+        className="icon_invert__horizontal"
+        height={32}
+        onClick={[Function]}
+        onDoubleClick={[Function]}
+        src="iconback.svg"
+        width={32}
+      />
+    </div>
+  </div>
+  <div
+    className="app__russian"
+  >
+    <div
+      className="app__center"
+    >
+      <div
+        className="overflow_y_scroll"
+      >
+        <div>
+          Русский текст
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="app__english"
+  >
+    <div
+      className="app__center"
+    >
+      <div
+        className="overflow_y_scroll"
+      >
+        <div
+          className="eng_text_color"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

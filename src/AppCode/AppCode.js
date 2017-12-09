@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import IconBack from '../svg/iconback.svg';
 import IconBackGreen from '../svg/iconback_green.svg';
@@ -9,6 +10,9 @@ import './AppCode.css';
 import { getItemFormLocalStorage, arrayRandomOrder, filterDeletedOff } from '../lib/lib';
 
 class App extends PureComponent {
+    static propTypes = {
+        dictionary: PropTypes.array.isRequired,
+    };
     constructor(props) {
         super(props);
         this.state = {
