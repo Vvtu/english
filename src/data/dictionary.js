@@ -1,43 +1,51 @@
 const dictionary = [
     {
-        'Реакт это JavaScript библиотека, и поэтому подразумевается, что у вас есть базовое понимание JavaScript.':
-            'React is a JavaScript library, and so it assumes you have a basic understanding of the JavaScript language.'
+        'Концептуально, компоненты это как джаваскрипт  функции':
+            'Conceptually, components are like JavaScript functions.'
     },
     {
-        'Если вы не чувствуете себя очень уверенно, мы рекомендуем освежить ваши знания JavaScript, чтобы вы могли следовать дальше более легко.':
-            'If you don’t feel very confident, we recommend refreshing your JavaScript knowledge so you can follow along more easily.'
+        'Компоненты получают произвольный вход (называемый пропс) и возвращают реакт-элементы, описывающие, что должно появиться на экране.':
+            'Components accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.'
     },
     {
-        'Мы также используем некоторый  синтаксис из ES6 в наших примерах':
-            'We also use some of the ES6 syntax in the examples. '
+        'Самый простой способ определить компонент это написать дважваскрипт фукцию.':
+            'The simplest way to define a component is to write a JavaScript function.'
     },
     {
-        'Мы пытаемся использовать его умеренно, потому что от относительно новый  ':
-            'We try to use it sparingly because it’s still relatively new'
+        'Эта функция являетс валидным реакт-компонентом, потому что она принимает один  аршумент - объект с данными, назыавемый пропс (что означает пропертис), и возвращает реакт-элемент.':
+            'This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element.'
     },
     {
-        'Но мы поддерживаем вас познакомиться с новыми стрелочными функциями, классами, шаблонами, литералами, let  и const утверждениями.':
-            'But we encourage you to get familiar with arrow functions, classes, template literals, let, and const statements'
+        'Мы назыавет такие компоненты функциональными потому, что это литерально джаваскрипт функции.':
+            'We call such components “functional” because they are literally JavaScript functions.'
     },
     {
-        'Вы можете использовать Babel REPL для проверки во что ES6 код компилируется.':
-            'You can use the Babel REPL to check what ES6 code compiles to.'
+        'Вы также можете использовать ES6 класс для определения компонента.':
+            'You can also use an ES6 class to define a component.'
     },
     {
-        'В отличии от браузерных DOM элементов, реакт элементы являются простыми объектами, которые легко создавать.':
-            'Unlike browser DOM elements, React elements are plain objects, and are cheap to create.'
+        'Классы имеют некоторые дополнительные свойства, которые мы обсудим в следующих секциях.':
+            'Classes have some additional features that we will discuss in the next sections.'
     },
     {
-        'React DOM заботиться об обновлении DOM, чтобы он соответствовал React элементам.':
-            'React DOM takes care of updating the DOM to match the React elements.'
+        'А пока мы будем использовать функциональные компоненты из-за их краткости.':
+            'Until then, we will use functional components for their conciseness.'
     },
     {
-        'Можно перепутать элементы с более широко известной концепцией "компонентов".':
-            'One might confuse elements with a more widely known concept of “components”.'
+        'Когда реакт видит элемент, представляющий определенный пользователем компонент, он пропускает JSX атрибуты в этот компонент как один объект.':
+            'When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object.'
     },
     {
-        'Элементы это то из чего сделаны компоненты, и мы поощряем прочтение этой секции перед тем как идти вперед.':
-            'Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.'
+        'Всегда начинайте имена компонентов с большой буквы.':
+            'Always start component names with a capital letter.'
+    },
+    {
+        'Компоненты могут ссылаться на другие компоненты в своем выводе.':
+            'Components can refer to other components in their output.'
+    },
+    {
+        'Это позволяет нам испльзовать ту же самую компонентную абстракцию на любом уровне детализации.':
+            'This lets us use the same component abstraction for any level of detail.'
     },
     { '1': '2' }
 ];
@@ -244,4 +252,86 @@ export default dictionary;
 // {
 //     'Когда состояние компонента изменится, рендерированная разметка будет обновлена через вызов render().':
 //         'When a component’s state data changes, the rendered markup will be updated by re-invoking render().'
+// },
+
+// {
+//     'Реакт это JavaScript библиотека, и поэтому подразумевается, что у вас есть базовое понимание JavaScript.':
+//         'React is a JavaScript library, and so it assumes you have a basic understanding of the JavaScript language.'
+// },
+// {
+//     'Если вы не чувствуете себя очень уверенно, мы рекомендуем освежить ваши знания JavaScript, чтобы вы могли следовать дальше более легко.':
+//         'If you don’t feel very confident, we recommend refreshing your JavaScript knowledge so you can follow along more easily.'
+// },
+// {
+//     'Мы также используем некоторый  синтаксис из ES6 в наших примерах':
+//         'We also use some of the ES6 syntax in the examples. '
+// },
+// {
+//     'Мы пытаемся использовать его умеренно, потому что от относительно новый  ':
+//         'We try to use it sparingly because it’s still relatively new'
+// },
+// {
+//     'Но мы поддерживаем вас познакомиться с новыми стрелочными функциями, классами, шаблонами, литералами, let  и const утверждениями.':
+//         'But we encourage you to get familiar with arrow functions, classes, template literals, let, and const statements'
+// },
+// {
+//     'Вы можете использовать Babel REPL для проверки во что ES6 код компилируется.':
+//         'You can use the Babel REPL to check what ES6 code compiles to.'
+// },
+// {
+//     'В отличии от браузерных DOM элементов, реакт элементы являются простыми объектами, которые легко создавать.':
+//         'Unlike browser DOM elements, React elements are plain objects, and are cheap to create.'
+// },
+// {
+//     'React DOM заботиться об обновлении DOM, чтобы он соответствовал React элементам.':
+//         'React DOM takes care of updating the DOM to match the React elements.'
+// },
+// {
+//     'Можно перепутать элементы с более широко известной концепцией "компонентов".':
+//         'One might confuse elements with a more widely known concept of “components”.'
+// },
+// {
+//     'Элементы это то из чего сделаны компоненты, и мы поощряем прочтение этой секции перед тем как идти вперед.':
+//         'Elements are what components are “made of”, and we encourage you to read this section before jumping ahead.'
+// },
+
+// {
+//     'Элемент описывает то, что вы хотите увидеть на экране.':
+//         'An element describes what you want to see on the screen.'
+// },
+// {
+//     'Для того, чтобы отобразить элемент в корневом узле DOM, передайте их обоих в ReactDOM.render().':
+//         'To render a React element into a root DOM node, pass both to ReactDOM.render().'
+// },
+// {
+//     'Реактовские элементы иммутабельны. Как только вы создали элемент, вы не можете изменить его детей или атрибуты.':
+//         'React elements are immutable. Once you create an element, you can’t change its children or attributes.'
+// },
+// {
+//     'Элемент - как единичный фрагмент фильма: он представляет UI в определенный момент времени.':
+//         'An element is like a single frame in a movie: it represents the UI at a certain point in time.'
+// },
+// {
+//     'В соотвествии с нашими знаниями, единственный путь обновить UI это создавать новый элемент и отправить его в ReactDOM.render().':
+//         'With our knowledge so far, the only way to update the UI is to create a new element, and pass it to ReactDOM.render().'
+// },
+// {
+//     'На практике, большинство реакт приложений вызывают  ReactDOM.render() только один раз.':
+//         'In practice, most React apps only call ReactDOM.render() once.'
+// },
+// {
+//     'В следующей секции мы изучим как такой код изолируется в компонент с состоянием.':
+//         'In the next sections we will learn how such code gets encapsulated into stateful components.'
+// },
+// {
+//     'Реакт сравнивает элемент и его детей с предыдущими  и  применяет к DOM только необходимые изменения, чтобы DOM соответствовал желаемому состоянию.':
+//         'React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.'
+// },
+// {
+//     'Даже если мы создаем элемент описывающий целое UI дерево на каждый тик, только следующий узел чей контент изменился обновится by React DOM.':
+//         'Even though we create an element describing the whole UI tree on every tick, only the text node whose contents has changed gets updated by React DOM.'
+// },
+// {
+//     'Согласно нашему опыту, думать о том, как UI должен выглядеть в данный момент времени в противовес как изменять его со временем устраняет целый класс ошибок.':
+//         'In our experience, thinking about how the UI should look at any given moment rather than how to change it over time eliminates a whole class of bugs.'
 // },
