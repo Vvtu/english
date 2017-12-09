@@ -32,6 +32,9 @@
   .icon_rotate {
     transform: rotate(270deg);
   }
+  .icon_rotate_back {
+    transform: rotate(90deg);
+  }
 }
 @media (orientation: landscape) {
   .app__grid {
@@ -45,6 +48,9 @@
   }
   .icon_rotate {
     transform: rotate(90deg);
+  }
+  .icon_rotate_back {
+    transform: rotate(270deg);
   }
 }
 

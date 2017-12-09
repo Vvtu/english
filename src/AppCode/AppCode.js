@@ -68,7 +68,7 @@ class App extends PureComponent {
     handleShowEnglishClicked = (e) => {
         e.preventDefault();
         this.setState({
-            showEnglish: true
+            showEnglish: this.state.showEnglish !== true
         });
     };
 
@@ -132,7 +132,19 @@ class App extends PureComponent {
                                 width={32}
                             />
                         )}
-                        {showEnglish && (
+                         {showEnglish && (
+                            <img
+                                alt="english is shown"
+                                className="icon_rotate_back"
+                                height={32}
+                                onClick={this.handleShowEnglishClicked}
+                                onDoubleClick={this.handleShowEnglishClicked}
+                                src={IconBackGreen}
+                                width={32}
+                            />
+                        )}
+
+                        {/* {showEnglish && (
                             <img
                                 alt="remove item"
                                 height={32}
@@ -141,7 +153,7 @@ class App extends PureComponent {
                                 src={IconCancel}
                                 width={32}
                             />
-                        )}
+                        )} */}
 
                         <img
                             alt={'forward'}
