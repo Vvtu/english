@@ -1,5 +1,8 @@
 import { css } from 'emotion';
 
+const full_screen_div = css`
+
+
 const STYLES = {
 
     full_screen_div: css`
