@@ -7,7 +7,7 @@ import IconBack from './svg/iconback.svg';
 import IconBackGreen from './svg/iconback_green.svg';
 import SettingsIcon from './svg/settings.svg';
 
-import STYLES from './AppCodeCss';
+import './AppCode.css';
 
 import { getItemFormLocalStorage, arrayRandomOrder, filterDeletedOff } from '../lib/lib';
 
@@ -124,7 +124,7 @@ class App extends PureComponent {
             activeIndex: 0,
             randomDictionary: arrayRandomOrder(filterDeletedOff(this.props.dictionary)),
             showEnglish: false,
-            showSettings: false
+            showSettings: false,
         });
     };
 
@@ -140,9 +140,11 @@ class App extends PureComponent {
 
         return (
             <div>
-                <div className={STYLES.app__grid}>
-                    <div className={STYLES.app__info}>
-                        <div className={STYLES.app__info2}>
+                <div className="app__grid">
+
+
+                    <div className="app__info">
+                        <div className="app__info2">
                             <img
                                 alt={'back'}
                                 height={32}
@@ -164,7 +166,7 @@ class App extends PureComponent {
                             {!showEnglish && (
                                 <img
                                     alt="show english"
-                                    className={STYLES.icon_rotate}
+                                    className="icon_rotate"
                                     height={32}
                                     onClick={this.handleShowEnglishClicked}
                                     onDoubleClick={this.handleShowEnglishClicked}
@@ -175,7 +177,7 @@ class App extends PureComponent {
                             {showEnglish && (
                                 <img
                                     alt="english is shown"
-                                    className={STYLES.icon_rotate_back}
+                                    className="icon_rotate_back"
                                     height={32}
                                     onClick={this.handleForwardClicked}
                                     onDoubleClick={this.handleForwardClicked}
@@ -189,12 +191,12 @@ class App extends PureComponent {
                                 onDoubleClick={this.handleStatisticClicked}
                             >
                                 <span>{activeIndex + 1 + '/' + count}</span>
-                                <span className={STYLES.eng_text_color}>{'(' + shown + ')'}</span>
+                                <span className="eng_text_color">{'(' + shown + ')'}</span>
                             </div>
 
                             <img
                                 alt={'forward'}
-                                className={STYLES.icon_invert__horizontal}
+                                className="icon_invert__horizontal"
                                 height={32}
                                 onClick={this.handleForwardClicked}
                                 onDoubleClick={this.handleForwardClicked}
@@ -203,17 +205,17 @@ class App extends PureComponent {
                             />
                         </div>
                     </div>
-                    <div className={STYLES.app__russian}>
-                        <div className={STYLES.app__center}>
-                            <div className={STYLES.overflow_y_scroll}>
+                    <div className="app__russian">
+                        <div className="app__center">
+                            <div className="overflow_y_scroll">
                                 <div>{russian}</div>
                             </div>
                         </div>
                     </div>
-                    <div className={STYLES.app__english}>
-                        <div className={STYLES.app__center}>
-                            <div className={STYLES.overflow_y_scroll}>
-                                <div className={STYLES.eng_text_color}>{english}</div>
+                    <div className="app__english">
+                        <div className="app__center">
+                            <div className="overflow_y_scroll">
+                                <div className="eng_text_color">{english}</div>
                             </div>
                         </div>
                     </div>
