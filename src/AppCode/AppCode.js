@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import PopupWindowSettings from '../PopupWindowSettings';
+
 import IconBack from './svg/iconback.svg';
 import IconBackGreen from './svg/iconback_green.svg';
 import SettingsIcon from './svg/settings.svg';
@@ -18,7 +20,7 @@ class App extends PureComponent {
         this.state = {
             activeIndex: 0,
             showEnglish: false,
-            showSettings: false,
+            showSettings: true,
             randomDictionary: arrayRandomOrder(filterDeletedOff(this.props.dictionary))
         };
     }
@@ -110,7 +112,7 @@ class App extends PureComponent {
     };
 
     render() {
-        const { activeIndex, showEnglish, randomDictionary } = this.state;
+        const { activeIndex, randomDictionary, showEnglish, showSettings } = this.state;
         const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
         const russian = Object.keys(activeObj || {})[0];
         const english = showEnglish && Object.values(activeObj || {})[0];
@@ -120,80 +122,84 @@ class App extends PureComponent {
         const shown = parseInt(item, 10) || 0;
 
         return (
-            <div className="app__grid">
-                <div className="app__info">
-                    <div className="app__info2">
-                        <img
-                            alt={'back'}
-                            height={32}
-                            onClick={this.handleBackClicked}
-                            onDoubleClick={this.handleBackClicked}
-                            src={IconBack}
-                            width={32}
-                        />
+            <div>
+                <div className="app__grid">
+                {showSettings && <PopupWindowSettings />}
 
-                        <img
-                            alt="settingd"
-                            height={32}
-                            onClick={this.handleSettingsClicked}
-                            onDoubleClick={this.handleSettingsClicked}
-                            src={SettingsIcon}
-                            width={32}
-                        />
-
-                        {!showEnglish && (
+                    <div className="app__info">
+                        <div className="app__info2">
                             <img
-                                alt="show english"
-                                className="icon_rotate"
+                                alt={'back'}
                                 height={32}
-                                onClick={this.handleShowEnglishClicked}
-                                onDoubleClick={this.handleShowEnglishClicked}
-                                src={IconBackGreen}
+                                onClick={this.handleBackClicked}
+                                onDoubleClick={this.handleBackClicked}
+                                src={IconBack}
                                 width={32}
                             />
-                        )}
-                        {showEnglish && (
+
                             <img
-                                alt="english is shown"
-                                className="icon_rotate_back"
+                                alt="settingd"
+                                height={32}
+                                onClick={this.handleSettingsClicked}
+                                onDoubleClick={this.handleSettingsClicked}
+                                src={SettingsIcon}
+                                width={32}
+                            />
+
+                            {!showEnglish && (
+                                <img
+                                    alt="show english"
+                                    className="icon_rotate"
+                                    height={32}
+                                    onClick={this.handleShowEnglishClicked}
+                                    onDoubleClick={this.handleShowEnglishClicked}
+                                    src={IconBackGreen}
+                                    width={32}
+                                />
+                            )}
+                            {showEnglish && (
+                                <img
+                                    alt="english is shown"
+                                    className="icon_rotate_back"
+                                    height={32}
+                                    onClick={this.handleForwardClicked}
+                                    onDoubleClick={this.handleForwardClicked}
+                                    src={IconBackGreen}
+                                    width={32}
+                                />
+                            )}
+
+                            <div
+                                onClick={this.handleStatisticClicked}
+                                onDoubleClick={this.handleStatisticClicked}
+                            >
+                                <span>{activeIndex + 1 + '/' + count}</span>
+                                <span className="eng_text_color">{'(' + shown + ')'}</span>
+                            </div>
+
+                            <img
+                                alt={'forward'}
+                                className="icon_invert__horizontal"
                                 height={32}
                                 onClick={this.handleForwardClicked}
                                 onDoubleClick={this.handleForwardClicked}
-                                src={IconBackGreen}
+                                src={IconBack}
                                 width={32}
                             />
-                        )}
-
-                        <div
-                            onClick={this.handleStatisticClicked}
-                            onDoubleClick={this.handleStatisticClicked}
-                        >
-                            <span>{activeIndex + 1 + '/' + count}</span>
-                            <span className="eng_text_color">{'(' + shown + ')'}</span>
-                        </div>
-
-                        <img
-                            alt={'forward'}
-                            className="icon_invert__horizontal"
-                            height={32}
-                            onClick={this.handleForwardClicked}
-                            onDoubleClick={this.handleForwardClicked}
-                            src={IconBack}
-                            width={32}
-                        />
-                    </div>
-                </div>
-                <div className="app__russian">
-                    <div className="app__center">
-                        <div className="overflow_y_scroll">
-                            <div>{russian}</div>
                         </div>
                     </div>
-                </div>
-                <div className="app__english">
-                    <div className="app__center">
-                        <div className="overflow_y_scroll">
-                            <div className="eng_text_color">{english}</div>
+                    <div className="app__russian">
+                        <div className="app__center">
+                            <div className="overflow_y_scroll">
+                                <div>{russian}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="app__english">
+                        <div className="app__center">
+                            <div className="overflow_y_scroll">
+                                <div className="eng_text_color">{english}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
