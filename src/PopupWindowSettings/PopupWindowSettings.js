@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 
 import CancelIconWhite from './svg/iconcancel-white.svg';
 import CancelIconRed from './svg/iconcancel-red.svg';
+import UnhideAllIcon from './svg/unhide-all.svg';
+import CancelIconInvisible from './svg/iconcancel-invisible.svg';
 
 import './PopupWindowSettings.css';
 
@@ -11,7 +13,7 @@ const menuRow = (menuItem) => (
         onClick={menuItem.handleClicked}
         onDoubleClick={menuItem.handleClicked}
     >
-        <img alt={'cancel'} height={32} src={menuItem.icon} width={32} />
+        <img alt={menuItem.label} height={32} src={menuItem.icon} width={32} />
         <div className="popup__gap" />
         <div>{menuItem.label}</div>
     </div>
@@ -46,7 +48,7 @@ class PopupWindowSettings extends PureComponent {
                         </div>
                         {menuRow({
                             label: 'Settings',
-                            icon: CancelIconRed,
+                            icon: CancelIconInvisible,
                             handleClicked: noop
                         })}
 
@@ -58,7 +60,7 @@ class PopupWindowSettings extends PureComponent {
 
                         {menuRow({
                             label: 'Unhide all items',
-                            icon: CancelIconRed,
+                            icon: UnhideAllIcon,
                             handleClicked: handleUnhideAllItemsClicked
                         })}
                     </div>

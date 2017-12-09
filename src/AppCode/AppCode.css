@@ -17,6 +17,7 @@
 
   height: var(--trueHeight);
   max-height: var(--trueHeight);
+  padding: 2px;
 }
 
 @media (orientation: portrait) {
