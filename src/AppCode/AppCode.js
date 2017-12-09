@@ -20,7 +20,7 @@ class App extends PureComponent {
         this.state = {
             activeIndex: 0,
             showEnglish: false,
-            showSettings: true,
+            showSettings: false,
             randomDictionary: arrayRandomOrder(filterDeletedOff(this.props.dictionary))
         };
     }
