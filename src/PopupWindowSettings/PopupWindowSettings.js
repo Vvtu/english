@@ -5,16 +5,16 @@ import CancelIconRed from './svg/iconcancel-red.svg';
 import UnhideAllIcon from './svg/unhide-all.svg';
 import CancelIconInvisible from './svg/iconcancel-invisible.svg';
 
-import './PopupWindowSettings.css';
+import STYLES from './PopupWindowSettingsCss.js';
 
 const menuRow = (menuItem) => (
     <div
-        className="popup__row"
+        className={STYLES.popup__row}
         onClick={menuItem.handleClicked}
         onDoubleClick={menuItem.handleClicked}
     >
         <img alt={menuItem.label} height={32} src={menuItem.icon} width={32} />
-        <div className="popup__gap" />
+        <div className={STYLES.popup__gap} />
         <div>{menuItem.label}</div>
     </div>
 );
@@ -29,14 +29,14 @@ class PopupWindowSettings extends PureComponent {
         } = this.props;
         return (
             <div>
-                <div className="full_screen_div_opacity" />
+                <div className={STYLES.full_screen_div_opacity} />
                 <div
-                    className="full_screen_div"
+                    className={STYLES.full_screen_div}
                     onClick={handleClosePopupClicked}
                     onDoubleClick={handleClosePopupClicked}
                 >
-                    <div className="popup_window">
-                        <div className="cancel_button" onClick={this.changeBoardValueByPath}>
+                    <div className={STYLES.popup_window}>
+                        <div className={STYLES.cancel_button} onClick={this.changeBoardValueByPath}>
                             <img
                                 alt={'cancel'}
                                 height={12}
