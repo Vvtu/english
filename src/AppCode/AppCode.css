@@ -2,10 +2,10 @@
     --button_height: 2rem;
     --main_gap: 1rem;
     --trueHeight: calc(100vh - 1rem);
-    /* --red-color: #add8e6; */
     --green-color: #6b5ee0;
     --font-size: 24px;
-    --portrait_half_height: calc((var(--trueHeight) - var(--button_height))/2);
+    --text-height: calc(var(--trueHeight) - var(--button_height));
+    --half-text-height: calc(var(--text-height) / 2);
 }
 /* grid
 ============================================================= */
@@ -17,18 +17,20 @@
 
     height: var(--trueHeight);
     max-height: var(--trueHeight);
+    min-height: var(--trueHeight);
     padding: 2px;
 }
 
 @media (orientation: portrait) {
     .app__grid {
         grid-template-columns: 1fr;
-        grid-template-rows: var(--portrait_half_height) var(--button_height)
-            var(--portrait_half_height);
+        grid-template-rows: var(--half-text-height) var(--button_height) var(--half-text-height);
         grid-template-areas: 'russian' 'info' 'english';
     }
     .overflow_y_scroll {
-        max-height: var(--portrait_half_height);
+        max-height: var(--half-text-height);
+        min-height: var(--half-text-height);
+        height: var(--half-text-height);
         overflow-y: scroll;
     }
     .icon_rotate {
@@ -42,11 +44,13 @@
 @media (orientation: landscape) {
     .app__grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: calc(var(--trueHeight) - var(--button_height)) var(--button_height);
+        grid-template-rows: var(--text-height) var(--button_height);
         grid-template-areas: 'russian english' 'info info';
     }
     .overflow_y_scroll {
-        max-height: calc(var(--trueHeight) - var(--button_height));
+        max-height: var(--text-height);
+        min-height: var(--text-height);
+        height: var(--text-height);
         overflow-y: scroll;
     }
     .icon_rotate {
@@ -60,18 +64,15 @@
 .app__info {
     grid-area: info;
     margin: 0 -8px 0 -8px;
-    /* background-color: lightgrey; */
 }
 
 .app__russian {
     grid-area: russian;
     padding: 0 -10px 0 -5px;
-    /* background-color: grey; */
 }
 .app__english {
     grid-area: english;
     padding: 0 -10px 0 -5px;
-    /* background-color: grey; */
 }
 
 /* font size and colors

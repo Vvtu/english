@@ -1,23 +1,25 @@
-.full_screen_div,
-.full_screen_div_opacity {
+.full_screen_div {
+    align-items: center;
     bottom: 0;
+    display: flex;
+    justify-content: center;
     left: 0;
     overflow: hidden;
     position: fixed;
     right: 0;
     top: 0;
-}
-
-.full_screen_div {
-    align-items: center;
-    display: flex;
-    justify-content: center;
     z-index: 3;
 }
 
 .full_screen_div_opacity {
     background-color: grey;
+    bottom: 0;
+    left: 0;
     opacity: 0.4;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
     z-index: 2;
 }
 
@@ -47,6 +49,7 @@
     flex-direction: row;
     justify-content: flex-start;
 }
+
 .popup__gap {
   padding-right: 10px;
 }

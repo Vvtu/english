@@ -4,19 +4,19 @@ const dictionary = [
             'Conceptually, components are like JavaScript functions.'
     },
     {
-        'Компоненты получают произвольный вход (называемый пропс) и возвращают реакт-элементы, описывающие, что должно появиться на экране.':
+        'Компоненты получают произвольные входные данные (называемые пропсы) и возвращают реакт-элементы, описывающие, что должно появиться на экране.':
             'Components accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.'
     },
     {
-        'Самый простой способ определить компонент это написать дважваскрипт фукцию.':
+        'Самый простой способ определить компонент это написать дважваскрипт функцию.':
             'The simplest way to define a component is to write a JavaScript function.'
     },
     {
-        'Эта функция являетс валидным реакт-компонентом, потому что она принимает один  аршумент - объект с данными, назыавемый пропс (что означает пропертис), и возвращает реакт-элемент.':
+        'Эта функция является валидным реакт-компонентом, потому что она принимает один  “пропс” (что означает пропертис) - объект-аргумент с данными, называемый пропс, и возвращает реакт-элемент.':
             'This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element.'
     },
     {
-        'Мы назыавет такие компоненты функциональными потому, что это литерально джаваскрипт функции.':
+        'Мы называем такие компоненты функциональными потому, что это буквально джаваскрипт функции.':
             'We call such components “functional” because they are literally JavaScript functions.'
     },
     {
@@ -24,11 +24,11 @@ const dictionary = [
             'You can also use an ES6 class to define a component.'
     },
     {
-        'Классы имеют некоторые дополнительные свойства, которые мы обсудим в следующих секциях.':
+        'Классы имеют некоторые дополнительные фичи, которые мы обсудим в следующих секциях.':
             'Classes have some additional features that we will discuss in the next sections.'
     },
     {
-        'А пока мы будем использовать функциональные компоненты из-за их краткости.':
+        'Пока мы будем использовать функциональные компоненты из-за их краткости.':
             'Until then, we will use functional components for their conciseness.'
     },
     {
@@ -44,7 +44,7 @@ const dictionary = [
             'Components can refer to other components in their output.'
     },
     {
-        'Это позволяет нам испльзовать ту же самую компонентную абстракцию на любом уровне детализации.':
+        'Это позволяет нам использовать ту же самую компонентную абстракцию на любом уровне детализации.':
             'This lets us use the same component abstraction for any level of detail.'
     },
     { '1': '2' }
