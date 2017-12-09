@@ -1,32 +1,27 @@
 import { css } from 'emotion';
 
-const full_screen_div = css`
-
+const full_div = css`
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+`;
 
 const STYLES = {
-
     full_screen_div: css`
+        ${full_div};
         align-items: center;
-        bottom: 0;
         display: flex;
         justify-content: center;
-        left: 0;
-        overflow: hidden;
-        position: fixed;
-        right: 0;
-        top: 0;
         z-index: 3;
     `,
 
     full_screen_div_opacity: css`
+        ${full_div};
         background-color: grey;
-        bottom: 0;
-        left: 0;
         opacity: 0.4;
-        overflow: hidden;
-        position: fixed;
-        right: 0;
-        top: 0;
         z-index: 2;
     `,
 
