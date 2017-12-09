@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import IconBack from '../svg/iconback.svg';
-import IconBackGreen from '../svg/iconback_green.svg';
-import IconCancel from '../svg/iconcancel.svg';
+import IconBack from './svg/iconback.svg';
+import IconBackGreen from './svg/iconback_green.svg';
+import SettingsIcon from './svg/settings.svg';
 
 import './AppCode.css';
 
@@ -11,13 +11,14 @@ import { getItemFormLocalStorage, arrayRandomOrder, filterDeletedOff } from '../
 
 class App extends PureComponent {
     static propTypes = {
-        dictionary: PropTypes.array.isRequired,
+        dictionary: PropTypes.array.isRequired
     };
     constructor(props) {
         super(props);
         this.state = {
             activeIndex: 0,
             showEnglish: false,
+            showSettings: false,
             randomDictionary: arrayRandomOrder(filterDeletedOff(this.props.dictionary))
         };
     }
@@ -68,7 +69,14 @@ class App extends PureComponent {
     handleShowEnglishClicked = (e) => {
         e.preventDefault();
         this.setState({
-            showEnglish: this.state.showEnglish !== true
+            showEnglish: true
+        });
+    };
+
+    handleSettingsClicked = (e) => {
+        e.preventDefault();
+        this.setState({
+            showSettings: true
         });
     };
 
@@ -90,6 +98,14 @@ class App extends PureComponent {
                 randomDictionary: newRandomDictionary,
                 showEnglish: false
             });
+        }
+    };
+
+    handleStatisticClicked = (e) => {
+        if (this.state.showEnglish) {
+            this.handleForwardClicked(e);
+        } else {
+            this.handleShowEnglishClicked(e);
         }
     };
 
@@ -116,10 +132,14 @@ class App extends PureComponent {
                             width={32}
                         />
 
-                        <div>
-                            <span>{activeIndex + 1 + ' / ' + count}</span>
-                            <span className="eng_text_color">{'\u00A0(' + shown + ')'}</span>
-                        </div>
+                        <img
+                            alt="settingd"
+                            height={32}
+                            onClick={this.handleSettingsClicked}
+                            onDoubleClick={this.handleSettingsClicked}
+                            src={SettingsIcon}
+                            width={32}
+                        />
 
                         {!showEnglish && (
                             <img
@@ -132,28 +152,25 @@ class App extends PureComponent {
                                 width={32}
                             />
                         )}
-                         {showEnglish && (
+                        {showEnglish && (
                             <img
                                 alt="english is shown"
                                 className="icon_rotate_back"
                                 height={32}
-                                onClick={this.handleShowEnglishClicked}
-                                onDoubleClick={this.handleShowEnglishClicked}
+                                onClick={this.handleForwardClicked}
+                                onDoubleClick={this.handleForwardClicked}
                                 src={IconBackGreen}
                                 width={32}
                             />
                         )}
 
-                        {/* {showEnglish && (
-                            <img
-                                alt="remove item"
-                                height={32}
-                                onClick={this.handleRemoveItemClicked}
-                                onDoubleClick={this.handleRemoveItemClicked}
-                                src={IconCancel}
-                                width={32}
-                            />
-                        )} */}
+                        <div
+                            onClick={this.handleStatisticClicked}
+                            onDoubleClick={this.handleStatisticClicked}
+                        >
+                            <span>{activeIndex + 1 + '/' + count}</span>
+                            <span className="eng_text_color">{'(' + shown + ')'}</span>
+                        </div>
 
                         <img
                             alt={'forward'}
