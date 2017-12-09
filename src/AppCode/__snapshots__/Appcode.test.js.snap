@@ -1,80 +1,175 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppCode test    test 1 1`] = `
-<div
-  className="app__grid"
->
+<div>
   <div
-    className="app__info"
+    className="app__grid"
   >
-    <div
-      className="app__info2"
-    >
-      <img
-        alt="back"
-        height={32}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        src="iconback.svg"
-        width={32}
-      />
-      <div>
-        <span>
-          1 / 1
-        </span>
-        <span
-          className="eng_text_color"
-        >
-           (0)
-        </span>
-      </div>
-      <img
-        alt="show english"
-        className="icon_rotate"
-        height={32}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        src="iconback_green.svg"
-        width={32}
-      />
-      <img
-        alt="forward"
-        className="icon_invert__horizontal"
-        height={32}
-        onClick={[Function]}
-        onDoubleClick={[Function]}
-        src="iconback.svg"
-        width={32}
-      />
-    </div>
-  </div>
-  <div
-    className="app__russian"
-  >
-    <div
-      className="app__center"
-    >
+    <div>
       <div
-        className="overflow_y_scroll"
+        className="full_screen_div_opacity"
+      />
+      <div
+        className="full_screen_div"
+        onClick={[Function]}
+        onDoubleClick={[Function]}
       >
-        <div>
-          Русский текст
+        <div
+          className="popup_window"
+        >
+          <div
+            className="cancel_button"
+            onClick={undefined}
+          >
+            <img
+              alt="cancel"
+              height={12}
+              onClick={[Function]}
+              onDoubleClick={[Function]}
+              src="iconcancel-white.svg"
+              width={12}
+            />
+          </div>
+          <div
+            className="popup__row"
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+          >
+            <img
+              alt="Settings"
+              height={32}
+              src="iconcancel-invisible.svg"
+              width={32}
+            />
+            <div
+              className="popup__gap"
+            />
+            <div>
+              Settings
+            </div>
+          </div>
+          <div
+            className="popup__row"
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+          >
+            <img
+              alt="Hide item"
+              height={32}
+              src="iconcancel-red.svg"
+              width={32}
+            />
+            <div
+              className="popup__gap"
+            />
+            <div>
+              Hide item
+            </div>
+          </div>
+          <div
+            className="popup__row"
+            onClick={[Function]}
+            onDoubleClick={[Function]}
+          >
+            <img
+              alt="Unhide all items"
+              height={32}
+              src="unhide-all.svg"
+              width={32}
+            />
+            <div
+              className="popup__gap"
+            />
+            <div>
+              Unhide all items
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="app__english"
-  >
     <div
-      className="app__center"
+      className="app__info"
     >
       <div
-        className="overflow_y_scroll"
+        className="app__info2"
+      >
+        <img
+          alt="back"
+          height={32}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          src="iconback.svg"
+          width={32}
+        />
+        <img
+          alt="settingd"
+          height={32}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          src="settings.svg"
+          width={32}
+        />
+        <img
+          alt="show english"
+          className="icon_rotate"
+          height={32}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          src="iconback_green.svg"
+          width={32}
+        />
+        <div
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+        >
+          <span>
+            1/1
+          </span>
+          <span
+            className="eng_text_color"
+          >
+            (0)
+          </span>
+        </div>
+        <img
+          alt="forward"
+          className="icon_invert__horizontal"
+          height={32}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+          src="iconback.svg"
+          width={32}
+        />
+      </div>
+    </div>
+    <div
+      className="app__russian"
+    >
+      <div
+        className="app__center"
       >
         <div
-          className="eng_text_color"
-        />
+          className="overflow_y_scroll"
+        >
+          <div>
+            Русский текст
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="app__english"
+    >
+      <div
+        className="app__center"
+      >
+        <div
+          className="overflow_y_scroll"
+        >
+          <div
+            className="eng_text_color"
+          />
+        </div>
       </div>
     </div>
   </div>
