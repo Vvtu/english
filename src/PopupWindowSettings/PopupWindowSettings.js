@@ -22,9 +22,46 @@ class PopupWindowSettings extends PureComponent {
                                 width={12}
                             />
                         </div>
-                        <div>Settings</div>
-                        <div>23412342314231432</div>
-                        <div>23412342314231432142314 </div>
+                        <div className="popup__row">
+                            <img
+                                alt={'cancel'}
+                                height={32}
+                                onClick={this.handleBackClicked}
+                                onDoubleClick={this.handleBackClicked}
+                                src={CancelIconRed}
+                                width={32}
+                            />
+                            <div className="popup__gap" />
+
+                            <div>Settings</div>
+                        </div>
+                        <div className="popup__row">
+                            <img
+                                alt={'cancel'}
+                                height={32}
+                                onClick={this.handleBackClicked}
+                                onDoubleClick={this.handleBackClicked}
+                                src={CancelIconRed}
+                                width={32}
+                            />
+                            <div className="popup__gap" />
+
+                            <div>Hide item</div>
+                        </div>
+
+                        <div className="popup__row">
+                            <img
+                                alt={'cancel'}
+                                height={32}
+                                onClick={this.handleBackClicked}
+                                onDoubleClick={this.handleBackClicked}
+                                src={CancelIconRed}
+                                width={32}
+                            />
+                            <div className="popup__gap" />
+
+                            <div>Unhide all items</div>
+                        </div>
                     </div>
                 </div>
             </div>
