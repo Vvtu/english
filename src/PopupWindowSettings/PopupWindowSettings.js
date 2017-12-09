@@ -47,19 +47,19 @@ class PopupWindowSettings extends PureComponent {
                             />
                         </div>
                         {menuRow({
-                            label: 'Settings',
+                            label: 'Settings:',
                             icon: CancelIconInvisible,
                             handleClicked: noop
                         })}
 
                         {menuRow({
-                            label: 'Hide item',
+                            label: 'hide this item',
                             icon: CancelIconRed,
                             handleClicked: handleHideItemClicked
                         })}
 
                         {menuRow({
-                            label: 'Unhide all items',
+                            label: 'unhide all items',
                             icon: UnhideAllIcon,
                             handleClicked: handleUnhideAllItemsClicked
                         })}

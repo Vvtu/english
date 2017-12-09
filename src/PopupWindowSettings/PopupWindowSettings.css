@@ -30,14 +30,14 @@
     flex-direction: column;
     justify-content: flex-start;
     line-height: 3rem;
-    padding: 5px 10px;
+    padding: 10px 25px 10px 20px;
     position: relative;
 }
 
 .cancel_button {
     position: absolute;
-    top: -12px;
-    right: 6px;
+    top: -9px;
+    right: 10px;
     cursor: pointer;
 }
 

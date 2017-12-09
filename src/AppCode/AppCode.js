@@ -141,13 +141,7 @@ class App extends PureComponent {
         return (
             <div>
                 <div className="app__grid">
-                    {showSettings && (
-                        <PopupWindowSettings
-                            handleClosePopupClicked={this.handleClosePopupClicked}
-                            handleHideItemClicked={this.handleHideItemClicked}
-                            handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
-                        />
-                    )}
+
 
                     <div className="app__info">
                         <div className="app__info2">
@@ -225,6 +219,13 @@ class App extends PureComponent {
                             </div>
                         </div>
                     </div>
+                    {showSettings && (
+                        <PopupWindowSettings
+                            handleClosePopupClicked={this.handleClosePopupClicked}
+                            handleHideItemClicked={this.handleHideItemClicked}
+                            handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
+                        />
+                    )}
                 </div>
             </div>
         );
