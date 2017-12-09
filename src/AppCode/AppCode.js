@@ -81,8 +81,14 @@ class App extends PureComponent {
             showSettings: true
         });
     };
+    handleClosePopupClicked = (e) => {
+        e.preventDefault();
+        this.setState({
+            showSettings: false
+        });
+    };
 
-    handleRemoveItemClicked = (e) => {
+    handleHideItemClicked = (e) => {
         e.preventDefault();
         const { activeIndex, randomDictionary } = this.state;
         if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
@@ -98,7 +104,8 @@ class App extends PureComponent {
             this.setState({
                 activeIndex: newActiveIndex,
                 randomDictionary: newRandomDictionary,
-                showEnglish: false
+                showEnglish: false,
+                showSettings: false
             });
         }
     };
@@ -109,6 +116,16 @@ class App extends PureComponent {
         } else {
             this.handleShowEnglishClicked(e);
         }
+    };
+
+    handleUnhideAllItemsClicked = (e) => {
+        localStorage.clear();
+        this.setState({
+            activeIndex: 0,
+            randomDictionary: arrayRandomOrder(filterDeletedOff(this.props.dictionary)),
+            showEnglish: false,
+            showSettings: false,
+        });
     };
 
     render() {
@@ -124,7 +141,13 @@ class App extends PureComponent {
         return (
             <div>
                 <div className="app__grid">
-                {showSettings && <PopupWindowSettings />}
+                    {showSettings && (
+                        <PopupWindowSettings
+                            handleClosePopupClicked={this.handleClosePopupClicked}
+                            handleHideItemClicked={this.handleHideItemClicked}
+                            handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
+                        />
+                    )}
 
                     <div className="app__info">
                         <div className="app__info2">
