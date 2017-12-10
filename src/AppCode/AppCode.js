@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 import PopupWindowForAdvancedMenu from '../PopupWindowForAdvancedMenu';
 
-import IconBack from './svg/iconback.svg';
-import IconBackGreen from './svg/iconback_green.svg';
-import AdvancedIcon from './svg/settings.svg';
+import ArrowIcon from './svg/ArrowIcon';
+import AdvancedIcon from './svg/AdvancedIcon';
 
 import './AppCode.css';
 
@@ -143,44 +142,38 @@ class App extends PureComponent {
                 <div className="app__grid">
                     <div className="app__info">
                         <div className="app__info2">
-                            <img
-                                alt={'back'}
+                            <ArrowIcon
                                 height={32}
                                 onClick={this.handleBackClicked}
                                 onDoubleClick={this.handleBackClicked}
-                                src={IconBack}
                                 width={32}
                             />
-
-                            <img
-                                alt="Advanced"
+                            <AdvancedIcon
                                 height={32}
                                 onClick={this.handleAdvancedClicked}
                                 onDoubleClick={this.handleAdvancedClicked}
-                                src={AdvancedIcon}
                                 width={32}
+                                fill='#add8e6'
                             />
 
                             {!showEnglish && (
-                                <img
-                                    alt="show english"
+                                <ArrowIcon
                                     className="icon_rotate"
                                     height={32}
                                     onClick={this.handleShowEnglishClicked}
                                     onDoubleClick={this.handleShowEnglishClicked}
-                                    src={IconBackGreen}
                                     width={32}
+                                    fill="#6b5ee0"
                                 />
                             )}
                             {showEnglish && (
-                                <img
-                                    alt="english is shown"
+                                <ArrowIcon
                                     className="icon_rotate_back"
                                     height={32}
                                     onClick={this.handleForwardClicked}
                                     onDoubleClick={this.handleForwardClicked}
-                                    src={IconBackGreen}
                                     width={32}
+                                    fill="#6b5ee0"
                                 />
                             )}
 
@@ -192,13 +185,11 @@ class App extends PureComponent {
                                 <span className="eng_text_color">{'(' + shown + ')'}</span>
                             </div>
 
-                            <img
-                                alt={'forward'}
+                            <ArrowIcon
                                 className="icon_invert__horizontal"
                                 height={32}
                                 onClick={this.handleForwardClicked}
                                 onDoubleClick={this.handleForwardClicked}
-                                src={IconBack}
                                 width={32}
                             />
                         </div>

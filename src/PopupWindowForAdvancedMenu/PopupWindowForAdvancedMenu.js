@@ -1,9 +1,7 @@
 import React, { PureComponent } from 'react';
 
-import CancelIconWhite from './svg/iconcancel-white.svg';
-import CancelIconRed from './svg/iconcancel-red.svg';
-import UnhideAllIcon from './svg/unhide-all.svg';
-import CancelIconInvisible from './svg/iconcancel-invisible.svg';
+import CancelIcon from './svg/CancelIcon';
+import ClearAllInfo from './svg/ClearAllInfo';
 
 import './PopupWindowForAdvancedMenu.css';
 
@@ -13,11 +11,12 @@ const menuRow = (menuItem) => (
         onClick={menuItem.handleClicked}
         onDoubleClick={menuItem.handleClicked}
     >
-        <img alt={menuItem.label} height={32} src={menuItem.icon} width={32} />
+        <menuItem.Icon {...menuItem.props} />
         <div className="popup__gap" />
         <div>{menuItem.label}</div>
     </div>
 );
+
 const noop = () => {};
 
 class PopupWindowForAdvancedMenu extends PureComponent {
@@ -37,30 +36,31 @@ class PopupWindowForAdvancedMenu extends PureComponent {
                 >
                     <div className="popup_window">
                         <div className="cancel_button" onClick={this.changeBoardValueByPath}>
-                            <img
-                                alt={'cancel'}
+                            <CancelIcon
                                 height={12}
                                 onClick={handleClosePopupClicked}
                                 onDoubleClick={handleClosePopupClicked}
-                                src={CancelIconWhite}
                                 width={12}
                             />
                         </div>
                         {menuRow({
                             label: 'Advanced:',
-                            icon: CancelIconInvisible,
+                            Icon: CancelIcon,
+                            props: { height: '32', width: '32', fill: '#ffffff' },
                             handleClicked: noop
                         })}
 
                         {menuRow({
                             label: 'hide this item',
-                            icon: CancelIconRed,
+                            Icon: CancelIcon,
+                            props: { height: '32', width: '32', fill: '#00bfff' },
                             handleClicked: handleHideItemClicked
                         })}
 
                         {menuRow({
                             label: 'reset all info',
-                            icon: UnhideAllIcon,
+                            Icon: ClearAllInfo,
+                            props: { height: '32', width: '32', fill: "#6b5ee0" },
                             handleClicked: handleUnhideAllItemsClicked
                         })}
                     </div>
