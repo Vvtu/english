@@ -30,8 +30,6 @@
     }
     .overflow_y_scroll {
         max-height: var(--half-text-height);
-        min-height: var(--half-text-height);
-        height: var(--half-text-height);
         overflow-y: scroll;
     }
     .icon_rotate {
@@ -50,8 +48,6 @@
     }
     .overflow_y_scroll {
         max-height: var(--text-height);
-        min-height: var(--text-height);
-        height: var(--text-height);
         overflow-y: scroll;
     }
     .icon_rotate {
