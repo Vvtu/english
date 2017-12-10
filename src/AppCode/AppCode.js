@@ -195,15 +195,20 @@ class App extends PureComponent {
                         </div>
                     </div>
                     <div className="app__russian">
+                    <div className="app__center">
                         <div className="overflow_y_scroll">
-                            <div className="app__center">{russian}</div>
+                            <div>{russian}</div>
                         </div>
                     </div>
-                    <div className="app__english">
+                </div>
+                <div className="app__english">
+                    <div className="app__center">
                         <div className="overflow_y_scroll">
-                            <div className="app__center eng_text_color">{english}</div>
+                            <div className="eng_text_color">{english}</div>
                         </div>
                     </div>
+                </div>
+
                     {showAdvanced && (
                         <PopupWindowForAdvancedMenu
                             handleClosePopupClicked={this.handleClosePopupClicked}
