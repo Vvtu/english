@@ -37,10 +37,11 @@ class PopupWindowForAdvancedMenu extends PureComponent {
                     <div className="popup_window">
                         <div className="cancel_button" onClick={this.changeBoardValueByPath}>
                             <CancelIcon
-                                height={12}
+                                fill="#000000"
+                                height={16}
                                 onClick={handleClosePopupClicked}
                                 onDoubleClick={handleClosePopupClicked}
-                                width={12}
+                                width={16}
                             />
                         </div>
                         {menuRow({
@@ -60,7 +61,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
                         {menuRow({
                             label: 'reset all info',
                             Icon: ClearAllInfo,
-                            props: { height: '32', width: '32', fill: "#6b5ee0" },
+                            props: { height: '32', width: '32', fill: '#6b5ee0' },
                             handleClicked: handleUnhideAllItemsClicked
                         })}
                     </div>
