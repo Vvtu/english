@@ -5,7 +5,7 @@ import CancelIconRed from './svg/iconcancel-red.svg';
 import UnhideAllIcon from './svg/unhide-all.svg';
 import CancelIconInvisible from './svg/iconcancel-invisible.svg';
 
-import './PopupWindowSettings.css';
+import './PopupWindowForAdvancedMenu.css';
 
 const menuRow = (menuItem) => (
     <div
@@ -20,7 +20,7 @@ const menuRow = (menuItem) => (
 );
 const noop = () => {};
 
-class PopupWindowSettings extends PureComponent {
+class PopupWindowForAdvancedMenu extends PureComponent {
     render() {
         const {
             handleClosePopupClicked,
@@ -47,7 +47,7 @@ class PopupWindowSettings extends PureComponent {
                             />
                         </div>
                         {menuRow({
-                            label: 'Settings:',
+                            label: 'Advanced:',
                             icon: CancelIconInvisible,
                             handleClicked: noop
                         })}
@@ -59,7 +59,7 @@ class PopupWindowSettings extends PureComponent {
                         })}
 
                         {menuRow({
-                            label: 'unhide all items',
+                            label: 'reset all info',
                             icon: UnhideAllIcon,
                             handleClicked: handleUnhideAllItemsClicked
                         })}
@@ -70,4 +70,4 @@ class PopupWindowSettings extends PureComponent {
     }
 }
 
-export default PopupWindowSettings;
+export default PopupWindowForAdvancedMenu;
