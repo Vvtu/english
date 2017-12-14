@@ -130,8 +130,8 @@ class App extends PureComponent {
     };
 
     handleTextToSpeachClicked = (text) => {
-        const synth = window.speechSynthesis;
         const utterThis = new SpeechSynthesisUtterance(text);
+        const synth = window.speechSynthesis;
         synth.speak(utterThis);
     };
 

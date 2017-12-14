@@ -1,53 +1,14 @@
 const dictionary = [
-    {
-        'Концептуально, компоненты это как джаваскрипт  функции':
-            'Conceptually, components are like JavaScript functions.'
-    },
-    {
-        'Компоненты получают произвольные входные данные (называемые пропсы) и возвращают реакт-элементы, описывающие, что должно появиться на экране.':
-            'Components accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.'
-    },
-    {
-        'Самый простой способ определить компонент это написать дважваскрипт функцию.':
-            'The simplest way to define a component is to write a JavaScript function.'
-    },
-    {
-        'Эта функция является валидным реакт-компонентом, потому что она принимает один  “пропс” (что означает пропертис) - объект-аргумент с данными, называемый пропс, и возвращает реакт-элемент.':
-            'This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element.'
-    },
-    {
-        'Мы называем такие компоненты функциональными потому, что это буквально джаваскрипт функции.':
-            'We call such components “functional” because they are literally JavaScript functions.'
-    },
-    {
-        'Вы также можете использовать ES6 класс для определения компонента.':
-            'You can also use an ES6 class to define a component.'
-    },
-    {
-        'Классы имеют некоторые дополнительные фичи, которые мы обсудим в следующих секциях.':
-            'Classes have some additional features that we will discuss in the next sections.'
-    },
-    {
-        'Пока мы будем использовать функциональные компоненты из-за их краткости.':
-            'Until then, we will use functional components for their conciseness.'
-    },
-    {
-        'Когда реакт видит элемент, представляющий определенный пользователем компонент, он пропускает JSX атрибуты в этот компонент как один объект.':
-            'When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object.'
-    },
-    {
-        'Всегда начинайте имена компонентов с большой буквы.':
-            'Always start component names with a capital letter.'
-    },
-    {
-        'Компоненты могут ссылаться на другие компоненты в своем выводе.':
-            'Components can refer to other components in their output.'
-    },
-    {
-        'Это позволяет нам использовать ту же самую компонентную абстракцию на любом уровне детализации.':
-            'This lets us use the same component abstraction for any level of detail.'
-    },
-    { '1': '2' }
+
+    { 'падать': 'fall, fell, fallen' },
+    { 'приносить': 'bring' },
+    { 'знать': 'know, knew, known' },
+    { 'иметь': 'have, had, had' },
+    { 'пить': 'drink, drank, drunk' },
+    { 'делать': 'do, did, done' },
+    { 'говорить': 'speak, spoke, spoken' },
+    {'забывать': 'forget, forgot, frogotten'}
+
 ];
 export default dictionary;
 
@@ -334,4 +295,53 @@ export default dictionary;
 // {
 //     'Согласно нашему опыту, думать о том, как UI должен выглядеть в данный момент времени в противовес как изменять его со временем устраняет целый класс ошибок.':
 //         'In our experience, thinking about how the UI should look at any given moment rather than how to change it over time eliminates a whole class of bugs.'
+// },
+
+// {
+//     'Концептуально, компоненты это как джаваскрипт  функции':
+//         'Conceptually, components are like JavaScript functions.'
+// },
+// {
+//     'Компоненты получают произвольные входные данные (называемые пропсы) и возвращают реакт-элементы, описывающие, что должно появиться на экране.':
+//         'Components accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.'
+// },
+// {
+//     'Самый простой способ определить компонент это написать дважваскрипт функцию.':
+//         'The simplest way to define a component is to write a JavaScript function.'
+// },
+// {
+//     'Эта функция является валидным реакт-компонентом, потому что она принимает один  “пропс” (что означает пропертис) - объект-аргумент с данными, называемый пропс, и возвращает реакт-элемент.':
+//         'This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element.'
+// },
+// {
+//     'Мы называем такие компоненты функциональными потому, что это буквально джаваскрипт функции.':
+//         'We call such components “functional” because they are literally JavaScript functions.'
+// },
+// {
+//     'Вы также можете использовать ES6 класс для определения компонента.':
+//         'You can also use an ES6 class to define a component.'
+// },
+// {
+//     'Классы имеют некоторые дополнительные фичи, которые мы обсудим в следующих секциях.':
+//         'Classes have some additional features that we will discuss in the next sections.'
+// },
+// {
+//     'Пока мы будем использовать функциональные компоненты из-за их краткости.':
+//         'Until then, we will use functional components for their conciseness.'
+// },
+// {
+//     'Когда реакт видит элемент, представляющий определенный пользователем компонент, он пропускает JSX атрибуты в этот компонент как один объект.':
+//         'When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object.'
+// },
+// {
+//     'Всегда начинайте имена компонентов с большой буквы.':
+//         'Always start component names with a capital letter.'
+// },
+// {
+//     'Компоненты могут ссылаться на другие компоненты в своем выводе.':
+//         'Components can refer to other components in their output.'
+// },
+// {
+//     'Это позволяет нам использовать ту же самую компонентную абстракцию на любом уровне детализации.':
+//         'This lets us use the same component abstraction for any level of detail.'
 // },
