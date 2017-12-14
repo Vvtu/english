@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import googleTTS from 'google-tts-api';
+
 import PopupWindowForAdvancedMenu from '../PopupWindowForAdvancedMenu';
 
 import ArrowIcon from './svg/ArrowIcon';
@@ -127,6 +129,12 @@ class App extends PureComponent {
         });
     };
 
+    handleTextToSpeachClicked = (text) => {
+        const synth = window.speechSynthesis;
+        const utterThis = new SpeechSynthesisUtterance(text);
+        synth.speak(utterThis);
+    };
+
     render() {
         const { activeIndex, randomDictionary, showEnglish, showAdvanced } = this.state;
         const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
@@ -153,7 +161,7 @@ class App extends PureComponent {
                                 onClick={this.handleAdvancedClicked}
                                 onDoubleClick={this.handleAdvancedClicked}
                                 width={32}
-                                fill='#add8e6'
+                                fill="#add8e6"
                             />
 
                             {!showEnglish && (
@@ -195,19 +203,22 @@ class App extends PureComponent {
                         </div>
                     </div>
                     <div className="app__russian">
-                    <div className="app__center">
-                        <div className="overflow_y_scroll">
-                            <div>{russian}</div>
+                        <div className="app__center">
+                            <div className="overflow_y_scroll">
+                                <div>{russian}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="app__english">
-                    <div className="app__center">
-                        <div className="overflow_y_scroll">
-                            <div className="eng_text_color">{english}</div>
+                    <div
+                        className="app__english"
+                        onClick={() => this.handleTextToSpeachClicked(english)}
+                    >
+                        <div className="app__center">
+                            <div className="overflow_y_scroll">
+                                <div className="eng_text_color">{english}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                     {showAdvanced && (
                         <PopupWindowForAdvancedMenu
