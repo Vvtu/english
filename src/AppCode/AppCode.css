@@ -60,7 +60,7 @@
 
 .app__info {
     grid-area: info;
-    margin: 0 -8px 0 -8px;
+    margin: 2px -8px 2px -8px;
 }
 
 .app__russian {
