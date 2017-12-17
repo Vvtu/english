@@ -89,24 +89,31 @@ exports[`AppCode test    test 1 1`] = `
       className="app__russian"
     >
       <div
-        className="overflow_y_scroll"
+        className="app__center"
       >
         <div
-          className="app__center"
+          className="overflow_y_scroll"
         >
-          Русский текст
+          <div>
+            Русский текст
+          </div>
         </div>
       </div>
     </div>
     <div
       className="app__english"
+      onClick={[Function]}
     >
       <div
-        className="overflow_y_scroll"
+        className="app__center"
       >
         <div
-          className="app__center eng_text_color"
-        />
+          className="overflow_y_scroll"
+        >
+          <div
+            className="eng_text_color"
+          />
+        </div>
       </div>
     </div>
   </div>
