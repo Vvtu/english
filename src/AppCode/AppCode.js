@@ -139,7 +139,8 @@ class App extends PureComponent {
         const { activeIndex, randomDictionary, showEnglish, showAdvanced } = this.state;
         const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
         const russian = Object.keys(activeObj || {})[0];
-        const english = showEnglish && Object.values(activeObj || {})[0];
+
+        const english = Object.values(activeObj || {})[0];
         const count = randomDictionary.length;
 
         const item = getItemFormLocalStorage(russian);
@@ -215,7 +216,7 @@ class App extends PureComponent {
                     >
                         <div className="app__center">
                             <div className="overflow_y_scroll">
-                                <div className="eng_text_color">{english}</div>
+                                <div className="eng_text_color">{showEnglish && english}</div>
                             </div>
                         </div>
                     </div>
