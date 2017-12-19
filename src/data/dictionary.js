@@ -47,7 +47,7 @@ export const dictionary1 = [
 	{ 'сказать (кому-то), рассказать': 'tell, told, told' },
 	{ думать: 'think, thought, thought' },
 	{ понимать: 'understand, understood, understood' },
-	{ 'носить (одижду)': 'wear, wore, worn' },
+	{ 'носить (одежду)': 'wear, wore, worn' },
 	{ писать: 'write, wrote, written' }
 ];
 export const dictionary2 = [

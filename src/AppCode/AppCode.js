@@ -10,7 +10,7 @@ import AdvancedIcon from './svg/AdvancedIcon';
 
 import './AppCode.css';
 
-import { getDictionary } from '../lib/lib';
+import { getDictionary, handleDictClicked } from '../lib/lib';
 
 class AppCode extends PureComponent {
 	static propTypes = {};
@@ -133,6 +133,16 @@ class AppCode extends PureComponent {
 		synth.speak(utterThis);
 	};
 
+	handleDictClickedLocal = (number) => {
+		handleDictClicked(number);
+		this.setState({
+			activeIndex: 0,
+			randomDictionary: getDictionary(),
+			showEnglish: false,
+			showAdvanced: false
+		});
+	};
+
 	render() {
 		const { activeIndex, randomDictionary, showEnglish, showAdvanced } = this.state;
 		const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
@@ -221,6 +231,7 @@ class AppCode extends PureComponent {
 							handleClosePopupClicked={this.handleClosePopupClicked}
 							handleHideItemClicked={this.handleHideItemClicked}
 							handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
+							handleDictClicked={this.handleDictClickedLocal}
 						/>
 					)}
 				</div>

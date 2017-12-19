@@ -35,5 +35,13 @@ const DICT = 'DICT';
 
 export const getDictionary = () => {
 	const whichDict = localStorage.getItem(DICT);
-	return arrayRandomOrder(filterDeletedOff(whichDict ? dictionary2 : dictionary1));
+	return arrayRandomOrder(filterDeletedOff(whichDict === '2' ? dictionary2 : dictionary1));
 };
+
+export const handleDictClicked=(number) => {
+  if (number === 2) {
+    localStorage.setItem(DICT, '2');
+  } else {
+    localStorage.setItem(DICT, '1');
+  }
+}
