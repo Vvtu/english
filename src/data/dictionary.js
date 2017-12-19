@@ -1,141 +1,142 @@
-const dictionary = [
-    { начинать: 'begin, began, begun' },
-    { ломать: 'break, broke, broken' },
-    { приносить: 'bring, brought, brought' },
-    { покупать: 'buy, bought, bought' },
-    { выбирать: 'choose, chose, chosen' },
-    { 'приходить, приезжать': 'come, came, come' },
-    { резать: 'cut, cut, cut' },
-    { делать: 'do, did, done' },
-    { рисовать: 'draw, drew, drawn' },
-    { пить: 'drink, drank, drunk' },
-    { 'есть, кушать': 'eat, ate, eaten' },
-    { падать: 'fall, fell, fallen' },
-    { кормить: 'feed, fed, fed' },
-    { находить: 'find, found, found' },
-    { летать: 'fly, flew, flown' },
-    { забывать: 'forget, forgot, forgotten' },
-    { получать: 'get, got, got' },
-    { давать: 'give, gave, given' },
-    { 'идти, ходить': 'go, went, gone' },
-    { иметь: 'have, had, had' },
-    { слышать: 'hear, heard, heard' },
-    { ушибить: 'hurt, hurt, hurt' },
-    { знать: 'know, knew, known' },
-    //////////////////////////////////////
-    { 'учить (что-то), узнавать (новое)': 'learn, learned, or, learnt, learned, or, learnt' },
-    { 'делать, заставлять': 'make, made, made' },
-    { встречать: 'meet, met, met' },
-    { платить: 'pay, paid, paid' },
-    { 'класть, положить': 'put, put, put' },
-    { читать: 'read, red, [read], red, [read]' },
-    { бежать: 'run, ran, run' },
-    { говорить: 'say, said, said' },
-    { видеть: 'see, saw, seen' },
-    { посылать: 'send, sent, sent' },
-    { показывать: 'show, showed, shown' },
-    { петь: 'sing, sang, sung' },
-    { сидеть: 'sit, sat, sat' },
-    { спать: 'sleep, slept, slept' },
-    { 'нюхать, пахнуть': 'smell, smelt, smelt' },
-    { говорить: 'speak, spoke, spoken' },
-    { стоять: 'stand, stood, stood' },
-    { плавать: 'swim, swam, swum' },
-    { брать: 'take, took, taken' },
-    { 'учить (кого-то)': 'teach, taught, taught' },
-    { 'сказать (кому-то), рассказать': 'tell, told, told' },
-    { думать: 'think, thought, thought' },
-    { понимать: 'understand, understood, understood' },
-    { 'носить (одижду)': 'wear, wore, worn' },
-    { писать: 'write, wrote, written' }
+export const dictionary1 = [
+	{ 'Ты меня понимаешь?': 'Do you understand me?' },
+	{ начинать: 'begin, began, begun' },
+	{ ломать: 'break, broke, broken' },
+	{ приносить: 'bring, brought, brought' },
+	{ покупать: 'buy, bought, bought' },
+	{ выбирать: 'choose, chose, chosen' },
+	{ 'приходить, приезжать': 'come, came, come' },
+	{ резать: 'cut, cut, cut' },
+	{ делать: 'do, did, done' },
+	{ рисовать: 'draw, drew, drawn' },
+	{ пить: 'drink, drank, drunk' },
+	{ 'есть, кушать': 'eat, ate, eaten' },
+	{ падать: 'fall, fell, fallen' },
+	{ кормить: 'feed, fed, fed' },
+	{ находить: 'find, found, found' },
+	{ летать: 'fly, flew, flown' },
+	{ забывать: 'forget, forgot, forgotten' },
+	{ получать: 'get, got, got' },
+	{ давать: 'give, gave, given' },
+	{ 'идти, ходить': 'go, went, gone' },
+	{ иметь: 'have, had, had' },
+	{ слышать: 'hear, heard, heard' },
+	{ ушибить: 'hurt, hurt, hurt' },
+	{ знать: 'know, knew, known' },
+	//////////////////////////////////////
+	{ 'учить (что-то), узнавать (новое)': 'learn, learned, or, learnt, learned, or, learnt' },
+	{ 'делать, заставлять': 'make, made, made' },
+	{ встречать: 'meet, met, met' },
+	{ платить: 'pay, paid, paid' },
+	{ 'класть, положить': 'put, put, put' },
+	{ читать: 'read, red, [read], red, [read]' },
+	{ бежать: 'run, ran, run' },
+	{ говорить: 'say, said, said' },
+	{ видеть: 'see, saw, seen' },
+	{ посылать: 'send, sent, sent' },
+	{ показывать: 'show, showed, shown' },
+	{ петь: 'sing, sang, sung' },
+	{ сидеть: 'sit, sat, sat' },
+	{ спать: 'sleep, slept, slept' },
+	{ 'нюхать, пахнуть': 'smell, smelt, smelt' },
+	{ говорить: 'speak, spoke, spoken' },
+	{ стоять: 'stand, stood, stood' },
+	{ плавать: 'swim, swam, swum' },
+	{ брать: 'take, took, taken' },
+	{ 'учить (кого-то)': 'teach, taught, taught' },
+	{ 'сказать (кому-то), рассказать': 'tell, told, told' },
+	{ думать: 'think, thought, thought' },
+	{ понимать: 'understand, understood, understood' },
+	{ 'носить (одижду)': 'wear, wore, worn' },
+	{ писать: 'write, wrote, written' }
 ];
-export default dictionary;
-
-// ****************************************************************************************
-// Dmitry Baranovskiy: Zen of JavaScript | JSConf EU 2015 - YouTube
-// Видео по запросу javascript zen▶ 26:22
-// https://www.youtube.com/watch?v=QHs55-5FzgA
-// 10 нояб. 2015 г. - Добавлено пользователем JSConf
-// {
-//   'Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом.':
-//       'Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream.'
-// },
-// {
-//   'Не смотря на многочисленные попытки, до сих пор нет единственного правильного пути написания кода в этом языке.':
-//       'Despite multiple attempts, there is still no right single way to write code in this language.'
-// },
-// {
-//   'Каждый использует его своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык.':
-//       'Everybody is using it in their own special way and most people still fill that they are failing to tame the language.'
-// },
-// {
-//   'Посмотри на этот код. Ты не знал этого. Я знаю, поэтому я умнее тебя.':
-//       "Look at that code. You didn't know that. I know so I am smarter then you."
-// },
-// {
-//   'Все эти разговоры немного скучные потому, что бесполезные.':
-//       'All this talks are kinda boring, because they are not very useful.'
-// },
-// {
-//   'Моя речь будет такой же но я хочу принести вам весть.':
-//       'My talk will be sort of similar but I want to bring a message to you.'
-// },
-// {
-//   'Я расскажу вам, как я придумал идею говорить о языке Javascript.':
-//       "I'll tell you how I came up with idea to talk about javascript language."
-// },
-// {
-//   'Я знаю много языков. Паскаль, С++ и наконец перешел к javascript.':
-//       'I know many languages. Pascal, C++ and finally jumped to javascript.'
-// },
-// {
-//   'У меня было очень хорошее понимание того, как JavaScript-код должен быть написан. И я был совершенно неправ.':
-//       'I had very good understanding of how the javascript code should be written. And I was completely wrong.'
-// },
-// {
-//   'Javascript ударил меня в спину много много раз, прежде чем я наконец понял':
-//       'Javascript hit me in back many many times before I finally understood.'
-// },
-// {
-//   'Но даже теперь я не уверен, что понял даваскипт полностью.':
-//       'But even now I am not sure that I understood javascript completely.'
-// },
-// {
-//   'Кто здесь думает, что знает Javascript очень хорошо?':
-//       'Who is there thinking know javascript very well?'
-// },
-// {
-//   'OK. Пара заблуждающихся человек. Но большинство людей не так уверенно.':
-//       'Ok. The couple misguided people. But most people are not so confident.'
-// },
-// {
-//   'Я хочу, чтобы вы подумали... Остановитесь на минутку. Забудьте о react и angular. Подумайте о чистом JavaScript.':
-//       'What I want you to think... Stop for a moment. Forget about react and angular. Think about pure javascript.'
-// },
-// {
-//   'Каким он должен быть? Что такое правильный способ написания JavaScript.':
-//       'What it should be like? What is the proper way of javascript.'
-// },
-// {
-//   'Javascript очень гибкий, как вы знаете. Мы могли бы написать код многими способами.':
-//       'Javascript is very flexible as you all know. We could write code in many different ways.'
-// },
-// {
-//   'И я здесь не для того, чтобы научить вас правильно писать Javascript. Нет правильного пути.':
-//       'And I am not here to teach you how to write javascript the right way. There is no right way. '
-// },
-// {
-//   'Те, кто не знает, что они ходят во тьме, никогда не будут искать света.':
-//       'Those who are unaware they are walking in darkness will never seek the light.'
-// },
-// {
-//   'Я бы хотел сказать, что JavaScript-это Брюс Ли из языков программирования. Потому что он гибкий, он мощный и он изменил всю картину.':
-//       "I'd like to say that javascript is Bruce Lee of programming languages. Because it's flexible, it's powerful and it changed the hole picture."
-// },
-// {
-//   'Я хочу (своего рода) указать вам на некоторые вещи, которые вы, возможно, не видели раньше или, может быть, не думали о них.':
-//       "I want to (sort of) point you to some of the things that you may be haven't seen before or maybe didn't think about them"
-// },
+export const dictionary2 = [
+	// ****************************************************************************************
+	// Dmitry Baranovskiy: Zen of JavaScript | JSConf EU 2015 - YouTube
+	// Видео по запросу javascript zen▶ 26:22
+	// https://www.youtube.com/watch?v=QHs55-5FzgA
+	// 10 нояб. 2015 г. - Добавлено пользователем JSConf
+	{
+		'Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом.':
+			'Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream.'
+	},
+	{
+		'Не смотря на многочисленные попытки, до сих пор нет единственного правильного пути написания кода в этом языке.':
+			'Despite multiple attempts, there is still no right single way to write code in this language.'
+	},
+	{
+		'Каждый использует его своим специальным способом и многи люди все еще думают, что они не смогли укротить этот язык.':
+			'Everybody is using it in their own special way and most people still fill that they are failing to tame the language.'
+	},
+	{
+		'Посмотри на этот код. Ты не знал этого. Я знаю, поэтому я умнее тебя.':
+			"Look at that code. You didn't know that. I know so I am smarter then you."
+	},
+	{
+		'Все эти разговоры немного скучные потому, что бесполезные.':
+			'All this talks are kinda boring, because they are not very useful.'
+	},
+	{
+		'Моя речь будет такой же но я хочу принести вам весть.':
+			'My talk will be sort of similar but I want to bring a message to you.'
+	},
+	{
+		'Я расскажу вам, как я придумал идею говорить о языке Javascript.':
+			"I'll tell you how I came up with idea to talk about javascript language."
+	},
+	{
+		'Я знаю много языков. Паскаль, С++ и наконец перешел к javascript.':
+			'I know many languages. Pascal, C++ and finally jumped to javascript.'
+	},
+	{
+		'У меня было очень хорошее понимание того, как JavaScript-код должен быть написан. И я был совершенно неправ.':
+			'I had very good understanding of how the javascript code should be written. And I was completely wrong.'
+	},
+	{
+		'Javascript ударил меня в спину много много раз, прежде чем я наконец понял':
+			'Javascript hit me in back many many times before I finally understood.'
+	},
+	{
+		'Но даже теперь я не уверен, что понял даваскипт полностью.':
+			'But even now I am not sure that I understood javascript completely.'
+	},
+	{
+		'Кто здесь думает, что знает Javascript очень хорошо?':
+			'Who is there thinking know javascript very well?'
+	},
+	{
+		'OK. Пара заблуждающихся человек. Но большинство людей не так уверенно.':
+			'Ok. The couple misguided people. But most people are not so confident.'
+	},
+	{
+		'Я хочу, чтобы вы подумали... Остановитесь на минутку. Забудьте о react и angular. Подумайте о чистом JavaScript.':
+			'What I want you to think... Stop for a moment. Forget about react and angular. Think about pure javascript.'
+	},
+	{
+		'Каким он должен быть? Что такое правильный способ написания JavaScript.':
+			'What it should be like? What is the proper way of javascript.'
+	},
+	{
+		'Javascript очень гибкий, как вы знаете. Мы могли бы написать код многими способами.':
+			'Javascript is very flexible as you all know. We could write code in many different ways.'
+	},
+	{
+		'И я здесь не для того, чтобы научить вас правильно писать Javascript. Нет правильного пути.':
+			'And I am not here to teach you how to write javascript the right way. There is no right way. '
+	},
+	{
+		'Те, кто не знает, что они ходят во тьме, никогда не будут искать света.':
+			'Those who are unaware they are walking in darkness will never seek the light.'
+	},
+	{
+		'Я бы хотел сказать, что JavaScript-это Брюс Ли из языков программирования. Потому что он гибкий, он мощный и он изменил всю картину.':
+			"I'd like to say that javascript is Bruce Lee of programming languages. Because it's flexible, it's powerful and it changed the hole picture."
+	},
+	{
+		'Я хочу (своего рода) указать вам на некоторые вещи, которые вы, возможно, не видели раньше или, может быть, не думали о них.':
+			"I want to (sort of) point you to some of the things that you may be haven't seen before or maybe didn't think about them"
+	}
+];
 
 // ****************************************************************************************
 // https://reactjs.org
