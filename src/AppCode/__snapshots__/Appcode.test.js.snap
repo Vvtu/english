@@ -61,7 +61,7 @@ exports[`AppCode test    test 1 1`] = `
           onDoubleClick={[Function]}
         >
           <span>
-            1/1
+            1/49
           </span>
           <span
             className="eng_text_color"
@@ -95,7 +95,7 @@ exports[`AppCode test    test 1 1`] = `
           className="overflow_y_scroll"
         >
           <div>
-            Русский текст
+            видеть
           </div>
         </div>
       </div>

@@ -127,10 +127,24 @@ class AppCode extends PureComponent {
 		});
 	};
 
-	handleTextToSpeachClicked = (text) => {
-		const utterThis = new SpeechSynthesisUtterance(text);
-		const synth = window.speechSynthesis;
-		synth.speak(utterThis);
+	handleTextToSpeachClicked = (e, text) => {
+		e.preventDefault();
+		const utterThis = new SpeechSynthesisUtterance();
+		if (utterThis) {
+			const synth = window.speechSynthesis;
+			if (synth) {
+				// const voices = synth.getVoices();
+				// utterThis.voice = voices[1];   // ошибка какая то !!!
+				utterThis.voiceURI = 'Google UK English Male';
+				utterThis.volume = 1; // 0 to 1
+				utterThis.rate = 0.1; // 0.1 to 10
+				utterThis.pitch = 0; //0 to 2
+				utterThis.text = text;
+				utterThis.lang = 'en-GB';
+				// utterThis.onend = (event) => console.log('Finished in ' + Math.round(event.elapsedTime/100)/10 + ' seconds.');
+				synth.speak(utterThis);
+			}
+		}
 	};
 
 	handleDictClickedLocal = (number) => {
@@ -218,7 +232,7 @@ class AppCode extends PureComponent {
 							</div>
 						</div>
 					</div>
-					<div className="app__english" onClick={() => this.handleTextToSpeachClicked(english)}>
+					<div className="app__english" onClick={(e) => this.handleTextToSpeachClicked(e, english)}>
 						<div className="app__center">
 							<div className="overflow_y_scroll">
 								<div className="eng_text_color">{showEnglish && english}</div>
