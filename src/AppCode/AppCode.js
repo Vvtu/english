@@ -7,7 +7,7 @@ import AdvancedIcon from './svg/AdvancedIcon';
 
 import './AppCode.css';
 
-import { getDictionary, handleDictClicked } from '../lib/lib';
+import { getDictionaryWithMix, handleDictClicked } from '../lib/lib';
 
 class AppCode extends PureComponent {
 	static propTypes = {};
@@ -17,7 +17,7 @@ class AppCode extends PureComponent {
 			activeIndex: 0,
 			showEnglish: false,
 			showAdvanced: false,
-			randomDictionary: getDictionary()
+			randomDictionary: getDictionaryWithMix()
 		};
 	}
 
@@ -118,7 +118,7 @@ class AppCode extends PureComponent {
 		localStorage.clear();
 		this.setState({
 			activeIndex: 0,
-			randomDictionary: getDictionary(),
+			randomDictionary: getDictionaryWithMix(),
 			showEnglish: false,
 			showAdvanced: false
 		});
@@ -146,7 +146,7 @@ class AppCode extends PureComponent {
 		handleDictClicked(number);
 		this.setState({
 			activeIndex: 0,
-			randomDictionary: getDictionary(),
+			randomDictionary: getDictionaryWithMix(),
 			showEnglish: false,
 			showAdvanced: false
 		});
