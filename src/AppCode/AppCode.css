@@ -31,6 +31,7 @@
     .overflow_y_scroll {
         max-height: var(--half-text-height);
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     .icon_rotate {
         transform: rotate(270deg);
@@ -49,6 +50,7 @@
     .overflow_y_scroll {
         max-height: var(--text-height);
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     .icon_rotate {
         transform: rotate(90deg);

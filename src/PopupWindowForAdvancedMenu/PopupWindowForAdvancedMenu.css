@@ -1,55 +1,61 @@
 .full_screen_div {
-    align-items: center;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 3;
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 3;
 }
 
 .full_screen_div_opacity {
-    background-color: grey;
-    bottom: 0;
-    left: 0;
-    opacity: 0.4;
-    overflow: hidden;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 2;
+	background-color: grey;
+	bottom: 0;
+	left: 0;
+	opacity: 0.4;
+	overflow: hidden;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 2;
 }
 
 .popup_window {
-    align-items: flex-start;
-    background: white;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.9) 0px 13px 26px 0px;
-    display: flex;
-    flex-direction: column;
+    max-height: calc(100vh - 4rem);
+	background: white;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.9) 0px 13px 26px 0px;
+	padding: 10px 25px 10px 20px;
+	position: relative;
+}
+
+.popup_list {
+    max-height: calc(100vh - 4rem);
+	overflow-y: scroll;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
     justify-content: flex-start;
-    line-height: 4rem;
-    padding: 10px 25px 10px 20px;
-    position: relative;
 }
 
 .cancel_button {
-    position: absolute;
-    top: -12px;
-    right: 10px;
-    cursor: pointer;
+	position: absolute;
+	top: 2px;
+	right: 10px;
+	cursor: pointer;
 }
 
 .popup__row {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+	padding: 1rem 0;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
 }
 
 .popup__gap {
-  padding-right: 10px;
+	padding-right: 10px;
 }

@@ -9,19 +9,6 @@ import './AppCode.css';
 
 import { getDictionary, handleDictClicked } from '../lib/lib';
 
-const utterThis = new SpeechSynthesisUtterance();
-const synth = window.speechSynthesis;
-if (utterThis && synth) {
-	// const voices = synth.getVoices();
-	// utterThis.voice = voices[1];   // ошибка какая то !!!
-	// utterThis.voiceURI = 'Google UK English Male';
-	// utterThis.volume = 1; // 0 to 1
-	// utterThis.rate = 0.1; // 0.1 to 10
-	// utterThis.pitch = 0; //0 to 2
-	utterThis.lang = 'en-GB';
-	// utterThis.onend = (event) => console.log('Finished in ' + Math.round(event.elapsedTime/100)/10 + ' seconds.');
-}
-
 class AppCode extends PureComponent {
 	static propTypes = {};
 	constructor(props) {
@@ -139,8 +126,20 @@ class AppCode extends PureComponent {
 
 	handleTextToSpeachClicked = (e, text) => {
 		e.preventDefault();
-		utterThis.text = text;
-		synth.speak(utterThis);
+		const utterThis = new SpeechSynthesisUtterance();
+		const synth = window.speechSynthesis;
+		if (utterThis && synth) {
+			// const voices = synth.getVoices();
+			// utterThis.voice = voices[1];   // ошибка какая то !!!
+			// utterThis.voiceURI = 'Google UK English Male';
+			// utterThis.volume = 1; // 0 to 1
+			// utterThis.rate = 0.1; // 0.1 to 10
+			// utterThis.pitch = 0; //0 to 2
+			utterThis.lang = 'en-GB';
+			// utterThis.onend = (event) => console.log('Finished in ' + Math.round(event.elapsedTime/100)/10 + ' seconds.');
+			utterThis.text = text;
+			synth.speak(utterThis);
+		}
 	};
 
 	handleDictClickedLocal = (number) => {

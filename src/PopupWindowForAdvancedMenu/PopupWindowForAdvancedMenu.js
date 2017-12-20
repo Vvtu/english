@@ -24,8 +24,8 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 		const {
 			handleClosePopupClicked,
 			handleHideItemClicked,
-            handleUnhideAllItemsClicked,
-            handleDictClicked
+			handleUnhideAllItemsClicked,
+			handleDictClicked
 		} = this.props;
 		return (
 			<div>
@@ -45,39 +45,41 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 								width={16}
 							/>
 						</div>
-						{menuRow({
-							label: 'Advanced:',
-							Icon: CancelIcon,
-							props: { height: '32', width: '32', fill: '#ffffff' },
-							handleClicked: noop
-						})}
+						<div className="popup_list">
+							{menuRow({
+								label: 'Advanced:',
+								Icon: CancelIcon,
+								props: { height: '32', width: '32', fill: '#ffffff' },
+								handleClicked: noop
+							})}
 
-						{menuRow({
-							label: 'hide this item',
-							Icon: CancelIcon,
-							props: { height: '32', width: '32', fill: '#00bfff' },
-							handleClicked: handleHideItemClicked
-						})}
+							{menuRow({
+								label: 'hide this item',
+								Icon: CancelIcon,
+								props: { height: '32', width: '32', fill: '#00bfff' },
+								handleClicked: handleHideItemClicked
+							})}
 
-						{menuRow({
-							label: 'reset all info',
-							Icon: ClearAllInfo,
-							props: { height: '32', width: '32', fill: '#6b5ee0' },
-							handleClicked: handleUnhideAllItemsClicked
-						})}
+							{menuRow({
+								label: 'reset all info',
+								Icon: ClearAllInfo,
+								props: { height: '32', width: '32', fill: '#6b5ee0' },
+								handleClicked: handleUnhideAllItemsClicked
+							})}
 
-						{menuRow({
-							label: 'dict #1',
-							Icon: ClearAllInfo,
-							props: { height: '32', width: '32', fill: '#6b5ee0' },
-							handleClicked: () => handleDictClicked(1)
-						})}
-						{menuRow({
-							label: 'dict #2',
-							Icon: ClearAllInfo,
-							props: { height: '32', width: '32', fill: '#6b5ee0' },
-							handleClicked: () => handleDictClicked(2)
-						})}
+							{menuRow({
+								label: 'dict #1',
+								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D1</div>,
+								props: {},
+								handleClicked: () => handleDictClicked(1)
+							})}
+							{menuRow({
+								label: 'dict #2',
+								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D2</div>,
+								props: {},
+								handleClicked: () => handleDictClicked(2)
+							})}
+						</div>
 					</div>
 				</div>
 			</div>
