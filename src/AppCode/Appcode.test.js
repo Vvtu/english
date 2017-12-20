@@ -7,7 +7,7 @@ const dictionary = [ { 'Русский текст': 'Russian text' } ];
 
 describe('AppCode test   ', () => {
     it('test 1', () => {
-        const component = renderer.create(<AppCode dictionary={dictionary} />);
+        const component = renderer.create(<AppCode />);
         const result = component.toJSON();
         expect(result).toMatchSnapshot();
     });

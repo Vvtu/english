@@ -1,7 +1,4 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-
-import googleTTS from 'google-tts-api';
 
 import PopupWindowForAdvancedMenu from '../PopupWindowForAdvancedMenu';
 
@@ -11,6 +8,19 @@ import AdvancedIcon from './svg/AdvancedIcon';
 import './AppCode.css';
 
 import { getDictionary, handleDictClicked } from '../lib/lib';
+
+const utterThis = new SpeechSynthesisUtterance();
+const synth = window.speechSynthesis;
+if (utterThis && synth) {
+	// const voices = synth.getVoices();
+	// utterThis.voice = voices[1];   // ошибка какая то !!!
+	// utterThis.voiceURI = 'Google UK English Male';
+	// utterThis.volume = 1; // 0 to 1
+	// utterThis.rate = 0.1; // 0.1 to 10
+	// utterThis.pitch = 0; //0 to 2
+	utterThis.lang = 'en-GB';
+	// utterThis.onend = (event) => console.log('Finished in ' + Math.round(event.elapsedTime/100)/10 + ' seconds.');
+}
 
 class AppCode extends PureComponent {
 	static propTypes = {};
@@ -129,22 +139,8 @@ class AppCode extends PureComponent {
 
 	handleTextToSpeachClicked = (e, text) => {
 		e.preventDefault();
-		const utterThis = new SpeechSynthesisUtterance();
-		if (utterThis) {
-			const synth = window.speechSynthesis;
-			if (synth) {
-				// const voices = synth.getVoices();
-				// utterThis.voice = voices[1];   // ошибка какая то !!!
-				utterThis.voiceURI = 'Google UK English Male';
-				utterThis.volume = 1; // 0 to 1
-				utterThis.rate = 0.1; // 0.1 to 10
-				utterThis.pitch = 0; //0 to 2
-				utterThis.text = text;
-				utterThis.lang = 'en-GB';
-				// utterThis.onend = (event) => console.log('Finished in ' + Math.round(event.elapsedTime/100)/10 + ' seconds.');
-				synth.speak(utterThis);
-			}
-		}
+		utterThis.text = text;
+		synth.speak(utterThis);
 	};
 
 	handleDictClickedLocal = (number) => {

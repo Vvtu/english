@@ -57,8 +57,8 @@ export const dictionary2 = [
 	// https://www.youtube.com/watch?v=QHs55-5FzgA
 	// 10 нояб. 2015 г. - Добавлено пользователем JSConf
 	{
-		'Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом. Прошло много времени с тех пор как джаваскрипт стал мейнстримом.':
-			'Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream. Long time passed since JavaScript became mainstream.'
+		'Прошло много времени с тех пор как джаваскрипт стал мейнстримом.':
+			'Long time passed since JavaScript became mainstream.'
 	},
 	{
 		'Не смотря на многочисленные попытки, до сих пор нет единственного правильного пути написания кода в этом языке.':
@@ -102,7 +102,7 @@ export const dictionary2 = [
 	},
 	{
 		'Кто здесь думает, что знает Javascript очень хорошо?':
-			'Who is there thinking know javascript very well?'
+			'Who is there thinking he knows javascript very well?'
 	},
 	{
 		'OK. Пара заблуждающихся человек. Но большинство людей не так уверенно.':
@@ -114,7 +114,7 @@ export const dictionary2 = [
 	},
 	{
 		'Каким он должен быть? Что такое правильный способ написания JavaScript.':
-			'What it should be like? What is the proper way of javascript.'
+			'What it should be like? What is the proper way of javascript?'
 	},
 	{
 		'Javascript очень гибкий, как вы знаете. Мы могли бы написать код многими способами.':
