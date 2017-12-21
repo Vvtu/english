@@ -80,7 +80,7 @@ const dictionaries = {
 				'Since component state is considered private, we can’t update it directly from another component.',
 		},
 		{
-			'Обычным патерном здесь является передача функции из родительского компонента дочернему компоненту, который вызывается при нажатии кнопки.':
+			'Обычным паттерном здесь является передача функции из родительского компонента дочернему компоненту, которая вызывается при нажатии кнопки.':
 				'The usual pattern here is pass down a function from parent component to child component that gets called when the button is clicked.',
 		},
 		{
@@ -92,8 +92,12 @@ const dictionaries = {
 				'Jump ahead a section to learn why immutability is important.',
 		},
 		{
-			'Этот компонент больше не сохраняет свое собственное состояние; он получает свое значение от родительского компонента и сообщает своему родителю о клике. Мы называем такие как эти компоненты, контролируемыми компонентами.':
-				'This component no longer keeps its own state; it receives its value from its parent component and informs its parent when it’s clicked. We call components like this controlled components.',
+			'Этот компонент больше не сохраняет свое собственное состояние; он получает свое значение от родительского компонента и сообщает своему родителю о клике.':
+				'This component no longer keeps its own state; it receives its value from its parent component and informs its parent when it’s clicked.',
+		},
+		{
+			'Мы называем такие как эти компоненты, контролируемыми компонентами.':
+				'We call components like this controlled components.',
 		},
 		{
 			'В предыдущем примере кода мы рекомендуем использовать .slice() оператор, чтобы скопировать массив, до внесения изменений и предотвратить изменения существующего массива.':
@@ -104,12 +108,27 @@ const dictionaries = {
 				'Let’s talk about what this means (immutability) and why it is an important concept to learn.',
 		},
 		{
-			'Как правило, существует два способа изменения данных. Первый метод заключается в изменении данных путем прямого изменения значений переменной. Второй метод состоит в замене данных новой копией объекта, которая также включает необходимые изменения.':
-				'There are generally two ways for changing data. The first method is to mutate the data by directly changing the values of a variable. The second method is to replace the data with a new copy of the object that also includes desired changes.',
+			'Как правило, существует два способа изменения данных.':
+				'There are generally two ways for changing data.',
 		},
 		{
-			'Конечный результат тот же, но не мутируя (или не изменяя базовые данные) непосредственно, мы теперь имеем дополнительное преимущество, которое может помочь нам увеличить производительность компонентов и приложений в целом.':
-				'The end result is the same but by not mutating (or changing the underlying data) directly we now have an added benefit that can help us increase component and overall application performance.',
+			'Первый метод заключается в изменении данных путем прямого изменения значений переменной.':
+				'The first method is to mutate the data by directly changing the values of a variable.',
+		},
+		{
+			'Второй метод состоит в замене данных новой копией объекта, которая также включает необходимые изменения.':
+				'The second method is to replace the data with a new copy of the object that also includes desired changes.',
+		},
+		{
+			'Конечный результат тот же.': 'The end result is the same.',
+		},
+		{
+			'Не мутируя (или не изменяя базовые данные) непосредственно, мы теперь имеем дополнительное преимущество.':
+				'By not mutating (or changing the underlying data) directly we now have an added benefit.',
+		},
+		{
+			'Это преимущество может помочь нам увеличить производительность компонентов и приложений в целом.':
+				'This benefit can help us increase component and overall application performance.',
 		},
 		{
 			'Иммутабельность также приводит к тому, что некоторые сложные функции гораздо проще реализовать.':
@@ -124,12 +143,20 @@ const dictionaries = {
 				'Determining if a mutated object has changed is complex because changes are made directly to the object.',
 		},
 		{
-			'Это требует сравнения текущего объекта с предыдущей копией, обхода всего дерева объектов и сравнения каждой переменной и значения. Этот процесс может стать всё возрастающе сложным.':
-				'This then requires comparing the current object to a previous copy, traversing the entire object tree, and comparing each variable and value. This process can become increasingly complex.',
+			'Это требует сравнения текущего объекта с предыдущей копией, обхода всего дерева объектов и сравнения каждой переменной и значения.':
+				'This then requires comparing the current object to a previous copy, traversing the entire object tree, and comparing each variable and value.',
 		},
 		{
-			'Определить, как изменялся неизменяемый объект, значительно проще. Если ссылка изменилась, то объект был изменен. Вот и все.':
-				'Determining how an immutable object has changed is considerably easier. If the object being referenced is different from before, then the object has changed. That’s it.',
+			'Этот процесс может стать всё возрастающе сложным.':
+				'This process can become increasingly complex.',
+		},
+		{
+			'Определить, как изменялся неизменяемый объект, значительно проще.':
+				'Determining how an immutable object has changed is considerably easier.',
+		},
+		{
+			'Если ссылка изменилась, то объект был изменен. Вот и все.':
+				'If the object being referenced is different from before, then the object has changed. That’s it.',
 		},
 		{
 			'Определить, когда делать повторный рендеринг в React.':
