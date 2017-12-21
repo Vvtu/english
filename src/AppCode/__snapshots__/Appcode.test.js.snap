@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppCode test    test 1 1`] = `
+exports[`AppCode test    test 1 - Always fails because of random side effect 1`] = `
 <div>
   <div
     className="app__grid"
@@ -61,7 +61,7 @@ exports[`AppCode test    test 1 1`] = `
           onDoubleClick={[Function]}
         >
           <span>
-            1/49
+            1/52
           </span>
           <span
             className="eng_text_color"
@@ -95,7 +95,7 @@ exports[`AppCode test    test 1 1`] = `
           className="overflow_y_scroll"
         >
           <div>
-            видеть
+            читать
           </div>
         </div>
       </div>

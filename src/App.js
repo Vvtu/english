@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import AppCode from './AppCode';
+import AppCode from 'AppCode';
 
 class App extends PureComponent {
 	render() {

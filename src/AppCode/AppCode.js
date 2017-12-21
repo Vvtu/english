@@ -1,13 +1,18 @@
 import React, { PureComponent } from 'react';
 
-import PopupWindowForAdvancedMenu from '../PopupWindowForAdvancedMenu';
+import PopupWindowForAdvancedMenu from 'PopupWindowForAdvancedMenu/PopupWindowForAdvancedMenu';
+import ArrowIcon from 'AppCode/svg/ArrowIcon';
+import AdvancedIcon from 'AppCode/svg/AdvancedIcon';
 
-import ArrowIcon from './svg/ArrowIcon';
-import AdvancedIcon from './svg/AdvancedIcon';
+import 'AppCode/AppCode.css';
 
-import './AppCode.css';
+import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 
-import { getDictionaryWithMix, handleDictClicked } from '../lib/lib';
+console.log('process.env = ', process.env);
+console.log(
+	'process.env.REACT_APP_SECRET_CODE = ',
+	process.env && process.env.REACT_APP_SECRET_CODE,
+);
 
 class AppCode extends PureComponent {
 	static propTypes = {};
@@ -17,7 +22,7 @@ class AppCode extends PureComponent {
 			activeIndex: 0,
 			showEnglish: false,
 			showAdvanced: false,
-			randomDictionary: getDictionaryWithMix()
+			randomDictionary: getDictionaryWithMix(),
 		};
 	}
 
@@ -46,7 +51,7 @@ class AppCode extends PureComponent {
 		console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
 		this.setState({
 			activeIndex: newActiveIndex,
-			showEnglish: false
+			showEnglish: false,
 		});
 	};
 
@@ -60,27 +65,27 @@ class AppCode extends PureComponent {
 		console.log('handleBackClicked newActiveIndex = ', newActiveIndex);
 		this.setState({
 			activeIndex: newActiveIndex,
-			showEnglish: false
+			showEnglish: false,
 		});
 	};
 
 	handleShowEnglishClicked = (e) => {
 		e.preventDefault();
 		this.setState({
-			showEnglish: true
+			showEnglish: true,
 		});
 	};
 
 	handleAdvancedClicked = (e) => {
 		e.preventDefault();
 		this.setState({
-			showAdvanced: true
+			showAdvanced: true,
 		});
 	};
 	handleClosePopupClicked = (e) => {
 		e.preventDefault();
 		this.setState({
-			showAdvanced: false
+			showAdvanced: false,
 		});
 	};
 
@@ -101,7 +106,7 @@ class AppCode extends PureComponent {
 				activeIndex: newActiveIndex,
 				randomDictionary: newRandomDictionary,
 				showEnglish: false,
-				showAdvanced: false
+				showAdvanced: false,
 			});
 		}
 	};
@@ -120,7 +125,7 @@ class AppCode extends PureComponent {
 			activeIndex: 0,
 			randomDictionary: getDictionaryWithMix(),
 			showEnglish: false,
-			showAdvanced: false
+			showAdvanced: false,
 		});
 	};
 
@@ -148,7 +153,7 @@ class AppCode extends PureComponent {
 			activeIndex: 0,
 			randomDictionary: getDictionaryWithMix(),
 			showEnglish: false,
-			showAdvanced: false
+			showAdvanced: false,
 		});
 	};
 
@@ -227,7 +232,10 @@ class AppCode extends PureComponent {
 							</div>
 						</div>
 					</div>
-					<div className="app__english" onClick={(e) => this.handleTextToSpeachClicked(e, english)}>
+					<div
+						className="app__english"
+						onClick={(e) => this.handleTextToSpeachClicked(e, english)}
+					>
 						<div className="app__center">
 							<div className="overflow_y_scroll">
 								<div className="eng_text_color">{showEnglish && english}</div>

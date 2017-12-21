@@ -3,7 +3,7 @@ import {
 	dictionary2,
 	oldDictionary1,
 	oldDictionary2
-} from '../data/dictionaries';
+} from 'data/dictionaries';
 
 export const getRandomInt = (min, max) => {
 	min = Math.ceil(min);

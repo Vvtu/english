@@ -1,4 +1,4 @@
-import { getRandomInt, arrayRandomOrder } from './lib';
+import { getRandomInt, arrayRandomOrder } from 'lib/lib';
 
 describe('getRandomInt test', () => {
   it('getRandomInt', () => {
