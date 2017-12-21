@@ -85,8 +85,7 @@ class AppCode extends PureComponent {
 			showAdvanced: true,
 		});
 	};
-	handleClosePopupClicked = (e) => {
-		e.preventDefault();
+	handleClosePopupClicked = () => {
 		this.setState({
 			showAdvanced: false,
 		});
