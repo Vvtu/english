@@ -1,10 +1,3 @@
-import {
-	dictionary1,
-	dictionary2,
-	oldDictionary1,
-	oldDictionary2
-} from 'data/dictionaries';
-
 export const getRandomInt = (min, max) => {
 	min = Math.ceil(min);
 	max = Math.floor(max);
@@ -45,16 +38,16 @@ const DICT_NUMBER = '2';
 
 const OLD_LENGTH = 3;
 
-export const getDictionaryWithMix = () => {
+export const getDictionaryWithMix = (dictionaries) => {
 	const whichDict = localStorage.getItem(DICT);
 	let d;
 	let oldD;
 	if (whichDict === DICT_NUMBER) {
-		d = dictionary2;
-		oldD = oldDictionary2;
+		d = dictionaries.dictionary2;
+		oldD = dictionaries.oldDictionary2;
 	} else {
-		d = dictionary1;
-		oldD = oldDictionary1;
+		d = dictionaries.dictionary1;
+		oldD = dictionaries.oldDictionary1;
 	}
 	d = arrayRandomOrder(filterDeletedOff(d, null));
 	oldD = arrayRandomOrder(filterDeletedOff(oldD, OLD_LENGTH));

@@ -61,7 +61,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
           onDoubleClick={[Function]}
         >
           <span>
-            1/52
+            1/1
           </span>
           <span
             className="eng_text_color"
@@ -95,7 +95,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
           className="overflow_y_scroll"
         >
           <div>
-            читать
+            Русский текст
           </div>
         </div>
       </div>

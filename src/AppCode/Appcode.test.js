@@ -3,12 +3,15 @@ import renderer from 'react-test-renderer';
 
 import AppCode from 'AppCode';
 
-const dictionary = [ { 'Русский текст': 'Russian text' } ];
+const dictionaries = {
+	dictionary1: [ { 'Русский текст': 'Russian text' } ],
+	dictionary2: [],
+};
 
 describe('AppCode test   ', () => {
-    it('test 1 - Always fails because of random side effect', () => {
-        const component = renderer.create(<AppCode />);
-        const result = component.toJSON();
-        expect(result).toMatchSnapshot();
-    });
+	it('test 1 - Always fails because of random side effect', () => {
+		const component = renderer.create(<AppCode dictionaries={dictionaries} />);
+		const result = component.toJSON();
+		expect(result).toMatchSnapshot();
+	});
 });

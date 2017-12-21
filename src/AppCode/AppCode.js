@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import PopupWindowForAdvancedMenu from 'PopupWindowForAdvancedMenu/PopupWindowForAdvancedMenu';
 import ArrowIcon from 'AppCode/svg/ArrowIcon';
@@ -15,14 +16,16 @@ console.log(
 );
 
 class AppCode extends PureComponent {
-	static propTypes = {};
+	static propTypes = {
+		dictionaries: PropTypes.object.isRequired,
+	};
 	constructor(props) {
 		super(props);
 		this.state = {
 			activeIndex: 0,
 			showEnglish: false,
 			showAdvanced: false,
-			randomDictionary: getDictionaryWithMix(),
+			randomDictionary: getDictionaryWithMix(this.props.dictionaries),
 		};
 	}
 
@@ -123,7 +126,7 @@ class AppCode extends PureComponent {
 		localStorage.clear();
 		this.setState({
 			activeIndex: 0,
-			randomDictionary: getDictionaryWithMix(),
+			randomDictionary: getDictionaryWithMix(this.props.dictionaries),
 			showEnglish: false,
 			showAdvanced: false,
 		});
@@ -151,7 +154,7 @@ class AppCode extends PureComponent {
 		handleDictClicked(number);
 		this.setState({
 			activeIndex: 0,
-			randomDictionary: getDictionaryWithMix(),
+			randomDictionary: getDictionaryWithMix(this.props.dictionaries),
 			showEnglish: false,
 			showAdvanced: false,
 		});
