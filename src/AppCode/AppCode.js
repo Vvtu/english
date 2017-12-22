@@ -45,6 +45,7 @@ class AppCode extends PureComponent {
 
 	handleForwardClicked = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 		this.incrementLocalStorage();
 
 		const { activeIndex, randomDictionary } = this.state;
@@ -56,10 +57,12 @@ class AppCode extends PureComponent {
 			activeIndex: newActiveIndex,
 			showEnglish: false,
 		});
+		return false;
 	};
 
 	handleBackClicked = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 		this.incrementLocalStorage();
 
 		const { activeIndex, randomDictionary } = this.state;
@@ -70,29 +73,36 @@ class AppCode extends PureComponent {
 			activeIndex: newActiveIndex,
 			showEnglish: false,
 		});
+		return false;
 	};
 
 	handleShowEnglishClicked = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 		this.setState({
 			showEnglish: true,
 		});
+		return false;
 	};
 
 	handleAdvancedClicked = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 		this.setState({
 			showAdvanced: true,
 		});
+		return false;
 	};
 	handleClosePopupClicked = () => {
 		this.setState({
 			showAdvanced: false,
 		});
+		return false;
 	};
 
 	handleHideItemClicked = (e) => {
 		e.preventDefault();
+		e.stopPropagation();
 		const { activeIndex, randomDictionary } = this.state;
 		if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
 			const activeObj = randomDictionary[activeIndex];
@@ -111,17 +121,23 @@ class AppCode extends PureComponent {
 				showAdvanced: false,
 			});
 		}
+		return false;
 	};
 
 	handleStatisticClicked = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		if (this.state.showEnglish) {
 			this.handleForwardClicked(e);
 		} else {
 			this.handleShowEnglishClicked(e);
 		}
+		return false;
 	};
 
 	handleUnhideAllItemsClicked = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		localStorage.clear();
 		this.setState({
 			activeIndex: 0,
@@ -129,10 +145,12 @@ class AppCode extends PureComponent {
 			showEnglish: false,
 			showAdvanced: false,
 		});
+		return false;
 	};
 
 	handleTextToSpeachClicked = (e, text) => {
 		e.preventDefault();
+		e.stopPropagation();
 		const utterThis = new SpeechSynthesisUtterance();
 		const synth = window.speechSynthesis;
 		if (utterThis && synth) {
@@ -147,9 +165,12 @@ class AppCode extends PureComponent {
 			utterThis.text = text;
 			synth.speak(utterThis);
 		}
+		return false;
 	};
 
-	handleDictClickedLocal = (number) => {
+	handleDictClickedLocal = (e, number) => {
+		e.preventDefault();
+		e.stopPropagation();
 		handleDictClicked(number);
 		this.setState({
 			activeIndex: 0,
@@ -157,6 +178,7 @@ class AppCode extends PureComponent {
 			showEnglish: false,
 			showAdvanced: false,
 		});
+		return false;
 	};
 
 	render() {

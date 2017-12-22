@@ -31,16 +31,18 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 		}, 1);
 	}
 
-	handleClose = () => {
+	handleClose = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
 		this.setState({ mount: false });
 		setTimeout(() => {
 			this.props.handleClosePopupClicked();
 		}, 500);
+		return false;
 	};
 
 	render() {
 		const {
-			handleClosePopupClicked,
 			handleHideItemClicked,
 			handleUnhideAllItemsClicked,
 			handleDictClicked,
@@ -50,9 +52,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 
 		return (
 			<div
-				className={
-					this.state.mount !== true ? 'opacity-0' : 'transition-opacity-to-1'
-				}
+				className={this.state.mount !== true ? 'opacity-0' : 'transition-opacity-to-1'}
 			>
 				<div className="full_screen_div_opacity" />
 				<div
@@ -96,13 +96,13 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 								label: 'dict #1',
 								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D1</div>,
 								props: {},
-								handleClicked: () => handleDictClicked(1),
+								handleClicked: (e) => handleDictClicked(e, 1),
 							})}
 							{menuRow({
 								label: 'dict #2',
 								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D2</div>,
 								props: {},
-								handleClicked: () => handleDictClicked(2),
+								handleClicked: (e) => handleDictClicked(e, 2),
 							})}
 						</div>
 					</div>
