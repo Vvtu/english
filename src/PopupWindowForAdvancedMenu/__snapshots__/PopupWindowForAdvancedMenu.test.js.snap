@@ -1,14 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
-<div>
+<div
+  onClick={[Function]}
+  onDoubleClick={[Function]}
+  style={
+    Object {
+      "opacity": "0",
+      "transition": "opacity 0.5s ease",
+    }
+  }
+>
   <div
     className="full_screen_div_opacity"
   />
   <div
     className="full_screen_div"
-    onClick={undefined}
-    onDoubleClick={undefined}
   >
     <div
       className="popup_window"
@@ -20,8 +27,8 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
         <svg
           fill="#000000"
           height={16}
-          onClick={undefined}
-          onDoubleClick={undefined}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
           viewBox="0 0 32 32"
           width={16}
           xmlns="http://www.w3.org/2000/svg"
@@ -71,8 +78,8 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
         </div>
         <div
           className="popup__row"
-          onClick={undefined}
-          onDoubleClick={undefined}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
         >
           <svg
             fill="#00bfff"
@@ -100,8 +107,8 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
         </div>
         <div
           className="popup__row"
-          onClick={undefined}
-          onDoubleClick={undefined}
+          onClick={[Function]}
+          onDoubleClick={[Function]}
         >
           <svg
             fill="#6b5ee0"
