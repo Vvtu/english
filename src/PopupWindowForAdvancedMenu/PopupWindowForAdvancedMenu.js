@@ -48,10 +48,10 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 
 	render() {
 		const styles = getComputedStyle(document.documentElement);
-		const greenColor = String(styles.getPropertyValue('--green-color')).trim();
-		const redColor = String(styles.getPropertyValue('--red-color')).trim();
-		const whiteColor = String(styles.getPropertyValue('--white-color')).trim();
-		const blackColor = String(styles.getPropertyValue('--black-color')).trim();
+		const greenColor = String(styles.getPropertyValue('--english-text-color')).trim();
+		const redColor = String(styles.getPropertyValue('--danger-color')).trim();
+		const whiteColor = String(styles.getPropertyValue('--base-text-color')).trim();
+		const blackColor = String(styles.getPropertyValue('--background-color')).trim();
 
 		const {
 			handleHideItemClicked,

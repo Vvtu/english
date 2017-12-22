@@ -7,13 +7,13 @@
 	--trueHeight: calc(100vh - 1rem);
 
 	--advanced-color: #522719;
-	--blue-color: #6b5ee0;
-	--green-color: #94a11f;
+	--english-speaking-text-color: #6b5ee0;
+	--english-text-color: #94a11f;
 	--grey-color: #777777;
-	--red-color: #ff4000;
+	--danger-color: #ff4000;
 	--shadow-color: #dddddd;
-	--black-color: #000000;
-	--white-color: #ffffff;
+	--background-color: #000000;
+	--base-text-color: #ffffff;
 }
 
 /* grid
@@ -32,8 +32,8 @@
 	min-height: var(--trueHeight);
 	padding: 0 2px 0 4px;
 
-	background-color: var(--black-color);
-	color:  var(--white-color) ;
+	background-color: var(--background-color);
+	color:  var(--base-text-color) ;
 }
 
 @media (orientation: portrait) {
@@ -94,11 +94,11 @@
 ============================================================= */
 
 .eng_text_color {
-	color: var(--green-color);
+	color: var(--english-text-color);
 }
 
 .speaking {
-	color: var(--blue-color);
+	color: var(--english-speaking-text-color);
 }
 /* icons
 ============================================================= */

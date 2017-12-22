@@ -26,7 +26,7 @@
 
 .popup_window {
 	max-height: calc(100vh - 4rem);
-	background-color: var(--black-color);
+	background-color: var(--background-color);
 	border-radius: 5px;
 	box-shadow:   var(--shadow-color) 0px 13px 26px 0px;
 	padding: 10px 25px 10px 20px;

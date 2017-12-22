@@ -33,9 +33,9 @@ class AppCode extends PureComponent {
 		// window.addEventListener('touchstart', this.handleTouchStart);
 		const styles = getComputedStyle(document.documentElement);
 		this.setState({
-			greenColor: String(styles.getPropertyValue('--green-color')).trim(),
+			greenColor: String(styles.getPropertyValue('--english-text-color')).trim(),
 			advancedColor: String(styles.getPropertyValue('--advanced-color')).trim(),
-			whiteColor: String(styles.getPropertyValue('--white-color')).trim(),
+			whiteColor: String(styles.getPropertyValue('--base-text-color')).trim(),
 		});
 	}
 
