@@ -60,7 +60,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 			handleClosePopupClicked,
 		} = this.props;
 
-		console.log('this.state.mount = ', this.state.mount);
+		// console.log('this.state.mount = ', this.state.mount);
 
 		return (
 			<div

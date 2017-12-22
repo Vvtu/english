@@ -9,11 +9,11 @@ import 'AppCode/AppCode.css';
 
 import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 
-console.log('process.env = ', process.env);
-console.log(
-	'process.env.REACT_APP_SECRET_CODE = ',
-	process.env && process.env.REACT_APP_SECRET_CODE,
-);
+// console.log('process.env = ', process.env);
+// console.log(
+// 	'process.env.REACT_APP_SECRET_CODE = ',
+// 	process.env && process.env.REACT_APP_SECRET_CODE,
+// );
 
 class AppCode extends PureComponent {
 	static propTypes = {
@@ -73,7 +73,7 @@ class AppCode extends PureComponent {
 
 		const len = randomDictionary.length;
 		const newActiveIndex = activeIndex === len - 1 ? 0 : activeIndex + 1;
-		console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
+		// console.log('handleForwardClicked newActiveIndex = ', newActiveIndex);
 		this.setState({
 			activeIndex: newActiveIndex,
 			showEnglish: false,
@@ -89,7 +89,7 @@ class AppCode extends PureComponent {
 		const { activeIndex, randomDictionary } = this.state;
 		const len = randomDictionary.length;
 		const newActiveIndex = activeIndex === 0 ? len - 1 : activeIndex - 1;
-		console.log('handleBackClicked newActiveIndex = ', newActiveIndex);
+		// console.log('handleBackClicked newActiveIndex = ', newActiveIndex);
 		this.setState({
 			activeIndex: newActiveIndex,
 			showEnglish: false,
