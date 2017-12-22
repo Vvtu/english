@@ -455,7 +455,7 @@ const dictionaries = {
 		},
 		{
 			"Обоснуйте свои выборы метрик (даже если вы выбрали 'Соответсвует ожиданиям', что указывает на хорошую производительность.":
-				"Justify your choiches for metrics (even if you selected 'Meets expectations' which denotes a good performance).",
+				"Justify your choices for metrics (even if you selected 'Meets expectations' which denotes a good performance).",
 		},
 		{
 			'Также отметьте топики в дополнении к метрикам. Добавьте личные мысли и чувства.':

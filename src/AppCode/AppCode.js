@@ -29,6 +29,21 @@ class AppCode extends PureComponent {
 		};
 	}
 
+	// componentDidMount() {
+	// 	window.addEventListener('touchstart', this.handleTouchStart);
+	// }
+
+	// componentWillUnmount() {
+	// 	window.removeEventListener('touchstart', this.handleTouchStart);
+	// }
+
+	// handleTouchStart = (e) => {
+	// 	console.log('e = ', e);
+	// 	e.preventDefault();
+	// 	console.log('e = ', e);
+	// 	return false;
+	// };
+
 	incrementLocalStorage = () => {
 		const { activeIndex, randomDictionary, showEnglish } = this.state;
 		if (showEnglish) {

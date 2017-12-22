@@ -5,6 +5,8 @@ import ClearAllInfo from './svg/ClearAllInfo';
 
 import './PopupWindowForAdvancedMenu.css';
 
+const ANIMATION_INTERVAL = 500; // ms
+
 const menuRow = (menuItem) => (
 	<div
 		className="popup__row"
@@ -37,7 +39,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 		this.setState({ mount: false });
 		setTimeout(() => {
 			this.props.handleClosePopupClicked();
-		}, 500);
+		}, ANIMATION_INTERVAL);
 		return false;
 	};
 
