@@ -115,9 +115,7 @@ class AppCode extends PureComponent {
 		return false;
 	};
 
-	handleHideItemClicked = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
+	handleHideItemClicked = () => {
 		const { activeIndex, randomDictionary } = this.state;
 		if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
 			const activeObj = randomDictionary[activeIndex];
@@ -136,7 +134,6 @@ class AppCode extends PureComponent {
 				showAdvanced: false,
 			});
 		}
-		return false;
 	};
 
 	handleStatisticClicked = (e) => {
@@ -150,9 +147,7 @@ class AppCode extends PureComponent {
 		return false;
 	};
 
-	handleUnhideAllItemsClicked = (e) => {
-		e.preventDefault();
-		e.stopPropagation();
+	handleUnhideAllItemsClicked = () => {
 		localStorage.clear();
 		this.setState({
 			activeIndex: 0,
@@ -160,7 +155,6 @@ class AppCode extends PureComponent {
 			showEnglish: false,
 			showAdvanced: false,
 		});
-		return false;
 	};
 
 	handleTextToSpeachClicked = (e, text) => {
@@ -183,9 +177,7 @@ class AppCode extends PureComponent {
 		return false;
 	};
 
-	handleDictClickedLocal = (e, number) => {
-		e.preventDefault();
-		e.stopPropagation();
+	handleDictClickedLocal = ( number) => {
 		handleDictClicked(number);
 		this.setState({
 			activeIndex: 0,
@@ -193,7 +185,6 @@ class AppCode extends PureComponent {
 			showEnglish: false,
 			showAdvanced: false,
 		});
-		return false;
 	};
 
 	render() {

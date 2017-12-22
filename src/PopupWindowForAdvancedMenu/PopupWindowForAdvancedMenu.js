@@ -5,21 +5,9 @@ import ClearAllInfo from './svg/ClearAllInfo';
 
 import './PopupWindowForAdvancedMenu.css';
 
-const ANIMATION_INTERVAL = 5; // sec
+const ANIMATION_INTERVAL = 0.5; // sec
 
 const TRANSITION = 'opacity ' + ANIMATION_INTERVAL + 's ease';
-
-const menuRow = (menuItem) => (
-	<div
-		className="popup__row"
-		onClick={menuItem.handleClicked}
-		onDoubleClick={menuItem.handleClicked}
-	>
-		<menuItem.Icon {...menuItem.props} />
-		<div className="popup__gap" />
-		<div>{menuItem.label}</div>
-	</div>
-);
 
 const noop = () => {};
 
@@ -35,12 +23,24 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 		}, 1);
 	}
 
-	handleClose = (e) => {
+	menuRow = (menuItem) => (
+		<div
+			className="popup__row"
+			onClick={(e) => this.handleClicked(e, menuItem.handleClicked)}
+			onDoubleClick={(e) => this.handleClicked(e, menuItem.handleClicked)}
+		>
+			<menuItem.Icon {...menuItem.props} />
+			<div className="popup__gap" />
+			<div>{menuItem.label}</div>
+		</div>
+	);
+
+	handleClicked = (e, func) => {
 		e.preventDefault();
 		e.stopPropagation();
 		this.setState({ mount: false });
 		setTimeout(() => {
-			this.props.handleClosePopupClicked();
+			func();
 		}, ANIMATION_INTERVAL * 1000);
 		return false;
 	};
@@ -50,6 +50,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 			handleHideItemClicked,
 			handleUnhideAllItemsClicked,
 			handleDictClicked,
+			handleClosePopupClicked,
 		} = this.props;
 
 		console.log('this.state.mount = ', this.state.mount);
@@ -60,8 +61,8 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 					opacity: this.state.mount === true ? '1' : '0',
 					transition: TRANSITION,
 				}}
-				onClick={this.handleClose}
-				onDoubleClick={this.handleClose}
+				onClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
+				onDoubleClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
 			>
 				<div className="full_screen_div_opacity" />
 				<div className="full_screen_div">
@@ -70,44 +71,44 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 							<CancelIcon
 								fill="#000000"
 								height={16}
-								onClick={this.handleClose}
-								onDoubleClick={this.handleClose}
+								onClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
+								onDoubleClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
 								width={16}
 							/>
 						</div>
 						<div className="popup_list">
-							{menuRow({
+							{this.menuRow({
 								label: 'Advanced:',
 								Icon: CancelIcon,
 								props: { height: '32', width: '32', fill: '#ffffff' },
 								handleClicked: noop,
 							})}
 
-							{menuRow({
+							{this.menuRow({
 								label: 'hide this item',
 								Icon: CancelIcon,
 								props: { height: '32', width: '32', fill: '#00bfff' },
 								handleClicked: handleHideItemClicked,
 							})}
 
-							{menuRow({
+							{this.menuRow({
 								label: 'reset all info',
 								Icon: ClearAllInfo,
 								props: { height: '32', width: '32', fill: '#6b5ee0' },
 								handleClicked: handleUnhideAllItemsClicked,
 							})}
 
-							{menuRow({
+							{this.menuRow({
 								label: 'dict #1',
 								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D1</div>,
 								props: {},
-								handleClicked: (e) => handleDictClicked(e, 1),
+								handleClicked: () => handleDictClicked( 1),
 							})}
-							{menuRow({
+							{this.menuRow({
 								label: 'dict #2',
 								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D2</div>,
 								props: {},
-								handleClicked: (e) => handleDictClicked(e, 2),
+								handleClicked: () => handleDictClicked( 2),
 							})}
 						</div>
 					</div>
