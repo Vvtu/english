@@ -25,7 +25,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
         onClick={undefined}
       >
         <svg
-          fill="#000000"
+          fill=""
           height={16}
           onClick={[Function]}
           onDoubleClick={[Function]}
@@ -39,7 +39,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
             width="32"
           />
           <polygon
-            fill="#000000"
+            fill=""
             points="2,26 6,30 16,20 26,30 30,26 20,16 30,6 26,2 16,12 6,2 2,6 12,16"
           />
         </svg>
@@ -53,7 +53,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
           onDoubleClick={[Function]}
         >
           <svg
-            fill="#ffffff"
+            fill=""
             height="32"
             viewBox="0 0 32 32"
             width="32"
@@ -65,7 +65,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
               width="32"
             />
             <polygon
-              fill="#ffffff"
+              fill=""
               points="2,26 6,30 16,20 26,30 30,26 20,16 30,6 26,2 16,12 6,2 2,6 12,16"
             />
           </svg>
@@ -82,7 +82,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
           onDoubleClick={[Function]}
         >
           <svg
-            fill="#00bfff"
+            fill=""
             height="32"
             viewBox="0 0 32 32"
             width="32"
@@ -94,7 +94,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
               width="32"
             />
             <polygon
-              fill="#00bfff"
+              fill=""
               points="2,26 6,30 16,20 26,30 30,26 20,16 30,6 26,2 16,12 6,2 2,6 12,16"
             />
           </svg>
@@ -111,7 +111,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
           onDoubleClick={[Function]}
         >
           <svg
-            fill="#6b5ee0"
+            fill=""
             height="32"
             viewBox="0 0 16 16"
             width="32"
@@ -123,7 +123,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
               id="Icons with numbers"
             >
               <g
-                fill="#6b5ee0"
+                fill=""
                 id="Group"
                 transform="translate(-432 -432)"
               >
@@ -150,7 +150,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
           <div
             style={
               Object {
-                "color": "#6b5ee0",
+                "color": "",
                 "width": "32px",
               }
             }
@@ -172,7 +172,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
           <div
             style={
               Object {
-                "color": "#6b5ee0",
+                "color": "",
                 "width": "32px",
               }
             }

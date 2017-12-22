@@ -12,7 +12,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         className="app__info2"
       >
         <svg
-          fill="#00000"
+          fill=""
           height={32}
           onClick={[Function]}
           onDoubleClick={[Function]}
@@ -25,7 +25,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
           />
         </svg>
         <svg
-          fill="#add8e6"
+          fill=""
           height={32}
           onClick={[Function]}
           onDoubleClick={[Function]}
@@ -44,7 +44,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         </svg>
         <svg
           className="icon_rotate"
-          fill="#6b5ee0"
+          fill=""
           height={32}
           onClick={[Function]}
           onDoubleClick={[Function]}
@@ -71,7 +71,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         </div>
         <svg
           className="icon_invert__horizontal"
-          fill="#00000"
+          fill=""
           height={32}
           onClick={[Function]}
           onDoubleClick={[Function]}
