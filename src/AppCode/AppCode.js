@@ -163,6 +163,7 @@ class AppCode extends PureComponent {
 		const utterThis = new SpeechSynthesisUtterance();
 		const synth = window.speechSynthesis;
 		if (utterThis && synth) {
+			this.setState({ speaking: true });
 			// const voices = synth.getVoices();
 			// utterThis.voice = voices[1];   // ошибка какая то !!!
 			// utterThis.voiceURI = 'Google UK English Male';
@@ -170,14 +171,16 @@ class AppCode extends PureComponent {
 			// utterThis.rate = 0.1; // 0.1 to 10
 			// utterThis.pitch = 0; //0 to 2
 			utterThis.lang = 'en-GB';
-			// utterThis.onend = (event) => console.log('Finished in ' + Math.round(event.elapsedTime/100)/10 + ' seconds.');
+			utterThis.onend = (event) => {
+				this.setState({ speaking: false });
+			};
 			utterThis.text = text;
 			synth.speak(utterThis);
 		}
 		return false;
 	};
 
-	handleDictClickedLocal = ( number) => {
+	handleDictClickedLocal = (number) => {
 		handleDictClicked(number);
 		this.setState({
 			activeIndex: 0,
@@ -188,7 +191,14 @@ class AppCode extends PureComponent {
 	};
 
 	render() {
-		const { activeIndex, randomDictionary, showEnglish, showAdvanced } = this.state;
+		const {
+			activeIndex,
+			randomDictionary,
+			showAdvanced,
+			showEnglish,
+			speaking,
+		} = this.state;
+
 		const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
 		const russian = Object.keys(activeObj || {})[0];
 
@@ -268,7 +278,9 @@ class AppCode extends PureComponent {
 					>
 						<div className="app__center">
 							<div className="overflow_y_scroll">
-								<div className="eng_text_color">{showEnglish && english}</div>
+								<div className={'eng_text_color' + (speaking ? ' speaking' : '')}>
+									{showEnglish && english}
+								</div>
 							</div>
 						</div>
 					</div>

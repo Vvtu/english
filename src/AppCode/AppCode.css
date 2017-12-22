@@ -3,6 +3,7 @@
     --main_gap: 1rem;
     --trueHeight: calc(100vh - 1rem);
     --green-color: #6b5ee0;
+    --blue-color: #64911f;
     --font-size: 24px;
     --text-height: calc(var(--trueHeight) - var(--button_height));
     --half-text-height: calc(var(--text-height) / 2);
@@ -74,13 +75,17 @@
     padding: 0 -10px 0 -5px;
 }
 
+
+
 /* font size and colors
 ============================================================= */
 
 .eng_text_color {
     color: var(--green-color);
 }
-
+.speaking {
+    color: var(--blue-color);
+}
 /* icons
 ============================================================= */
 
