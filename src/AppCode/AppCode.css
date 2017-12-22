@@ -1,113 +1,127 @@
 :root {
-    --button_height: 2rem;
-    --main_gap: 1rem;
-    --trueHeight: calc(100vh - 1rem);
-    --green-color: #6b5ee0;
-    --blue-color: #64911f;
-    --font-size: 24px;
-    --text-height: calc(var(--trueHeight) - var(--button_height));
-    --half-text-height: calc(var(--text-height) / 2);
+	--button_height: 2rem;
+	--font-size: 24px;
+	--half-text-height: calc(var(--text-height) / 2);
+	--main_gap: 1rem;
+	--text-height: calc(var(--trueHeight) - var(--button_height));
+	--trueHeight: calc(100vh - 1rem);
+
+	--advanced-color: #522719;
+	--blue-color: #6b5ee0;
+	--green-color: #94a11f;
+	--grey-color: #777777;
+	--red-color: #ff4000;
+	--shadow-color: #dddddd;
+	--black-color: #000000;
+	--white-color: #ffffff;
 }
 
 /* grid
 ============================================================= */
-.app__grid {
-    display: grid;
-    font-size: var(--font-size);
-    grid-column-gap: var(--main_gap);
-    grid-row-gap: var(--main_gap);
 
-    height: var(--trueHeight);
-    max-height: var(--trueHeight);
-    min-height: var(--trueHeight);
-    padding: 0 2px 0 4px;
+.app__grid {
+	filter: invert(100%);
+
+	display: grid;
+	font-size: var(--font-size);
+	grid-column-gap: var(--main_gap);
+	grid-row-gap: var(--main_gap);
+
+	height: var(--trueHeight);
+	max-height: var(--trueHeight);
+	min-height: var(--trueHeight);
+	padding: 0 2px 0 4px;
+
+	background-color: var(--black-color);
+	color:  var(--white-color) ;
 }
 
 @media (orientation: portrait) {
-    .app__grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: var(--half-text-height) var(--button_height) var(--half-text-height);
-        grid-template-areas: 'russian' 'info' 'english';
-    }
-    .overflow_y_scroll {
-        max-height: var(--half-text-height);
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
-    .icon_rotate {
-        transform: rotate(270deg);
-    }
-    .icon_rotate_back {
-        transform: rotate(90deg);
-    }
+	.app__grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: var(--half-text-height) var(--button_height)
+			var(--half-text-height);
+		grid-template-areas: 'russian' 'info' 'english';
+	}
+	.overflow_y_scroll {
+		max-height: var(--half-text-height);
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+	.icon_rotate {
+		transform: rotate(270deg);
+	}
+	.icon_rotate_back {
+		transform: rotate(90deg);
+	}
 }
 
 @media (orientation: landscape) {
-    .app__grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: var(--text-height) var(--button_height);
-        grid-template-areas: 'russian english' 'info info';
-    }
-    .overflow_y_scroll {
-        max-height: var(--text-height);
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
-    .icon_rotate {
-        transform: rotate(90deg);
-    }
-    .icon_rotate_back {
-        transform: rotate(270deg);
-    }
+	.app__grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: var(--text-height) var(--button_height);
+		grid-template-areas: 'russian english' 'info info';
+	}
+	.overflow_y_scroll {
+		max-height: var(--text-height);
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+	.icon_rotate {
+		transform: rotate(90deg);
+	}
+	.icon_rotate_back {
+		transform: rotate(270deg);
+	}
 }
 
 .app__info {
-    grid-area: info;
-    margin: 2px -8px 2px -8px;
+	grid-area: info;
+	margin: 2px -8px 2px -8px;
 }
 
 .app__russian {
-    grid-area: russian;
-    padding: 0 -10px 0 -5px;
+	grid-area: russian;
+	padding: 0 -10px 0 -5px;
 }
+
 .app__english {
-    grid-area: english;
-    padding: 0 -10px 0 -5px;
+	grid-area: english;
+	padding: 0 -10px 0 -5px;
 }
-
-
 
 /* font size and colors
 ============================================================= */
 
 .eng_text_color {
-    color: var(--green-color);
+	color: var(--green-color);
 }
+
 .speaking {
-    color: var(--blue-color);
+	color: var(--blue-color);
 }
 /* icons
 ============================================================= */
 
 .icon_invert__horizontal {
-    transform: scaleX(-1);
+	transform: scaleX(-1);
 }
 
 /* flex boxes
 ============================================================= */
 
 .app__center {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 .app__info2 {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }

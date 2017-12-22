@@ -11,6 +11,7 @@ const TRANSITION = 'opacity ' + ANIMATION_INTERVAL + 's ease';
 
 const noop = () => {};
 
+
 class PopupWindowForAdvancedMenu extends PureComponent {
 	constructor(props) {
 		super(props);
@@ -46,6 +47,12 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 	};
 
 	render() {
+		const styles = getComputedStyle(document.documentElement);
+		const greenColor = String(styles.getPropertyValue('--green-color')).trim();
+		const redColor = String(styles.getPropertyValue('--red-color')).trim();
+		const whiteColor = String(styles.getPropertyValue('--white-color')).trim();
+		const blackColor = String(styles.getPropertyValue('--black-color')).trim();
+
 		const {
 			handleHideItemClicked,
 			handleUnhideAllItemsClicked,
@@ -69,7 +76,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 					<div className="popup_window">
 						<div className="cancel_button" onClick={this.changeBoardValueByPath}>
 							<CancelIcon
-								fill="#000000"
+								fill={whiteColor}
 								height={16}
 								onClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
 								onDoubleClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
@@ -80,35 +87,35 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 							{this.menuRow({
 								label: 'Advanced:',
 								Icon: CancelIcon,
-								props: { height: '32', width: '32', fill: '#ffffff' },
+								props: { height: '32', width: '32', fill: blackColor },
 								handleClicked: noop,
 							})}
 
 							{this.menuRow({
 								label: 'hide this item',
 								Icon: CancelIcon,
-								props: { height: '32', width: '32', fill: '#00bfff' },
+								props: { height: '32', width: '32', fill: redColor },
 								handleClicked: handleHideItemClicked,
 							})}
 
 							{this.menuRow({
 								label: 'reset all info',
 								Icon: ClearAllInfo,
-								props: { height: '32', width: '32', fill: '#6b5ee0' },
+								props: { height: '32', width: '32', fill: greenColor },
 								handleClicked: handleUnhideAllItemsClicked,
 							})}
 
 							{this.menuRow({
 								label: 'dict #1',
-								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D1</div>,
+								Icon: () => <div style={{ width: '32px', color: greenColor }}>D1</div>,
 								props: {},
-								handleClicked: () => handleDictClicked( 1),
+								handleClicked: () => handleDictClicked(1),
 							})}
 							{this.menuRow({
 								label: 'dict #2',
-								Icon: () => <div style={{ width: '32px', color: '#6b5ee0' }}>D2</div>,
+								Icon: () => <div style={{ width: '32px', color: greenColor }}>D2</div>,
 								props: {},
-								handleClicked: () => handleDictClicked( 2),
+								handleClicked: () => handleDictClicked(2),
 							})}
 						</div>
 					</div>

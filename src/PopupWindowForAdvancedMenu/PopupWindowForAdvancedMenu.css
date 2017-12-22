@@ -13,7 +13,7 @@
 }
 
 .full_screen_div_opacity {
-	background-color: grey;
+	background-color: var(--grey-color);
 	bottom: 0;
 	left: 0;
 	opacity: 0.4;
@@ -26,9 +26,9 @@
 
 .popup_window {
 	max-height: calc(100vh - 4rem);
-	background-color: white;
+	background-color: var(--black-color);
 	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.9) 0px 13px 26px 0px;
+	box-shadow:   var(--shadow-color) 0px 13px 26px 0px;
 	padding: 10px 25px 10px 20px;
 	position: relative;
 }

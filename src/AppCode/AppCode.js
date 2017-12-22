@@ -29,9 +29,15 @@ class AppCode extends PureComponent {
 		};
 	}
 
-	// componentDidMount() {
-	// 	window.addEventListener('touchstart', this.handleTouchStart);
-	// }
+	componentDidMount() {
+		// window.addEventListener('touchstart', this.handleTouchStart);
+		const styles = getComputedStyle(document.documentElement);
+		this.setState({
+			greenColor: String(styles.getPropertyValue('--green-color')).trim(),
+			advancedColor: String(styles.getPropertyValue('--advanced-color')).trim(),
+			whiteColor: String(styles.getPropertyValue('--white-color')).trim(),
+		});
+	}
 
 	// componentWillUnmount() {
 	// 	window.removeEventListener('touchstart', this.handleTouchStart);
@@ -197,6 +203,9 @@ class AppCode extends PureComponent {
 			showAdvanced,
 			showEnglish,
 			speaking,
+			greenColor,
+			advancedColor,
+			whiteColor
 		} = this.state;
 
 		const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
@@ -218,13 +227,14 @@ class AppCode extends PureComponent {
 								onClick={this.handleBackClicked}
 								onDoubleClick={this.handleBackClicked}
 								width={32}
+								fill={whiteColor}
 							/>
 							<AdvancedIcon
 								height={32}
 								onClick={this.handleAdvancedClicked}
 								onDoubleClick={this.handleAdvancedClicked}
 								width={32}
-								fill="#add8e6"
+								fill={advancedColor}
 							/>
 
 							{!showEnglish && (
@@ -234,7 +244,7 @@ class AppCode extends PureComponent {
 									onClick={this.handleShowEnglishClicked}
 									onDoubleClick={this.handleShowEnglishClicked}
 									width={32}
-									fill="#6b5ee0"
+									fill={greenColor}
 								/>
 							)}
 							{showEnglish && (
@@ -244,7 +254,7 @@ class AppCode extends PureComponent {
 									onClick={this.handleForwardClicked}
 									onDoubleClick={this.handleForwardClicked}
 									width={32}
-									fill="#6b5ee0"
+									fill={greenColor}
 								/>
 							)}
 
@@ -262,6 +272,7 @@ class AppCode extends PureComponent {
 								onClick={this.handleForwardClicked}
 								onDoubleClick={this.handleForwardClicked}
 								width={32}
+								fill={whiteColor}
 							/>
 						</div>
 					</div>
