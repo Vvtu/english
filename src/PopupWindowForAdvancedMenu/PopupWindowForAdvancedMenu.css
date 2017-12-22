@@ -1,16 +1,3 @@
-:root {
-	--ANIMATION_INTERVAL: 0.5s;
-}
-
-.opacity-0 {
-	opacity: 0.05;
-	transition: opacity var(--ANIMATION_INTERVAL) ease;
-}
-
-.transition-opacity-to-1 {
-	opacity: 1;
-  transition: opacity var(--ANIMATION_INTERVAL) ease;
-}
 
 .full_screen_div {
 	align-items: center;
@@ -23,7 +10,6 @@
 	right: 0;
 	top: 0;
 	z-index: 3;
-	cursor: pointer;
 }
 
 .full_screen_div_opacity {
@@ -40,7 +26,7 @@
 
 .popup_window {
 	max-height: calc(100vh - 4rem);
-	background: white;
+	background-color: white;
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.9) 0px 13px 26px 0px;
 	padding: 10px 25px 10px 20px;

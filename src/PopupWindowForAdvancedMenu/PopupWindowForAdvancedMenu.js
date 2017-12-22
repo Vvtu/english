@@ -5,7 +5,9 @@ import ClearAllInfo from './svg/ClearAllInfo';
 
 import './PopupWindowForAdvancedMenu.css';
 
-const ANIMATION_INTERVAL = 500; // ms
+const ANIMATION_INTERVAL = 5; // sec
+
+const TRANSITION = 'opacity ' + ANIMATION_INTERVAL + 's ease';
 
 const menuRow = (menuItem) => (
 	<div
@@ -39,7 +41,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 		this.setState({ mount: false });
 		setTimeout(() => {
 			this.props.handleClosePopupClicked();
-		}, ANIMATION_INTERVAL);
+		}, ANIMATION_INTERVAL * 1000);
 		return false;
 	};
 
@@ -54,14 +56,15 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 
 		return (
 			<div
-				className={this.state.mount !== true ? 'opacity-0' : 'transition-opacity-to-1'}
+				style={{
+					opacity: this.state.mount === true ? '1' : '0',
+					transition: TRANSITION,
+				}}
+				onClick={this.handleClose}
+				onDoubleClick={this.handleClose}
 			>
 				<div className="full_screen_div_opacity" />
-				<div
-					className="full_screen_div"
-					onClick={this.handleClose}
-					onDoubleClick={this.handleClose}
-				>
+				<div className="full_screen_div">
 					<div className="popup_window">
 						<div className="cancel_button" onClick={this.changeBoardValueByPath}>
 							<CancelIcon
