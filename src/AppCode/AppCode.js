@@ -15,6 +15,8 @@ import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 // 	process.env && process.env.REACT_APP_SECRET_CODE,
 // );
 
+import { ICON_SIZE } from '../Constants/constants';
+
 class AppCode extends PureComponent {
 	static propTypes = {
 		dictionaries: PropTypes.object.isRequired,
@@ -205,7 +207,7 @@ class AppCode extends PureComponent {
 			speaking,
 			greenColor,
 			advancedColor,
-			whiteColor
+			whiteColor,
 		} = this.state;
 
 		const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
@@ -223,37 +225,37 @@ class AppCode extends PureComponent {
 					<div className="app__info">
 						<div className="app__info2">
 							<ArrowIcon
-								height={32}
+								height={ICON_SIZE}
 								onClick={this.handleBackClicked}
 								onDoubleClick={this.handleBackClicked}
-								width={32}
+								width={ICON_SIZE}
 								fill={whiteColor}
 							/>
 							<AdvancedIcon
-								height={32}
+								height={ICON_SIZE}
 								onClick={this.handleAdvancedClicked}
 								onDoubleClick={this.handleAdvancedClicked}
-								width={32}
+								width={ICON_SIZE}
 								fill={advancedColor}
 							/>
 
 							{!showEnglish && (
 								<ArrowIcon
 									className="icon_rotate"
-									height={32}
+									height={ICON_SIZE}
 									onClick={this.handleShowEnglishClicked}
 									onDoubleClick={this.handleShowEnglishClicked}
-									width={32}
+									width={ICON_SIZE}
 									fill={greenColor}
 								/>
 							)}
 							{showEnglish && (
 								<ArrowIcon
 									className="icon_rotate_back"
-									height={32}
+									height={ICON_SIZE}
 									onClick={this.handleForwardClicked}
 									onDoubleClick={this.handleForwardClicked}
-									width={32}
+									width={ICON_SIZE}
 									fill={greenColor}
 								/>
 							)}
@@ -268,10 +270,10 @@ class AppCode extends PureComponent {
 
 							<ArrowIcon
 								className="icon_invert__horizontal"
-								height={32}
+								height={ICON_SIZE}
 								onClick={this.handleForwardClicked}
 								onDoubleClick={this.handleForwardClicked}
-								width={32}
+								width={ICON_SIZE}
 								fill={whiteColor}
 							/>
 						</div>

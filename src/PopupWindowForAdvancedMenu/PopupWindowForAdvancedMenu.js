@@ -5,12 +5,11 @@ import ClearAllInfo from './svg/ClearAllInfo';
 
 import './PopupWindowForAdvancedMenu.css';
 
-const ANIMATION_INTERVAL = 0.5; // sec
+import { ANIMATION_INTERVAL, ICON_SIZE } from '../Constants/constants';
 
 const TRANSITION = 'opacity ' + ANIMATION_INTERVAL + 's ease';
 
 const noop = () => {};
-
 
 class PopupWindowForAdvancedMenu extends PureComponent {
 	constructor(props) {
@@ -20,7 +19,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 
 	componentDidMount() {
 		setTimeout(() => {
-			this.setState({ mount: true });
+			this.setState({ increaseOpacity: true });
 		}, 1);
 	}
 
@@ -39,7 +38,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 	handleClicked = (e, func) => {
 		e.preventDefault();
 		e.stopPropagation();
-		this.setState({ mount: false });
+		this.setState({ increaseOpacity: false });
 		setTimeout(() => {
 			func();
 		}, ANIMATION_INTERVAL * 1000);
@@ -60,12 +59,12 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 			handleClosePopupClicked,
 		} = this.props;
 
-		// console.log('this.state.mount = ', this.state.mount);
+		// console.log('this.state.increaseOpacity = ', this.state.increaseOpacity);
 
 		return (
 			<div
 				style={{
-					opacity: this.state.mount === true ? '1' : '0',
+					opacity: this.state.increaseOpacity === true ? '1' : '0',
 					transition: TRANSITION,
 				}}
 				onClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
@@ -87,33 +86,34 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 							{this.menuRow({
 								label: 'Advanced:',
 								Icon: CancelIcon,
-								props: { height: '32', width: '32', fill: blackColor },
+								props: { height: ICON_SIZE, width: ICON_SIZE, fill: blackColor },
 								handleClicked: noop,
 							})}
 
 							{this.menuRow({
 								label: 'hide this item',
 								Icon: CancelIcon,
-								props: { height: '32', width: '32', fill: redColor },
+								props: { height: ICON_SIZE, width: ICON_SIZE, fill: redColor },
 								handleClicked: handleHideItemClicked,
 							})}
 
 							{this.menuRow({
 								label: 'reset all info',
 								Icon: ClearAllInfo,
-								props: { height: '32', width: '32', fill: greenColor },
+								props: { height: ICON_SIZE, width: ICON_SIZE, fill: greenColor },
 								handleClicked: handleUnhideAllItemsClicked,
 							})}
 
 							{this.menuRow({
 								label: 'dict #1',
-								Icon: () => <div style={{ width: '32px', color: greenColor }}>D1</div>,
+								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D1</div>,
 								props: {},
 								handleClicked: () => handleDictClicked(1),
 							})}
+
 							{this.menuRow({
 								label: 'dict #2',
-								Icon: () => <div style={{ width: '32px', color: greenColor }}>D2</div>,
+								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D2</div>,
 								props: {},
 								handleClicked: () => handleDictClicked(2),
 							})}
