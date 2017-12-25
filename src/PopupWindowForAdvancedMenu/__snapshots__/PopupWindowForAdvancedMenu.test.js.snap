@@ -12,16 +12,16 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
   }
 >
   <div
-    className="full_screen_div_opacity"
+    className="popup__full_screen_div_opacity"
   />
   <div
-    className="full_screen_div"
+    className="popup__full_screen_div"
   >
     <div
-      className="popup_window"
+      className="popup__window"
     >
       <div
-        className="cancel_button"
+        className="popup__cancel"
         onClick={undefined}
       >
         <svg
@@ -45,7 +45,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
         </svg>
       </div>
       <div
-        className="popup_list"
+        className="popup__list"
       >
         <div
           className="popup__row"

@@ -70,10 +70,10 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 				onClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
 				onDoubleClick={(e) => this.handleClicked(e, handleClosePopupClicked)}
 			>
-				<div className="full_screen_div_opacity" />
-				<div className="full_screen_div">
-					<div className="popup_window">
-						<div className="cancel_button" onClick={this.changeBoardValueByPath}>
+				<div className="popup__full_screen_div_opacity" />
+				<div className="popup__full_screen_div">
+					<div className="popup__window">
+						<div className="popup__cancel" onClick={this.changeBoardValueByPath}>
 							<CancelIcon
 								fill={whiteColor}
 								height={16}
@@ -82,7 +82,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 								width={16}
 							/>
 						</div>
-						<div className="popup_list">
+						<div className="popup__list">
 							{this.menuRow({
 								label: 'Advanced:',
 								Icon: CancelIcon,

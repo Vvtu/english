@@ -171,7 +171,7 @@ class AppCode extends PureComponent {
 		const utterThis = new SpeechSynthesisUtterance();
 		const synth = window.speechSynthesis;
 		if (utterThis && synth) {
-			this.setState({ speaking: true });
+			this.setState({ appcode__speaking: true });
 			// const voices = synth.getVoices();
 			// utterThis.voice = voices[1];   // ошибка какая то !!!
 			// utterThis.voiceURI = 'Google UK English Male';
@@ -180,7 +180,7 @@ class AppCode extends PureComponent {
 			// utterThis.pitch = 0; //0 to 2
 			utterThis.lang = 'en-GB';
 			utterThis.onend = (event) => {
-				this.setState({ speaking: false });
+				this.setState({ appcode__speaking: false });
 			};
 			utterThis.text = text;
 			synth.speak(utterThis);
@@ -204,7 +204,7 @@ class AppCode extends PureComponent {
 			randomDictionary,
 			showAdvanced,
 			showEnglish,
-			speaking,
+			appcode__speaking,
 			greenColor,
 			advancedColor,
 			whiteColor,
@@ -221,9 +221,9 @@ class AppCode extends PureComponent {
 
 		return (
 			<div>
-				<div className="app__grid">
-					<div className="app__info">
-						<div className="app__info2">
+				<div className="appcode__grid">
+					<div className="appcode__info">
+						<div className="appcode__info2">
 							<ArrowIcon
 								height={ICON_SIZE}
 								onClick={this.handleBackClicked}
@@ -241,7 +241,7 @@ class AppCode extends PureComponent {
 
 							{!showEnglish && (
 								<ArrowIcon
-									className="icon_rotate"
+									className="appcode__icon_rotate"
 									height={ICON_SIZE}
 									onClick={this.handleShowEnglishClicked}
 									onDoubleClick={this.handleShowEnglishClicked}
@@ -251,7 +251,7 @@ class AppCode extends PureComponent {
 							)}
 							{showEnglish && (
 								<ArrowIcon
-									className="icon_rotate_back"
+									className="appcode__icon_rotate_back"
 									height={ICON_SIZE}
 									onClick={this.handleForwardClicked}
 									onDoubleClick={this.handleForwardClicked}
@@ -265,11 +265,11 @@ class AppCode extends PureComponent {
 								onDoubleClick={this.handleStatisticClicked}
 							>
 								<span>{activeIndex + 1 + '/' + count}</span>
-								<span className="eng_text_color">{'(' + shown + ')'}</span>
+								<span className="appcode__eng_text_color">{'(' + shown + ')'}</span>
 							</div>
 
 							<ArrowIcon
-								className="icon_invert__horizontal"
+								className="appcode__icon_invert__horizontal"
 								height={ICON_SIZE}
 								onClick={this.handleForwardClicked}
 								onDoubleClick={this.handleForwardClicked}
@@ -278,18 +278,18 @@ class AppCode extends PureComponent {
 							/>
 						</div>
 					</div>
-					<div className="app__russian">
-						<div className="app__center">
-							<div className="overflow_y_scroll">
+					<div className="appcode__russian">
+						<div className="appcode__center">
+							<div className="appcode__scroll">
 								<div>{russian}</div>
 							</div>
 						</div>
 					</div>
-					<div className="app__english">
-						<div className="app__center">
-							<div className="overflow_y_scroll">
+					<div className="appcode__english">
+						<div className="appcode__center">
+							<div className="appcode__scroll">
 								<div
-									className={'eng_text_color' + (speaking ? ' speaking' : '')}
+									className={'appcode__eng_text_color' + (appcode__speaking ? ' appcode__speaking' : '')}
 									onClick={(e) => this.handleTextToSpeachClicked(e, english)}
 								>
 									{showEnglish && english}

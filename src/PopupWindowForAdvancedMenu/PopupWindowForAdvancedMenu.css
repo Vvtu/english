@@ -1,5 +1,5 @@
 
-.full_screen_div {
+.popup__full_screen_div {
 	align-items: center;
 	bottom: 0;
 	display: flex;
@@ -12,7 +12,7 @@
 	z-index: 5;
 }
 
-.full_screen_div_opacity {
+.popup__full_screen_div_opacity {
 	background-color: var(--grey-color);
 	bottom: 0;
 	left: 0;
@@ -24,7 +24,7 @@
 	z-index: 4;
 }
 
-.popup_window {
+.popup__window {
 	max-height: calc(100vh - 4rem);
 	background-color: var(--background-color);
 	border-radius: 5px;
@@ -33,7 +33,7 @@
 	position: relative;
 }
 
-.popup_list {
+.popup__list {
 	max-height: calc(100vh - 4rem);
 	overflow-y: scroll;
 	align-items: flex-start;
@@ -42,7 +42,7 @@
 	justify-content: flex-start;
 }
 
-.cancel_button {
+.popup__cancel {
 	position: absolute;
 	top: 2px;
 	right: 10px;

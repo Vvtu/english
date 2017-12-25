@@ -15,7 +15,7 @@
 	);
 
 	--advanced-color: #522719;
-	--english-speaking-text-color: #6b5ee0;
+	--english-appcode__speaking-text-color: #6b5ee0;
 	--english-text-color: #94a11f;
 	--grey-color: #777777;
 	--danger-color: #ff4000;
@@ -27,7 +27,7 @@
 /* grid
 ============================================================= */
 
-.app__grid {
+.appcode__grid {
 	padding: 0 8px;
 	filter: invert(100%);
 
@@ -41,73 +41,73 @@
 }
 
 @media (orientation: portrait) {
-	.app__grid {
+	.appcode__grid {
 		grid-template-columns: 1fr;
 		grid-template-rows: var(--text-height-portrait) var(--info_panel_height)
 			var(--text-height-portrait);
 		grid-template-areas: 'russian' 'info' 'english';
 	}
-	.icon_rotate {
+	.appcode__icon_rotate {
 		transform: rotate(270deg);
 	}
-	.icon_rotate_back {
+	.appcode__icon_rotate_back {
 		transform: rotate(90deg);
 	}
 }
 
 @media (orientation: landscape) {
-	.app__grid {
+	.appcode__grid {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: var(--text-height-landscape) var(--info_panel_height);
 		grid-template-areas: 'russian english' 'info info';
 	}
-	.icon_rotate {
+	.appcode__icon_rotate {
 		transform: rotate(90deg);
 	}
-	.icon_rotate_back {
+	.appcode__icon_rotate_back {
 		transform: rotate(270deg);
 	}
 }
 
-.overflow_y_scroll {
+.appcode__info {
+	grid-area: info;
+}
+
+.appcode__russian {
+	grid-area: russian;
+}
+
+.appcode__english {
+	grid-area: english;
+}
+
+.appcode__scroll {
 	max-height: 100%;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 
-.app__info {
-	grid-area: info;
-}
-
-.app__russian {
-	grid-area: russian;
-}
-
-.app__english {
-	grid-area: english;
-}
-
 /* font size and colors
 ============================================================= */
 
-.eng_text_color {
+.appcode__eng_text_color {
 	color: var(--english-text-color);
 }
 
-.speaking {
-	color: var(--english-speaking-text-color);
+.appcode__speaking {
+	color: var(--english-appcode__speaking-text-color);
 }
 /* icons
 ============================================================= */
 
-.icon_invert__horizontal {
+.appcode__icon_invert__horizontal {
 	transform: scaleX(-1);
 }
 
 /* flex boxes
 ============================================================= */
 
-.app__center {
+.appcode__center {
 	height: 100%;
 	display: flex;
 	flex-direction: row;
@@ -116,7 +116,7 @@
 	position: relative;
 }
 
-.app__info2 {
+.appcode__info2 {
 	height: 100%;
 	display: flex;
 	flex-direction: row;

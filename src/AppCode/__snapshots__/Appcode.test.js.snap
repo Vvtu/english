@@ -3,13 +3,13 @@
 exports[`AppCode test    test 1 - Always fails because of random side effect 1`] = `
 <div>
   <div
-    className="app__grid"
+    className="appcode__grid"
   >
     <div
-      className="app__info"
+      className="appcode__info"
     >
       <div
-        className="app__info2"
+        className="appcode__info2"
       >
         <svg
           fill=""
@@ -43,7 +43,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
           </g>
         </svg>
         <svg
-          className="icon_rotate"
+          className="appcode__icon_rotate"
           fill=""
           height="32"
           onClick={[Function]}
@@ -64,13 +64,13 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
             1/1
           </span>
           <span
-            className="eng_text_color"
+            className="appcode__eng_text_color"
           >
             (0)
           </span>
         </div>
         <svg
-          className="icon_invert__horizontal"
+          className="appcode__icon_invert__horizontal"
           fill=""
           height="32"
           onClick={[Function]}
@@ -86,13 +86,13 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
       </div>
     </div>
     <div
-      className="app__russian"
+      className="appcode__russian"
     >
       <div
-        className="app__center"
+        className="appcode__center"
       >
         <div
-          className="overflow_y_scroll"
+          className="appcode__scroll"
         >
           <div>
             Русский текст
@@ -101,16 +101,16 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
       </div>
     </div>
     <div
-      className="app__english"
+      className="appcode__english"
     >
       <div
-        className="app__center"
+        className="appcode__center"
       >
         <div
-          className="overflow_y_scroll"
+          className="appcode__scroll"
         >
           <div
-            className="eng_text_color"
+            className="appcode__eng_text_color"
             onClick={[Function]}
           />
         </div>
