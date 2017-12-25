@@ -15,36 +15,33 @@
 	);
 
 	--advanced-color: #522719;
+	--background-color: #000000;
+	--base-text-color: #ffffff;
+	--danger-color: #ff4000;
 	--english-appcode__speaking-text-color: #6b5ee0;
 	--english-text-color: #94a11f;
 	--grey-color: #777777;
-	--danger-color: #ff4000;
 	--shadow-color: #dddddd;
-	--background-color: #000000;
-	--base-text-color: #ffffff;
 }
 
 /* grid
 ============================================================= */
 
 .appcode__grid {
-	padding: 0 8px;
-	filter: invert(100%);
-
+	background-color: var(--background-color);
+	color: var(--base-text-color);
 	display: grid;
+	filter: invert(100%);
 	font-size: var(--font-size);
 	grid-column-gap: var(--main_gap);
 	grid-row-gap: var(--main_gap);
-
-	background-color: var(--background-color);
-	color: var(--base-text-color);
+	padding: 0 8px;
 }
 
 @media (orientation: portrait) {
 	.appcode__grid {
 		grid-template-columns: 1fr;
-		grid-template-rows: var(--text-height-portrait) var(--info_panel_height)
-			var(--text-height-portrait);
+		grid-template-rows: var(--text-height-portrait) var(--info_panel_height) var(--text-height-portrait);
 		grid-template-areas: 'russian' 'info' 'english';
 	}
 	.appcode__icon_rotate {
@@ -97,6 +94,7 @@
 .appcode__speaking {
 	color: var(--english-appcode__speaking-text-color);
 }
+
 /* icons
 ============================================================= */
 
@@ -113,7 +111,6 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 }
 
 .appcode__info2 {

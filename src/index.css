@@ -3,13 +3,3 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-
-
-html, body, .container {
-  height: 100%;
-}
-
-/* body { */
-  /* Disables pull-to-refresh but allows overscroll glow effects. */
-  /* overscroll-behavior-y: none; */
-/* } */
