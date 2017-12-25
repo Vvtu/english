@@ -1,10 +1,20 @@
 :root {
-	--button_height: 2rem;
 	--font-size: 24px;
-	--half-text-height: calc(var(--text-height) / 2);
-	--main_gap: 1rem;
-	--text-height: calc(var(--trueHeight) - var(--button_height));
-	--trueHeight: calc(100vh - 1rem);
+
+	--overlap_top_bottom: 8px;
+	--info_panel_height: calc(var(--font-size)*2);
+	--main_gap: calc(var(--font-size) / 2);
+
+	--text-height-portrait: calc(
+
+			(
+				100vh - var(--overlap_top_bottom) - (var(--main_gap) * 2) - var(--info_panel_height)
+			) / 2
+	);
+
+	--text-height-landscape: calc(
+		100vh - var(--info_panel_height) - var(--main_gap) - var(--overlap_top_bottom)
+	);
 
 	--advanced-color: #522719;
 	--english-speaking-text-color: #6b5ee0;
@@ -20,6 +30,7 @@
 ============================================================= */
 
 .app__grid {
+	padding: 0 8px;
 	filter: invert(100%);
 
 	display: grid;
@@ -27,26 +38,16 @@
 	grid-column-gap: var(--main_gap);
 	grid-row-gap: var(--main_gap);
 
-	height: var(--trueHeight);
-	max-height: var(--trueHeight);
-	min-height: var(--trueHeight);
-	padding: 0 2px 0 4px;
-
 	background-color: var(--background-color);
-	color:  var(--base-text-color) ;
+	color: var(--base-text-color);
 }
 
 @media (orientation: portrait) {
 	.app__grid {
 		grid-template-columns: 1fr;
-		grid-template-rows: var(--half-text-height) var(--button_height)
-			var(--half-text-height);
+		grid-template-rows: var(--text-height-portrait) var(--info_panel_height)
+			var(--text-height-portrait);
 		grid-template-areas: 'russian' 'info' 'english';
-	}
-	.overflow_y_scroll {
-		max-height: var(--half-text-height);
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
 	}
 	.icon_rotate {
 		transform: rotate(270deg);
@@ -59,13 +60,8 @@
 @media (orientation: landscape) {
 	.app__grid {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: var(--text-height) var(--button_height);
+		grid-template-rows: var(--text-height-landscape) var(--info_panel_height);
 		grid-template-areas: 'russian english' 'info info';
-	}
-	.overflow_y_scroll {
-		max-height: var(--text-height);
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
 	}
 	.icon_rotate {
 		transform: rotate(90deg);
@@ -75,19 +71,22 @@
 	}
 }
 
+.overflow_y_scroll {
+	max-height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
 .app__info {
 	grid-area: info;
-	margin: 2px -8px 2px -8px;
 }
 
 .app__russian {
 	grid-area: russian;
-	padding: 0 -10px 0 -5px;
 }
 
 .app__english {
 	grid-area: english;
-	padding: 0 -10px 0 -5px;
 }
 
 /* font size and colors
@@ -116,6 +115,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .app__info2 {
