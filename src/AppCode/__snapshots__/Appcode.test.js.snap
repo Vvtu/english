@@ -13,11 +13,11 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
       >
         <svg
           fill=""
-          height={32}
+          height="32"
           onClick={[Function]}
           onDoubleClick={[Function]}
           viewBox="0 0 141.732 141.732"
-          width={32}
+          width="32"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -26,11 +26,11 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         </svg>
         <svg
           fill=""
-          height={32}
+          height="32"
           onClick={[Function]}
           onDoubleClick={[Function]}
           viewBox="0 0 24 24"
-          width={32}
+          width="32"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -45,11 +45,11 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         <svg
           className="icon_rotate"
           fill=""
-          height={32}
+          height="32"
           onClick={[Function]}
           onDoubleClick={[Function]}
           viewBox="0 0 141.732 141.732"
-          width={32}
+          width="32"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -72,11 +72,11 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         <svg
           className="icon_invert__horizontal"
           fill=""
-          height={32}
+          height="32"
           onClick={[Function]}
           onDoubleClick={[Function]}
           viewBox="0 0 141.732 141.732"
-          width={32}
+          width="32"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -102,7 +102,6 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
     </div>
     <div
       className="app__english"
-      onClick={[Function]}
     >
       <div
         className="app__center"
@@ -112,6 +111,7 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
         >
           <div
             className="eng_text_color"
+            onClick={[Function]}
           />
         </div>
       </div>

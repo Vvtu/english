@@ -151,7 +151,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
             style={
               Object {
                 "color": "",
-                "width": "32px",
+                "width": "32",
               }
             }
           >
@@ -173,7 +173,7 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
             style={
               Object {
                 "color": "",
-                "width": "32px",
+                "width": "32",
               }
             }
           >
