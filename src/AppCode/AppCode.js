@@ -285,13 +285,13 @@ class AppCode extends PureComponent {
 							</div>
 						</div>
 					</div>
-					<div
-						className="app__english"
-						onClick={(e) => this.handleTextToSpeachClicked(e, english)}
-					>
+					<div className="app__english">
 						<div className="app__center">
 							<div className="overflow_y_scroll">
-								<div className={'eng_text_color' + (speaking ? ' speaking' : '')}>
+								<div
+									className={'eng_text_color' + (speaking ? ' speaking' : '')}
+									onClick={(e) => this.handleTextToSpeachClicked(e, english)}
+								>
 									{showEnglish && english}
 								</div>
 							</div>

@@ -9,7 +9,7 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 3;
+	z-index: 5;
 }
 
 .full_screen_div_opacity {
@@ -21,7 +21,7 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 2;
+	z-index: 4;
 }
 
 .popup_window {

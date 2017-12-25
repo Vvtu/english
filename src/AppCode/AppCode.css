@@ -1,19 +1,17 @@
 :root {
 	--font-size: 24px;
 
-	--overlap_top_bottom: 8px;
+	--overlap_bottom: 8px;
 	--info_panel_height: calc(var(--font-size)*2);
 	--main_gap: calc(var(--font-size) / 2);
 
 	--text-height-portrait: calc(
-
-			(
-				100vh - var(--overlap_top_bottom) - (var(--main_gap) * 2) - var(--info_panel_height)
-			) / 2
+		 (100vh - var(--overlap_bottom) - (var(--main_gap) * 2) - var(--info_panel_height)) /
+			2
 	);
 
 	--text-height-landscape: calc(
-		100vh - var(--info_panel_height) - var(--main_gap) - var(--overlap_top_bottom)
+		100vh - var(--info_panel_height) - var(--main_gap) - var(--overlap_bottom)
 	);
 
 	--advanced-color: #522719;
