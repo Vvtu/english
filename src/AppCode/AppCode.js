@@ -15,6 +15,8 @@ import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 // 	process.env && process.env.REACT_APP_SECRET_CODE,
 // );
 
+// Проверка работы git
+
 import { ICON_SIZE } from '../Constants/constants';
 
 class AppCode extends PureComponent {
