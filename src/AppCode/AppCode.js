@@ -8,14 +8,14 @@ import AdvancedIcon from 'AppCode/svg/AdvancedIcon';
 import 'AppCode/AppCode.css';
 
 import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
-
-// console.log('process.env = ', process.env);
-// console.log(
-// 	'process.env.REACT_APP_SECRET_CODE = ',
-// 	process.env && process.env.REACT_APP_SECRET_CODE,
-// );
-
 import { ICON_SIZE } from '../Constants/constants';
+
+console.log('process.env = ', process.env);
+console.log(
+	'process.env.REACT_APP_SECRET_CODE = ',
+	process.env && process.env.REACT_APP_SECRET_CODE,
+);
+
 
 class AppCode extends PureComponent {
 	static propTypes = {
