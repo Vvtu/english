@@ -10,8 +10,6 @@ import 'AppCode/AppCode.css';
 import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 import { ICON_SIZE } from '../Constants/constants';
 
-import { ICON_SIZE } from '../Constants/constants';
-
 // console.log('process.env = ', process.env);
 // console.log(
 // 	'process.env.REACT_APP_SECRET_CODE = ',
