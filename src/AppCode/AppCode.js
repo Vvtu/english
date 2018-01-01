@@ -10,8 +10,6 @@ import 'AppCode/AppCode.css';
 import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 import { ICON_SIZE } from '../Constants/constants';
 
-import { ICON_SIZE } from '../Constants/constants';
-
 // console.log('process.env = ', process.env);
 // console.log(
 // 	'process.env.REACT_APP_SECRET_CODE = ',
@@ -57,7 +55,7 @@ class AppCode extends PureComponent {
 		const { activeIndex, randomDictionary, showEnglish } = this.state;
 		if (showEnglish) {
 			const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
-			const russian = Object.keys(activeObj || {})[0];
+			const russian = activeObj.rus;
 			if (russian) {
 				const item = localStorage.getItem(russian);
 				const shown = parseInt(item, 10) || 0;
@@ -128,7 +126,7 @@ class AppCode extends PureComponent {
 		const { activeIndex, randomDictionary } = this.state;
 		if (activeIndex !== undefined && activeIndex < randomDictionary.length) {
 			const activeObj = randomDictionary[activeIndex];
-			const russian = Object.keys(activeObj || {})[0];
+			const russian = activeObj.rus;
 			if (russian) {
 				localStorage.setItem(russian, 'd');
 			}
@@ -212,9 +210,9 @@ class AppCode extends PureComponent {
 		} = this.state;
 
 		const activeObj = activeIndex !== undefined && randomDictionary[activeIndex];
-		const russian = Object.keys(activeObj || {})[0];
+		const russian = activeObj.rus;
 
-		const english = Object.values(activeObj || {})[0];
+		const english = activeObj.eng
 		const count = randomDictionary.length;
 
 		const item = localStorage.getItem(russian);
