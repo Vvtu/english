@@ -78,7 +78,7 @@ const dictionaries = {
     },
     {
       rus:
-        'React Devtools extension реагируют в  для Chrome и Firefox позволяет проверить компонентное дерево в браузере в инструментах разработчика.',
+        'React Devtools extension для Chrome и Firefox позволяет проверить компонентное дерево в браузерном devtools.',
       eng:
         'The React Devtools extension for Chrome and Firefox lets you inspect a React component tree in your browser devtools.',
     },
@@ -96,15 +96,8 @@ const dictionaries = {
     },
     {
       rus:
-        'Многие компоненты в вашем приложении могут быть написаны как функциональные компоненты.',
+        'Многие компоненты в ваших приложениях могут быть написаны как функциональные компоненты.',
       eng: 'Many components in your apps will be able to be written as functional components.',
-    },
-
-    {
-      rus:
-        'Когда вы отображаете список элементов, React всегда сохраняет некоторую информацию о каждом элементе в списке.',
-      eng:
-        'When you render a list of items, React always stores some info about each item in the list.',
     },
     {
       rus:
@@ -123,24 +116,24 @@ const dictionaries = {
         'When you render a list of items, React always stores some info about each item in the list.',
     },
     {
-      rus:
-        'Если вы отрисовываете компонент, имеющий состояние, это состояние должно быть сохранено-и независимо от того, как вы реализуете свои компоненты, React сохраняет ссылку на резервные собственные представления.',
-      eng:
-        ' If you render a component that has state, that state needs to be stored – and regardless of how you implement your components, React stores a reference to the backing native views.',
-    },
-    {
-      rus: 'Когда вы обновить этот список, React должен определить, что изменилось.',
+      rus: 'Когда вы обновляете этот список, React должен определить, что изменилось.',
       eng: 'When you update that list, React needs to determine what has changed.',
     },
     {
-      rus: 'Вы могли бы добавить, удалить, изменить или обновить элементы в списке.',
+      rus: 'Вы могли бы добавить, удалить, реорганизовать или обновить элементы в списке.',
       eng: 'You could’ve added, removed, rearranged, or updated items in the list.',
     },
     {
       rus:
-        'Настоятельно рекомендуется назначать правильные ключи при создании динамических списков. Если у вас нет подходящего ключа, вы можете рассмотреть вопрос о реструктуризации ваших данных так, что он был.',
+        'Настоятельно рекомендуется назначать правильные ключи всякий раз когда вы создаете динамические списки.',
       eng:
-        'It’s strongly recommended that you assign proper keys whenever you build dynamic lists. If you don’t have an appropriate key handy, you may want to consider restructuring your data so that you do.',
+        'It’s strongly recommended that you assign proper keys whenever you build dynamic lists.',
+    },
+    {
+      rus:
+        'Если у вас нет подходящего ключа, вы можете рассмотреть вопрос о реструктуризации ваших данных так, что он был.',
+      eng:
+        'If you don’t have an appropriate key handy, you may want to consider restructuring your data so that you do.',
     },
     {
       rus:
