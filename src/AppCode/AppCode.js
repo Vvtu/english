@@ -245,22 +245,21 @@ class AppCode extends PureComponent {
                 fill={advancedColor}
               />
 
-              {!showEnglish && (
-                <ArrowIcon
-                  className="appcode__icon_rotate"
-                  height={ICON_SIZE}
-                  onClick={this.handleShowEnglishClicked}
-                  onDoubleClick={this.handleShowEnglishClicked}
-                  width={ICON_SIZE}
-                  fill={greenColor}
-                />
-              )}
-              {showEnglish && (
+              {showEnglish ? (
                 <ArrowIcon
                   className="appcode__icon_rotate_back"
                   height={ICON_SIZE}
                   onClick={this.handleForwardClicked}
                   onDoubleClick={this.handleForwardClicked}
+                  width={ICON_SIZE}
+                  fill={greenColor}
+                />
+              ) : (
+                <ArrowIcon
+                  className="appcode__icon_rotate"
+                  height={ICON_SIZE}
+                  onClick={this.handleShowEnglishClicked}
+                  onDoubleClick={this.handleShowEnglishClicked}
                   width={ICON_SIZE}
                   fill={greenColor}
                 />
@@ -313,14 +312,14 @@ class AppCode extends PureComponent {
             </div>
           </div>
 
-          {showAdvanced && (
+          {showAdvanced ? (
             <PopupWindowForAdvancedMenu
               handleClosePopupClicked={this.handleClosePopupClicked}
               handleHideItemClicked={this.handleHideItemClicked}
               handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
               handleDictClicked={this.handleDictClickedLocal}
             />
-          )}
+          ) : null}
         </div>
       </div>
     );
