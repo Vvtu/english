@@ -93,10 +93,10 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
       >
         <div
           className="appcode__scroll"
+          onClick={[Function]}
+          onDoubleClick={[Function]}
         >
-          <div>
-            Русский текст
-          </div>
+          <div />
         </div>
       </div>
     </div>
@@ -108,10 +108,11 @@ exports[`AppCode test    test 1 - Always fails because of random side effect 1`]
       >
         <div
           className="appcode__scroll"
+          onClick={[Function]}
+          onDoubleClick={[Function]}
         >
           <div
             className="appcode__eng_text_color"
-            onClick={[Function]}
           />
         </div>
       </div>
