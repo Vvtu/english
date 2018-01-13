@@ -105,7 +105,7 @@ class AppCode extends PureComponent {
     e.preventDefault();
     e.stopPropagation();
     this.setState({
-      showEnglish: true,
+      showEnglish: this.state.showEnglish !== true,
     });
     return false;
   };
