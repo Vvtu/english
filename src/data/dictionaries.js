@@ -80,104 +80,106 @@ const dictionaries = {
 		},
 		{
 			rus:
-				'Мы хотим создать Таймер, когда часы оказанные в дом впервые. Это называется "монтаж" в React.',
+				'Мы хотим создавать Таймер каждый раз, когда "Часы" рендерится в дом впервые. Это называется "монтирование" в React.',
 			eng:
 				'We want to set up a timer whenever the Clock is rendered to the DOM for the first time. This is called “mounting” in React.',
 		},
 		{
 			rus:
-				'мы хотим понять, что Таймер каждый раз, когда дом производится круглосуточно удаляется. Это называется “размонтирование” в React.',
+				'Мы  также хотим вычищать этот Таймер каждый раз, когда DOM производенный "Часы" убирается. Это называется “размонтирование” в React.',
 			eng:
 				'We also want to clear that timer whenever the DOM produced by the Clock is removed. This is called “unmounting” in React.',
 		},
 		{
 			rus:
-				'мы можем объявить специальные методы класса Component, чтобы выполнить некоторый код, когда компонент монтирует и размонтирует.',
+				'Мы можем объявить специальные методы класса компонента, чтобы выполнять некоторый код, когда компонент монтирует и размонтирует.',
 			eng:
 				'We can declare special methods on the component class to run some code when a component mounts and unmounts.',
 		},
 		{
-			rus: 'эти методы называются "крюками жизненного цикла".',
+			rus: 'Эти методы называются "хуками жизненного цикла".',
 			eng: 'These methods are called “lifecycle hooks”.',
 		},
 		{
-			rus:
-				'в componentDidMount() крюк выполняется после вывода компонента была оказана на дом.',
+			rus: 'componentDidMount() хук выполняется после вывода был отрендерен в DOM.',
 			eng:
 				'The componentDidMount() hook runs after the component output has been rendered to the DOM.',
 		},
 		{
-			rus: 'обратите внимание, как мы сохраняем идентификатор таймера прямо на этом.',
+			rus: 'Обратите внимание, мы сохраняем идентификатор таймера прямо в this.',
 			eng: 'Note how we save the timer ID right on this.',
 		},
 		{
 			rus:
-				'при этом.реквизит устанавливается реагировать себя и это.состояние имеет особое значение, вы можете добавить дополнительные поля к классу вручную, если вам нужно сохранить что-то, что не используется для визуального вывода.',
+				'Хотя this.props устанавливается самим Реактом и this.state имеет особое значение, вы свободны добавлять дополнительные поля к классу вручную, если вам нужно сохранить что-то, что не используется для визуального вывода.',
 			eng:
 				'While this.props is set up by React itself and this.state has a special meaning, you are free to add additional fields to the class manually if you need to store something that is not used for the visual output.',
 		},
 		{
-			rus: 'если Вы не используете что-то в render (), это не должно быть в государстве.',
+			rus: 'Если Вы не используете что-то в render (), это не должно быть в state.',
 			eng: 'If you don’t use something in render(), it shouldn’t be in the state.',
 		},
 		{
-			rus: 'мы будем рвать вниз Таймер в componentWillUnmount() крюк жизненного цикла:',
-			eng: 'We will tear down the timer in the componentWillUnmount() lifecycle hook:',
+			rus:
+				'Мы будем демонтировать таймер в componentWillUnmount() хуке жизненного цикла.',
+			eng: 'We will tear down the timer in the componentWillUnmount() lifecycle hook.',
 		},
 		{
-			rus: 'есть три вещи, которые вы должны знать о выполнении функция setstate().',
+			rus: 'Есть три вещи, которые вы должны знать о setstate().',
 			eng: 'There are three things you should know about setState().',
 		},
 		{
-			rus: 'не изменяйте состояние напрямую.Вместо этого используйте setState ().',
-			eng: 'Do Not Modify State Directly.Instead, use setState().',
+			rus:
+				'Не изменяйте состояние напрямую. Вместо этого используйте setState(), иначе не будет ререндера.',
+			eng:
+				'Do Not Modify State Directly. Instead, use setState() otherwise there will be no rerender.',
 		},
 		{
-			rus: 'единственное место, где можно назначить этот.состояние-это конструктор.',
+			rus: 'Единственное место, где можно присвоить this.state это конструктор.',
 			eng: 'The only place where you can assign this.state is the constructor.',
 		},
 		{
-			rus: 'обновления состояния могут быть Асинхронными.',
+			rus: 'Обновления state могут быть Асинхронными.',
 			eng: 'State Updates May Be Asynchronous.',
 		},
 		{
 			rus:
-				'реагировать мая пакетные выполнении функция setstate() звонки в одно обновление для исполнения.',
+				'React может реагировать пакетировать множественные setstate() вызовы в один update для производительности.',
 			eng:
 				'React may batch multiple setState() calls into a single update for performance.',
 		},
 		{
 			rus:
-				'чтобы исправить это, используйте второй формой выполнении функция setstate (), которая принимает функцию, а не объект.',
+				'Чтобы исправить это, используйте вторую форму setstate (), которая принимает функцию, а не объект.',
 			eng:
 				'To fix it, use a second form of setState() that accepts a function rather than an object.',
 		},
 		{
 			rus:
-				'эта функция будет получать прежнее состояние в качестве первого аргумента, и реквизит на время обновления в качестве второго аргумента.',
+				'Эта функция будет получать прежнее состояние в качестве первого аргумента, и props на момент применения обновления в качестве второго аргумента.',
 			eng:
 				'That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument.',
 		},
 		{
 			rus:
-				'обновления состояния объединены.При звонке выполнении функция setstate(), реагируют сливает объекта, обеспечить в текущем состоянии.',
+				'Обновления state сливаются. При вы вызываете setstate(), React сливает объект, обеспечить в текущем состоянии.',
 			eng:
-				'State Updates are Merged.When you call setState(), React merges the object you provide into the current state.',
+				'State Updates are Merged. When you call setState(), React merges the object you provide into the current state.',
 		},
 		{
 			rus:
-				'слияние неглубоко, так это.выполнении функция setstate({комментарии}) оставляет это.государство.посты целы, но полностью заменяет это.государство.Примечание.',
+				'Это слияние неглубокое, так setstate({комментарии}) оставляет this.state.posts целым, но полностью заменяет this.state.comments.',
 			eng:
 				'The merging is shallow, so this.setState({comments}) leaves this.state.posts intact, but completely replaces this.state.comments.',
 		},
 		{
 			rus:
-				'ни родительский, ни дочерний компоненты не могут знать, является ли определенный компонент статусом или без отслеживания состояния, и им все равно, определен ли он как функция или класс.',
+				'Ни родительский, ни дочерний компоненты не могут знать, является ли определенный компонент с состоянием или без состояния, и им все равно, определен ли он как функция или класс.',
 			eng:
 				'Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn’t care whether it is defined as a function or a class.',
 		},
 		{
-			rus: 'поэтому государство часто называют локальным или инкапсулированным.',
+			rus: 'Поэтому state часто называют локальным или инкапсулированным.',
 			eng: 'This is why state is often called local or encapsulated.',
 		},
 		{
@@ -188,35 +190,35 @@ const dictionaries = {
 		},
 		{
 			rus:
-				'компонент может передать свое состояние в качестве реквизита своим дочерним компонентам.',
+				'Компонент может передать свое состояние в качестве пропс своим дочерним компонентам.',
 			eng:
 				'A component may choose to pass its state down as props to its child components.',
 		},
 		{
-			rus: 'обычно это называется потоком данных “сверху вниз” или "однонаправленным".',
+			rus: 'Обычно это называется потоком данных “сверху вниз” или "однонаправленным".',
 			eng: 'This is commonly called a “top-down” or “unidirectional” data flow.',
 		},
 		{
 			rus:
-				'любое состояние всегда принадлежит какому-то конкретному компоненту, и любые данные или пользовательский интерфейс, полученные из этого состояния, могут влиять только на компоненты "ниже" их в дереве.',
+				'Любое состояние всегда принадлежит какому-то конкретному компоненту, и любые данные или UI, полученный из этого состояния, могут влиять только на компоненты "ниже" их в дереве.',
 			eng:
 				'Any state is always owned by some specific component, and any data or UI derived from that state can only affect components “below” them in the tree.',
 		},
 		{
 			rus:
-				'если представить компонентное дерево как водопад реквизита, то состояние каждого компонента похоже на дополнительный источник воды, который присоединяется к нему в произвольной точке, но также стекает вниз.',
+				'Если представить компонентное дерево как водопад пропс, то состояние каждого компонента похоже на дополнительный источник воды, который присоединяется к нему в произвольной точке, но также стекает вниз.',
 			eng:
 				'If you imagine a component tree as a waterfall of props, each component’s state is like an additional water source that joins it at an arbitrary point but also flows down.',
 		},
 		{
 			rus:
-				'в приложениях реагировать, является ли компонент отслеживанием состояния или является деталью реализации компонента, который может меняться с течением времени.',
+				'В React приложениях, является ли компонент c состоянием или без состояния является деталью реализации компонента, которая может меняться с течением времени.',
 			eng:
 				'In React apps, whether a component is stateful or stateless is considered an implementation detail of the component that may change over time.',
 		},
 		{
 			rus:
-				'Вы можете использовать компоненты без состояния внутренних компонентов с сохранением состояния, и наоборот.',
+				'Вы можете использовать компоненты без состояния  внутри компонентов с состояния, и наоборот.',
 			eng: 'You can use stateless components inside stateful components, and vice versa.',
 		},
 	],

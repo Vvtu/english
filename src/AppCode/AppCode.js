@@ -180,7 +180,7 @@ class AppCode extends PureComponent {
       console.log('voices = ', voices);
       // utterThis.voice = voices[1];   // ошибка какая то !!!
       // utterThis.voiceURI = 'Google UK English Male';
-      utterThis.volume = 1; // 0 to 1
+      utterThis.volume = 1.0; // 0 to 1
       utterThis.rate = 1.0; // 0.1 to 10
       // utterThis.pitch = 0; //0 to 2
       utterThis.lang = 'en-GB';
