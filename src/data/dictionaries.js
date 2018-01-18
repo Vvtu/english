@@ -103,7 +103,7 @@ const dictionaries = {
 		{
 			rus: 'componentDidMount() хук выполняется после вывода был отрендерен в DOM.',
 			eng:
-				'The componentDidMount() hook runs after the component output has been rendered to the DOM.',
+				'The componentDidMount hook runs after the component output has been rendered to the DOM.',
 		},
 		{
 			rus: 'Обратите внимание, мы сохраняем идентификатор таймера прямо в this.',
@@ -111,7 +111,7 @@ const dictionaries = {
 		},
 		{
 			rus:
-				'Хотя this.props устанавливается самим Реактом и this.state имеет особое значение, вы свободны добавлять дополнительные поля к классу вручную, если вам нужно сохранить что-то, что не используется для визуального вывода.',
+				'Когда this.props устанавливается самим Реактом и this.state имеет особое значение, вы свободны добавлять дополнительные поля к классу вручную, если вам нужно сохранить что-то, что не используется для визуального вывода.',
 			eng:
 				'While this.props is set up by React itself and this.state has a special meaning, you are free to add additional fields to the class manually if you need to store something that is not used for the visual output.',
 		},
@@ -122,7 +122,7 @@ const dictionaries = {
 		{
 			rus:
 				'Мы будем демонтировать таймер в componentWillUnmount() хуке жизненного цикла.',
-			eng: 'We will tear down the timer in the componentWillUnmount() lifecycle hook.',
+			eng: 'We will tear down the timer in the componentWillUnmount lifecycle hook.',
 		},
 		{
 			rus: 'Есть три вещи, которые вы должны знать о setstate().',
@@ -132,7 +132,7 @@ const dictionaries = {
 			rus:
 				'Не изменяйте состояние напрямую. Вместо этого используйте setState(), иначе не будет ререндера.',
 			eng:
-				'Do Not Modify State Directly. Instead, use setState() otherwise there will be no rerender.',
+				'Do Not Modify State Directly. Instead, use setState otherwise there will be no rerender.',
 		},
 		{
 			rus: 'Единственное место, где можно присвоить this.state это конструктор.',
@@ -146,13 +146,13 @@ const dictionaries = {
 			rus:
 				'React может реагировать пакетировать множественные setstate() вызовы в один update для производительности.',
 			eng:
-				'React may batch multiple setState() calls into a single update for performance.',
+				'React may batch multiple setState calls into a single update for performance.',
 		},
 		{
 			rus:
 				'Чтобы исправить это, используйте вторую форму setstate (), которая принимает функцию, а не объект.',
 			eng:
-				'To fix it, use a second form of setState() that accepts a function rather than an object.',
+				'To fix it, use a second form of setState that accepts a function rather than an object.',
 		},
 		{
 			rus:
