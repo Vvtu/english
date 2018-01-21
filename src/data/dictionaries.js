@@ -3,7 +3,29 @@ const dictionaries = {
 	// 	{ id:'1', rus:'Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? ', eng:'Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? '},
 	// ],
 	dictionary1: [
+		{ rus: 'простуда', eng: 'a cold' },
+		{ rus: 'сыпь', eng: 'a rash' },
+		{ rus: 'крем для кожи', eng: 'a skin cream' },
+		{ rus: 'боль в животе', eng: 'a stomachache' },
+		{ rus: 'головная боль', eng: 'a headache' },
+		{ rus: 'зубная боль', eng: 'a toothache' },
+		{ rus: 'шуметь', eng: 'make a noise' },
+		{ rus: 'трава', eng: 'grass' },
+		{ rus: 'В чем дело?', eng: 'What\'s the matter?' },
+		{ rus: 'У меня зубная боль.', eng: 'I\'ve got a toothache.' },
+		{ rus: 'Тебе следует пойти к дантисту', eng: 'You should go to the dentist\'s' },
+		{rus: 'Мы не должны мусорить.', end: 'We mustn\'t drop litter.'},
+		{rus: 'Мы должны держаться вне травы.', end: 'We must keep of the grass.'},
+		{rus: 'Мы должны держать наших собак на поводке.', end: 'We must keep our dogs on a lead.'},
+		{rus: 'Мы не должны рвать цветы.', end: 'We mustn\'t pick flowers.'},
+	],
+
+	oldDictionary1: [
 		{ rus: 'Ты меня понимаешь?', eng: 'Do you understand me?' },
+		{ rus: 'Дай мне ручку.', eng: 'Give me a pen.' },
+		{ rus: 'Дай мне ручку.', eng: 'Give me a pen.' },
+		{ rus: 'Встреть меня в кинотеатре', eng: 'Meet me in the theatre.' },
+		//dictionaries.js	{ rus: 'Ты меня понимаешь?', eng: 'Do you understand me?' },
 		{ rus: 'начинать', eng: 'begin, began, begun' },
 		{ rus: 'ломать', eng: 'break, broke, broken' },
 		{ rus: 'приносить', eng: 'bring, brought, brought' },
@@ -56,13 +78,6 @@ const dictionaries = {
 		{ rus: 'понимать', eng: 'understand, understood, understood' },
 		{ rus: 'носить (одежду)', eng: 'wear, wore, worn' },
 		{ rus: 'писать', eng: 'write, wrote, written' },
-	],
-
-	oldDictionary1: [
-		{ rus: 'Ты меня понимаешь?', eng: 'Do you understand me?' },
-		{ rus: 'Дай мне ручку.', eng: 'Give me a pen.' },
-		{ rus: 'Дай мне ручку.', eng: 'Give me a pen.' },
-		{ rus: 'Встреть меня в кинотеатре', eng: 'Meet me in the theatre.' },
 	],
 
 	dictionary2: [
