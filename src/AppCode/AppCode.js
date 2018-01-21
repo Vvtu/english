@@ -40,15 +40,15 @@ class AppCode extends PureComponent {
 			whiteColor: String(styles.getPropertyValue('--base-text-color')).trim(),
 		});
 
-		const synth = window.speechSynthesis;
-		if (synth) {
-			const awaitVoices = new Promise((done) => (synth.onvoiceschanged = done));
-			awaitVoices.then(() => {
-				const voices = synth.getVoices();
-				console.log('voices = ', voices);
-				this.engVoice = voices[50];
-			});
-		}
+		// const synth = window.speechSynthesis;
+		// if (synth) {
+		// 	const awaitVoices = new Promise((done) => (synth.onvoiceschanged = done));
+		// 	awaitVoices.then(() => {
+		// 		const voices = synth.getVoices();
+		// 		console.log('voices = ', voices);
+		// 		this.engVoice = voices[50];
+		// 	});
+		// }
 	}
 
 	// componentWillUnmount() {
@@ -186,15 +186,15 @@ class AppCode extends PureComponent {
 
 		const synth = window.speechSynthesis;
 		if (utterThis && synth) {
-			this.setState({ appcodeIsSpeaking: true });
 			if (this.engVoice) {
 				utterThis.voice = this.engVoice;
 			}
 			// utterThis.voiceURI = 'Google UK English Male';
 			utterThis.volume = 1.0; // 0 to 1
 			utterThis.rate = 1.0; // 0.1 to 10
-			// utterThis.pitch = 0; //0 to 2
+			// utterThis.pitch = 2; //0 to 2
 			utterThis.lang = 'en-GB';
+			this.setState({ appcodeIsSpeaking: true });
 			utterThis.onend = (event) => {
 				this.setState({ appcodeIsSpeaking: false });
 			};
@@ -235,6 +235,11 @@ class AppCode extends PureComponent {
 
 		const item = localStorage.getItem(russian);
 		const shown = parseInt(item, 10) || 0;
+
+		console.log('App code render this.props = ', this.props)
+		console.log('App code render activeObj = ', activeObj)
+		console.log('App code count = ', count)
+		console.log('App code english = ', english)
 
 		return (
 			<div>
