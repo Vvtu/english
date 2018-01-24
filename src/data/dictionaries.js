@@ -1,5 +1,3 @@
-// @flow
-
 export type WordPair = {
   rus: string,
   eng: string,
