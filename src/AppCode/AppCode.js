@@ -182,6 +182,9 @@ class AppCode extends PureComponent {
 	handleTextToSpeachClicked = (e, text) => {
 		e.preventDefault();
 		e.stopPropagation();
+		if (this.state.appcodeIsSpeaking) {
+			return false;
+		}
 		const utterThis = new SpeechSynthesisUtterance();
 
 		const synth = window.speechSynthesis;
