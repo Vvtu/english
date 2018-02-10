@@ -239,108 +239,106 @@ class AppCode extends PureComponent {
 		const item = localStorage.getItem(russian);
 		const shown = parseInt(item, 10) || 0;
 
-		console.log('App code render this.props = ', this.props)
-		console.log('App code render activeObj = ', activeObj)
-		console.log('App code count = ', count)
-		console.log('App code english = ', english)
+		console.log('App code render this.props = ', this.props);
+		console.log('App code render activeObj = ', activeObj);
+		console.log('App code count = ', count);
+		console.log('App code english = ', english);
 
 		return (
-			<div>
-				<div className="appcode__grid">
-					<div className="appcode__info">
-						<div className="appcode__info2">
+			<div className="appcode__grid">
+				<div className="appcode__info">
+					<div className="appcode__info2">
+						<ArrowIcon
+							height={ICON_SIZE}
+							onClick={this.handleBackClicked}
+							onDoubleClick={this.handleBackClicked}
+							width={ICON_SIZE}
+							fill={whiteColor}
+						/>
+						<AdvancedIcon
+							height={ICON_SIZE}
+							onClick={this.handleAdvancedClicked}
+							onDoubleClick={this.handleAdvancedClicked}
+							width={ICON_SIZE}
+							fill={advancedColor}
+						/>
+
+						{showEnglish ? (
 							<ArrowIcon
-								height={ICON_SIZE}
-								onClick={this.handleBackClicked}
-								onDoubleClick={this.handleBackClicked}
-								width={ICON_SIZE}
-								fill={whiteColor}
-							/>
-							<AdvancedIcon
-								height={ICON_SIZE}
-								onClick={this.handleAdvancedClicked}
-								onDoubleClick={this.handleAdvancedClicked}
-								width={ICON_SIZE}
-								fill={advancedColor}
-							/>
-
-							{showEnglish ? (
-								<ArrowIcon
-									className="appcode__icon_rotate_back"
-									height={ICON_SIZE}
-									onClick={this.handleForwardClicked}
-									onDoubleClick={this.handleForwardClicked}
-									width={ICON_SIZE}
-									fill={greenColor}
-								/>
-							) : (
-								<ArrowIcon
-									className="appcode__icon_rotate"
-									height={ICON_SIZE}
-									onClick={this.handleShowEnglishClicked}
-									onDoubleClick={this.handleShowEnglishClicked}
-									width={ICON_SIZE}
-									fill={greenColor}
-								/>
-							)}
-
-							<div
-								onClick={this.handleStatisticClicked}
-								onDoubleClick={this.handleStatisticClicked}
-							>
-								<span>{activeIndex + 1 + '/' + count}</span>
-								<span className="appcode__eng_text_color">{'(' + shown + ')'}</span>
-							</div>
-
-							<ArrowIcon
-								className="appcode__icon_invert__horizontal"
+								className="appcode__icon_rotate_back"
 								height={ICON_SIZE}
 								onClick={this.handleForwardClicked}
 								onDoubleClick={this.handleForwardClicked}
 								width={ICON_SIZE}
-								fill={whiteColor}
+								fill={greenColor}
 							/>
-						</div>
-					</div>
-					<div className="appcode__russian">
-						<div className="appcode__center">
-							<div
-								className="appcode__scroll"
+						) : (
+							<ArrowIcon
+								className="appcode__icon_rotate"
+								height={ICON_SIZE}
 								onClick={this.handleShowEnglishClicked}
 								onDoubleClick={this.handleShowEnglishClicked}
-							>
-								<div>{russian}</div>
-							</div>
-						</div>
-					</div>
-					<div className="appcode__english">
-						<div className="appcode__center">
-							<div
-								className="appcode__scroll"
-								onClick={(e) => this.handleTextToSpeachClicked(e, english)}
-								onDoubleClick={(e) => this.handleTextToSpeachClicked(e, english)}
-							>
-								<div
-									className={
-										'appcode__eng_text_color' +
-										(appcodeIsSpeaking ? ' appcode__speaking' : '')
-									}
-								>
-									{showEnglish && english}
-								</div>
-							</div>
-						</div>
-					</div>
+								width={ICON_SIZE}
+								fill={greenColor}
+							/>
+						)}
 
-					{showAdvanced ? (
-						<PopupWindowForAdvancedMenu
-							handleClosePopupClicked={this.handleClosePopupClicked}
-							handleHideItemClicked={this.handleHideItemClicked}
-							handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
-							handleDictClicked={this.handleDictClickedLocal}
+						<div
+							onClick={this.handleStatisticClicked}
+							onDoubleClick={this.handleStatisticClicked}
+						>
+							<span>{activeIndex + 1 + '/' + count}</span>
+							<span className="appcode__eng_text_color">{'(' + shown + ')'}</span>
+						</div>
+
+						<ArrowIcon
+							className="appcode__icon_invert__horizontal"
+							height={ICON_SIZE}
+							onClick={this.handleForwardClicked}
+							onDoubleClick={this.handleForwardClicked}
+							width={ICON_SIZE}
+							fill={whiteColor}
 						/>
-					) : null}
+					</div>
 				</div>
+				<div className="appcode__russian">
+					<div className="appcode__center">
+						<div
+							className="appcode__scroll"
+							onClick={this.handleShowEnglishClicked}
+							onDoubleClick={this.handleShowEnglishClicked}
+						>
+							<div>{russian}</div>
+						</div>
+					</div>
+				</div>
+				<div className="appcode__english">
+					<div className="appcode__center">
+						<div
+							className="appcode__scroll"
+							onClick={(e) => this.handleTextToSpeachClicked(e, english)}
+							onDoubleClick={(e) => this.handleTextToSpeachClicked(e, english)}
+						>
+							<div
+								className={
+									'appcode__eng_text_color' +
+									(appcodeIsSpeaking ? ' appcode__speaking' : '')
+								}
+							>
+								{showEnglish && english}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{showAdvanced ? (
+					<PopupWindowForAdvancedMenu
+						handleClosePopupClicked={this.handleClosePopupClicked}
+						handleHideItemClicked={this.handleHideItemClicked}
+						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
+						handleDictClicked={this.handleDictClickedLocal}
+					/>
+				) : null}
 			</div>
 		);
 	}

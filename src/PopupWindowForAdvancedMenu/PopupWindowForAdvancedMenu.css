@@ -1,7 +1,7 @@
 
 .popup__full_screen_div {
 	align-items: center;
-	bottom: 0;
+	bottom: 10px;
 	display: flex;
 	justify-content: center;
 	left: 0;
@@ -14,7 +14,7 @@
 
 .popup__full_screen_div_opacity {
 	background-color: var(--grey-color);
-	bottom: 0;
+	bottom: 10px;
 	left: 0;
 	opacity: 0.4;
 	overflow: hidden;
@@ -25,7 +25,7 @@
 }
 
 .popup__window {
-	max-height: calc(100vh - 4rem);
+	/* max-height: calc(100vh - 4rem); */
 	background-color: var(--background-color);
 	border-radius: 5px;
 	box-shadow:   var(--shadow-color) 0px 13px 26px 0px;
@@ -34,7 +34,7 @@
 }
 
 .popup__list {
-	max-height: calc(100vh - 4rem);
+	/* max-height: calc(100vh - 4rem); */
 	overflow-y: scroll;
 	align-items: flex-start;
 	display: flex;

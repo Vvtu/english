@@ -118,115 +118,115 @@ const dictionaries: dictSet = {
 		{
 			rus:
 				'В приведенном ниже коде  мы используем JavaScript map функцию, чтобы сделать массив чисел и удвоить их значения.',
-			end:
+			eng:
 				'Given the code below, we use the "map" function to take an array of numbers and double their values.',
 		},
 		{
 			rus: 'Ниже, мы проходим циклом по массиву чисел, используя JavaScript map функцию.',
-			end: 'Below, we loop through the numbers array using the JavaScript "map" function',
+			eng: 'Below, we loop through the numbers array using the JavaScript "map" function',
 		},
 		{
 			rus:
 				'При выполнении этого кода будет выдано предупреждение о том, что должен быть предоставлен ключ для элементов списка.',
-			end:
+			eng:
 				'When you run this code, you’ll be given a warning that a key should be provided for list items.',
 		},
 		{
 			rus:
 				'Key - спецальный строковый атрибут, который вам нужно включать при создании списков элементов.',
-			end:
+			eng:
 				'A "key" is a special string attribute you need to include when creating lists of elements.',
 		},
 		{
 			rus:
 				'Ключи помогают идентифицировать, какие элементы были изменены, добавлены или удалены.',
-			end:
+			eng:
 				'Keys help React identify which items have changed, are added, or are removed.',
 		},
 		{
 			rus:
 				'Ключи должны быть заданы элементам внутри массива, чтобы дать элементам стабильную идентификацию.',
-			end:
+			eng:
 				'Keys should be given to the elements inside the array to give the elements a stable identity.',
 		},
 		{
 			rus:
 				'Лучший способ выбрать key - использовать строку, которая однозначно идентифицирует элемент списка среди своих собратьев.',
-			end:
+			eng:
 				'The best way to pick a key is to use a string that uniquely identifies a list item among its siblings.',
 		},
 		{
 			rus: 'Чаще всего вы будете использовать IDs из ваших данных в качестве ключей.',
-			end: 'Most often you would use IDs from your data as keys.',
+			eng: 'Most often you would use IDs from your data as keys.',
 		},
 		{
 			rus:
 				'Мы не рекомендуем использовать индексы для ключей, если порядок элементов может измениться.',
-			end: 'We don’t recommend using indexes for keys if the order of items may change.',
+			eng: 'We don’t recommend using indexes for keys if the order of items may change.',
 		},
 		{
 			rus:
 				'Если вы решите не назначать явный ключ элементам списка, то React будет по умолчанию использовать индексы в качестве ключей.',
-			end:
+			eng:
 				'If you choose not to assign an explicit key to list items then React will default to using indexes as keys.',
 		},
 		{
 			rus:
 				'Ключи, используемые в массивах, должны быть уникальными среди своих собратьев.',
-			end: 'Keys used within arrays should be unique among their siblings.',
+			eng: 'Keys used within arrays should be unique among their siblings.',
 		},
 		{
 			rus: 'Однако ключи не должны быть глобально уникальными.',
-			end: 'However keys don’t need to be globally unique.',
+			eng: 'However keys don’t need to be globally unique.',
 		},
 		{
 			rus: 'Ключи служат подсказками для React, но они не передаются вашим компонентам.',
-			end: 'Keys serve as a hint to React but they don’t get passed to your components.',
+			eng: 'Keys serve as a hint to React but they don’t get passed to your components.',
 		},
 		{
 			rus:
 				'Элементы HTML form работают немного иначе, чем другие DOM элементы в Ракте, потому что элементы формы, естественно, держат некоторое внутренние состояние.',
-			end:
+			eng:
 				'HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state.',
 		},
 		{
 			rus:
 				'В большинстве случаев удобно иметь функцию JavaScript, которая обрабатывает submit формы и имеет доступ к данным, которые пользователь ввел в форму.',
-			end:
+			eng:
 				'In most cases, it’s convenient to have a JavaScript function that handles the submission of the form and has access to the data that the user entered into the form.',
 		},
 		{
 			rus:
 				'Стандартный способ достижения этого является техника, называемая "контролируемые компоненты".',
-			end:
+			eng:
 				'The standard way to achieve this is with a technique called "controlled components".',
 		},
 		{
 			rus:
 				'Form элементы, такие как <ввод>, блок <textarea> и <Select> обычно поддерживают свой собственный state и обновляют его на основе пользовательского ввода.',
-			end:
+			eng:
 				'Form elements such as <input>, <textarea>, and <select> typically maintain their own state and update it based on user input.',
 		},
 		{
 			rus:
 				'В React изменяемое состояние обычно хранится в state property компонентов, и обновляется только при выполнении функции setstate().',
-			end:
+			eng:
 				'In React, mutable state is typically kept in the state property of components, and only updated with setState().',
 		},
 		{
 			rus:
 				'Мы можем объединить два способа, делая React state "единым источником правды".',
-			end:
+			eng:
 				'We can combine the two by making the React state be the "single source of truth".',
 		},
 		{
 			rus:
 				'Элемент формы input, значение которого контролируется React, таким способом называется "контролируемый компонентом".',
-			end:
+			eng:
 				'An input form element whose value is controlled by React in this way is called a "controlled component".',
 		},
 	],
-	oldDictionary2: [ { rus: '', end: '' } ],
+	oldDictionary2: [ { rus: '', eng: '' } ],
 };
 
 export default dictionaries;

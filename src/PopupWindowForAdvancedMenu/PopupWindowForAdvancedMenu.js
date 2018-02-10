@@ -20,7 +20,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 	componentDidMount() {
 		setTimeout(() => {
 			this.setState({ increaseOpacity: true });
-		}, 1);
+		}, 0);
 	}
 
 	menuRow = (menuItem) => (
