@@ -12,7 +12,7 @@ export type dictSet = {
 
 const dictionaries: dictSet = {
 	// dictionary1: [
-	// 	{ id:'1', rus:'Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? ', eng:'Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? '},
+	//  { id:'1', rus:'Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? ', eng:'Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? '},
 	// ],
 	dictionary1: [
 		{ rus: 'тушить огонь', eng: 'to put out a fire' },
@@ -83,8 +83,7 @@ const dictionaries: dictSet = {
 		{ rus: 'иметь', eng: 'have, had, had' },
 		{ rus: 'слышать', eng: 'hear, heard, heard' },
 		{ rus: 'ушибить', eng: 'hurt, hurt, hurt' },
-		{ rus: 'знать', eng: 'know, knew, known' },
-		//////////////////////////////////////
+		{ rus: 'знать', eng: 'know, knew, known' }, //////////////////////////////////////
 		{
 			rus: 'учить (что-то), узнавать (новое)',
 			eng: 'learn, learned, or, learnt, learned, or, learnt',
@@ -118,7 +117,7 @@ const dictionaries: dictSet = {
 	dictionary2: [
 		{
 			rus:
-				'В приведенном ниже коде  мы используем JavaScript map функцию, чтобв сделать массив чисел и удвоить их значения.',
+				'В приведенном ниже коде  мы используем JavaScript map функцию, чтобы сделать массив чисел и удвоить их значения.',
 			end:
 				'Given the code below, we use the "map" function to take an array of numbers and double their values.',
 		},
@@ -134,7 +133,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Key - спецальный стринг атрибут, который вам нужно включать при создании списков элементов.',
+				'Key - спецальный строковый атрибут, который вам нужно включать при создании списков элементов.',
 			end:
 				'A "key" is a special string attribute you need to include when creating lists of elements.',
 		},
@@ -186,7 +185,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Элементы HTML-формы работают немного иначе, чем другие DOM элементы в Ракте, потому что элементы формы, естественно, держат некоторое внутренние состояние.',
+				'Элементы HTML form работают немного иначе, чем другие DOM элементы в Ракте, потому что элементы формы, естественно, держат некоторое внутренние состояние.',
 			end:
 				'HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state.',
 		},
@@ -198,7 +197,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Cтандартный способ достижения этого является техника, называемая "контролируемые компоненты',
+				'Стандартный способ достижения этого является техника, называемая "контролируемые компоненты".',
 			end:
 				'The standard way to achieve this is with a technique called "controlled components".',
 		},
@@ -210,7 +209,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'В React изменяемое состояние обычно хранится в state property компонентов, и обновляется только при выполнении функция setstate().',
+				'В React изменяемое состояние обычно хранится в state property компонентов, и обновляется только при выполнении функции setstate().',
 			end:
 				'In React, mutable state is typically kept in the state property of components, and only updated with setState().',
 		},
@@ -222,7 +221,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Элемент формы input, значение которого контролируется React таким способом называется "контролируемый компонентом".',
+				'Элемент формы input, значение которого контролируется React, таким способом называется "контролируемый компонентом".',
 			end:
 				'An input form element whose value is controlled by React in this way is called a "controlled component".',
 		},
