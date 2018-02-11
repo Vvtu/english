@@ -338,7 +338,9 @@ class AppCode extends PureComponent {
 						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
 						handleDictClicked={this.handleDictClickedLocal}
 					/>
-				) : null}
+				) : (
+					<div />
+				)}
 			</div>
 		);
 	}

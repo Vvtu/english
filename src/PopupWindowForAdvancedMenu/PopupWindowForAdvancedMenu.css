@@ -1,7 +1,7 @@
 
 .popup__full_screen_div {
 	align-items: center;
-	bottom: 10px;
+	bottom: 0;
 	display: flex;
 	justify-content: center;
 	left: 0;
@@ -14,7 +14,7 @@
 
 .popup__full_screen_div_opacity {
 	background-color: var(--grey-color);
-	bottom: 10px;
+	bottom: 0;
 	left: 0;
 	opacity: 0.4;
 	overflow: hidden;
