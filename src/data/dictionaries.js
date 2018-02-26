@@ -117,6 +117,98 @@ const dictionaries: dictSet = {
 	dictionary2: [
 		{
 			rus:
+				'Часто несколько компонентов должны отражать одни и те же изменяющиеся данные.',
+			eng: 'Often, several components need to reflect the same changing data.',
+		},
+		{
+			rus: 'мы рекомендуем поднятие общего состояния до их ближайшего общего предка.',
+			eng: 'We recommend lifting the shared state up to their closest common ancestor.',
+		},
+		{
+			rus:
+				'В этом разделе мы создадим температурный калькулятор, который вычислит, будет ли вода кипеть при заданной температуре.',
+			eng:
+				'In this section, we will create a temperature calculator that calculates whether the water would boil at a given temperature.',
+		},
+		{
+			rus:
+				'"BoilingVerdict" компонент принимает температуру по Цельсию в качестве prop, и печатает, является ли это достаточно, чтобы вскипятить воду.',
+			eng:
+				'"BoilingVerdict" component accepts the celsius temperature as a prop, and prints whether it is enough to boil the water.',
+		},
+		{
+			rus:
+				'Далее мы создадим компонент под названием калькулятор. Он рендерит <input>, который позволяет ввести температуру и сохраняет ее значение в this.state.temperature.',
+			eng:
+				'Next, we will create a component called Calculator. It renders an <input> that lets you enter the temperature, and keeps its value in this.state.temperature.',
+		},
+		{
+			rus:
+				'Наше новое требование, что помимо ввода по Цельсию, мы предоставляем ввод по Фаренгейту, и они синхронизируются.',
+			eng:
+				'Our new requirement is that, in addition to a Celsius input, we provide a Fahrenheit input, and they are kept in sync.',
+		},
+		{
+			rus:
+				'У нас есть два инпута, но когда вы вводите температуру в одном из них, другой не обновляется.',
+			eng:
+				'We have two inputs now, but when you enter the temperature in one of them, the other doesn’t update.',
+		},
+		{
+			rus: 'Это противоречит нашему требованию: мы хотим держать их в синхронизации.',
+			eng: 'This contradicts our requirement: we want to keep them in sync.',
+		},
+		{
+			rus:
+				'Когда мы обновляем инпут по Цельсию, по инпут по Фаренгейту должен отражать сконвертированную температуру, и наоборот.',
+			eng:
+				'When we update the Celsius input, the Fahrenheit input should reflect the converted temperature, and vice versa.',
+		},
+		{
+			rus:
+				'В React шеринг состояние достигается путем перемещения его к ближайшему общему предку компонентов, которые в нем нуждаются. Это называется "подъем состояния вверх".',
+			eng:
+				'In React, sharing state is accomplished by moving it up to the closest common ancestor of the components that need it. This is called "lifting state up".',
+		},
+		{
+			rus: 'Мы знаем, что props доступны только для чтения.',
+			eng: 'We know that props are read-only.',
+		},
+		{
+			rus:
+				'Когда температура была в локальном стейте, TemperatureInput мог бы просто вызвать this.setstate (), чтобы изменить ее.',
+			eng:
+				'When the temperature was in the local state, the TemperatureInput could just call this.setState() to change it.',
+		},
+		{
+			rus: 'Мы могли бы сохранить значение обоих входов, но это оказывается ненужным.',
+			eng:
+				'We could have stored the value of both inputs but it turns out to be unnecessary.',
+		},
+		{
+			rus:
+				'Достаточно хранить значение самого последнего измененого инпута, и шкалу, которую он представляет.',
+			eng:
+				'It is enough to store the value of the most recently changed input, and the scale that it represents.',
+		},
+		{
+			rus:
+				'Входные данные остаются синхронизированными, так как их значения вычисляются из одного состояния.',
+			eng:
+				'The inputs stay in sync because their values are computed from the same state.',
+		},
+		{
+			rus:
+				'Должен быть единый "источник истины" для любых данных, которые изменяются в приложении React.',
+			eng:
+				'There should be a single "source of truth" for any data that changes in a React application.',
+		},
+		//  https://reactjs.org/docs/lifting-state-up.html
+	],
+
+	oldDictionary2: [
+		{
+			rus:
 				'В приведенном ниже коде  мы используем JavaScript map функцию, чтобы сделать массив чисел и удвоить их значения.',
 			eng:
 				'Given the code below, we use the "map" function to take an array of numbers and double their values.',
@@ -226,7 +318,6 @@ const dictionaries: dictSet = {
 				'An input form element whose value is controlled by React in this way is called a "controlled component".',
 		},
 	],
-	oldDictionary2: [ { rus: '', eng: '' } ],
 };
 
 export default dictionaries;
