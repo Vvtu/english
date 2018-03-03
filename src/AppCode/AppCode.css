@@ -9,12 +9,15 @@
 	--screen-width: 100vw;
 
 	--text-height-portrait: calc(
-		 (var(--screen-height) - var(--overlap_bottom) - calc(var(--main_gap) * 2) - var(--info_panel_height)) /
-			2
+			(
+				var(--screen-height) - var(--overlap_bottom) - calc(var(--main_gap) * 2) -
+					calc(var(--info_panel_height)*3)
+			) / 2
 	);
 
 	--text-height-landscape: calc(
-		var(--screen-width) - var(--info_panel_height) - var(--main_gap) - var(--overlap_bottom)
+		var(--screen-width) - calc(var(--info_panel_height)*3) - var(--main_gap) -
+			var(--overlap_bottom)
 	);
 
 	--advanced-color: #522719;
@@ -40,7 +43,7 @@
 	grid-row-gap: var(--main_gap);
 	padding: 0 8px;
 	margin: 0;
-  font-family: sans-serif;
+	font-family: sans-serif;
 }
 
 @media (orientation: portrait) {
