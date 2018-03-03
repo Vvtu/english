@@ -9,7 +9,7 @@
 	--screen-width: 100vw;
 
 	--text-height-portrait: calc(
-		 (var(--screen-height) - var(--overlap_bottom) - (var(--main_gap) * 2) - var(--info_panel_height)) /
+		 (var(--screen-height) - var(--overlap_bottom) - calc(var(--main_gap) * 2) - var(--info_panel_height)) /
 			2
 	);
 
