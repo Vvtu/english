@@ -32,35 +32,28 @@ class AppCode extends PureComponent {
 	}
 
 	componentDidMount() {
-		// window.addEventListener('touchstart', this.handleTouchStart);
-		const styles = getComputedStyle(document.documentElement);
+		const element = document.documentElement;
+		// console.log('window.screen = ', window.screen);
+		const height = Math.max(
+			parseInt(window.screen.height, 10),
+			parseInt(window.screen.width, 10),
+		);
+		const width = Math.min(
+			parseInt(window.screen.height, 10),
+			parseInt(window.screen.width, 10),
+		);
+		// console.log('height , width = ',height , width);
+
+		element.style.setProperty('--screen-height', height + 'px');
+		element.style.setProperty('--screen-width', width + 'px');
+
+		const styles = getComputedStyle(element);
 		this.setState({
 			greenColor: String(styles.getPropertyValue('--english-text-color')).trim(),
 			advancedColor: String(styles.getPropertyValue('--advanced-color')).trim(),
 			whiteColor: String(styles.getPropertyValue('--base-text-color')).trim(),
 		});
-
-		// const synth = window.speechSynthesis;
-		// if (synth) {
-		// 	const awaitVoices = new Promise((done) => (synth.onvoiceschanged = done));
-		// 	awaitVoices.then(() => {
-		// 		const voices = synth.getVoices();
-		// 		console.log('voices = ', voices);
-		// 		this.engVoice = voices[50];
-		// 	});
-		// }
 	}
-
-	// componentWillUnmount() {
-	// 	window.removeEventListener('touchstart', this.handleTouchStart);
-	// }
-
-	// handleTouchStart = (e) => {
-	// 	console.log('e = ', e);
-	// 	e.preventDefault();
-	// 	console.log('e = ', e);
-	// 	return false;
-	// };
 
 	incrementLocalStorage = () => {
 		const { activeIndex, randomDictionary, showEnglish } = this.state;

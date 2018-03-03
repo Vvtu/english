@@ -5,6 +5,18 @@
 	--info_panel_height: calc(var(--font-size)*2);
 	--main_gap: calc(var(--font-size) / 2);
 
+	--screen-height: 100vh;
+	--screen-width: 100vw;
+
+	--text-height-portrait: calc(
+		 (var(--screen-height) - var(--overlap_bottom) - (var(--main_gap) * 2) - var(--info_panel_height)) /
+			2
+	);
+
+	--text-height-landscape: calc(
+		var(--screen-width) - var(--info_panel_height) - var(--main_gap) - var(--overlap_bottom)
+	);
+
 	--advanced-color: #522719;
 	--background-color: #000000;
 	--base-text-color: #ffffff;
@@ -19,7 +31,6 @@
 ============================================================= */
 
 .appcode__grid {
-	height: 100%;
 	background-color: var(--background-color);
 	color: var(--base-text-color);
 	display: grid;
@@ -28,12 +39,15 @@
 	grid-column-gap: var(--main_gap);
 	grid-row-gap: var(--main_gap);
 	padding: 0 8px;
+	margin: 0;
+  font-family: sans-serif;
 }
 
 @media (orientation: portrait) {
 	.appcode__grid {
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr var(--info_panel_height) 1fr;
+		grid-template-rows: var(--text-height-portrait) var(--info_panel_height)
+			var(--text-height-portrait);
 		grid-template-areas: 'russian' 'info' 'english';
 	}
 	.appcode__icon_rotate {
@@ -47,7 +61,7 @@
 @media (orientation: landscape) {
 	.appcode__grid {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr var(--info_panel_height);
+		grid-template-rows: var(--text-height-landscape) var(--info_panel_height);
 		grid-template-areas: 'russian english' 'info info';
 	}
 	.appcode__icon_rotate {
