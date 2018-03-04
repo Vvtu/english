@@ -34,18 +34,18 @@ class AppCode extends PureComponent {
 	componentDidMount() {
 		const element = document.documentElement;
 		// console.log('window.screen = ', window.screen);
-		const height = Math.max(
-			parseInt(window.screen.height, 10),
-			parseInt(window.screen.width, 10),
-		);
-		const width = Math.min(
-			parseInt(window.screen.height, 10),
-			parseInt(window.screen.width, 10),
-		);
-		// console.log('height , width = ',height , width);
+		// const height = Math.max(
+		// 	parseInt(window.screen.height, 10),
+		// 	parseInt(window.screen.width, 10),
+		// );
+		// const width = Math.min(
+		// 	parseInt(window.screen.height, 10),
+		// 	parseInt(window.screen.width, 10),
+		// );
+		// // console.log('height , width = ',height , width);
 
-		element.style.setProperty('--screen-height', height + 'px');
-		element.style.setProperty('--screen-width', width + 'px');
+		// element.style.setProperty('--screen-height', height + 'px');
+		// element.style.setProperty('--screen-width', width + 'px');
 
 		const styles = getComputedStyle(element);
 		this.setState({
@@ -53,6 +53,7 @@ class AppCode extends PureComponent {
 			advancedColor: String(styles.getPropertyValue('--advanced-color')).trim(),
 			whiteColor: String(styles.getPropertyValue('--base-text-color')).trim(),
 		});
+		this.forceUpdate();
 	}
 
 	incrementLocalStorage = () => {
