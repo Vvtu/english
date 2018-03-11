@@ -117,6 +117,104 @@ const dictionaries: dictSet = {
 	dictionary2: [
 		{
 			rus:
+				'React имеет мощную модель композиции, и мы рекомендуем использовать композицию вместо наследования для  переиспользования кода между компонентами.',
+			eng:
+				'React has a powerful composition model, and we recommend using composition instead of inheritance to reuse code between components.',
+		},
+		{
+			rus:
+				'В этом разделе мы рассмотрим несколько проблем, где разработчики (новички в Реакте) часто используют наследование, и показать, как мы можем решить эти проблеммы композицией.',
+			eng:
+				'In this section, we will consider a few problems where developers new to React often reach for inheritance, and show how we can solve them with composition.',
+		},
+		{
+			rus:
+				'Мы рекомендуем, чтобы такие компоненты использовали специальный проп children, чтобы передать элементы детей непосредственно в их вывод.',
+			eng:
+				'We recommend that such components use the special children prop to pass children elements directly into their output.',
+		},
+
+		{
+			rus:
+				'Иногда мы думаем о компонентах, как об “особых случаях” других компонентов. Например, можно сказать, что WelcomeDialog - это особый случай диалога.',
+			eng:
+				'Sometimes we think about components as being “special cases” of other components. For example, we might say that a WelcomeDialog is a special case of Dialog.',
+		},
+		{
+			rus:
+				'На Facebook, мы используем Реакт в тысячях компонентов, и мы не нашли каких-либо полезных случаев, где мы бы рекомендовали создание компонентной иерархии наследования.',
+			eng:
+				'At Facebook, we use React in thousands of components, and we haven’t found any use cases where we would recommend creating component inheritance hierarchies.',
+		},
+		{
+			rus:
+				'Пропс и композиция дают вам всю гибкость, необходимую для настройки внешнего вида и поведения компонента явным и безопасным способом.',
+			eng:
+				'Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way.',
+		},
+		{
+			rus:
+				'Помните, что компоненты могут принимать произвольные элементы, включая примитивные значения, Реакт элементы или функции.',
+			eng:
+				'Remember that components may accept arbitrary props, including primitive values, React elements, or functions.',
+		},
+		{
+			rus:
+				'В Реакте это также достигается за счет композиции, где более “специфический” компонент рендерит более “универсальный” и настраивает его с помощью пропс.',
+			eng:
+				'In React, this is also achieved by composition, where a more “specific” component renders a more “generic” one and configures it with props.',
+		},
+		{
+			rus:
+				'Одна из многих замечательных частей Реакта это, как он заставляет думать о приложениях, как вы строите их.',
+			eng:
+				'One of the many great parts of React is how it makes you think about apps as you build them. ',
+		},
+		{
+			rus:
+				'В этом документе мы проведем вас через мыслительный процесс построения таблицы данных продукта с возможностью поиска с помощью React.',
+			eng:
+				'In this document, we’ll walk you through the thought process of building a searchable product data table using React.',
+		},
+		{
+			rus:
+				'Первое, что вы хотите сделать, это нарисовать коробки вокруг каждого компонента (и субкомпонента) в моке и дать им всем имена.',
+			eng:
+				'The first thing you’ll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names.',
+		},
+		{
+			rus:
+				'Если вы работаете с дизайнером, они, возможно, уже это сделали, так что поговорите с ними.',
+			eng:
+				'If you’re working with a designer, they may have already done this, so go talk to them.',
+		},
+		{
+			rus: 'Их имена слоев в Photoshop могут стать именами ваших Реакт компонентов.',
+			eng:
+				'Their Photoshop layer names may end up being the names of your React components.',
+		},
+		{
+			rus:
+				'Но откуда вы знаете, какой должна быть ее собственная составляющая? Просто используйте те же методы для определения, если вы должны создать новую функцию или объект.',
+			eng:
+				'But how do you know what should be its own component? Just use the same techniques for deciding if you should create a new function or object.',
+		},
+		{
+			rus:
+				'Одна из таких техник - принцип единой ответственности, то есть компонент должен в идеале делать только одну вещь.',
+			eng:
+				'One such technique is the single responsibility principle, that is, a component should ideally only do one thing.',
+		},
+		{
+			rus:
+				'Если он продолжает расти, он должен быть декомпозирован на более мелкие компоненты.',
+			eng: 'If it ends up growing, it should be decomposed into smaller subcomponents.',
+		},
+	],
+
+	oldDictionary2: [
+		{
+			rus:
 				'Часто несколько компонентов должны отражать одни и те же изменяющиеся данные.',
 			eng: 'Often, several components need to reflect the same changing data.',
 		},
@@ -204,9 +302,7 @@ const dictionaries: dictSet = {
 				'There should be a single "source of truth" for any data that changes in a React application.',
 		},
 		//  https://reactjs.org/docs/lifting-state-up.html
-	],
 
-	oldDictionary2: [
 		{
 			rus:
 				'В приведенном ниже коде  мы используем JavaScript map функцию, чтобы сделать массив чисел и удвоить их значения.',
