@@ -195,7 +195,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Но откуда вы знаете, какой должна быть ее собственная составляющая? Просто используйте те же методы для определения, если вы должны создать новую функцию или объект.',
+				'Но откуда узнать, что должно быть отдельным компонентом? Просто используйте те же методы для определения, как если вы должны создать новую функцию или объект.',
 			eng:
 				'But how do you know what should be its own component? Just use the same techniques for deciding if you should create a new function or object.',
 		},
