@@ -110,6 +110,7 @@ class AppCode extends PureComponent {
 		e.stopPropagation();
 		this.setState({
 			showEnglish: this.state.showEnglish !== true,
+			appcodeIsSpeaking: false,
 		});
 		return false;
 	};
@@ -119,12 +120,14 @@ class AppCode extends PureComponent {
 		e.stopPropagation();
 		this.setState({
 			showAdvanced: true,
+			appcodeIsSpeaking: false,
 		});
 		return false;
 	};
 	handleClosePopupClicked = () => {
 		this.setState({
 			showAdvanced: false,
+			appcodeIsSpeaking: false,
 		});
 		return false;
 	};
