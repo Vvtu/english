@@ -117,6 +117,147 @@ const dictionaries: dictSet = {
 	dictionary2: [
 		{
 			rus:
+				'Поскольку вы часто отображаете JSON модель данных пользователю, вы обнаружите, что если ваша модель была построена правильно, ваш  UI (и, следовательно, ваша структура компонентов) будет хорошо отображаться.',
+			eng:
+				'Since you’re often displaying a JSON data model to a user, you’ll find that if your model was built correctly, your UI (and therefore your component structure) will map nicely.',
+		},
+		{
+			rus:
+				'Это потому, что модели пользовательского интерфейса и данных, как правило, придерживаются одной и той же информационной архитектуры, что означает, что работа разделения пользовательского интерфейса на компоненты часто тривиальна.',
+			eng:
+				'That’s because UI and data models tend to adhere to the same information architecture, which means the work of separating your UI into components is often trivial.',
+		},
+		{
+			rus:
+				'Просто разбейте его на компоненты, которые представляют собой ровно одну часть вашей модели данных.',
+			eng:
+				'Just break it up into components that represent exactly one piece of your data model.',
+		},
+		{
+			rus:
+				'Теперь, когда мы определили компоненты в нашем макете, давайте организуем их в иерархию.',
+			eng:
+				'Now that we’ve identified the components in our mock, let’s arrange them into a hierarchy.',
+		},
+		{
+			rus:
+				'Компоненты, которые появляются в другом компоненте макета, должны отображаться как дочерние в иерархии.',
+			eng:
+				'Components that appear within another component in the mock should appear as a child in the hierarchy.',
+		},
+		{
+			rus:
+				'Самый простой способ - создать версию, которая принимает вашу модель данных и отображает UI, но не имеет интерактивности.',
+			eng:
+				'The easiest way is to build a version that takes your data model and renders the UI but has no interactivity.',
+		},
+		{
+			rus:
+				'Лучше всего отделить эти процессы, потому что построение статической версии требует много набора текста и никакого мышления, а добавление интерактивности требует много мышления и не много набора текста.',
+			eng:
+				'It’s best to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing.',
+		},
+		{
+			rus:
+				'Чтобы создать статическую версию приложения, которая отображает модель данных, необходимо создать компоненты, которые повторно используют другие компоненты и передают данные с помощью props.',
+			eng:
+				'To build a static version of your app that renders your data model, you’ll want to build components that reuse other components and pass data using props.',
+		},
+		{
+			rus: 'Props - это способ передачи данных от родителя ребенку.',
+			eng: 'props are a way of passing data from parent to child.',
+		},
+		{
+			rus:
+				'Если вы знакомы с концепцией состояния, не используйте state для создания этой статической версии.',
+			eng:
+				'If you’re familiar with the concept of state, don’t use state at all to build this static version.',
+		},
+		{
+			rus:
+				'Состояние зарезервировано только для интерактивности, то есть данных, которые меняются с течением времени.',
+			eng:
+				'State is reserved only for interactivity, that is, data that changes over time.',
+		},
+		{
+			rus:
+				'В более простых примерах обычно легче идти сверху вниз, а в более крупных проектах легче идти снизу вверх и писать тесты по мере сборки.',
+			eng:
+				'In simpler examples, it’s usually easier to go top-down, and on larger projects, it’s easier to go bottom-up and write tests as you build.',
+		},
+		{
+			rus:
+				'у компонентов будут только методы render(), так как это статическая версия вашего приложения',
+			eng:
+				'The components will only have render methods since this is a static version of your app.',
+		},
+		{
+			rus:
+				'Если внести изменения в базовую модель данных и вызвать ReactDOM.render снова, пользовательский интерфейс будет обновлен.',
+			eng:
+				' If you make a change to your underlying data model and call ReactDOM.render again, the UI will be updated.',
+		},
+
+		{
+			rus:
+				'Односторонний поток данных React (также называемый односторонней привязкой) сохраняет все модульным и быстрым',
+			eng:
+				'React’s one-way data flow (also called one-way binding) keeps everything modular and fast.',
+		},
+		{
+			rus: 'Существует два типа "модельных" данных в React: props и state.',
+			eng: 'There are two types of "model" data in React: props and state.',
+		},
+		{
+			rus:
+				'Чтобы сделать пользовательский интерфейс интерактивным, необходимо иметь возможность инициировать изменения в базовой модели данных. Реакт делает это легко со стейтом.',
+			eng:
+				'To make your UI interactive, you need to be able to trigger changes to your underlying data model. React makes this easy with state.',
+		},
+		{
+			rus:
+				'Чтобы правильно построить приложение, сначала нужно подумать о минимальном наборе изменяемых состояний, необходимых вашему приложению.',
+			eng:
+				'To build your app correctly, you first need to think of the minimal set of mutable state that your app needs.',
+		},
+		{
+			rus: 'Ключ здесь DRY: не повторяй себя.',
+			eng: 'The key here is DRY: Don’t Repeat Yourself.',
+		},
+		{
+			rus:
+				'Выясните абсолютное минимальное представление состояния, в котором нуждается ваше приложение, и вычисляйте все остальное, что вам будет нужно, по требованию.',
+			eng:
+				'Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand.',
+		},
+		{
+			rus: 'Просто задайте три вопроса о каждом фрагменте данных',
+			eng: 'Simply ask three questions about each piece of data:',
+		},
+		{
+			rus: 'Это передается от родителя через props? Если да, то это, вероятно, не state.',
+			eng: 'Is it passed in from a parent via props? If so, it probably isn’t state.',
+		},
+		{
+			rus:
+				'Остается ли это неизменным с течением времени? Если да, то это, вероятно, не state.',
+			eng: 'Does it remain unchanged over time? If so, it probably isn’t state.',
+		},
+		{
+			rus:
+				'Можете ли вы вычислить его на основе любого другого state или props в вашем компоненте? Если да, то это не state.',
+			eng:
+				'Can you compute it based on any other state or props in your component? If so, it isn’t state.',
+		},
+		{
+			rus: 'Шаг 4: Определите, где должен быть Ваш state.',
+			eng: 'Step 4: Identify Where Your State Should Live.',
+		},
+	],
+
+	oldDictionary2: [
+		{
+			rus:
 				'React имеет мощную модель композиции, и мы рекомендуем использовать композицию вместо наследования для  переиспользования кода между компонентами.',
 			eng:
 				'React has a powerful composition model, and we recommend using composition instead of inheritance to reuse code between components.',
@@ -133,7 +274,6 @@ const dictionaries: dictSet = {
 			eng:
 				'We recommend that such components use the special children prop to pass children elements directly into their output.',
 		},
-
 		{
 			rus:
 				'Иногда мы думаем о компонентах, как об “особых случаях” других компонентов. Например, можно сказать, что WelcomeDialog - это особый случай диалога.',
@@ -180,7 +320,7 @@ const dictionaries: dictSet = {
 			rus:
 				'Первое, что вы хотите сделать, это нарисовать коробки вокруг каждого компонента (и субкомпонента) в моке и дать им всем имена.',
 			eng:
-				'The first thing you’ll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names.',
+				'The first thing you’ll want to do is to draw boxes around every component and subcomponent in the mock and give them all names.',
 		},
 		{
 			rus:
@@ -210,9 +350,7 @@ const dictionaries: dictSet = {
 				'Если он продолжает расти, он должен быть декомпозирован на более мелкие компоненты.',
 			eng: 'If it ends up growing, it should be decomposed into smaller subcomponents.',
 		},
-	],
 
-	oldDictionary2: [
 		{
 			rus:
 				'Часто несколько компонентов должны отражать одни и те же изменяющиеся данные.',
