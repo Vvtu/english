@@ -197,7 +197,18 @@ class AppCode extends PureComponent {
 			this.setState({ appcodeIsSpeaking: true });
 			utterThis.onend = (event) => {
 				this.setState({ appcodeIsSpeaking: false });
+				if (this.appcodeIsSpeakingTimeOut) {
+					clearTimeout(this.appcodeIsSpeakingTimeOut);
+					this.appcodeIsSpeakingTimeOut = null;
+				}
 			};
+			this.appcodeIsSpeakingTimeOut = setTimeout(
+				() => {
+					this.setState({ appcodeIsSpeaking: false });
+					this.appcodeIsSpeakingTimeOut = null;
+				},
+				9000, // in case of utterThis.onend failed
+			);
 			utterThis.text = text;
 			synth.speak(utterThis);
 		}
