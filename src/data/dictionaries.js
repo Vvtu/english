@@ -11,9 +11,6 @@ export type dictSet = {
 };
 
 const dictionaries: dictSet = {
-	// dictionary1: [
-	//  { id:'1', rus:'Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? Ты меня понимаешь? ', eng:'Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? Do you understand me? '},
-	// ],
 	dictionary1: [
 		{ rus: 'тушить огонь', eng: 'to put out a fire' },
 		{ rus: 'бросать мусор', eng: 'to drop a litter' },
@@ -117,15 +114,26 @@ const dictionaries: dictSet = {
 	dictionary2: [
 		{
 			rus:
-				'Поскольку вы часто отображаете JSON модель данных пользователю, вы обнаружите, что если ваша модель была построена правильно, ваш  UI (и, следовательно, ваша структура компонентов) будет хорошо отображаться.',
+				'Поскольку вы часто отображаете JSON модель данных пользователю, вы обнаружите...',
 			eng:
-				'Since you’re often displaying a JSON data model to a user, you’ll find that if your model was built correctly, your UI (and therefore your component structure) will map nicely.',
+				'Since you’re often displaying a JSON data model to a user, you’ll find that...',
 		},
 		{
 			rus:
-				'Это потому, что модели пользовательского интерфейса и данных, как правило, придерживаются одной и той же информационной архитектуры, что означает, что работа разделения пользовательского интерфейса на компоненты часто тривиальна.',
+				'Если ваша модель была построена правильно, ваш  UI (и, следовательно, ваша структура компонентов) будет хорошо отображаться.',
 			eng:
-				'That’s because UI and data models tend to adhere to the same information architecture, which means the work of separating your UI into components is often trivial.',
+				'If your model was built correctly, your UI (and therefore your component structure) will map nicely.',
+		},
+		{
+			rus:
+				'Это потому, что модели пользовательского интерфейса и данных, как правило, придерживаются одной и той же информационной архитектуры.',
+			eng:
+				'That’s because UI and data models tend to adhere to the same information architecture.',
+		},
+		{
+			rus:
+				'Работа разделения пользовательского интерфейса на компоненты часто тривиальна.',
+			eng: 'The work of separating your UI into components is often trivial.',
 		},
 		{
 			rus:
@@ -159,7 +167,7 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Чтобы создать статическую версию приложения, которая отображает модель данных, необходимо создать компоненты, которые повторно используют другие компоненты и передают данные с помощью props.',
+				'Чтобы создать статическую версию приложения, которая отображает модель данных, вы захотите создать компоненты, которые повторно используют другие компоненты и передают данные с помощью props.',
 			eng:
 				'To build a static version of your app that renders your data model, you’ll want to build components that reuse other components and pass data using props.',
 		},
