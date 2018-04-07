@@ -75,6 +75,13 @@ class AppCode extends PureComponent {
 		e.stopPropagation();
 		this.incrementLocalStorage();
 
+		if (this.russianScrollNode) {
+			this.russianScrollNode.scrollTop = 0;
+		}
+		if (this.englishScrollNode) {
+			this.englishScrollNode.scrollTop = 0;
+		}
+
 		const { activeIndex, randomDictionary } = this.state;
 
 		const len = randomDictionary.length;
@@ -92,6 +99,13 @@ class AppCode extends PureComponent {
 		e.preventDefault();
 		e.stopPropagation();
 		this.incrementLocalStorage();
+
+		if (this.russianScrollNode) {
+			this.russianScrollNode.scrollTop = 0;
+		}
+		if (this.englishScrollNode) {
+			this.englishScrollNode.scrollTop = 0;
+		}
 
 		const { activeIndex, randomDictionary } = this.state;
 		const len = randomDictionary.length;
@@ -207,7 +221,7 @@ class AppCode extends PureComponent {
 					this.setState({ appcodeIsSpeaking: false });
 					this.appcodeIsSpeakingTimeOut = null;
 				},
-				9000, // in case of utterThis.onend failed
+				6000, // in case of utterThis.onend failed
 			);
 			utterThis.text = text;
 			synth.speak(utterThis);
@@ -247,10 +261,10 @@ class AppCode extends PureComponent {
 		const item = localStorage.getItem(russian);
 		const shown = parseInt(item, 10) || 0;
 
-		console.log('App code render this.props = ', this.props);
-		console.log('App code render activeObj = ', activeObj);
-		console.log('App code count = ', count);
-		console.log('App code english = ', english);
+		// console.log('App code render this.props = ', this.props);
+		// console.log('App code render activeObj = ', activeObj);
+		// console.log('App code count = ', count);
+		// console.log('App code english = ', english);
 
 		return (
 			<div className="appcode__grid">
@@ -315,6 +329,7 @@ class AppCode extends PureComponent {
 							className="appcode__scroll"
 							onClick={this.handleShowEnglishClicked}
 							onDoubleClick={this.handleShowEnglishClicked}
+							ref={(ref) => (this.russianScrollNode = ref)}
 						>
 							<div>{russian}</div>
 						</div>
@@ -326,6 +341,7 @@ class AppCode extends PureComponent {
 							className="appcode__scroll"
 							onClick={(e) => this.handleTextToSpeachClicked(e, english)}
 							onDoubleClick={(e) => this.handleTextToSpeachClicked(e, english)}
+							ref={(ref) => (this.englishScrollNode = ref)}
 						>
 							<div
 								className={
