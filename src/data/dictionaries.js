@@ -113,6 +113,73 @@ const dictionaries: dictSet = {
 
 	dictionary2: [
 		{
+			rus:
+				'До сих пор мы создали приложение, которое корректно рендерится как функция от props и state, стекающих вниз по иерархии.',
+			eng:
+				"So far, we've built an app that renders correctly as a function of props and state flowing down the hierarchy.",
+		},
+		{
+			rus:
+				'Теперь пришло время поддерживать поток данных следующих в другом направлении: компоненты формы глубоко в иерархии должны обновлять state в другом компоненте.',
+			eng:
+				"Now it's time to support data flowing the other way: the form components deep in the hierarchy need to update the state in the other component.",
+		},
+		{
+			rus: '',
+			eng:
+				'React makes this data flow explicit to make it easy to understand how your program works, but it does require a little more typing than traditional two-way data binding.',
+		},
+
+		{
+			rus:
+				'Мы хотим убедиться, что всякий раз, когда пользователь изменяет форму, мы обновляем состояние, чтобы отразить пользовательский ввод.',
+			eng:
+				'We want to make sure that whenever the user changes the form, we update the state to reflect the user input.',
+		},
+		{
+			rus:
+				'Поскольку компоненты должны обновлять только свое собственное состояние, FilterableProductTable передаст обратные вызовы в панель поиска, которая будет срабатывать всякий раз, когда состояние должно быть обновлено.',
+			eng:
+				'Since components should only update their own state, FilterableProductTable will pass callbacks to SearchBar that will fire whenever the state should be updated.',
+		},
+		{
+			rus: 'Хотя это звучит сложно, на самом деле это всего лишь несколько строк кода.',
+			eng: "Though this sounds complex, it's really just a few lines of code.",
+		},
+		{
+			rus: 'И это действительно ясно, как ваши данные текут по всему приложению.',
+			eng: "And it's really explicit how your data is flowing throughout the app.",
+		},
+		{
+			rus:
+				'Надеюсь, это даст вам представление о том, как строить компоненты и приложения с помощью React.',
+			eng:
+				'Hopefully, this gives you an idea of how to think about building components and applications with React.',
+		},
+		{
+			rus: 'Хотя это может быть немного больше печатания, чем вы привыкли.',
+			eng: "While it may be a little more typing than you're used to",
+		},
+		{
+			rus:
+				'Помните, что код читается гораздо больше раз, чем пишется, и очень легко читать этот модульный, явный код.',
+			eng:
+				"Remember that code is read far more than it's written, and it's extremely easy to read this modular, explicit code.",
+		},
+		{
+			rus:
+				'Когда вы начнете создавать большие библиотеки компонентов, вы оцените эту эксплицитность и модульность.',
+			eng:
+				"As you start to build large libraries of components, you'll appreciate this explicitness and modularity.",
+		},
+		{
+			rus: 'И при переиспользовании кода ваши строки кода начнут сжиматься.',
+			eng: 'And with code reuse, your lines of code will start to shrink.',
+		},
+	],
+
+	oldDictionary2: [
+		{
 			rus: 'ОК, мы определили, что такое минимальный набор состояния приложения.',
 			eng: "OK, so we've identified what the minimal set of app state is.",
 		},
@@ -162,58 +229,6 @@ const dictionaries: dictSet = {
 			rus: 'Добавить обратный поток данных.',
 			eng: 'Add inverse data flow.',
 		},
-		// {
-		// 	rus: 'До сих пор мы создали приложение, которое корректно рендерится как функция от props и state, стекающих вниз по иерархии.',
-		// 	eng: 'So far, we\'ve built an app that renders correctly as a function of props and state flowing down the hierarchy.'
-		// },
-		// {
-		// 	rus: 'Теперь пришло время поддерживать поток данных следующих в другом направлении: компоненты формы глубоко в иерархии должны обновлять state в другом компоненте.',
-		// 	eng: 'Now it\'s time to support data flowing the other way: the form components deep in the hierarchy need to update the state in the other component.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'React makes this data flow explicit to make it easy to understand how your program works, but it does require a little more typing than traditional two-way data binding.'
-		// },
-
-		// {
-		// 	rus: '',
-		// 	eng: 'We want to make sure that whenever the user changes the form, we update the state to reflect the user input.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'Since components should only update their own state, FilterableProductTable will pass callbacks to SearchBar that will fire whenever the state should be updated.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'Though this sounds complex, it\'s really just a few lines of code.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'And it\'s really explicit how your data is flowing throughout the app.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'Hopefully, this gives you an idea of how to think about building components and applications with React.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'While it may be a little more typing than you\'re used to'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'Remember that code is read far more than it\'s written, and it\'s extremely easy to read this modular, explicit code.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'As you start to build large libraries of components, you\'ll appreciate this explicitness and modularity.'
-		// },
-		// {
-		// 	rus: '',
-		// 	eng: 'And with code reuse, your lines of code will start to shrink.'
-		// },
-	],
-
-	oldDictionary2: [
 		{
 			rus:
 				'Поскольку вы часто отображаете JSON модель данных пользователю, вы обнаружите...',
