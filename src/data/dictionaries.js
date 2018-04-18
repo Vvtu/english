@@ -120,12 +120,18 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'Теперь пришло время поддерживать поток данных следующих в другом направлении: компоненты формы глубоко в иерархии должны обновлять state в другом компоненте.',
+				'Компоненты формы глубоко в иерархии должны обновлять state в другом компоненте.',
 			eng:
-				"Now it's time to support data flowing the other way: the form components deep in the hierarchy need to update the state in the other component.",
+				'The form components deep in the hierarchy need to update the state in the other component.',
 		},
 		{
-			rus: '',
+			rus:
+				'Теперь пришло время поддерживать поток данных следующих в другом направлении.',
+			eng: "Now it's time to support data flowing the other way.",
+		},
+		{
+			rus:
+				'React делает этот поток данных явным, чтобы было легко понять, как работает ваша программа, но для этого требуется немного больше ввода, чем при традиционной двусторонней привязке данных.',
 			eng:
 				'React makes this data flow explicit to make it easy to understand how your program works, but it does require a little more typing than traditional two-way data binding.',
 		},
