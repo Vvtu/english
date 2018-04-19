@@ -131,9 +131,15 @@ const dictionaries: dictSet = {
 		},
 		{
 			rus:
-				'React делает этот поток данных явным, чтобы было легко понять, как работает ваша программа, но для этого требуется немного больше ввода, чем при традиционной двусторонней привязке данных.',
+				'Но для этого требуется немного больше ввода, чем при традиционной двусторонней привязке данных.',
 			eng:
-				'React makes this data flow explicit to make it easy to understand how your program works, but it does require a little more typing than traditional two-way data binding.',
+				'But it does require a little more typing than traditional two-way data binding.',
+		},
+		{
+			rus:
+				'React делает этот поток данных явным, чтобы было легко понять, как работает ваша программа.',
+			eng:
+				'React makes this data flow explicit to make it easy to understand how your program works.',
 		},
 
 		{
