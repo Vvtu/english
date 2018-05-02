@@ -53,7 +53,7 @@ const dictionaries: dictSet = {
 			rus: 'Мы должны держать наших собак на поводке.',
 			eng: 'We must keep our dogs on a lead.',
 		},
-		{ rus: 'Мы не должны рвать цветы.', eng: "We must not pick flowers." },
+		{ rus: 'Мы не должны рвать цветы.', eng: 'We must not pick flowers.' },
 	],
 
 	oldDictionary1: [
@@ -1070,7 +1070,6 @@ const dictionaries: dictSet = {
 			eng: 'You can use stateless components inside stateful components, and vice versa.',
 		},
 
-
 		{
 			rus:
 				'React имеет мощную модель композиции, и мы рекомендуем использовать композицию вместо наследования для  переиспользования кода между компонентами.',
@@ -1365,6 +1364,188 @@ const dictionaries: dictSet = {
 				'Элемент формы input, значение которого контролируется React, таким способом называется "контролируемый компонентом".',
 			eng:
 				'An input form element whose value is controlled by React in this way is called a "controlled component".',
+		},
+		{
+			rus:
+				'Это часто самая сложная часть для понимания новичками, поэтому следуйте этим шагам, чтобы понять это.',
+			eng:
+				'This is often the most challenging part for newcomers to understand, so follow these steps to figure it out.',
+		},
+		{
+			rus:
+				'Определите каждый компонент, который отображает что-то на основе этого состояния.',
+			eng: 'Identify every component that renders something based on that state.',
+		},
+		{
+			rus:
+				'Найти общий компонент владельца (один компонент выше всех компонентов, которым нужно состояние в иерархии).',
+			eng:
+				'Find a common owner component (a single component above all the components that need the state in the hierarchy).',
+		},
+		{
+			rus:
+				'Стейт должен принадлежать либо общему владельцу, либо другому компоненту, находящемуся выше в иерархии.',
+			eng:
+				'Either the common owner or another component higher up in the hierarchy should own the state.',
+		},
+		{
+			rus:
+				'Если Вы не можете найти компонент, где имеет смысл владеть состоянием, создайте новый компонент просто для удержания состояния и добавьте его где-то в иерархии над компонентом общего владельца.',
+			eng:
+				"If you can't find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.",
+		},
+		{
+			rus: 'Добавить обратный поток данных.',
+			eng: 'Add inverse data flow.',
+		},
+		{
+			rus:
+				'Поскольку вы часто отображаете JSON модель данных пользователю, вы обнаружите...',
+			eng:
+				'Since you’re often displaying a JSON data model to a user, you’ll find that...',
+		},
+		{
+			rus:
+				'Если ваша модель была построена правильно, ваш  UI (и, следовательно, ваша структура компонентов) будет хорошо отображаться.',
+			eng:
+				'If your model was built correctly, your UI (and therefore your component structure) will map nicely.',
+		},
+		{
+			rus:
+				'Это потому, что модели пользовательского интерфейса и данных, как правило, придерживаются одной и той же информационной архитектуры.',
+			eng:
+				'That’s because UI and data models tend to adhere to the same information architecture.',
+		},
+		{
+			rus:
+				'Работа разделения пользовательского интерфейса на компоненты часто тривиальна.',
+			eng: 'The work of separating your UI into components is often trivial.',
+		},
+		{
+			rus:
+				'Просто разбейте его на компоненты, которые представляют собой ровно одну часть вашей модели данных.',
+			eng:
+				'Just break it up into components that represent exactly one piece of your data model.',
+		},
+		{
+			rus:
+				'Теперь, когда мы определили компоненты в нашем макете, давайте организуем их в иерархию.',
+			eng:
+				'Now that we’ve identified the components in our mock, let’s arrange them into a hierarchy.',
+		},
+		{
+			rus:
+				'Компоненты, которые появляются в другом компоненте макета, должны отображаться как дочерние в иерархии.',
+			eng:
+				'Components that appear within another component in the mock should appear as a child in the hierarchy.',
+		},
+		{
+			rus:
+				'Самый простой способ - создать версию, которая принимает вашу модель данных и отображает UI, но не имеет интерактивности.',
+			eng:
+				'The easiest way is to build a version that takes your data model and renders the UI but has no interactivity.',
+		},
+		{
+			rus:
+				'Лучше всего отделить эти процессы, потому что построение статической версии требует много набора текста и никакого мышления, а добавление интерактивности требует много мышления и не много набора текста.',
+			eng:
+				'It’s best to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing.',
+		},
+		{
+			rus:
+				'Чтобы создать статическую версию приложения, которая отображает модель данных, вы захотите создать компоненты, которые повторно используют другие компоненты и передают данные с помощью props.',
+			eng:
+				'To build a static version of your app that renders your data model, you’ll want to build components that reuse other components and pass data using props.',
+		},
+		{
+			rus: 'Props - это способ передачи данных от родителя ребенку.',
+			eng: 'props are a way of passing data from parent to child.',
+		},
+		{
+			rus:
+				'Если вы знакомы с концепцией состояния, не используйте state для создания этой статической версии.',
+			eng:
+				'If you’re familiar with the concept of state, don’t use state at all to build this static version.',
+		},
+		{
+			rus:
+				'Состояние зарезервировано только для интерактивности, то есть данных, которые меняются с течением времени.',
+			eng:
+				'State is reserved only for interactivity, that is, data that changes over time.',
+		},
+		{
+			rus:
+				'В более простых примерах обычно легче идти сверху вниз, а в более крупных проектах легче идти снизу вверх и писать тесты по мере сборки.',
+			eng:
+				'In simpler examples, it’s usually easier to go top-down, and on larger projects, it’s easier to go bottom-up and write tests as you build.',
+		},
+		{
+			rus:
+				'у компонентов будут только методы render(), так как это статическая версия вашего приложения',
+			eng:
+				'The components will only have render methods since this is a static version of your app.',
+		},
+		{
+			rus:
+				'Если внести изменения в базовую модель данных и вызвать ReactDOM.render снова, пользовательский интерфейс будет обновлен.',
+			eng:
+				' If you make a change to your underlying data model and call ReactDOM.render again, the UI will be updated.',
+		},
+
+		{
+			rus:
+				'Односторонний поток данных React (также называемый односторонней привязкой) сохраняет все модульным и быстрым',
+			eng:
+				'React’s one-way data flow (also called one-way binding) keeps everything modular and fast.',
+		},
+		{
+			rus: "Существует два типа 'модельных' данных в React: props и state.",
+			eng: "There are two types of 'model' data in React: props and state.",
+		},
+		{
+			rus:
+				'Чтобы сделать пользовательский интерфейс интерактивным, необходимо иметь возможность инициировать изменения в базовой модели данных. Реакт делает это легко со стейтом.',
+			eng:
+				'To make your UI interactive, you need to be able to trigger changes to your underlying data model. React makes this easy with state.',
+		},
+		{
+			rus:
+				'Чтобы правильно построить приложение, сначала нужно подумать о минимальном наборе изменяемых состояний, необходимых вашему приложению.',
+			eng:
+				'To build your app correctly, you first need to think of the minimal set of mutable state that your app needs.',
+		},
+		{
+			rus: 'Ключ здесь DRY: не повторяй себя.',
+			eng: 'The key here is DRY: Don’t Repeat Yourself.',
+		},
+		{
+			rus:
+				'Выясните абсолютное минимальное представление состояния, в котором нуждается ваше приложение, и вычисляйте все остальное, что вам будет нужно, по требованию.',
+			eng:
+				'Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand.',
+		},
+		{
+			rus: 'Просто задайте три вопроса о каждом фрагменте данных',
+			eng: 'Simply ask three questions about each piece of data:',
+		},
+		{
+			rus: 'Это передается от родителя через props? Если да, то это, вероятно, не state.',
+			eng: 'Is it passed in from a parent via props? If so, it probably isn’t state.',
+		},
+		{
+			rus:
+				'Остается ли это неизменным с течением времени? Если да, то это, вероятно, не state.',
+			eng: 'Does it remain unchanged over time? If so, it probably isn’t state.',
+		},
+		{
+			rus:
+				'Можете ли вы вычислить его на основе любого другого state или props в вашем компоненте? Если да, то это не state.',
+			eng:
+				'Can you compute it based on any other state or props in your component? If so, it isn’t state.',
+		},
+		{
+			rus: 'Шаг 4: Определите, где должен быть Ваш state.',
+			eng: 'Step 4: Identify Where Your State Should Live.',
 		},
 	],
 };
