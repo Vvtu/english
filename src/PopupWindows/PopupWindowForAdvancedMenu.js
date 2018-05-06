@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import CancelIcon from './svg/CancelIcon';
 import ClearAllInfo from './svg/ClearAllInfo';
 
-import './PopupWindowForAdvancedMenu.css';
+import './PopupWindows.css';
 
 import { ANIMATION_INTERVAL, ICON_SIZE } from '../Constants/constants';
 
@@ -57,6 +57,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 			handleUnhideAllItemsClicked,
 			handleDictClicked,
 			handleClosePopupClicked,
+			handleSetVoiceClicked,
 		} = this.props;
 
 		// console.log('this.state.increaseOpacity = ', this.state.increaseOpacity);
@@ -116,6 +117,12 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D2</div>,
 								props: {},
 								handleClickedFunc: () => handleDictClicked(2),
+							})}
+							{this.menuRow({
+								label: 'set voice',
+								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D2</div>,
+								props: {},
+								handleClickedFunc: () => handleSetVoiceClicked(),
 							})}
 						</div>
 					</div>

@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import PopupWindowForAdvancedMenu from 'PopupWindowForAdvancedMenu/PopupWindowForAdvancedMenu';
+import PopupWindowForAdvancedMenu from 'PopupWindows/PopupWindowForAdvancedMenu';
 import ArrowIcon from 'AppCode/svg/ArrowIcon';
 import AdvancedIcon from 'AppCode/svg/AdvancedIcon';
 
 import 'AppCode/AppCode.css';
 
 import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
+import getVoicesArray from 'lib/getVoicesArray';
 import { ICON_SIZE } from '../Constants/constants';
 
 // console.log('process.env = ', process.env);
@@ -53,7 +54,13 @@ class AppCode extends PureComponent {
 			advancedColor: String(styles.getPropertyValue('--advanced-color')).trim(),
 			whiteColor: String(styles.getPropertyValue('--base-text-color')).trim(),
 		});
+		// get voices array
+		window.speechSynthesis.getVoices();
 		this.forceUpdate();
+
+		getVoicesArray().then((result) => {
+			this.voicesArray = result;
+		});
 	}
 
 	incrementLocalStorage = () => {
@@ -203,7 +210,16 @@ class AppCode extends PureComponent {
 			if (this.engVoice) {
 				utterThis.voice = this.engVoice;
 			}
-			// utterThis.voiceURI = 'Google UK English Male';
+			console.log('voices = ', this.voicesArray);
+
+			this.voicesArray.forEach((voice) => {
+				if (voice.name === 'Google UK English Female') {
+					utterThis.voice = voice;
+					console.log('voice = ', voice);
+				}
+			});
+
+			// utterThis.voiceURI = 'Google UK English Female';
 			utterThis.volume = 1.0; // 0 to 1
 			utterThis.rate = 1.0; // 0.1 to 10
 			// utterThis.pitch = 2; //0 to 2
@@ -224,7 +240,7 @@ class AppCode extends PureComponent {
 				6000, // in case of utterThis.onend failed
 			);
 			utterThis.text = text;
-			synth.speak(utterThis);
+			// synth.speak(utterThis);
 		}
 		return false;
 	};
@@ -240,11 +256,25 @@ class AppCode extends PureComponent {
 		});
 	};
 
+	handleSetVoiceClicked = () => {
+		this.setState({
+			showAdvanced: false,
+			showVoicesMenu: true,
+		});
+	};
+
+	handleSetVoiceClickedFinish = () => {
+		this.setState({
+			showVoicesMenu: false,
+		});
+	};
+
 	render() {
 		const {
 			activeIndex,
 			randomDictionary,
 			showAdvanced,
+			showVoicesMenu,
 			showEnglish,
 			appcodeIsSpeaking,
 			greenColor,
@@ -361,6 +391,19 @@ class AppCode extends PureComponent {
 						handleHideItemClicked={this.handleHideItemClicked}
 						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
 						handleDictClicked={this.handleDictClickedLocal}
+						handleSetVoiceClicked={this.handleSetVoiceClicked}
+					/>
+				) : (
+					<div />
+				)}
+
+				{showVoicesMenu ? (
+					<PopupWindowForAdvancedMenu
+						handleClosePopupClicked={this.handleClosePopupClicked}
+						handleHideItemClicked={this.handleHideItemClicked}
+						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
+						handleDictClicked={this.handleDictClickedLocal}
+						handleSetVoiceClicked={this.handleSetVoiceClicked}
 					/>
 				) : (
 					<div />

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import PopupWindowForAdvancedMenu from './PopupWindowForAdvancedMenu';
+import PopupWindowForAdvancedMenu from './PopupWindows';
 
 describe('PopupWindowForAdvancedMenu test   ', () => {
     it('test 1', () => {
