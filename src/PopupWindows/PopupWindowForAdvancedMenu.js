@@ -57,7 +57,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 			handleUnhideAllItemsClicked,
 			handleDictClicked,
 			handleClosePopupClicked,
-			handleSetVoiceClicked,
+			handleShowSetVoicePopupClicked,
 		} = this.props;
 
 		// console.log('this.state.increaseOpacity = ', this.state.increaseOpacity);
@@ -122,7 +122,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 								label: 'set voice',
 								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D2</div>,
 								props: {},
-								handleClickedFunc: () => handleSetVoiceClicked(),
+								handleClickedFunc: () => handleShowSetVoicePopupClicked(),
 							})}
 						</div>
 					</div>

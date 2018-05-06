@@ -12,6 +12,8 @@ import { getDictionaryWithMix, handleDictClicked } from 'lib/lib';
 import getVoicesArray from 'lib/getVoicesArray';
 import { ICON_SIZE } from '../Constants/constants';
 
+const VOICE_INDEX_IN_VOICES_ARRAY = 'voiceIndexInVoicesArray';
+
 // console.log('process.env = ', process.env);
 // console.log(
 // 	'process.env.REACT_APP_SECRET_CODE = ',
@@ -150,6 +152,7 @@ class AppCode extends PureComponent {
 		this.setState({
 			showAdvanced: false,
 			appcodeIsSpeaking: false,
+			showVoicesMenu: false,
 		});
 		return false;
 	};
@@ -213,12 +216,15 @@ class AppCode extends PureComponent {
 			}
 			console.log('voices = ', this.voicesArray);
 
-			this.voicesArray.forEach((voice) => {
-				if (voice.name === 'Google UK English Female') {
-					utterThis.voice = voice;
-					console.log('voice = ', voice);
-				}
-			});
+			const voiceIndex = localStorage.getItem(VOICE_INDEX_IN_VOICES_ARRAY);
+			if (
+				voiceIndex !== undefined &&
+				voiceIndex !== null &&
+				voiceIndex !== -1 &&
+				this.voicesArray[voiceIndex]
+			) {
+				utterThis.voice = this.voicesArray[voiceIndex];
+			}
 
 			// utterThis.voiceURI = 'Google UK English Female';
 			utterThis.volume = 1.0; // 0 to 1
@@ -241,7 +247,7 @@ class AppCode extends PureComponent {
 				6000, // in case of utterThis.onend failed
 			);
 			utterThis.text = text;
-			// synth.speak(utterThis);
+			synth.speak(utterThis);
 		}
 		return false;
 	};
@@ -257,17 +263,21 @@ class AppCode extends PureComponent {
 		});
 	};
 
-	handleSetVoiceClicked = () => {
+	handleShowSetVoicePopupClicked = () => {
 		this.setState({
 			showAdvanced: false,
 			showVoicesMenu: true,
 		});
 	};
 
-	handleSetVoiceClickedFinish = () => {
+	handleVoiceDidSelect = (voiceIndex) => {
 		this.setState({
+			showAdvanced: false,
 			showVoicesMenu: false,
 		});
+		if (voiceIndex !== undefined && voiceIndex !== null && voiceIndex !== -1) {
+			localStorage.setItem(VOICE_INDEX_IN_VOICES_ARRAY, String(voiceIndex));
+		}
 	};
 
 	render() {
@@ -392,7 +402,7 @@ class AppCode extends PureComponent {
 						handleHideItemClicked={this.handleHideItemClicked}
 						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
 						handleDictClicked={this.handleDictClickedLocal}
-						handleSetVoiceClicked={this.handleSetVoiceClicked}
+						handleShowSetVoicePopupClicked={this.handleShowSetVoicePopupClicked}
 					/>
 				) : (
 					<div />
@@ -400,11 +410,9 @@ class AppCode extends PureComponent {
 
 				{showVoicesMenu ? (
 					<PopupWindowForVoicesMenu
+						voicesArray={this.voicesArray}
 						handleClosePopupClicked={this.handleClosePopupClicked}
-						handleHideItemClicked={this.handleHideItemClicked}
-						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
-						handleDictClicked={this.handleDictClickedLocal}
-						handleSetVoiceClicked={this.handleSetVoiceClicked}
+						handleVoiceDidSelect={this.handleVoiceDidSelect}
 					/>
 				) : (
 					<div />
