@@ -186,6 +186,28 @@ exports[`PopupWindowForAdvancedMenu test    test 1 1`] = `
             dict #2
           </div>
         </div>
+        <div
+          className="popup__row"
+          onClick={[Function]}
+          onDoubleClick={[Function]}
+        >
+          <div
+            style={
+              Object {
+                "color": "",
+                "width": "32",
+              }
+            }
+          >
+            D2
+          </div>
+          <div
+            className="popup__gap"
+          />
+          <div>
+            set voice
+          </div>
+        </div>
       </div>
     </div>
   </div>
