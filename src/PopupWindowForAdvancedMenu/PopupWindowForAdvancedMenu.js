@@ -18,7 +18,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 	}
 
 	componentDidMount() {
-		Promise.resolve().then(() => {
+		requestAnimationFrame(() => {
 			this.setState({ increaseOpacity: true });
 		});
 	}
@@ -26,8 +26,8 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 	menuRow = (menuItem) => (
 		<div
 			className="popup__row"
-			onClick={(e) => this.handleClicked(e, menuItem.handleClicked)}
-			onDoubleClick={(e) => this.handleClicked(e, menuItem.handleClicked)}
+			onClick={(e) => this.handleClicked(e, menuItem.handleClickedFunc)}
+			onDoubleClick={(e) => this.handleClicked(e, menuItem.handleClickedFunc)}
 		>
 			<menuItem.Icon {...menuItem.props} />
 			<div className="popup__gap" />
@@ -87,35 +87,35 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 								label: 'Advanced:',
 								Icon: CancelIcon,
 								props: { height: ICON_SIZE, width: ICON_SIZE, fill: blackColor },
-								handleClicked: noop,
+								handleClickedFunc: noop,
 							})}
 
 							{this.menuRow({
 								label: 'hide this item',
 								Icon: CancelIcon,
 								props: { height: ICON_SIZE, width: ICON_SIZE, fill: redColor },
-								handleClicked: handleHideItemClicked,
+								handleClickedFunc: handleHideItemClicked,
 							})}
 
 							{this.menuRow({
 								label: 'reset all info',
 								Icon: ClearAllInfo,
 								props: { height: ICON_SIZE, width: ICON_SIZE, fill: greenColor },
-								handleClicked: handleUnhideAllItemsClicked,
+								handleClickedFunc: handleUnhideAllItemsClicked,
 							})}
 
 							{this.menuRow({
 								label: 'dict #1',
 								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D1</div>,
 								props: {},
-								handleClicked: () => handleDictClicked(1),
+								handleClickedFunc: () => handleDictClicked(1),
 							})}
 
 							{this.menuRow({
 								label: 'dict #2',
 								Icon: () => <div style={{ width: ICON_SIZE, color: greenColor }}>D2</div>,
 								props: {},
-								handleClicked: () => handleDictClicked(2),
+								handleClickedFunc: () => handleDictClicked(2),
 							})}
 						</div>
 					</div>
