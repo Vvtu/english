@@ -46,7 +46,7 @@ class AppCode extends PureComponent {
 		// 	parseInt(window.screen.height, 10),
 		// 	parseInt(window.screen.width, 10),
 		// );
-		// // console.log('height , width = ',height , width);
+		// console.log('height , width = ',height , width);
 
 		// element.style.setProperty('--screen-height', height + 'px');
 		// element.style.setProperty('--screen-width', width + 'px');
@@ -216,7 +216,7 @@ class AppCode extends PureComponent {
 			if (this.engVoice) {
 				utterThis.voice = this.engVoice;
 			}
-			console.log('voices = ', this.voicesArray);
+			// console.log('voices = ', this.voicesArray);
 
 			if (this.state.voiceIndex && this.voicesArray[parseInt(this.state.voiceIndex, 10)]) {
 				utterThis.voice = this.voicesArray[parseInt(this.state.voiceIndex, 10)];

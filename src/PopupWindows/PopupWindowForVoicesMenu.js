@@ -56,7 +56,7 @@ class PopupWindowForVoicesMenu extends PureComponent {
 
 		const { voicesArray, handleClosePopupClicked } = this.props;
 
-		console.log('PopupWindowForVoicesMenu = ', this.props);
+		// console.log('PopupWindowForVoicesMenu = ', this.props);
 
 		return (
 			<div
