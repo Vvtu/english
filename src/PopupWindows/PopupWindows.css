@@ -57,6 +57,16 @@
 	justify-content: flex-start;
 }
 
+.popup__row_selected {
+	background-color: red;
+}
+
 .popup__gap {
 	padding-right: 10px;
+}
+
+.popup__scroll {
+	max-height: 80vh;
+	overflow-y: scroll;
+	/* -webkit-overflow-scrolling: touch; */
 }

@@ -74,7 +74,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 				<div className="popup__full_screen_div_opacity" />
 				<div className="popup__full_screen_div">
 					<div className="popup__window">
-						<div className="popup__cancel" onClick={this.changeBoardValueByPath}>
+						<div className="popup__cancel">
 							<CancelIcon
 								fill={whiteColor}
 								height={16}

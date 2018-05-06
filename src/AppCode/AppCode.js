@@ -50,12 +50,14 @@ class AppCode extends PureComponent {
 
 		// element.style.setProperty('--screen-height', height + 'px');
 		// element.style.setProperty('--screen-width', width + 'px');
+		const voiceIndex = localStorage.getItem(VOICE_INDEX_IN_VOICES_ARRAY);
 
 		const styles = getComputedStyle(element);
 		this.setState({
 			greenColor: String(styles.getPropertyValue('--english-text-color')).trim(),
 			advancedColor: String(styles.getPropertyValue('--advanced-color')).trim(),
 			whiteColor: String(styles.getPropertyValue('--base-text-color')).trim(),
+			voiceIndex,
 		});
 		// get voices array
 		window.speechSynthesis.getVoices();
@@ -216,14 +218,8 @@ class AppCode extends PureComponent {
 			}
 			console.log('voices = ', this.voicesArray);
 
-			const voiceIndex = localStorage.getItem(VOICE_INDEX_IN_VOICES_ARRAY);
-			if (
-				voiceIndex !== undefined &&
-				voiceIndex !== null &&
-				voiceIndex !== -1 &&
-				this.voicesArray[voiceIndex]
-			) {
-				utterThis.voice = this.voicesArray[voiceIndex];
+			if (this.state.voiceIndex && this.voicesArray[parseInt(this.state.voiceIndex, 10)]) {
+				utterThis.voice = this.voicesArray[parseInt(this.state.voiceIndex, 10)];
 			}
 
 			// utterThis.voiceURI = 'Google UK English Female';
@@ -274,10 +270,9 @@ class AppCode extends PureComponent {
 		this.setState({
 			showAdvanced: false,
 			showVoicesMenu: false,
+			voiceIndex
 		});
-		if (voiceIndex !== undefined && voiceIndex !== null && voiceIndex !== -1) {
-			localStorage.setItem(VOICE_INDEX_IN_VOICES_ARRAY, String(voiceIndex));
-		}
+		localStorage.setItem(VOICE_INDEX_IN_VOICES_ARRAY, voiceIndex);
 	};
 
 	render() {
@@ -413,6 +408,7 @@ class AppCode extends PureComponent {
 						voicesArray={this.voicesArray}
 						handleClosePopupClicked={this.handleClosePopupClicked}
 						handleVoiceDidSelect={this.handleVoiceDidSelect}
+						selectedVoiceIndex={this.state.voiceIndex}
 					/>
 				) : (
 					<div />
