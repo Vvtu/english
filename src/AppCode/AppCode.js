@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import PopupWindowForAdvancedMenu from 'PopupWindows/PopupWindowForAdvancedMenu';
+import PopupWindowForVoicesMenu from 'PopupWindows/PopupWindowForVoicesMenu';
 import ArrowIcon from 'AppCode/svg/ArrowIcon';
 import AdvancedIcon from 'AppCode/svg/AdvancedIcon';
 
@@ -398,7 +399,7 @@ class AppCode extends PureComponent {
 				)}
 
 				{showVoicesMenu ? (
-					<PopupWindowForAdvancedMenu
+					<PopupWindowForVoicesMenu
 						handleClosePopupClicked={this.handleClosePopupClicked}
 						handleHideItemClicked={this.handleHideItemClicked}
 						handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
