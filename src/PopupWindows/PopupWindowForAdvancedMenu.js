@@ -58,6 +58,7 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 			handleDictClicked,
 			handleClosePopupClicked,
 			handleShowSetVoicePopupClicked,
+			switchOldAndNewWords,
 		} = this.props;
 
 		// console.log('this.state.increaseOpacity = ', this.state.increaseOpacity);
@@ -92,18 +93,27 @@ class PopupWindowForAdvancedMenu extends PureComponent {
 							})}
 
 							{this.menuRow({
+								label: 'reset all info',
+								Icon: ClearAllInfo,
+								props: { height: ICON_SIZE, width: ICON_SIZE, fill: greenColor },
+								handleClickedFunc: handleUnhideAllItemsClicked,
+							})}
+
+							{this.menuRow({
+								label: 'words (old vs new)',
+								Icon: ClearAllInfo,
+								props: { height: ICON_SIZE, width: ICON_SIZE, fill: greenColor },
+								handleClickedFunc: switchOldAndNewWords,
+							})}
+
+
+							{this.menuRow({
 								label: 'hide this item',
 								Icon: CancelIcon,
 								props: { height: ICON_SIZE, width: ICON_SIZE, fill: redColor },
 								handleClickedFunc: handleHideItemClicked,
 							})}
 
-							{this.menuRow({
-								label: 'reset all info',
-								Icon: ClearAllInfo,
-								props: { height: ICON_SIZE, width: ICON_SIZE, fill: greenColor },
-								handleClickedFunc: handleUnhideAllItemsClicked,
-							})}
 
 							{this.menuRow({
 								label: 'dict #1',
