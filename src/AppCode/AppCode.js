@@ -13,7 +13,6 @@ import getVoicesArray from 'lib/getVoicesArray';
 import { ICON_SIZE } from '../Constants/constants';
 
 const VOICE_INDEX_IN_VOICES_ARRAY = 'voiceIndexInVoicesArray';
-const OLD_WORDS = 'oldWords';
 
 // console.log('process.env = ', process.env);
 // console.log(
@@ -281,28 +280,6 @@ class AppCode extends PureComponent {
     localStorage.setItem(VOICE_INDEX_IN_VOICES_ARRAY, voiceIndex);
   };
 
-  switchOldAndNewWords = () => {
-
-    let oldWords = localStorage.getItem(OLD_WORDS);
-
-    if (oldWords) {
-      localStorage.setItem(OLD_WORDS, '');
-      oldWords = '';
-    } else {
-      localStorage.setItem(OLD_WORDS, 'yes');
-      oldWords = 'yes';
-    }
-
-    this.setState({
-      activeIndex: 0,
-      randomDictionary: getDictionaryWithMix(this.props.dictionaries, oldWords ),
-      showEnglish: false,
-      showAdvanced: false,
-      appcodeIsSpeaking: false,
-      voiceIndex: undefined,
-    });
-  };
-
   render() {
     const {
       activeIndex,
@@ -422,7 +399,6 @@ class AppCode extends PureComponent {
             handleUnhideAllItemsClicked={this.handleUnhideAllItemsClicked}
             handleDictClicked={this.handleDictClickedLocal}
             handleShowSetVoicePopupClicked={this.handleShowSetVoicePopupClicked}
-            switchOldAndNewWords={this.switchOldAndNewWords}
           />
         ) : (
           <div />
