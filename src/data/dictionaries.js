@@ -113,6 +113,97 @@ const dictionaries: dictSet = {
 
 	dictionary2: [
 		{
+		rus: 'В типичном потоке данных React props - это единственный способ взаимодействия родительских компонентов со своими дочерними элементами.',
+		eng: 'In the typical React dataflow, props are the only way that parent components interact with their children.',
+		},
+		{
+		rus: 'Чтобы изменить ребенка, вы перерисовываете его с новыми реквизитами.',
+		eng: 'To modify a child, you re-render it with new props.',
+		},
+		{
+		rus: 'Однако, есть несколько случаев, когда вам нужно обязательно изменить дочерний элемент вне обычного потока данных.',
+		eng: 'However, there are a few cases where you need to imperatively modify a child outside of the typical dataflow.',
+		},
+		{
+		rus: 'Изменяемый дочерний элемент может быть экземпляром компонента React или элементом DOM. В обоих случаях React обеспечивает аварийный люк.',
+		eng: 'The child to be modified could be an instance of a React component, or it could be a DOM element. For both of these cases, React provides an escape hatch.',
+		},
+		{
+		rus: 'Есть несколько хороших вариантов использования рефов: управление фокусом, выбор текста или воспроизведение мультимедиа. Запуск императивной анимации. Интеграция со сторонними библиотеками дом.',
+		eng: 'There are a few good use cases for refs: Managing focus, text selection, or media playback. Triggering imperative animations. Integrating with third-party DOM libraries.',
+		},
+		{
+		rus: 'Избегайте использования ссылок для всего, что может быть сделано декларативно.',
+		eng: 'Avoid using refs for anything that can be done declaratively.',
+		},
+		{
+		rus: 'Например, вместо того, чтобы открывать методы open() и close() в компоненте диалога, передайте ему isOpen prop.',
+		eng: 'For example, instead of exposing open() and close() methods on a Dialog component, pass an isOpen prop to it.',
+		},
+		{
+		rus: 'Ваше первое намерение может быть использовать ref-ы, чтобы "сделать, чтобы что-то произошло" в вашем приложении.',
+		eng: 'Your first inclination may be to use refs to “make things happen” in your app.',
+		},
+		{
+		rus: 'Если это так, выделите минутку и подумайте более критически о том, кому state должно принадлежать в иерархии компонентов.',
+		eng: 'If this is the case, take a moment and think more critically about where state should be owned in the component hierarchy.',
+		},
+		{
+		rus: 'Часто становится ясно, что надлежащее место для "владения" этим state находится на более высоком уровне в иерархии. См. руководство по поднятию состояния и примеры.',
+		eng: 'Often, it becomes clear that the proper place to “own” that state is at a higher level in the hierarchy. See the Lifting State Up guide for examples of this.',
+		},
+		// {
+		// rus: '',
+		// eng: 'The examples below have been updated to use the React.createRef() API introduced in React 16.3. If you are using an earlier release of React, we recommend using callback refs instead.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'Refs are commonly assigned to an instance property when a component is constructed so they can be referenced throughout the component.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'When a ref is passed to an element in render, a reference to the node becomes accessible at the "current" attribute of the ref. const node = this.myRef.current;',
+		// },
+		// {
+		// rus: '',
+		// eng: 'The value of the ref differs depending on the type of the node.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'When the ref attribute is used on an HTML element, the ref created in the constructor with React.createRef() receives the underlying DOM element as its current property.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'When the ref attribute is used on a custom class component, the ref object receives the mounted instance of the component as its current.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'You may not use the ref attribute on functional components because they don’t have instances.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'This code uses a ref to store a reference to a DOM node',
+		// },
+		// {
+		// rus: '',
+		// eng: 'React will assign the current property with the DOM element when the component mounts, and assign it back to null when it unmounts.',
+		// },
+		// {
+		// rus: '',
+		// eng: '"ref" updates happen before componentDidMount or componentDidUpdate lifecycle hooks.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'If we wanted to wrap the CustomTextInput above to simulate it being clicked immediately after mounting, we could use a ref to get access to the custom input and call its focusTextInput method manually.',
+		// },
+		// {
+		// rus: '',
+		// eng: 'You should convert the component to a class if you need a ref to it, just like you do when you need lifecycle methods or state.',
+		// },
+	],
+
+	oldDictionary2: [
+		{
 			rus:
 				'По мере роста вашего приложения, вы можете поймать много ошибок с помощью проверки типов.',
 			eng: 'As your app grows, you can catch a lot of bugs with typechecking.',
@@ -210,9 +301,6 @@ const dictionaries: dictSet = {
 			eng:
 				'Flow lets you annotate the variables, functions, and React components with a special type syntax, and catch mistakes early.',
 		},
-	],
-
-	oldDictionary2: [
 		{
 			rus:
 				'До сих пор мы создали приложение, которое корректно рендерится как функция от props и state, стекающих вниз по иерархии.',
