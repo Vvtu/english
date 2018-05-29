@@ -113,12 +113,127 @@ const dictionaries: dictSet = {
 
 	dictionary2: [
 		{
+			rus:'React предоставляет декларативный API, так что вам не придется беспокоиться о том, что именно изменяется в каждом обновлении.',
+			eng:'React provides a declarative API so that you don’t have to worry about exactly what changes on every update.',
+		},
+		{
+			rus:'Это делает написание приложений намного проще, но может быть не очевидно, как это реализуется в React.',
+			eng:'This makes writing applications a lot easier, but it might not be obvious how this is implemented within React.',
+		},
+		{
+			rus:'Эта статья объясняет выбор, который мы сделали в алгоритме react "diffing", так что обновления компонентов предсказуемы, будучи достаточно быстрыми для высокопроизводительных приложений.',
+			eng:'This article explains the choices we made in React’s "diffing" algorithm so that component updates are predictable while being fast enough for high-performance apps.',
+		},
+		{
+			rus:'Когда вы используете React, в каждый момент времени вы можете думать о функции render() как создающий дерево элементов React.',
+			eng:'When you use React, at a single point in time you can think of the render function as creating a tree of React elements.',
+		},
+		{
+			rus:'При следующем обновлении state или props эта функция render вернет другое дерево элементов React.',
+			eng:'On the next state or props update, that render() function will return a different tree of React elements.',
+		},
+		{
+			rus:'React-у затем необходимо выяснить, как эффективно обновить пользовательский интерфейс, чтобы соотвествовать последниму дереву.',
+			eng:'React then needs to figure out how to efficiently update the UI to match the most recent tree.',
+		},
+		{
+			rus:'Есть несколько общих решений этой алгоритмической задачи генерации минимального числа операций для преобразования одного дерева в другое.',
+			eng:'There are some generic solutions to this algorithmic problem of generating the minimum number of operations to transform one tree into another.',
+		},
+		{
+			rus:'Однако исскуство алгоритмов - имеет сложность в порядке O (n3), где n-количество элементов в дереве.',
+			eng:'However, the state of the art algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.',
+		},
+		{
+			rus:'Если бы мы использовали это в React, отображение 1000 элементов потребовало бы порядка миллиарда сравнений.',
+			eng:'If we used this in React, displaying 1000 elements would require in the order of one billion comparisons.',
+		},
+		{
+			rus:'Это слишком дорого. Вместо этого React реализует эвристический алгоритм O(n), основанный на двух предположениях.',
+			eng:'This is far too expensive. Instead, React implements a heuristic O(n) algorithm based on two assumptions.',
+		},
+		{
+			rus:'Два элемента разных типов будут производить разные деревья.',
+			eng:'Two elements of different types will produce different trees.',
+		},
+		{
+			rus:'Разработчик может намекнуть на то, какие дочерние элементы могут быть стабильными в разных рендерах с помощью пропса key.',
+			eng:'The developer can hint at which child elements may be stable across different renders with a key prop.',
+		},
+		{
+			rus:'На практике эти предположения справедливы почти для всех практических случаев использования.',
+			eng:'In practice, these assumptions are valid for almost all practical use cases.',
+		},
+		{
+			rus:'При вычитании двух деревьев React сначала сравнивает два корневых элемента. Поведение отличается в зависимости от типов корневых элементов.',
+			eng:'When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements.',
+		},
+		{
+			rus:'Всякий раз, когда корневые элементы имеют разные типы, React снесет старое дерево и построит новое дерево с нуля.',
+			eng:'Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch.',
+		},
+// https://reactjs.org/docs/reconciliation.html
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+		// {
+		// 	rus:'',
+		// 	eng:'',
+		// },
+	],
+
+	oldDictionary2: [
+		{
 			rus:
 				'Приведенные ниже примеры были обновлены для использования React.createRef() API, представленый в React 16.3. Если используется более раннюю версию React, мы рекомендуем использовать callback refs.',
 			eng:
 				'The examples below have been updated to use the React.createRef() API introduced in React 16.3. If you are using an earlier release of React, we recommend using callback refs instead.',
 		},
-
 		{
 			rus: 'Значение ref отличается в зависимости от типа узла.',
 			eng: 'The value of the ref differs depending on the type of the node.',
@@ -196,9 +311,7 @@ const dictionaries: dictSet = {
 				'You can find a detailed example of how to expose a child’s DOM node to a parent component in the ref forwarding documentation.',
 		},
 		// https://reactjs.org/docs/refs-and-the-dom.html
-	],
 
-	oldDictionary2: [
 		{
 			rus:
 				'В типичном потоке данных React props - это единственный способ взаимодействия родительских компонентов со своими дочерними элементами.',
