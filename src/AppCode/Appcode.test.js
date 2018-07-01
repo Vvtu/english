@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import AppCode from 'AppCode';
+import AppCode from 'AppCode/AppCode';
 
 const dictionaries = {
 	dictionary1: [ { 'Русский текст': 'Russian text' } ],
