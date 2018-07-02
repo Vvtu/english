@@ -112,6 +112,114 @@ const dictionaries: dictSet = {
   ],
 
   dictionary2: [
+    {
+      rus:
+        'Термин "Render prop" относится к простой технике обмена кодом между компонентами React с использованием prop, значение которого является функцией.',
+      eng:
+        'The term "render prop" refers to a simple technique for sharing code between React components using a prop whose value is a function.',
+    },
+    {
+      rus:
+        'Компонент с Render prop принимает функцию, которая возвращает элемент React и вызывает его вместо реализации собственной логики render.',
+      eng:
+        'A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.',
+    },
+    {
+      rus: 'В этом документе мы обсудим, почему рендер props полезны, и как написать свои собственные.',
+      eng:
+        'In this document, we’ll discuss why render props are useful, and how to write your own.',
+    },
+    {
+      rus: 'Используйте Render Props для Пересекающихся Задач',
+      eng: 'Use Render Props for Cross-Cutting Concerns',
+    },
+    {
+      rus: 'Компоненты являются основной единицей переиспользования кода в React, но не всегда очевидно, как поделиться состоянием или поведением, которое один компонент инкапсулирует, с другими компонентами, которые нуждаются в том же состоянии.',
+      eng:
+        'Components are the primary unit of code reuse in React, but it’s not always obvious how to share the state or behavior that one component encapsulates to other components that need that same state.',
+    },
+    {
+      rus: 'Теперь вопрос: Как мы можем переиспользовать это поведение в другом компоненте?',
+      eng: 'Now the question is: How can we reuse this behavior in another component?',
+    },
+    {
+      rus: 'Другими словами, если другой компонент должен знать о положении курсора, можем ли мы инкапсулировать это поведение, чтобы мы могли легко поделиться им с этим компонентом?',
+      eng:
+        'In other words, if another component needs to know about the cursor position, can we encapsulate that behavior so that we can easily share it with that component?',
+    },
+    {
+      rus: 'Теперь, вместо того, чтобы эффективно клонировать Mouse компонент и жестко кодировать что-то еще в его Render методе для решения для конкретного случая использования, мы предоставляем Render prop, который Mouse может использовать для динамического определения того, что он отображает.',
+      eng:
+        'Now, instead of effectively cloning the Mouse component and hard-coding something else in its render method to solve for a specific use case, we provide a render prop that Mouse can use to dynamically determine what it renders.',
+    },
+    {
+      rus: 'Более конкретно, Render prop-это функция prop, которую компонент использует, чтобы знать, что рендерить.',
+      eng:
+        'More concretely, a render prop is a function prop that a component uses to know what to render.',
+    },
+    {
+      rus: 'Этот метод делает поведение, которое нам нужно разделить, чрезвычайно портативным.',
+      eng: 'This technique makes the behavior that we need to share extremely portable.',
+    },
+    {
+      rus: 'Чтобы получить такое поведение, отрисуйте Mouse с помощью Render prop, которая говорит ему, что отрисовать с текущим (x, y) курсора.',
+      eng:
+        'To get that behavior, render a <Mouse> with a render prop that tells it what to render with the current x, y of the cursor.',
+    },
+    {
+      rus: 'Одна интересной вещью о Render props, которую следуюет отметить, является то, что вы можете реализовать большинство компонентов более высокого порядка (HOC), используя обычный компонент с Render prop.',
+      eng:
+        'One interesting thing to note about render props is that you can implement most higher-order components (HOC) using a regular component with a render prop.',
+    },
+    {
+      rus: 'Таким образом, использование Render prop позволяет использовать любой шаблон.',
+      eng: 'So using a render prop makes it possible to use either pattern.',
+    },
+    // {
+    //   rus: '',
+    //   eng:
+    //     'It’s important to remember that just because the pattern is called "render props" you don’t have to use a prop named render to use this pattern. In fact, any prop that is a function that a component uses to know what to render is technically a "render prop".',
+    // },
+    // {
+    //   rus: '',
+    //   eng: 'Although the examples above use render, we could just as easily use the children prop!',
+    // },
+    // {
+    //   rus: '',
+    //   eng:
+    //     'And remember, the children prop doesn’t actually need to be named in the list of "attributes" in your JSX element. Instead, you can put it directly inside the element!',
+    // },
+    // {
+    //   rus: '',
+    //   eng: 'You’ll see this technique used in the react-motion API.',
+    // },
+    // {
+    //   rus: '',
+    //   eng: 'Caveats. Be careful when using Render Props with React.PureComponent.',
+    // },
+    // {
+    //   rus: '',
+    //   eng:
+    //     'Using a render prop can negate the advantage that comes from using React.PureComponent if you create the function inside a render method.',
+    // },
+    // {
+    //   rus: '',
+    //   eng:
+    //     'This is because the shallow prop comparison will always return false for new props, and each render in this case will generate a new value for the render prop.',
+    // },
+    // {
+    //   rus: '',
+    //   eng:
+    //     'To get around this problem, you can sometimes define the prop as an instance method, like so:',
+    // },
+    // {
+    //   rus: '',
+    //   eng:
+    //     'In cases where you cannot define the prop statically (e.g. because you need to close over the component’s props and/or state) <Mouse> should extend React.Component instead.',
+    // },
+  ],
+
+  oldDictionary2: [
     // https://reactjs.org/docs/reconciliation.html
     {
       rus:
@@ -195,9 +303,7 @@ const dictionaries: dictSet = {
       eng:
         'Unstable keys (like those produced by Math.random()) will cause many component instances and DOM nodes to be unnecessarily recreated, which can cause performance degradation and lost state in child components.',
     },
-  ],
 
-  oldDictionary2: [
     {
       rus:
         'React предоставляет декларативный API, так что вам не придется беспокоиться о том, что именно изменяется в каждом обновлении.',
@@ -500,7 +606,7 @@ const dictionaries: dictSet = {
     {
       rus:
         'Ваше первое намерение может быть использовать ref-ы, чтобы "сделать, чтобы что-то произошло" в вашем приложении.',
-      eng: 'Your first inclination may be to use refs to “make things happen” in your app.',
+      eng: 'Your first inclination may be to use refs to "make things happen" in your app.',
     },
     {
       rus:
@@ -512,7 +618,7 @@ const dictionaries: dictSet = {
       rus:
         'Часто становится ясно, что надлежащее место для "владения" этим state находится на более высоком уровне в иерархии. См. руководство по поднятию состояния и примеры.',
       eng:
-        'Often, it becomes clear that the proper place to “own” that state is at a higher level in the hierarchy. See the Lifting State Up guide for examples of this.',
+        'Often, it becomes clear that the proper place to "own" that state is at a higher level in the hierarchy. See the Lifting State Up guide for examples of this.',
     },
     {
       rus:
