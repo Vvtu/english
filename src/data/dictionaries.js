@@ -114,6 +114,175 @@ const dictionaries: dictSet = {
   dictionary2: [
     {
       rus:
+        'Компонент более высокого порядка (HOC) - это продвинутая техника в React для повторного использования компонентной логики. Hoc не являются частью React API, как таковые. Это паттерны, которые возникают из композиционной природы React.',
+      eng:
+        'A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.',
+    },
+    {
+      rus:
+        'Конкретно, компонент более высокого порядка является функцией, которая берет компонент и возвращает новый компонент.',
+      eng:
+        'Concretely, a higher-order component is a function that takes a component and returns a new component.',
+    },
+    {
+      rus:
+        'HOCs распространены в сторонних библиотеках React, таких как connect Redux и Relay’s createFragmentContainer.',
+      eng:
+        'HOCs are common in third-party React libraries, such as Redux’s connect and Relay’s createFragmentContainer.',
+    },
+    {
+      rus:
+        'В этом документе мы обсудим, почему компоненты более высокого порядка полезны и как написать свои собственные.',
+      eng:
+        'In this document, we’ll discuss why higher-order components are useful, and how to write your own.',
+    },
+    {
+      rus:
+        'Компоненты-основная единица повторного использования кода в React. Однако, вы обнаружите, что некоторые патерны не подходят для традиционных компонентов.',
+      eng:
+        'Components are the primary unit of code reuse in React. However, you’ll find that some patterns aren’t a straightforward fit for traditional components.',
+    },
+    {
+      rus:
+        'Мы хотим абстракцию, которая позволяет определить эту логику в одном месте и разделить ее между многими компонентами.',
+      eng:
+        'We want an abstraction that allows us to define this logic in a single place and share it across many components.',
+    },
+    {
+      rus: 'Здесь компоненты более высокого порядка превосходят все.',
+      eng: 'This is where higher-order components excel.',
+    },
+    {
+      rus:
+        'Обратите внимание, что HOC не изменяет входной компонент и не использует наследование для копирования его поведения.',
+      eng:
+        'Note that a HOC doesn’t modify the input component, nor does it use inheritance to copy its behavior.',
+    },
+    {
+      rus: 'Скорее, HOC составляет исходный компонент, заключая его в компонент контейнера.',
+      eng: 'Rather, a HOC composes the original component by wrapping it in a container component.',
+    },
+    {
+      rus: 'HOC-это чистая функция с нулевыми побочными эффектами.',
+      eng: 'A HOC is a pure function with zero side-effects.',
+    },
+    {
+      rus:
+        'И это все! Обернутый компонент получает все реквизиты контейнера вместе с новым реквизитом, данные, которые он использует для визуализации своих выходных данных.',
+      eng:
+        'And that’s it! The wrapped component receives all the props of the container, along with a new prop, data, which it uses to render its output.',
+    },
+    {
+      rus:
+        'HOC не имеет отношения к тому, как и почему используются данные, и обернутый компонент не связан с тем, откуда пришли данные.',
+      eng:
+        'The HOC isn’t concerned with how or why the data is used, and the wrapped component isn’t concerned with where the data came from.',
+    },
+    {
+      rus:
+        'Как в компонентах, контракт между withSubscription и обернутым компонентом полностью основан на props.',
+      eng:
+        'Like components, the contract between withSubscription and the wrapped component is entirely props-based.',
+    },
+    {
+      rus:
+        'Это упрощает замену одного HOC на другой, если они предоставляют одинаковые props для обернутого компонента. Это может быть полезно, например, при изменении библиотек фетчинга данных.',
+      eng:
+        'This makes it easy to swap one HOC for a different one, as long as they provide the same props to the wrapped component. This may be useful if you change data-fetching libraries, for example.',
+    },
+    {
+      rus: 'Не изменяйте исходный компонент. Используйте копозицию.',
+      eng: 'Don’t Mutate the Original Component. Use Composition.',
+    },
+    {
+      rus:
+        'Вместо мутации HOCs следует использовать композицию, заключив входной компонент в компонент-контейнер.',
+      eng:
+        'Instead of mutation, HOCs should use composition, by wrapping the input component in a container component.',
+    },
+    {
+      rus:
+        'Этот HOC имеет ту же функциональность, что и мутирующая версия, избегая при этом возможности столкновений.',
+      eng:
+        'This HOC has the same functionality as the mutating version while avoiding the potential for clashes.',
+    },
+    {
+      rus: 'Он одинаково хорошо работает с класс и функциональными компонентами.',
+      eng: 'It works equally well with class and functional components.',
+    },
+    {
+      rus: 'И потому, что это чистая функция, он компонуем с другими hoc, или даже с самим собой.',
+      eng:
+        'And because it’s a pure function, it’s composable with other HOCs, or even with itself.',
+    },
+    {
+      rus:
+        'Возможно, вы заметили сходство между HOCs и паттерном, называемым контейнер-компоненты.',
+      eng:
+        'You may have noticed similarities between HOCs and a pattern called container components.',
+    },
+    {
+      rus:
+        'Контейнерные компоненты являются частью стратегии разделения ответственности между задачами высокого и низкого уровня.',
+      eng:
+        'Container components are part of a strategy of separating responsibility between high-level and low-level concerns.',
+    },
+    {
+      rus:
+        'Контейнеры управляют такими вещами, как подписки и состояние, и передают props компонентам, которые обрабатывают такие вещи, как рендеринг UI. HOCs используют контейнеры как часть их реализации.',
+      eng:
+        'Containers manage things like subscriptions and state, and pass props to components that handle things like rendering UI. HOCs use containers as part of their implementation.',
+    },
+    {
+      rus: 'HOCs можно рассматривать как параметризованные определения контейнер-компонента.',
+      eng: 'You can think of HOCs as parameterized container component definitions.',
+    },
+    {
+      rus: 'Соглашение: Передавать несвязанные props через обернутый компонент.',
+      eng: 'Convention: Pass Unrelated Props Through to the Wrapped Component',
+    },
+    {
+      rus: 'HOCs должны пропускать props, которые не связаны с его конкретной работой.',
+      eng: 'HOCs should pass through props that are unrelated to its specific concern.',
+    },
+    {
+      rus: 'Конвенция: максимизация Композиционности',
+      eng: 'Convention: Maximizing Composability',
+    },
+    {
+      rus:
+        'Не все HOCs выглядят одинаково. Иногда они принимают только один аргумент, обернутый компонент. WithRouter.',
+      eng:
+        'Not all HOCs look the same. Sometimes they accept only a single argument, the wrapped component. WithRouter.',
+    },
+    {
+      rus: 'Соглашение: Оберните отображаемоё имя для упрощения отладки.',
+      eng: 'Convention: Wrap the Display Name for Easy Debugging.',
+    },
+    {
+      rus:
+        'Предостережения. Компоненты более высокого порядка имеют несколько предостережений, которые не сразу очевидны, если вы новичок в React.',
+      eng:
+        'Caveats. Higher-order components come with a few caveats that aren’t immediately obvious if you’re new to React.',
+    },
+    {
+      rus:
+        'Не используйте HOCs внутри метода рендеринга. Проблема здесь не только в производительности - перемонтирование компонента приводит к потере состояния этого компонента и всех его дочерних элементов.',
+      eng:
+        'Don’t Use HOCs Inside the render Method. The problem here isn’t just about performance — remounting a component causes the state of that component and all of its children to be lost.',
+    },
+    {
+      rus:
+        'Хотя соглашение для HOC - пропустить все props к обернутому компоненту, это не работает для ссылок. Это потому, что ref на самом деле не prop — как и key, он обрабатывается специально React-ом.',
+      eng:
+        'While the convention for higher-order components is to pass through all props to the wrapped component, this does not work for refs. That’s because ref is not really a prop — like key, it’s handled specially by React.',
+    },
+  ],
+
+  oldDictionary2: [
+    // https://reactjs.org/docs/reconciliation.html
+    {
+      rus:
         'Термин "Render prop" относится к простой технике обмена кодом между компонентами React с использованием prop, значение которого является функцией.',
       eng:
         'The term "render prop" refers to a simple technique for sharing code between React components using a prop whose value is a function.',
@@ -125,7 +294,8 @@ const dictionaries: dictSet = {
         'A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.',
     },
     {
-      rus: 'В этом документе мы обсудим, почему рендер props полезны, и как написать свои собственные.',
+      rus:
+        'В этом документе мы обсудим, почему рендер props полезны, и как написать свои собственные.',
       eng:
         'In this document, we’ll discuss why render props are useful, and how to write your own.',
     },
@@ -134,7 +304,8 @@ const dictionaries: dictSet = {
       eng: 'Use Render Props for Cross-Cutting Concerns',
     },
     {
-      rus: 'Компоненты являются основной единицей переиспользования кода в React, но не всегда очевидно, как поделиться состоянием или поведением, которое один компонент инкапсулирует, с другими компонентами, которые нуждаются в том же состоянии.',
+      rus:
+        'Компоненты являются основной единицей переиспользования кода в React, но не всегда очевидно, как поделиться состоянием или поведением, которое один компонент инкапсулирует, с другими компонентами, которые нуждаются в том же состоянии.',
       eng:
         'Components are the primary unit of code reuse in React, but it’s not always obvious how to share the state or behavior that one component encapsulates to other components that need that same state.',
     },
@@ -143,17 +314,20 @@ const dictionaries: dictSet = {
       eng: 'Now the question is: How can we reuse this behavior in another component?',
     },
     {
-      rus: 'Другими словами, если другой компонент должен знать о положении курсора, можем ли мы инкапсулировать это поведение, чтобы мы могли легко поделиться им с этим компонентом?',
+      rus:
+        'Другими словами, если другой компонент должен знать о положении курсора, можем ли мы инкапсулировать это поведение, чтобы мы могли легко поделиться им с этим компонентом?',
       eng:
         'In other words, if another component needs to know about the cursor position, can we encapsulate that behavior so that we can easily share it with that component?',
     },
     {
-      rus: 'Теперь, вместо того, чтобы эффективно клонировать Mouse компонент и жестко кодировать что-то еще в его Render методе для решения для конкретного случая использования, мы предоставляем Render prop, который Mouse может использовать для динамического определения того, что он отображает.',
+      rus:
+        'Теперь, вместо того, чтобы эффективно клонировать Mouse компонент и жестко кодировать что-то еще в его Render методе для решения для конкретного случая использования, мы предоставляем Render prop, который Mouse может использовать для динамического определения того, что он отображает.',
       eng:
         'Now, instead of effectively cloning the Mouse component and hard-coding something else in its render method to solve for a specific use case, we provide a render prop that Mouse can use to dynamically determine what it renders.',
     },
     {
-      rus: 'Более конкретно, Render prop-это функция prop, которую компонент использует, чтобы знать, что рендерить.',
+      rus:
+        'Более конкретно, Render prop-это функция prop, которую компонент использует, чтобы знать, что рендерить.',
       eng:
         'More concretely, a render prop is a function prop that a component uses to know what to render.',
     },
@@ -162,12 +336,14 @@ const dictionaries: dictSet = {
       eng: 'This technique makes the behavior that we need to share extremely portable.',
     },
     {
-      rus: 'Чтобы получить такое поведение, отрисуйте Mouse с помощью Render prop, которая говорит ему, что отрисовать с текущим (x, y) курсора.',
+      rus:
+        'Чтобы получить такое поведение, отрисуйте Mouse с помощью Render prop, которая говорит ему, что отрисовать с текущим (x, y) курсора.',
       eng:
         'To get that behavior, render a <Mouse> with a render prop that tells it what to render with the current x, y of the cursor.',
     },
     {
-      rus: 'Одна интересной вещью о Render props, которую следуюет отметить, является то, что вы можете реализовать большинство компонентов более высокого порядка (HOC), используя обычный компонент с Render prop.',
+      rus:
+        'Одна интересной вещью о Render props, которую следуюет отметить, является то, что вы можете реализовать большинство компонентов более высокого порядка (HOC), используя обычный компонент с Render prop.',
       eng:
         'One interesting thing to note about render props is that you can implement most higher-order components (HOC) using a regular component with a render prop.',
     },
@@ -217,10 +393,7 @@ const dictionaries: dictSet = {
     //   eng:
     //     'In cases where you cannot define the prop statically (e.g. because you need to close over the component’s props and/or state) <Mouse> should extend React.Component instead.',
     // },
-  ],
 
-  oldDictionary2: [
-    // https://reactjs.org/docs/reconciliation.html
     {
       rus:
         'По умолчанию, при рекурсии на дочерних узлах DOM, React просто перебирает оба списка дочерних узлов одновременно и генерирует мутацию всякий раз, когда есть разница.',
