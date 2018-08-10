@@ -119,24 +119,24 @@ const dictionaries: dictSet = {
 				'We are uncovering better ways of developing software by doing it and helping others do it.',
 		},
 		{
-			rus: 'Через этоу работу мы пришли к ценности.',
+			rus: 'Через эту работу мы пришли к ценности.',
 			eng: 'Through this work we have come to value.',
 		},
 		{
-			rus: 'Люди и взаимодействия через процессы и инструменты',
+			rus: 'Люди и взаимодействия выше, чем процессы и инструменты',
 			eng: 'Individuals and interactions over processes and tools.',
 		},
 		{
-			rus: 'Работающее software через всеобъемлющую документацию.',
+			rus: 'Работающее software выше, чем всеобъемлющая документация.',
 			eng: 'Working software over comprehensive documentation.',
 		},
 		{
-			rus: 'Сотрудничество с заказчиком через обсуждение условий контракта.',
+			rus: 'Сотрудничество с заказчиком выше, чем обсуждение условий контракта.',
 			eng: 'Customer collaboration over contract negotiation.',
 		},
 
 		{
-			rus: 'Реагирование на изменения через следование плану.',
+			rus: 'Реагирование на изменения выше, чем следование плану.',
 			eng: 'Responding to change over following a plan.',
 		},
 
