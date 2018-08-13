@@ -164,26 +164,27 @@ const dictionaries: dictSet = {
 		rus: "Через регулярные промежутки времени, команда размышляет о том, как стать более эффективной, подстраивает и корректирует свое поведение соответствующим образом.",
 		eng: "At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.",
 		},
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
+
+		{
+		rus: "Scrum-это framework, в котором люди могут решать сложные адаптивные проблемы, продуктивно и творчески доставляя продукты максимально возможной ценности",
+		eng: "Scrum is a framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.",
+		},
+		{
+		rus: "Scrum-это не методология. Scrum реализует научный метод эмпиризма. Scrum заменяет запрограммированный алгоритмический подход эвристическим, с уважением к людям и самоорганизацией для решения непредсказуемости и решения сложных проблем.",
+		eng: "Scrum is not a methodology. Scrum implements the scientific method of empiricism. Scrum replaces a programmed algorithmic approach with a heuristic one, with respect for people and self-organization to deal with unpredictability and solving complex problems.",
+		},
+		{
+		rus: "Scrum не является процессом, техникой или окончательным методом. Скорее, это framework, в которыом вы можете использовать различные процессы и методы.",
+		eng: "Scrum is not a process, technique, or definitive method. Rather, it is a framework within which you can employ various processes and techniques.",
+		},
+		{
+		rus: "Framework Scrum состоит из команд Scrum и связанных с ними ролей, событий, артефактов и правил. Каждый компонент в рамках служит определенной цели и имеет важное значение для успеха и использования Скрама.",
+		eng: "The Scrum framework consists of Scrum Teams and their associated roles, events, artifacts, and rules. Each component within the framework serves a specific purpose and is essential to Scrum’s success and usage.",
+		},
+		{
+		rus: "Правила Scrum связывают вместе роли, события и артефакты, управляя отношениями и взаимодействием между ними. Правила Scrum описаны всюду по телу этого документа.",
+		eng: "The rules of Scrum bind together the roles, events, and artifacts, governing the relationships and interaction between them. The rules of Scrum are described throughout the body of this document.",
+		},
 		// {
 		// rus: "",
 		// eng: "",
