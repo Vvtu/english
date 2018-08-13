@@ -114,6 +114,122 @@ const dictionaries: dictSet = {
 	dictionary2: [
 		{
 			rus:
+				'Наша первоочередная задача состоит в том, чтобы удовлетворить потребности клиентов в своевременной и непрерывной поставке ценного программного обеспечения.',
+			eng:
+				'Our highest priority is to satisfy the customer trough early and continuous delivery of valueable software.',
+		},
+		{
+			rus:
+				'Приветствуются изменения требований, даже на поздних стадиях разработки. Гибкие процессы используют изменения для конкурентного преимущества клиента.',
+			eng:
+				"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competive advantage.",
+		},
+		{
+		rus: "Поставляйте рабочее программное обеспечение часто, от нескольких недель до нескольких месяцев, с предпочтением к более коротким временным рамкам.",
+		eng: "Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.",
+		},
+		{
+		rus: "Заказчики и разработчики должны ежедневно работать вместе на протяжении всего проекта.",
+		eng: "Business people and developers must work together daily throughout the project.",
+		},
+		{
+		rus: "Стройте проекты вокруг мотивированных людей. Дайте им окружение и поддержку, в которой они нуждаются, и доверяйте им, чтобы работа была сделана.",
+		eng: "Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.",
+		},
+		{
+		rus: "Наиболее эффективным и действенным способом передачи информации команде разработчиков и внутри нее является личная беседа.",
+		eng: "The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.",
+		},
+		{
+		rus: "Рабочая программа-основной критерий прогресса.",
+		eng: "Working software is the primary measure of progress.",
+		},
+		{
+		rus: "Гибкие процессы способствуют устойчивому развитию. Спонсоры, разработчики и пользователи должны иметь возможность поддерживать постоянный темп на неопределенный срок.",
+		eng: "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.",
+		},
+		{
+		rus: "Постоянное внимание к техническому совершенству и хорошему дизайну повышает гибкость.",
+		eng: "Continuous attention to technical excellence and good design enhances agility.",
+		},
+		{
+		rus: "Простота - искусство максимизации объема незавершенной работы - имеет важное значение.",
+		eng: "Simplicity – the art of maximizing the amount of work not done–is essential.",
+		},
+		{
+		rus: "Лучшие архитектуры, требования и проекты появляются из самоорганизующихся команд.",
+		eng: "The best architectures, requirements, and designs emerge from self-organizing teams.",
+		},
+		{
+		rus: "Через регулярные промежутки времени, команда размышляет о том, как стать более эффективной, подстраивает и корректирует свое поведение соответствующим образом.",
+		eng: "At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.",
+		},
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+		// {
+		// rus: "",
+		// eng: "",
+		// },
+
+	],
+
+	oldDictionary2: [
+		{
+			rus:
 				'Мы выявляем лучшие способы разработки программного обеспечения, делая это и помогая другим делать это.',
 			eng:
 				'We are uncovering better ways of developing software by doing it and helping others do it.',
@@ -150,21 +266,8 @@ const dictionaries: dictSet = {
 			eng:
 				'That is, while there is value in the items on the right, we value the items on the left more.',
 		},
-		{
-			rus:
-				'Наша первоочередная задача состоит в том, чтобы удовлетворить потребности клиентов в своевременной и непрерывной поставке ценного программного обеспечения.',
-			eng:
-				'Our highest priority is to satisfy the customer trough early and continuous delivery of valueable software.',
-		},
-		{
-			rus:
-				'Приветствуются изменения требований, даже на поздних стадиях разработки. Гибкие процессы используют изменения для конкурентного преимущества клиента.',
-			eng:
-				"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competive advantage.",
-		},
-	],
 
-	oldDictionary2: [
+
 		// https://reactjs.org/docs/reconciliation.html
 		{
 			rus:
