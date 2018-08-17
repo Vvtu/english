@@ -113,6 +113,51 @@ const dictionaries: dictSet = {
 
 	dictionary2: [
 		{
+			rus: "Типы-это изюминка Ризона! Здесь вы получаете представление о том, почему так много людей в восторге от них.",
+			eng: "Types are the highlight of Reason! Here, you get a glimpse of why so many are excited about them.",
+			},
+			{
+			rus: "Типы могут быть выведены. Система типов выводит типы для вас, даже если Вы не записываете их вручную. Это ускоряет фазу прототипирования.",
+			eng: "Types can be inferred. The type system deduces the types for you even if you don't manually write them down. This speeds up the prototyping phase.",
+			},
+			{
+			rus: "Покрытии типами - всегда 100%. Нам не нужен инструмент для проверки покрытия! Каждая часть кода на Reason имеет Тип.",
+			eng: "The type coverage is always 100%. We don't need a 'type coverage' tool! Every piece of Reason code has a type.",
+			},
+			{
+			rus: "Cистема типов полностью 'здравая'. Это означает, что пока код компилируется нормально, каждый Тип гарантирует, что он не лжет сам о себе.",
+			eng: "The type system is completely 'sound'. This means that, as long as your code compiles fine, every type guarantees that it's not lying about itself.",
+			},
+			{
+			rus: "Строки Reason отделяются двойными кавычками (одинарные кавычки зарезервированы для типа character).",
+			eng: "Reason strings are delimited using double quotes (single quotes are reserved for the character type).",
+			},
+			{
+			rus: "Для конкатенации строк используйте ++.",
+			eng: "To concatenate strings, use ++.",
+			},
+			{
+			rus: "Существует специальный синтаксис для строк, который позволяет делать многострочные строки, как и раньше, без специальных escape символов, хуки для специальных предпроцессоров. {|...|}  {js|...|js}",
+			eng: "There's a special syntax for string that allows multiline string just like before, no special character escaping, hooks for special pre-processors. {|...|}  {js|...|js}",
+			},
+			{
+			rus: "Поскольку строка Reason сопоставляется со строкой JavaScript, вы можете использовать строковые операции обеих стандартных библиотеках.",
+			eng: "Since a Reason string maps to a JavaScript string, you can mix & match the string operations in both standard libraries.",
+			},
+			{
+			rus: "Char. Reason имеет тип для строки из одной буквы. Char не поддерживает Unicode или UTF-8.",
+			eng: "Char. Reason has a type for a string with a single letter. Char doesn't support Unicode or UTF-8.",
+			},
+			{
+			rus: "Char компилируется в целое число от 0 до 255, для дополнительной скорости. Вы можете также паттерн-матчинг на нем.",
+			eng: "A character compiles to an integer ranging from 0 to 255, for extra speed. You can also pattern-match on it.",
+			},
+
+	],
+
+	oldDictionary2: [
+
+		{
 			rus:
 				'Наша первоочередная задача состоит в том, чтобы удовлетворить потребности клиентов в своевременной и непрерывной поставке ценного программного обеспечения.',
 			eng:
@@ -185,50 +230,8 @@ const dictionaries: dictSet = {
 		rus: "Правила Scrum связывают вместе роли, события и артефакты, управляя отношениями и взаимодействием между ними. Правила Scrum описаны всюду по телу этого документа.",
 		eng: "The rules of Scrum bind together the roles, events, and artifacts, governing the relationships and interaction between them. The rules of Scrum are described throughout the body of this document.",
 		},
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
-		// {
-		// rus: "",
-		// eng: "",
-		// },
 
-	],
 
-	oldDictionary2: [
 		{
 			rus:
 				'Мы выявляем лучшие способы разработки программного обеспечения, делая это и помогая другим делать это.',
