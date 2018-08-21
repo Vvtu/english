@@ -113,30 +113,150 @@ const dictionaries: dictSet = {
 
 	dictionary2: [
 		{
+			rus: "Типы-это изюминка Ризона! Здесь вы получаете представление о том, почему так много людей в восторге от них.",
+			eng: "Types are the highlight of Reason! Here, you get a glimpse of why so many are excited about them.",
+			},
+			{
+			rus: "Типы могут быть выведены. Система типов выводит типы для вас, даже если Вы не записываете их вручную. Это ускоряет фазу прототипирования.",
+			eng: "Types can be inferred. The type system deduces the types for you even if you don't manually write them down. This speeds up the prototyping phase.",
+			},
+			{
+			rus: "Покрытии типами - всегда 100%. Нам не нужен инструмент для проверки покрытия! Каждая часть кода на Reason имеет Тип.",
+			eng: "The type coverage is always 100%. We don't need a 'type coverage' tool! Every piece of Reason code has a type.",
+			},
+			{
+			rus: "Cистема типов полностью 'здравая'. Это означает, что пока код компилируется нормально, каждый Тип гарантирует, что он не лжет сам о себе.",
+			eng: "The type system is completely 'sound'. This means that, as long as your code compiles fine, every type guarantees that it's not lying about itself.",
+			},
+			{
+			rus: "Строки Reason отделяются двойными кавычками (одинарные кавычки зарезервированы для типа character).",
+			eng: "Reason strings are delimited using double quotes (single quotes are reserved for the character type).",
+			},
+			{
+			rus: "Для конкатенации строк используйте ++.",
+			eng: "To concatenate strings, use ++.",
+			},
+			{
+			rus: "Существует специальный синтаксис для строк, который позволяет делать многострочные строки, как и раньше, без специальных escape символов, хуки для специальных предпроцессоров. {|...|}  {js|...|js}",
+			eng: "There's a special syntax for string that allows multiline string just like before, no special character escaping, hooks for special pre-processors. {|...|}  {js|...|js}",
+			},
+			{
+			rus: "Поскольку строка Reason сопоставляется со строкой JavaScript, вы можете использовать строковые операции обеих стандартных библиотеках.",
+			eng: "Since a Reason string maps to a JavaScript string, you can mix & match the string operations in both standard libraries.",
+			},
+			{
+			rus: "Char. Reason имеет тип для строки из одной буквы. Char не поддерживает Unicode или UTF-8.",
+			eng: "Char. Reason has a type for a string with a single letter. Char doesn't support Unicode or UTF-8.",
+			},
+			{
+			rus: "Char компилируется в целое число от 0 до 255, для дополнительной скорости. Вы можете также паттерн-матчинг на нем.",
+			eng: "A character compiles to an integer ranging from 0 to 255, for extra speed. You can also pattern-match on it.",
+			},
+
+	],
+
+	oldDictionary2: [
+
+		{
+			rus:
+				'Наша первоочередная задача состоит в том, чтобы удовлетворить потребности клиентов в своевременной и непрерывной поставке ценного программного обеспечения.',
+			eng:
+				'Our highest priority is to satisfy the customer trough early and continuous delivery of valueable software.',
+		},
+		{
+			rus:
+				'Приветствуются изменения требований, даже на поздних стадиях разработки. Гибкие процессы используют изменения для конкурентного преимущества клиента.',
+			eng:
+				"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competive advantage.",
+		},
+		{
+		rus: "Поставляйте рабочее программное обеспечение часто, от нескольких недель до нескольких месяцев, с предпочтением к более коротким временным рамкам.",
+		eng: "Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.",
+		},
+		{
+		rus: "Заказчики и разработчики должны ежедневно работать вместе на протяжении всего проекта.",
+		eng: "Business people and developers must work together daily throughout the project.",
+		},
+		{
+		rus: "Стройте проекты вокруг мотивированных людей. Дайте им окружение и поддержку, в которой они нуждаются, и доверяйте им, чтобы работа была сделана.",
+		eng: "Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.",
+		},
+		{
+		rus: "Наиболее эффективным и действенным способом передачи информации команде разработчиков и внутри нее является личная беседа.",
+		eng: "The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.",
+		},
+		{
+		rus: "Рабочая программа-основной критерий прогресса.",
+		eng: "Working software is the primary measure of progress.",
+		},
+		{
+		rus: "Гибкие процессы способствуют устойчивому развитию. Спонсоры, разработчики и пользователи должны иметь возможность поддерживать постоянный темп на неопределенный срок.",
+		eng: "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.",
+		},
+		{
+		rus: "Постоянное внимание к техническому совершенству и хорошему дизайну повышает гибкость.",
+		eng: "Continuous attention to technical excellence and good design enhances agility.",
+		},
+		{
+		rus: "Простота - искусство максимизации объема незавершенной работы - имеет важное значение.",
+		eng: "Simplicity – the art of maximizing the amount of work not done–is essential.",
+		},
+		{
+		rus: "Лучшие архитектуры, требования и проекты появляются из самоорганизующихся команд.",
+		eng: "The best architectures, requirements, and designs emerge from self-organizing teams.",
+		},
+		{
+		rus: "Через регулярные промежутки времени, команда размышляет о том, как стать более эффективной, подстраивает и корректирует свое поведение соответствующим образом.",
+		eng: "At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.",
+		},
+
+		{
+		rus: "Scrum-это framework, в котором люди могут решать сложные адаптивные проблемы, продуктивно и творчески доставляя продукты максимально возможной ценности",
+		eng: "Scrum is a framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.",
+		},
+		{
+		rus: "Scrum-это не методология. Scrum реализует научный метод эмпиризма. Scrum заменяет запрограммированный алгоритмический подход эвристическим, с уважением к людям и самоорганизацией для решения непредсказуемости и решения сложных проблем.",
+		eng: "Scrum is not a methodology. Scrum implements the scientific method of empiricism. Scrum replaces a programmed algorithmic approach with a heuristic one, with respect for people and self-organization to deal with unpredictability and solving complex problems.",
+		},
+		{
+		rus: "Scrum не является процессом, техникой или окончательным методом. Скорее, это framework, в которыом вы можете использовать различные процессы и методы.",
+		eng: "Scrum is not a process, technique, or definitive method. Rather, it is a framework within which you can employ various processes and techniques.",
+		},
+		{
+		rus: "Framework Scrum состоит из команд Scrum и связанных с ними ролей, событий, артефактов и правил. Каждый компонент в рамках служит определенной цели и имеет важное значение для успеха и использования Скрама.",
+		eng: "The Scrum framework consists of Scrum Teams and their associated roles, events, artifacts, and rules. Each component within the framework serves a specific purpose and is essential to Scrum’s success and usage.",
+		},
+		{
+		rus: "Правила Scrum связывают вместе роли, события и артефакты, управляя отношениями и взаимодействием между ними. Правила Scrum описаны всюду по телу этого документа.",
+		eng: "The rules of Scrum bind together the roles, events, and artifacts, governing the relationships and interaction between them. The rules of Scrum are described throughout the body of this document.",
+		},
+
+
+		{
 			rus:
 				'Мы выявляем лучшие способы разработки программного обеспечения, делая это и помогая другим делать это.',
 			eng:
 				'We are uncovering better ways of developing software by doing it and helping others do it.',
 		},
 		{
-			rus: 'Через этоу работу мы пришли к ценности.',
+			rus: 'Через эту работу мы пришли к ценности.',
 			eng: 'Through this work we have come to value.',
 		},
 		{
-			rus: 'Люди и взаимодействия через процессы и инструменты',
+			rus: 'Люди и взаимодействия выше, чем процессы и инструменты',
 			eng: 'Individuals and interactions over processes and tools.',
 		},
 		{
-			rus: 'Работающее software через всеобъемлющую документацию.',
+			rus: 'Работающее software выше, чем всеобъемлющая документация.',
 			eng: 'Working software over comprehensive documentation.',
 		},
 		{
-			rus: 'Сотрудничество с заказчиком через обсуждение условий контракта.',
+			rus: 'Сотрудничество с заказчиком выше, чем обсуждение условий контракта.',
 			eng: 'Customer collaboration over contract negotiation.',
 		},
 
 		{
-			rus: 'Реагирование на изменения через следование плану.',
+			rus: 'Реагирование на изменения выше, чем следование плану.',
 			eng: 'Responding to change over following a plan.',
 		},
 
@@ -150,21 +270,8 @@ const dictionaries: dictSet = {
 			eng:
 				'That is, while there is value in the items on the right, we value the items on the left more.',
 		},
-		{
-			rus:
-				'Наша первоочередная задача состоит в том, чтобы удовлетворить потребности клиентов в своевременной и непрерывной поставке ценного программного обеспечения.',
-			eng:
-				'Our highest priority is to satisfy the customer trough early and continuous delivery of valueable software.',
-		},
-		{
-			rus:
-				'Приветствуются изменения требований, даже на поздних стадиях разработки. Гибкие процессы используют изменения для конкурентного преимущества клиента.',
-			eng:
-				"Welcome changing requirements, even late in development. Agile processes harness change for the customer's competive advantage.",
-		},
-	],
 
-	oldDictionary2: [
+
 		// https://reactjs.org/docs/reconciliation.html
 		{
 			rus:
