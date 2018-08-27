@@ -763,9 +763,7 @@ const dictionaries: dictSet = {
 				'Unstable keys (like those produced by Math.random()) will cause many component instances and DOM nodes to be unnecessarily recreated, which can cause performance degradation and lost state in child components.',
 		},
 		// https://reactjs.org/docs/reconciliation.html
-	],
 
-	oldDictionary2: [
 		{
 			rus:
 				'Приведенные ниже примеры были обновлены для использования React.createRef() API, представленый в React 16.3. Если используется более раннюю версию React, мы рекомендуем использовать callback refs.',
