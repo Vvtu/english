@@ -26,14 +26,14 @@
 			var(--overlap_bottom)
 	);
 
-	--advanced-color: #522719;
-	--background-color: #000000;
-	--base-text-color: #ffffff;
-	--danger-color: #ff4000;
-	--english-appcode__speaking-text-color: #6b5ee0;
-	--english-text-color: #94a11f;
-	--grey-color: #777777;
-	--shadow-color: #dddddd;
+	--advanced-color: #522719; /* #add8e6 */
+	--background-color: #000000; /* #ffffff */
+	--base-text-color: #ffffff; /* #000000 */
+	--danger-color: #ff4000; /* #00bfff */
+	--english-appcode__speaking-text-color: #6b5ee0; /* #94a11f */
+	--english-text-color: #6b5ee0; /*  #94a11f */
+	--grey-color: #777777; /*   #888888 */
+	--shadow-color: #dddddd; /* #222222*/
 }
 
 /* grid
