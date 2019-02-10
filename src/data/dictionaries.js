@@ -12,45 +12,283 @@ export type dictSet = {
 
 const dictionaries: dictSet = {
 	dictionary1: [
-		{ rus: 'тушить огонь', eng: 'to put out a fire' },
-		{ rus: 'бросать мусор', eng: 'to drop a litter' },
-		{ rus: 'овощи', eng: 'vegetables' },
-		{ rus: 'сладости', eng: 'sweets' },
-		{ rus: 'в хорошей форме', eng: 'fit' },
-		{ rus: 'сильный', eng: 'strong' },
-		{ rus: 'упражнение', eng: 'exercise' },
-		{ rus: 'богатый', eng: 'rich' },
-		{ rus: 'бедный', eng: 'poor' },
-		{ rus: 'здоровый', eng: 'healthy' },
 		{
-			rus: 'Как вы должны содержать своё тело сильным и в хорошей форме?',
-			eng: 'How can you keep your body strong and fit?',
+			rus: 'гид',
+			eng: 'guide',
 		},
-		{ rus: 'Что вы должны есть каждый день?', eng: 'What should you eat every day?' },
-		{ rus: 'Что вы должны пить каждый день?', eng: 'What should you drink every day?' },
 		{
-			rus: 'Упражнение это хорошо потому, что позволяет поддерживать ваше тело здоровым.',
-			eng: 'Exercise is good beacause it keeps you healthy.',
+			rus: 'маршрут',
+			eng: 'route',
 		},
-		{ rus: 'загородная местность', eng: 'countyside' },
-		{ rus: 'простуда', eng: 'a cold' },
-		{ rus: 'сыпь', eng: 'a rash' },
-		{ rus: 'крем для кожи', eng: 'a skin cream' },
-		{ rus: 'боль в животе', eng: 'a stomachache' },
-		{ rus: 'головная боль', eng: 'a headache' },
-		{ rus: 'зубная боль', eng: 'a toothache' },
-		{ rus: 'шуметь', eng: 'to make a noise' },
-		{ rus: 'трава', eng: 'grass' },
-		{ rus: 'В чем дело?', eng: "What's the matter?" },
-		{ rus: 'У меня зубная боль.', eng: "I've got a toothache." },
-		{ rus: 'Тебе следует пойти к дантисту.', eng: "You should go to the dentist's." },
-		{ rus: 'Мы не должны мусорить.', eng: "We mustn't drop litter." },
-		{ rus: 'Мы должны держаться вне травы.', eng: 'We must keep off the grass.' },
+
 		{
-			rus: 'Мы должны держать наших собак на поводке.',
-			eng: 'We must keep our dogs on a lead.',
+			rus: 'заснеженные',
+			eng: 'show-capped',
 		},
-		{ rus: 'Мы не должны рвать цветы.', eng: 'We must not pick flowers.' },
+		{
+			rus: 'гора',
+			eng: 'mountain',
+		},
+		{
+			rus: 'вулкан',
+			eng: 'vocano',
+		},
+		{
+			rus: 'не могу дождаться',
+			eng: "can't wait",
+		},
+		{
+			rus: 'тур',
+			eng: 'tour',
+		},
+		{
+			rus: 'виды',
+			eng: 'sights',
+		},
+		{
+			rus: 'форт',
+			eng: 'fort',
+		},
+		{
+			rus: 'жалко',
+			eng: "it's a pity",
+		},
+		{
+			rus: 'блошиный рынок',
+			eng: 'flea market',
+		},
+		{
+			rus: 'ремесло',
+			eng: 'crafts',
+		},
+		{
+			rus: 'перекус',
+			eng: 'snack',
+		},
+		{
+			rus: 'искать',
+			eng: 'look for',
+		},
+		{
+			rus: 'подарок',
+			eng: 'present',
+		},
+		{
+			rus: 'успех',
+			eng: 'success',
+		},
+		{
+			rus: 'вместе',
+			eng: 'together',
+		},
+		{
+			rus: 'дорогой',
+			eng: 'expensive',
+		},
+		{
+			rus: 'гадать',
+			eng: 'guess',
+		},
+		{
+			rus: 'верхний',
+			eng: 'top',
+		},
+		{
+			rus: 'великолепный',
+			eng: 'gorgerous',
+		},
+		{
+			rus: 'полцены',
+			eng: 'half price',
+		},
+		{
+			rus: 'соотвествовать',
+			eng: 'to match',
+		},
+		{
+			rus: 'конюшни',
+			eng: 'stables',
+		},
+		{
+			rus: 'палатки',
+			eng: 'stalls',
+		},
+		{
+			rus: 'подержаный',
+			eng: 'second-hand',
+		},
+		{
+			rus: 'по выгодным ценам',
+			eng: 'at bargain prices',
+		},
+		{
+			rus: 'ресторанные дворики',
+			eng: 'food courts',
+		},
+		{
+			rus: 'следовать',
+			eng: 'follow',
+		},
+		{
+			rus: 'карта',
+			eng: 'map',
+		},
+		{
+			rus: 'заблудиться',
+			eng: 'get lost',
+		},
+		{
+			rus: 'деликатес',
+			eng: 'delicacy',
+		},
+		{
+			rus: 'жареные насекомые',
+			eng: 'fried insects',
+		},
+		{
+			rus: 'вкусный',
+			eng: 'delicious',
+		},
+		{
+			rus: 'ананасовый сок',
+			eng: 'pineapple juce',
+		},
+		{
+			rus: 'традиционный',
+			eng: 'traditional',
+		},
+		{
+			rus: 'включает',
+			eng: 'includes',
+		},
+		{
+			rus: 'пропаренный',
+			eng: 'steamed',
+		},
+		{
+			rus: 'хорошие манеры',
+			eng: 'good manners',
+		},
+		{
+			rus: 'важный',
+			eng: 'important',
+		},
+		{
+			rus: 'жареные тосты',
+			eng: 'fried toast',
+		},
+		{
+			rus: 'распространеный завтрак',
+			eng: 'breakfast spread',
+		},
+		{
+			rus: 'яичница',
+			eng: 'scrambled eggs',
+		},
+		{
+			rus: 'доступный',
+			eng: 'available',
+		},
+		{
+			rus: 'низкая температура',
+			eng: 'low temperature',
+		},
+		{
+			rus: 'охарактеризованный',
+			eng: 'characterise',
+		},
+		{
+			rus: 'существует',
+			eng: 'exists',
+		},
+		{
+			rus: 'последний',
+			eng: 'last',
+		},
+		{
+			rus: 'достичь',
+			eng: 'reach',
+		},
+		{
+			rus: 'блестеть',
+			eng: 'shine',
+		},
+		{
+			rus: 'полночь',
+			eng: 'midnight',
+		},
+		{
+			rus: 'солнце',
+			eng: 'sun',
+		},
+		{
+			rus: 'темный',
+			eng: 'dark',
+		},
+		{
+			rus: 'падение',
+			eng: 'drop',
+		},
+		{
+			rus: 'выжить',
+			eng: 'survive',
+		},
+		{
+			rus: 'сухой',
+			eng: 'dry',
+		},
+		{
+			rus: 'ниже нуля',
+			eng: 'below freesing',
+		},
+		{
+			rus: 'держать',
+			eng: 'hold in',
+		},
+		{
+			rus: 'бассейн',
+			eng: 'pool',
+		},
+		{
+			rus: 'театр',
+			eng: 'theatre',
+		},
+		{
+			rus: 'пляж',
+			eng: 'beach',
+		},
+		{
+			rus: 'парк',
+			eng: 'park',
+		},
+		{
+			rus: 'зоопарк',
+			eng: 'zoo',
+		},
+		{
+			rus: 'гимнастика',
+			eng: 'gym',
+		},
+		{
+			rus: 'библиотека',
+			eng: 'library',
+		},
+		{
+			rus: 'ресторан быстрого питания',
+			eng: 'fast food restaurant',
+		},
+		{
+			rus: 'оперный театр',
+			eng: 'opera house',
+		},
+		{
+			rus: 'аквариум',
+			eng: 'aquarium',
+		},
+		{
+			rus: 'супермаркет',
+			eng: 'supermarket',
+		},
 	],
 
 	oldDictionary1: [
