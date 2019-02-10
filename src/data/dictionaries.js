@@ -226,7 +226,7 @@ const dictionaries: dictSet = {
 			eng: 'dark',
 		},
 		{
-			rus: 'падение',
+			rus: 'бросать',
 			eng: 'drop',
 		},
 		{
